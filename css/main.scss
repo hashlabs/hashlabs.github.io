@@ -25,8 +25,9 @@
  * Objects
  */
 
-@import 'objects--paragraphs';
 @import 'objects--buttons';
+@import 'objects--brand-listers';
+@import 'objects--paragraphs';
 
 /**
  * Components
@@ -43,6 +44,7 @@
  */
 
 @import 'partials--section-lead';
+@import 'partials--section-projects';
 
 /**
  * Jekyll Default

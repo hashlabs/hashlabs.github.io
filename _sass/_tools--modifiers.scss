@@ -21,7 +21,7 @@
 }
 
 .emphasis-text {
-  font-weight: $font-weight-semi-bold;
+  font-weight: $font-weight-bold;
 }
 
 .fade-out {
@@ -44,7 +44,7 @@
   vertical-align: middle;
 }
 
-.text-accent {
+.text-accent.text-accent {
   color: $color--accent;
 }
 
