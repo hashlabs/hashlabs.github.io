@@ -1,0 +1,45 @@
+$color--section-testimonials-bg:                 $hint-of-red;
+
+.section-testimonials {
+  background-color: $color--section-testimonials-bg;
+  padding-bottom: $space*20;
+  padding-top: $space*20;
+}
+
+.testimony-content {
+  font-size: 200%;
+  margin-bottom: $space*10;
+  position: relative;
+  line-height: $line-height-base;
+  text-align: center;
+
+  @media #{$from-large-resolutions} {
+    padding-right: $space*12;
+    text-align: left;
+
+    &::after {
+      content: '}';
+      display: block;
+      font-size: 600%;
+      line-height: 1;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.testimony-details {
+  display: block;
+  text-align: center;
+
+  @media #{$from-large-resolutions} {
+    text-align: left;
+  }
+}
+
+.testimony-person {
+  display: block;
+  height: 350px;
+  margin: 0 auto;
+}
