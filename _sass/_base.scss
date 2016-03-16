@@ -1,3 +1,31 @@
+// Our variables
+$base-font-family:                               $primary-font;
+$base-font-size:                                 $font-size-base;
+$base-font-weight:                               400;
+$small-font-size:                                $base-font-size * 0.875;
+$base-line-height:                               $line-height-base;
+
+$spacing-unit:                                   30px;
+
+$text-color:                                     $color--text;
+$background-color:                               $color--base;
+$brand-color:                                    $color--accent;
+
+$grey-color:                                     #828282;
+$grey-color-light:                               lighten($grey-color, 40%);
+$grey-color-dark:                                darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:                                  800px;
+$on-palm:                                        600px;
+$on-laptop:                                      800px;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
 /**
  * Reset some basic elements
  */
@@ -73,34 +101,6 @@ li {
     > ul,
     > ol {
          margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
-}
-
-
-
-/**
- * Links
- */
-a {
-    color: $brand-color;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
     }
 }
 

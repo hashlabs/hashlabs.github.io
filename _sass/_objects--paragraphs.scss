@@ -1,0 +1,18 @@
+$color--lead-text:                               $white;
+
+.leadtext {
+  font-size: 300%;
+}
+
+.subleadtext {
+  font-size: 130%;
+}
+
+.leadtext,
+.subleadtext {
+  color: $color--lead-text;
+}
+
+.subleadtext {
+  margin-top: 0;
+}

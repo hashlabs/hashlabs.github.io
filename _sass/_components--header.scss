@@ -1,0 +1,40 @@
+$size--header-height:                            50px;
+$color--branding-text:                           $white;
+
+.site-header {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.header-branding {
+  img {
+    height: $size--header-height;
+  }
+
+  .branding-text {
+    font-size: 120%;
+    bottom: 0;
+    color: $color--branding-text;
+    line-height: 1;
+    left: $size--header-height;
+    position: absolute;
+  }
+}
+
+.header-links {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .header-link {
+    font-size: 100%;
+    float: left;
+
+    & + .header-link {
+      padding-left: $space*2;
+    }
+  }
+}

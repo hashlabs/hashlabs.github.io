@@ -1,23 +1,117 @@
 ---
 layout: default
 ---
+<section class="section-lead">
+	<div class="container-fluid section-wrapper">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 class="leadtext">We make mind-blowing code</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="subleadtext">
+					We help you grow your project and keep headaches away!
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<a href="#" class="btn-primary cta-lead">How we do it</a>
+			</div>
+		</div>
+	</div>
+</section>
 
-<div class="home">
+<section class="section-project">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 hidden-sm hidden-xs">
+				<img class="project-cabinet has-brackets" src="http://placehold.it/1200x900">
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="lister">
+					<span class="lister-title">Recent Projects</span>
+				</div>
+				<ul class="lister-items">
+					<li class="lister-item">Yummly</li>
+					<li class="lister-item">Real Scout</li>
+					<li class="lister-item">Next Galaxy</li>
+					<li class="lister-item">Funding Circle</li>
+				</ul>
+				<a href="/projects" class="btn-primary cta-lister">
+					More Projects
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
 
-  <h1 class="page-heading">Posts</h1>
+<section class="section-stripe">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-9">
+				<h1 class="section-title">Ready to create something awesome?</h1>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<a href="/hire" class="btn-primary">Come on!</a>
+			</div>
+		</div>
+	</div>
+</section>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<section class="section-testimonials">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-8">
+				<h1 class="testimony-content">"These guys are amazing! My project was once just a paper idea, now it's reality thanks to <strong>Hashlabs</strong>."</h1>
+				<small class="testimony-details">David Feller CEO at <span class="text-accent">Yummly</span></small>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<img class="img-circle testimony-person" src="http://placehold.it/700x700" alt="" />
+			</div>
+		</div>
+	</div>
+</section>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section class="section-team">
+	<div class="container-fluid section-wrapper">
+		<div class="squared-grid">
+			<div class="row">
+				<div class="col-xs-4">
+					<img class="member-picture" src="http://placehold.it/500x500" alt="member" />
+				</div>
+				<div class="col-xs-4">
+					<img class="member-picture" src="http://placehold.it/500x500" alt="member" />
+				</div>
+				<div class="col-xs-4">
+					<img class="member-picture" src="http://placehold.it/500x500" alt="member" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4">
+					<img class="member-picture" src="http://placehold.it/500x500" alt="member" />
+				</div>
+				<div class="col-xs-4">
+					<img class="member-picture" src="http://placehold.it/500x500" alt="member" />
+				</div>
+				<div class="col-xs-4">
+					<img class="member-picture" src="http://placehold.it/500x500" alt="member" />
+				</div>
+			</div>
+		</div>
+		<div class="surface">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="leadtext">We're Hash Labs</h1>
+					<h2 class="subleadtext">A team of coders and designers ready to solve all your development problems!</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="/team" class="btn-primary cta-team">Look who they</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
