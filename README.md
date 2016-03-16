@@ -22,6 +22,17 @@ Jekyll compiles SASS when serving/building. Put your partials in the `_sass` fol
 @import 'bla';
 ```
 
+## Data
+
+Jekyll has a convenient `_data` folder, that we can use to have dynamic
+things (like team members or projects) to be rendered without harcoding
+them in the template.
+
+You can add `yml` files in the `_data` folder, and query the contents of
+these files using `site.data.{filename}`.
+
+### Example
+
 # About
 
 ![hash labs logo](https://projects.invisionapp.com/assets/609036/7955492/AD8F5CE34B46D3F4AAC9175DE01DAFF8976C40BEDE3F7211CCA01AA5BAA7376E/thumbnail)
