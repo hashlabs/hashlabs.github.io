@@ -1,0 +1,55 @@
+$size--header-height:                            $size--header-height;
+$size--header-font:                              85%;
+$color--branding-text:                           $white;
+
+.site-header {
+  font-size: $size--header-font;
+  left: 0;
+  position: absolute;
+  top: $grid-gutter-width;
+  width: 100%;
+}
+
+.header-branding {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+
+  img {
+    height: $size--header-height;
+  }
+
+  .branding-text {
+    font-size: 120%;
+    bottom: 0;
+    color: $color--branding-text;
+    margin: 0;
+    line-height: 1;
+    left: $size--header-height + 10px;
+    position: absolute;
+  }
+}
+
+.header-links {
+  float: right;
+  height: $size--header-height;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .header-link {
+    display: table;
+    font-size: 100%;
+    float: left;
+    height: 100%;
+
+    & + .header-link {
+      padding-left: $space*2;
+    }
+
+    > a {
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+}

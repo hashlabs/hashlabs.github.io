@@ -1,0 +1,10 @@
+$color--btn-primary-font:                        $white;
+$rule--btn-primary-border:                       '3px solid #{$color--accent}';
+
+.btn-primary {
+  background-color: transparent;
+  border: #{$rule--btn-primary-border};
+  color: $color--btn-primary-font;
+  max-width: 100%;
+  padding: $space*1.5 $space*5;
+}

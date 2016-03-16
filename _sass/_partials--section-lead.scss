@@ -1,0 +1,26 @@
+$rule--section-lead-background:                  'url(../images/hero_background.jpg)';
+
+.section-lead {
+  background: #{$rule--section-lead-background};
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: table;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+
+  .row:first-of-type {
+    margin-top: $space*20;
+  }
+
+  .row:last-of-type {
+    margin-top: $space*15;
+    margin-bottom: $space*10;
+  }
+
+  .section-wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
