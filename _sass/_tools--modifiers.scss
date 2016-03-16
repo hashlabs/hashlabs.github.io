@@ -67,3 +67,11 @@
 .valign {
   @include table-align($target: '.vobject');
 }
+
+@include set-helper('.row-aligned-cols') {
+  > * {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+  }
+}
