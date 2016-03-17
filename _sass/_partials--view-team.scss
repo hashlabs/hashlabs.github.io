@@ -1,0 +1,19 @@
+.view-team {
+  padding-top: $space*7;
+
+  .leadtext {
+    color: $color--accent;
+    margin-bottom: $space*10;
+    text-align: center;
+  }
+}
+
+.social-lister-title {
+  color: $color--accent;
+  font-size: 120%;
+}
+
+.social-lister {
+  @include list-reset;
+  @include list-inline;
+}

@@ -32,6 +32,15 @@
   @include fade-in;
 }
 
+.has-bottom-shadow {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+  }
+}
+
 .no-pad {
   padding: 0 !important;
 }

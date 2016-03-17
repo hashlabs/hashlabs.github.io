@@ -27,6 +27,7 @@
 
 @import 'objects--buttons';
 @import 'objects--brand-listers';
+@import 'objects--expandables';
 @import 'objects--paragraphs';
 @import 'objects--square-grid';
 
@@ -36,10 +37,13 @@
 
 @import 'components--header';
 @import 'components--footer';
+@import 'components--member-profile';
 
 /**
  * Layouts
  */
+
+ @import 'layouts--global';
 
 /**
  * Partials
@@ -50,6 +54,7 @@
 @import 'partials--section-stripe';
 @import 'partials--section-testimonials';
 @import 'partials--section-team';
+@import 'partials--view-team';
 
 /**
  * Jekyll Default

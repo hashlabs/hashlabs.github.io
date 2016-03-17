@@ -1,0 +1,20 @@
+{% comment %}
+  Use this layout to render alternative variants for components like header
+{% endcomment %}
+
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="alternative">
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
