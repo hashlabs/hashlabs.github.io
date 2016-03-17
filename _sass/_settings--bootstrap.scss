@@ -31,6 +31,8 @@ $grid-gutter-width-half:          $grid-gutter-width/2;
 $border-radius-base:              3px;
 $border-radius-small:             3px;
 $border-radius-large:             4px;
+$padding-large-vertical:          20px;
+$padding-large-horizontal:        30px; 
 
 // Buttons
 
@@ -38,5 +40,10 @@ $btn-primary-border:              $brand-primary;
 
 // Forms
 
-$input-border:                    $gray;
-$input-border-focus:              null;
+$input-border:                    $aluminium;
+$input-color:                     $aluminium;
+$input-color-placeholder:         $aluminium;
+$input-border-focus:              $color--accent;
+$input-bg:                        transparent;
+$form-group-margin-bottom:        60px;
+$input-height-small:              75px;
