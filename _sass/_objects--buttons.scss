@@ -5,6 +5,7 @@ $rule--btn-primary-border:                       '3px solid #{$color--accent}';
   background-color: transparent;
   border: #{$rule--btn-primary-border};
   color: $color--btn-primary-font;
+  display: inline-block;
   max-width: 100%;
-  padding: $space*1.5 $space*5;
+  padding: $space $space*5;
 }

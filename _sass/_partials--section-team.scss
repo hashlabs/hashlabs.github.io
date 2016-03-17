@@ -1,0 +1,36 @@
+.section-team {
+
+  .leadtext {
+    font-size: 375%;
+  }
+
+  .subleadtext {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section-wrapper {
+    position: relative;
+  }
+
+  .surface {
+    background: rgba($color--accent, .5);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    opacity: .5;
+  }
+
+  .valign,
+  .vobject {
+    width: 100%;
+  }
+
+  .cta-team {
+    margin-top: $space*6;
+  }
+}
