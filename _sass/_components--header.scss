@@ -32,7 +32,7 @@ $color--branding-text:                           $white;
     color: $color--branding-text;
     margin: 0;
     line-height: 1;
-    left: $size--header-height + 10px;
+    left: $size--header-height + $space;
     position: absolute;
   }
 }

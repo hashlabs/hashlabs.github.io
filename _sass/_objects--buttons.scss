@@ -4,7 +4,13 @@ $rule--btn-primary-border:                       '3px solid #{$color--accent}';
 %btn-boilerplate {
   display: inline-block;
   max-width: 100%;
-  padding: $space $space*5;
+  min-width: 230px;
+  padding: $space*1.75 $space*6;
+
+  @media #{$from-small-resolutions} {
+    min-width: 0;
+    padding: $space $space*5;
+  }
 }
 
 .btn-primary {

@@ -29,7 +29,7 @@
   $modernizr-no-touch-class:                     '.no-touch';
   $modernizr-touch-class:                        '.touch';
 
-  $size--header-height:                          75px;
+  $size--header-height:                          $space*7.5;
 
 
 // -----------------------------------------------------------------------------
@@ -41,6 +41,7 @@
   $bootstrap-sm:                  768px;
   $bootstrap-md:                  992px;
   $bootstrap-lg:                  1200px;
+  $screens-fhd:                   1920px;
   $tablet-landscape:              1024px;
 
   $just-small-resolutions:                  "only screen and (max-width: #{$bootstrap-sm})";
@@ -48,6 +49,7 @@
   $from-medium-resolutions:                 "only screen and (min-width: #{$bootstrap-md})";
   $just-medium-resolutions:                 "only screen and (max-width: #{$bootstrap-md})";
   $from-large-resolutions:                  "only screen and (min-width: #{$bootstrap-lg})";
+  $from-fhd-resolutions:                    "only screen and (min-width: #{$screens-fhd})";
 
 
   $from-small-to-medium-resolutions:        "only screen and (min-width: #{$bootstrap-sm}) and (max-width: #{$bootstrap-md})";

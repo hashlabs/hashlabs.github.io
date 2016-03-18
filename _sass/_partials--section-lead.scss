@@ -5,6 +5,7 @@ $rule--section-lead-background:                  'url(../images/hero_background.
   background-size: cover;
   background-repeat: no-repeat;
   display: table;
+  min-height: $space*60;
   height: 100vh;
   text-align: center;
   width: 100%;
@@ -14,7 +15,7 @@ $rule--section-lead-background:                  'url(../images/hero_background.
   }
 
   .row:last-of-type {
-    margin-top: $space*15;
+    margin-top: $space*10;
     margin-bottom: $space*10;
   }
 

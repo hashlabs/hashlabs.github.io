@@ -1,6 +1,11 @@
 $color--lead-text:                               $white;
 $color--section-title-text:                      $white;
 
+%text-double-size {
+  font-size: 200%;
+  @media #{$from-fhd-resolutions} {font-size: 170%;}
+}
+
 .leadtext {
   font-size: 300%;
   font-weight: $font-weight-bold;
@@ -17,6 +22,7 @@ $color--section-title-text:                      $white;
 }
 
 .subleadtext {
+  line-height: $line-height-base;
   margin-top: 0;
 }
 
@@ -26,6 +32,7 @@ $color--section-title-text:                      $white;
 
 .section-title {
   color: $color--section-title-text;
+  line-height: 1.6;
   font-size: 200%;
 }
 
@@ -35,4 +42,11 @@ $color--section-title-text:                      $white;
 
 .paragraph-content {
   line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
 }
