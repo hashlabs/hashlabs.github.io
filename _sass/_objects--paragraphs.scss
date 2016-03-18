@@ -4,6 +4,7 @@ $color--section-title-text:                      $white;
 .leadtext {
   font-size: 300%;
   font-weight: $font-weight-bold;
+  text-align: center;
 }
 
 .subleadtext {
@@ -30,4 +31,8 @@ $color--section-title-text:                      $white;
 
 .section-subtitle {
   font-size: 170%;
+}
+
+.paragraph-content {
+  line-height: 2;
 }

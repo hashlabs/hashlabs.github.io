@@ -1,7 +1,5 @@
-$color--section-testimonials-bg:                 $hint-of-red;
-
 .section-testimonials {
-  background-color: $color--section-testimonials-bg;
+  @extend %material-background;
   padding-bottom: $space*20;
   padding-top: $space*20;
 }

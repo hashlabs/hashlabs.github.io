@@ -1,0 +1,21 @@
+$color--avatar-aside-font:                       $aluminium;
+
+.crew-avatar {
+  .avatar-picture {
+    @extend .img-circle;
+    margin: $space*4 auto;
+    width: 200px;
+  }
+
+  .avatar-info {
+    .name {
+      font-size: 140%;
+      font-weight: $font-weight-bold;
+      margin-bottom: 0;
+    }
+
+    .avatar-aside {
+      color: $color--avatar-aside-font;
+    }
+  }
+}
