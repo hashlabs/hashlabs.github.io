@@ -1,18 +1,10 @@
 .view-projects-hero {
   background: url('../images/projects_background.jpg');
   background-size: cover;
-  height: $space*53;
-  position: relative;
-  width: 100%;
+  @extend %view-hero-small;
 
   &::before {
-    content: '';
     @extend %hero-black-orange;
-  }
-
-  .leadtext {
-    padding-top: $space*7;
-    position: relative;
   }
 }
 

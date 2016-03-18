@@ -16,6 +16,22 @@ $rule--row-border:                               '2px solid #{$concrete}';
   color: $color--base;
 }
 
+%view-hero-small {
+  height: $space*53;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+
+  .leadtext {
+    padding-top: $space*7;
+    position: relative;
+  }
+}
+
 .material-background {
   @extend %material-background;
 }
