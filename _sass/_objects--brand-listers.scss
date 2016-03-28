@@ -8,6 +8,7 @@
   .brand-item {
     $brand-items-by-row: 1;
     float: left;
+    padding: $space*2 $space*4;
     width: 100%/$brand-items-by-row;
     text-align: center;
 
@@ -19,6 +20,15 @@
     @media #{$from-medium-resolutions} {
       $brand-items-by-row: 3;
       width: 100%/$brand-items-by-row;
+    }
+
+    @media #{$just-small-resolutions} {
+      padding-left: 0;
+      padding-right: 0;
+
+      .image {
+        width: 200px;
+      }
     }
 
     .image {
