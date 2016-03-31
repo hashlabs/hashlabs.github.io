@@ -65,7 +65,11 @@
 
 .testimony-person {
   display: block;
-  max-width: $space*35;
   margin: 0 auto;
+  max-width: $space*25;
   width: 100%;
+
+  @media #{$from-small-resolutions} {
+    max-width: $space*35;
+  }
 }
