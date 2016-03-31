@@ -8,31 +8,24 @@
   .brand-item {
     $brand-items-by-row: 1;
     float: left;
-    padding: $space*2 $space*4;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%/$brand-items-by-row;
     text-align: center;
 
-    @media only screen and (min-width: 500px) {
-      $brand-items-by-row: 2;
-      width: 100%/$brand-items-by-row;
-    }
-
-    @media #{$from-medium-resolutions} {
-      $brand-items-by-row: 3;
-      width: 100%/$brand-items-by-row;
-    }
-
-    @media #{$just-small-resolutions} {
-      padding-left: 0;
-      padding-right: 0;
-
-      .image {
-        width: 200px;
-      }
-    }
-
     .image {
       max-width: 100%;
+      width: 200px;
+    }
+
+    @media #{$from-small-resolutions} {
+      $brand-items-by-row: 3;
+      padding: $space*2 $space*5;
+      width: 100%/$brand-items-by-row;
+
+      .image {
+        width: 100%;
+      }
     }
   }
 }
