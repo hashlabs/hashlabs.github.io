@@ -94,6 +94,19 @@
     }
   }
 
+  // this rule allows the yummly ipad to be centered
+  // but idelly to be able to have images that reach the edges
+  // of the screen and others that don't we should add an empty space
+  // of 15 px on the sides of the images that doesn't reach the edge
+  &:first-child {
+    .project-cabinet-image {
+      &:first-of-type {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+  }
+
   @media #{$just-small-resolutions} {
     &:nth-child(even) {
       .project-cabinet-image {
