@@ -41,9 +41,11 @@ html {
 
 // change font size units base
 body {
-  font-size: 14px !important;
-  @media #{$from-medium-resolutions} {font-size: 24px !important;}
-  @media #{$from-fhd-resolutions} {font-size: 38px !important;}
+  @media #{$from-fhd-resolutions} {font-size: 24px;}
+}
+
+img {
+  max-width: 100%;
 }
 
 // let container to be wider to match the new scale

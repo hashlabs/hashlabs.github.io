@@ -45,11 +45,12 @@
   $tablet-landscape:              1024px;
 
   $just-small-resolutions:                  "only screen and (max-width: #{$bootstrap-sm})";
+  $just-medium-resolutions:                 "only screen and (max-width: #{$bootstrap-md})";
+
   $from-small-resolutions:                  "only screen and (min-width: #{$bootstrap-sm})";
   $from-medium-resolutions:                 "only screen and (min-width: #{$bootstrap-md})";
-  $just-medium-resolutions:                 "only screen and (max-width: #{$bootstrap-md})";
   $from-large-resolutions:                  "only screen and (min-width: #{$bootstrap-lg})";
-  $from-fhd-resolutions:                    "only screen and (min-width: #{$screens-fhd})";
+  $from-fhd-resolutions:                    "only screen and (min-width: 1920px)";
 
 
   $from-small-to-medium-resolutions:        "only screen and (min-width: #{$bootstrap-sm}) and (max-width: #{$bootstrap-md})";

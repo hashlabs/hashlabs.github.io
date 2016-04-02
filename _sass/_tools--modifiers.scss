@@ -57,6 +57,10 @@
   color: $color--accent;
 }
 
+.text-base.text-base {
+  color: $color--base;
+}
+
 .text-capitalize {
   text-transform: capitalize;
 }
@@ -75,6 +79,7 @@
 
 .valign {
   @include table-align($target: '.vobject');
+  width: 100%;
 }
 
 @include set-helper('.row-aligned-cols') {
