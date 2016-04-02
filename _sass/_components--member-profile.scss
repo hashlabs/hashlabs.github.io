@@ -1,43 +1,23 @@
 .member-profile {
+  color: $color--base;
   position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
 
   .member-info {
-    bottom: 0;
+    bottom: 2.5rem;
     left: 0;
     position: absolute;
     right: 0;
   }
 
-  .expandable-content {
-    display: none; /*while developing*/
-
-    text-align: center;
+  .name {
     color: $color--base;
-
-    .name {
-      color: $color--base;
-      font-size: 200%;
-      font-weight: $font-weight-bold;
-    }
-
-    .brief {
-      font-size: 130%;
-    }
+    font-size: 200%;
+    font-weight: $font-weight-bold;
   }
 
-  .expandable-trigger {
-    color: $color--base;
-    text-align: center;
-
-    .name {
-      color: $color--base;
-      font-size: 200%;
-      font-weight: $font-weight-bold;
-      margin-bottom: 0;
-    }
-
-    .member-info {
-      padding-bottom: $space*4;
-    }
+  .brief {
+    font-size: 130%;
   }
 }

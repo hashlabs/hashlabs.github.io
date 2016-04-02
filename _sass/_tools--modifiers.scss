@@ -82,6 +82,10 @@
   width: 100%;
 }
 
+.center-block {
+  float: none;
+}
+
 @include set-helper('.row-aligned-cols') {
   > * {
     display: inline-block;
