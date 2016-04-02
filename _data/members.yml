@@ -1,7 +1,32 @@
-- name: Orlando Del Aguila
-  github: orlando
-  twitter: eatcodetravel
-
 - name: Alexis Duran
+  description: description here
+  city: Maturin, VE
   github: duranmla
   twitter: duranmla
+
+- name: David Lucena
+  description: description here
+  city: Valencia, VE
+  github: delbit
+  twitter: delbit
+
+- name: Jose Marquez
+  description: description here
+  city: Valencia, VE
+  twitter: cocobahiano
+
+- name: Luis Castro
+  description: description here
+  city: Barcelona, ES
+  github: castrolem
+  twitter: castrolem
+
+- name: Marilia Prado
+  description: description here
+  city: Valencia, VE
+
+- name: Orlando Del Aguila
+  description: description here
+  city: Guadalajara, MX
+  github: orlando
+  twitter: eatcodetravel

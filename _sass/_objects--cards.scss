@@ -1,8 +1,12 @@
-.expandable {
+.card {
   position: relative;
   width: 100%;
 
-  .expandable-content {
+  &-front {
+  }
+
+  &-back {
+    display: none;
     background-color: $color--tertiary;
     bottom: 0;
     left: 0;
