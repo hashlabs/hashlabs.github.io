@@ -1,0 +1,64 @@
+$color--copyright-font:                          $aluminium;
+
+.site-footer {
+  padding-top: $space*10;
+  text-align: center;
+
+  .section-title {
+    color: $color--text;
+    font-weight: $font-weight-bold;
+  }
+
+  .custom-icon,
+  .offices {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .upper-group .row {
+    margin-bottom: $space*5;
+  }
+
+  .footer-links {
+    @include list-reset;
+
+    .footer-link {
+      display: inline-block;
+
+      & + .footer-link {
+        margin-left: $space*1.5;
+      }
+    }
+
+    a {
+      color: $color--accent;
+      font-size: 70%;
+      font-weight: $font-weight-bold;
+      text-transform: capitalize;
+    }
+  }
+
+  .bottom-section {
+    padding-top: $space*4;
+
+    .row {
+      margin-bottom: $space*1.5;
+    }
+  }
+}
+
+.simple-list {
+  @include list-reset();
+  font-size: 60%;
+}
+
+.footer-branding {
+  .sitelogo {
+    width: 75px;
+  }
+}
+
+.copyright {
+  color: $color--copyright-font;
+  font-size: 50%;
+}

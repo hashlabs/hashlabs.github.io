@@ -1,0 +1,93 @@
+.project-media {
+  display: block;
+  margin: $space*5 auto;
+}
+
+.project-location,
+.project-crew {
+  text-align: center;
+}
+
+.project-description {
+  padding-bottom: $space*10;
+  padding-top: $space*10;
+
+  &:not(.tertiary-background) .leadtext {
+    color: $color--accent;
+  }
+
+  .leadtext {
+    margin-bottom: $space*6;
+  }
+}
+
+.project-location {
+  padding-bottom: $space*4;
+  padding-top: $space*4;
+}
+
+.project-crew {
+  padding-bottom: $space*6;
+  padding-top: $space*8;
+
+  .name {
+    color: $color--accent;
+  }
+}
+
+.crew-lister {
+  @include list-reset;
+  @include list-inline;
+  padding-top: $space*4;
+
+  .crew-member {
+    float: left;
+    text-align: center;
+    margin: 0;
+    padding: 0 $space*2;
+    width: 100%;
+  }
+
+  @media #{$from-small-resolutions} {
+    @include children-based-layout($min: 1, $max: 4, $selector: '.crew-member');
+  }
+}
+
+.section-label {
+  margin-bottom: $space*2;
+}
+
+.view-project-hero {
+  background: url('../images/project_yummly_background.jpg');
+  background-size: cover;
+  padding-bottom: $space*8;
+  position: relative;
+  width: 100%;
+
+  .inner {
+    max-width: $space*115;
+    margin: 0 auto;
+    padding: 0 $grid-gutter-width-half;
+  }
+
+  &::before {
+    content: '';
+    @extend %hero-black-orange;
+  }
+
+  .client-branding {
+    margin-bottom: $space*4;
+    padding-top: $space*25;
+  }
+
+  .client-brief {
+    color: $color--base;
+    font-size: 200%;
+    line-height: $line-height-base;
+    margin-bottom: $space*4;
+  }
+}
+
+.over-layer-element {
+  position: relative;
+}

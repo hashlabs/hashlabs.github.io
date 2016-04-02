@@ -1,7 +1,10 @@
 $color--lead-text:                               $white;
+$color--section-title-text:                      $white;
 
 .leadtext {
   font-size: 300%;
+  font-weight: $font-weight-bold;
+  text-align: center;
 }
 
 .subleadtext {
@@ -19,4 +22,17 @@ $color--lead-text:                               $white;
 
 .bullet-icon {
   font-size: 80%;
+}
+
+.section-title {
+  color: $color--section-title-text;
+  font-size: 200%;
+}
+
+.section-subtitle {
+  font-size: 170%;
+}
+
+.paragraph-content {
+  line-height: 2;
 }

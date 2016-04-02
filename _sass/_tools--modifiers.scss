@@ -21,7 +21,7 @@
 }
 
 .emphasis-text {
-  font-weight: $font-weight-semi-bold;
+  font-weight: $font-weight-bold;
 }
 
 .fade-out {
@@ -30,6 +30,15 @@
 
 .fade-in {
   @include fade-in;
+}
+
+.has-bottom-shadow {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+  }
 }
 
 .no-pad {
@@ -44,7 +53,7 @@
   vertical-align: middle;
 }
 
-.text-accent {
+.text-accent.text-accent {
   color: $color--accent;
 }
 
@@ -66,4 +75,12 @@
 
 .valign {
   @include table-align($target: '.vobject');
+}
+
+@include set-helper('.row-aligned-cols') {
+  > * {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+  }
 }

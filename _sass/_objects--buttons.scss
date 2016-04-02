@@ -1,10 +1,22 @@
 $color--btn-primary-font:                        $white;
 $rule--btn-primary-border:                       '3px solid #{$color--accent}';
 
+%btn-boilerplate {
+  display: inline-block;
+  max-width: 100%;
+  padding: $space $space*5;
+}
+
 .btn-primary {
+  @extend %btn-boilerplate;
   background-color: transparent;
   border: #{$rule--btn-primary-border};
   color: $color--btn-primary-font;
-  max-width: 100%;
-  padding: $space*1.5 $space*5;
+}
+
+.btn-secondary {
+  @extend %btn-boilerplate;
+  background-color: $color--accent;
+  border: none;
+  color: $color--base;
 }

@@ -1,0 +1,17 @@
+.view-contact {
+  .leadtext {
+    padding-bottom: $space*10;
+  }
+
+  .view-contact-form {
+    .form-group {
+      &:last-of-type {
+        margin-bottom: $space*10;
+      }
+    }
+
+    .form-submit {
+      margin-bottom: $space*25;
+    }
+  }
+}

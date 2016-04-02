@@ -1,0 +1,28 @@
+.brand-lister {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  float: left;
+
+  .brand-item {
+    $brand-items-by-row: 1;
+    float: left;
+    width: 100%/$brand-items-by-row;
+    text-align: center;
+
+    @media only screen and (min-width: 500px) {
+      $brand-items-by-row: 2;
+      width: 100%/$brand-items-by-row;
+    }
+
+    @media #{$from-medium-resolutions} {
+      $brand-items-by-row: 3;
+      width: 100%/$brand-items-by-row;
+    }
+
+    .image {
+      max-width: 100%;
+    }
+  }
+}

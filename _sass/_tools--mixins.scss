@@ -123,6 +123,16 @@
   list-style-type: none;
 }
 
+@mixin list-inline($gutter: $space*1.5) {
+  > li {
+    display: inline-block;
+
+    & + li {
+      margin-left: $gutter;
+    }
+  }
+}
+
 @mixin set-helper($class, $sufix: false) {
   @if $sufix {
     $sufix: '-#{$sufix}';

@@ -1,0 +1,49 @@
+$color--material-bg:                             $hint-of-red;
+$rule--row-border:                               '2px solid #{$concrete}';
+
+%hero-black-orange {
+  @include overlay;
+  background: linear-gradient(-145deg, rgba(#000000, .75) 30%, rgba(#FF5824, .75) 100%);
+  opacity: 1;
+}
+
+%material-background {
+  background-color: $color--material-bg;
+}
+
+%tertiary-background {
+  background-color: $color--tertiary;
+  color: $color--base;
+}
+
+%view-hero-small {
+  height: $space*53;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+
+  .leadtext {
+    padding-top: $space*7;
+    position: relative;
+  }
+}
+
+.material-background {
+  @extend %material-background;
+}
+
+.has-bottom-border {
+  border-bottom: #{$rule--row-border};
+}
+
+.tertiary-background {
+  @extend %tertiary-background;
+}
+
+.view-holder {
+  padding-top: $space*20;
+}

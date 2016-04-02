@@ -1,0 +1,43 @@
+.member-profile {
+  position: relative;
+
+  .member-info {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  .expandable-content {
+    display: none; /*while developing*/
+
+    text-align: center;
+    color: $color--base;
+
+    .name {
+      color: $color--base;
+      font-size: 200%;
+      font-weight: $font-weight-bold;
+    }
+
+    .brief {
+      font-size: 130%;
+    }
+  }
+
+  .expandable-trigger {
+    color: $color--base;
+    text-align: center;
+
+    .name {
+      color: $color--base;
+      font-size: 200%;
+      font-weight: $font-weight-bold;
+      margin-bottom: 0;
+    }
+
+    .member-info {
+      padding-bottom: $space*4;
+    }
+  }
+}

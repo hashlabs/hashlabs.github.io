@@ -1,0 +1,65 @@
+$color--form-font:                               $aluminium;
+
+.form-group {
+  color: $color--form-font;
+  padding-right: 45px; // anough space for bullet
+  position: relative;
+
+  &.has-error {
+    &,
+    .form-control {
+      color: $color--error;
+      border-color: $color--error;
+    }
+  }
+
+  &.has-form-bullet::after {
+    content: '\25CF';
+    display: block;
+    font-size: 175%; // bullet diameter 25px;
+    position: absolute;
+    right: 0;
+    top: $padding-large-vertical;
+    line-height: 1;
+  }
+
+  .form-control {
+    color: $color--base;
+  }
+}
+
+textarea {
+  min-height: 250px;
+  resize: none;
+}
+
+@include placeholder-styles() {
+  color: $color--form-font;
+}
+
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.radio-inline {
+  input {
+    position: absolute;
+    top: .25em;
+  }
+
+  & + .radio-inline {
+    margin-left: $space*4;
+  }
+
+  .radio-text {
+    padding-left: $space*.5;
+  }
+}
+
+.form-submit {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 325px;
+}
