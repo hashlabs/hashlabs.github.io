@@ -9,42 +9,25 @@ layout: alternative
         <h1 class="leadtext">Meet the Team</h1>
       </div>
     </div>
-    <div class="squared-grid-guttered">
-      <div class="square member-profile">
-        <div class="card">
-          <div class="card-front has-bottom-shadow">
-            <img class="member-picture" src="http://placekitten.com/1280/1600" alt="member" />
-            <div class="member-info">
-              <h2 class="name">Orlando</h2>
-              {% include location.html %}
-            </div>
-          </div>
-          <div class="card-back">
-            <div class="valign">
-              <div class="vobject">
-                <div class="content-group">
-                  <h1 class="name">Orlando</h1>
-                  {% include location.html %}
-                </div>
-                <div class="content-group">
-                  <p class="brief">Lorem ipsum dolor sit amet, consectetur adi.</p>
-                </div>
-                <div class="content-group">
-                  <p class="social-lister-title">
-                    <strong>Find at:</strong>
-                  </p>
-                  <ul class="social-lister">
-                    <li class="social-item">
-                      <a href="/twitter">Twitter</a>
-                    </li>
-                    <li class="social-item">
-                      <a href="/twitter">Facebook</a>
-                    </li>
-                  </ul>
+    <div class="row">
+      <div class="col-xs-9 center-block">
+        <div class="row">
+          {% for member in site.data.members %}
+            {% assign name = member.name | split: ' ' %}
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="member-profile">
+                <div class="card">
+                  <div class="card-front has-bottom-shadow">
+                    <img class="member-picture" src="{{ member.image }}" alt="{{ member.name }}" />
+                    <div class="member-info">
+                      <h2 class="name">{{ name.first }}</h2>
+                      {% include location.html place=member.city %}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>

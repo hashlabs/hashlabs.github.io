@@ -1,32 +1,38 @@
 - name: Alexis Duran
-  description: description here
   city: Maturin, VE
+  description: description here
   github: duranmla
+  image: /images/alexis_tall.jpg
   twitter: duranmla
 
 - name: David Lucena
   description: description here
   city: Valencia, VE
   github: delbit
+  image: /images/david_tall.jpg
   twitter: delbit
 
 - name: Jose Marquez
   description: description here
   city: Valencia, VE
+  image: /images/jose_tall.jpg
   twitter: cocobahiano
 
 - name: Luis Castro
   description: description here
   city: Barcelona, ES
   github: castrolem
+  image: /images/luis_tall.jpg
   twitter: castrolem
 
 - name: Marilia Prado
   description: description here
+  image: /images/marilia_tall.jpg
   city: Valencia, VE
 
 - name: Orlando Del Aguila
   description: description here
   city: Guadalajara, MX
   github: orlando
+  image: /images/orlando_tall.jpg
   twitter: eatcodetravel
