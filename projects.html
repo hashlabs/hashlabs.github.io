@@ -11,62 +11,34 @@ layout: default
 <section class="view-projects view-holder">
   <div class="container-fluid">
     <div class="projects-listing">
-      <div class="row row-project-cabinet">
-        <div class="col-xs-12">
-          <img class="project-cabinet-image" src="/images/yummly_cabinet.png" alt="">
-          <div class="project-cabinet">
-            <div class="inner">
-              <div class="row">
-                <div class="col-xs-12">
-                  <h2 class="section-title yummly">Yummly</h2>
-                  {% include location.html %}
+      {% for project in site.data.projects %}
+        <div class="row row-project-cabinet">
+          <div class="col-xs-12">
+            <img class="project-cabinet-image" src="{{project.image}}" alt="">
+            <div class="project-cabinet">
+              <div class="inner">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2 class="section-title {{project.name | slugify}}">{{project.name}}</h2>
+                    {% include location.html place=project.city %}
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <p class="brief">
-                    Needed a site for his brand new iOS application, we took the job and delivered it.
-                  </p>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <p class="brief">{{project.description}}</p>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <a href="/projects/real-scout" class="btn-primary">Read this Story</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="project-cabinet-image" src="/images/yummly_cabinet.png" alt="">
-        </div>
-      </div>
-      <div class="row row-project-cabinet">
-        <div class="col-xs-12">
-          <img class="project-cabinet-image" src="/images/realscout_cabinet.png" alt="">
-          <div class="project-cabinet">
-            <div class="inner">
-              <div class="row">
-                <div class="col-xs-12">
-                  <h2 class="section-title realscout">Real Scout</h2>
-                  {% include location.html %}
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <p class="brief">
-                    Needed a site for his brand new iOS application, we took the job and delivered it.
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <a href="/projects/real-scout" class="btn-primary">Read this Story</a>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <a href="/projects/{{project.name}}" class="btn-primary">Read this Story</a>
+                  </div>
                 </div>
               </div>
             </div>
+            <img class="project-cabinet-image" src="{{project.image}}" alt="">
           </div>
-          <img class="project-cabinet-image" src="/images/realscout_cabinet.png" alt="">
         </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
