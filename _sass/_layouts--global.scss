@@ -32,6 +32,38 @@ $rule--row-border:                               '2px solid #{$concrete}';
   }
 }
 
+// change rems units base
+html {
+  font-size: 7px;
+  @media #{$from-medium-resolutions} {font-size: 10px;}
+  @media #{$from-fhd-resolutions} {font-size: 20px;}
+}
+
+// change font size units base
+body {
+  @media #{$from-fhd-resolutions} {font-size: 24px;}
+}
+
+img {
+  max-width: 100%;
+}
+
+// let container to be wider to match the new scale
+.container {
+  @media #{$from-fhd-resolutions} {
+    max-width: $space*117;
+    width: 100%;
+  }
+}
+
+.container-fluid {
+  @media #{$from-medium-resolutions} {
+    // gives extra gutter on the edges of the screen;
+    padding-left: $space*4;
+    padding-right: $space*4;
+  }
+}
+
 .material-background {
   @extend %material-background;
 }

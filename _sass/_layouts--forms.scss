@@ -2,7 +2,6 @@ $color--form-font:                               $aluminium;
 
 .form-group {
   color: $color--form-font;
-  padding-right: 45px; // anough space for bullet
   position: relative;
 
   &.has-error {
@@ -13,14 +12,30 @@ $color--form-font:                               $aluminium;
     }
   }
 
-  &.has-form-bullet::after {
-    content: '\25CF';
-    display: block;
-    font-size: 175%; // bullet diameter 25px;
-    position: absolute;
-    right: 0;
-    top: $padding-large-vertical;
-    line-height: 1;
+  &.has-form-bullet {
+    .form-control-bullet {
+      display: none;
+    }
+
+    @media #{$from-small-resolutions} {
+      padding-right: 45px; // anough space for bullet
+
+      .form-control-bullet {
+        display: block;
+        font-size: 350%; // bullet diameter 25px;
+        position: absolute;
+        right: 0;
+        top: 7px;
+        line-height: 1;
+      }
+    }
+
+    @media #{$from-medium-resolutions} {
+      .form-control-bullet {
+        font-size: 250%; // bullet diameter 25px;
+      }
+    }
+
   }
 
   .form-control {
