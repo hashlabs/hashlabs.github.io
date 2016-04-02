@@ -41,7 +41,8 @@ html {
 
 // change font size units base
 body {
-  @media #{$from-fhd-resolutions} {font-size: 24px;}
+  @media #{$just-small-resolutions} {font-size: 14px;}
+  @media #{$from-fhd-resolutions} {font-size: 38px;}
 }
 
 img {
