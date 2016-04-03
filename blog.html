@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="view-about-hero valign">
+  <div class="vobject text-center">
+    <h1 class="leadtext">
+      Sharing what we've learned
+    </h1>
+  </div>
+</div>
+
+<section class="container">
+  <ul class="blog-feed">
+    {% for post in site.posts %}
+      <li class="blog-post-preview">
+        <div class="crew-avatar">
+          <img class="avatar-picture" src="/images/{{ post.author | slugify }}_small.jpg" alt="{{ post.author }}" />
+        </div>
+        <div class="content">
+          <a href="{{ post.url }}" class="post-excerpt">
+            <h2 class="post-title">{{ post.title }}</h2>
+            {% if post.brief %}
+              <p>{{ post.brief }}</p>
+            {% else %}
+              {{ post.excerpt }}
+            {% endif %}
+          </a>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
