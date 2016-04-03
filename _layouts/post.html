@@ -1,15 +1,49 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+<div class="view-post-hero valign" style="background: url({{ page.cover }}); background-size: cover; background-position: center;">
+  <div class="vobject text-center">
+    <h1 class="leadtext" itemprop="name headline">{{ page.title }}</h1>
+    <div class="crew-avatar post-meta-avatar">
+      <img class="avatar-picture" src="/images/{{ page.author | slugify }}_small.jpg" alt="{{ page.author }}" />
+    </div>
+    <p class="post-meta">
+      {% if page.author %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">{{ page.author }}</span>
+        </span>
+      {% endif %}
+      on
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign d = page.date | date: "%-d" %}
+        {% assign m = page.date | date: "%B" %}
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+        {% case m %}
+          {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+          {% when 'September' %}Sept.
+          {% else %}{{ page.date | date: "%b" }}.
+          {% endcase %}
+        {% case d %}
+          {% when '1' or '21' or '31' %}{{ d }}st
+          {% when '2' or '22' %}{{ d }}nd
+          {% when '3' or '23' %}{{ d }}rd
+          {% else %}{{ d }}th
+          {% endcase %},
+        {{ page.date | date: "%Y" }}
+      </time>
+    </p>
   </div>
+</div>
 
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post-content" itemprop="articleBody">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
 </article>

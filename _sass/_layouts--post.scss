@@ -1,0 +1,29 @@
+.view-post-hero {
+  @extend %view-hero-small;
+
+  &::before {
+    @extend %hero-black-orange;
+  }
+}
+
+.post-content {
+  margin-top: $space*5;
+
+  @media #{$from-small-resolutions} {
+    margin-top: $space*10;
+  }
+}
+
+.post-meta {
+  color: $color--base;
+  display: inline-block;
+  position: relative;
+
+  &-avatar {
+    display: inline-block;
+    height: $space*5;
+    margin-right: $space*1.25;
+    position: relative;
+    width: $space*5;
+  }
+}
