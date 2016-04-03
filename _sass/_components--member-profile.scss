@@ -2,7 +2,7 @@
   color: $color--base;
   position: relative;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 
   .member-info {
     bottom: 2.5rem;
@@ -15,6 +15,16 @@
     color: $color--base;
     font-size: 200%;
     font-weight: $font-weight-bold;
+  }
+
+  @media #{$just-small-resolutions} {
+    .name {
+      font-size: 150%;
+    }
+
+    .location {
+      font-size: 100%;
+    }
   }
 
   .brief {
