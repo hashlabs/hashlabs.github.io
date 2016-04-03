@@ -12,6 +12,14 @@ $color--form-font:                               $aluminium;
     }
   }
 
+  &.has-success {
+    &,
+    .form-control {
+      color: $color--success;
+      border-color: $color--success;
+    }
+  }
+
   &.has-form-bullet {
     .form-control-bullet {
       display: none;
@@ -25,8 +33,8 @@ $color--form-font:                               $aluminium;
         font-size: 350%; // bullet diameter 25px;
         position: absolute;
         right: 0;
-        top: 7px;
-        line-height: 1;
+        top: 24px;
+        line-height: 0;
       }
     }
 
@@ -36,10 +44,20 @@ $color--form-font:                               $aluminium;
       }
     }
 
+    @media #{$from-fhd-resolutions} {
+      .form-control-bullet {
+        font-size: 175%; // bullet diameter 25px;
+      }
+    }
+
   }
 
   .form-control {
     color: $color--base;
+
+    &:focus + .form-control-bullet {
+      color: $color--accent;
+    }
   }
 }
 
@@ -57,24 +75,8 @@ textarea {
   outline: none !important;
 }
 
-.radio-inline {
-  input {
-    position: absolute;
-    top: .25em;
-  }
-
-  & + .radio-inline {
-    margin-left: $space*4;
-  }
-
-  .radio-text {
-    padding-left: $space*.5;
-  }
-}
-
 .form-submit {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  width: 325px;
 }
