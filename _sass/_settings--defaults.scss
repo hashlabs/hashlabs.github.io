@@ -25,6 +25,8 @@
 // defaults
 // -----------------------------------------------------------------------------
 
+  $container-fluid-gutter:                       $space*4; // used just form medium resolutions
+
   $default-speed-transition:                     .216s;
   $modernizr-no-touch-class:                     '.no-touch';
   $modernizr-touch-class:                        '.touch';

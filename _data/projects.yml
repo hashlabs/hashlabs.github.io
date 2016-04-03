@@ -1,0 +1,9 @@
+- name: Yummly
+  city: Redwood City, CA
+  description: Needed a site for his brand new iOS application, we took the job and delivered it.
+  image: /images/yummly_cabinet.png
+
+- name: Real Scout
+  city: Redwood City, CA
+  description: Needed a site for his brand new iOS application, we took the job and delivered it.
+  image: /images/realscout_cabinet.png

@@ -1,6 +1,6 @@
 .project-media {
   display: block;
-  margin: $space*5 auto;
+  margin: 0 auto $space*5 auto;
 }
 
 .project-location,
@@ -9,15 +9,19 @@
 }
 
 .project-description {
+  max-width: 100%;
+  margin: 0 auto;
   padding-bottom: $space*10;
   padding-top: $space*10;
-
-  &:not(.tertiary-background) .leadtext {
-    color: $color--accent;
-  }
+  width: $space*117;
 
   .leadtext {
+    margin-top: 0;
     margin-bottom: $space*6;
+  }
+
+  .container-fluid:not(.tertiary-background) & .leadtext {
+    color: $color--accent;
   }
 }
 
