@@ -117,3 +117,31 @@ $properties: ('top', 'right', 'left', 'bottom');
     }
   }
 }
+
+.lapse-one {
+  @include lapse-delay(0.5s);
+}
+
+.lapse-two {
+  @include lapse-delay(1s);
+}
+
+.lapse-three {
+  @include lapse-delay(1.5s);
+}
+
+.lapse-four {
+  @include lapse-delay(2s);
+}
+
+.lapse-five {
+  @include lapse-delay(2.5s);
+}
+
+.lapse-six {
+  @include lapse-delay(3s);
+}
+
+.lapse-seven {
+  @include lapse-delay(3.5s);
+}
