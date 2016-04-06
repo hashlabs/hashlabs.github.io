@@ -1,6 +1,1 @@
-wow = new WOW(
-  {
-    offset: 150
-  }
-);
-wow.init();
+new WOW().init();
