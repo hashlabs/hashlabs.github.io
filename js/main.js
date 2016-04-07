@@ -67,7 +67,7 @@ $(window).scroll(function() {
   }
 });
 // shows/hides navigation’s popover if class "expanded"
-$('.mobile--toggle').on('click touchstart', function(event) {
+$('.mobile-toggle').on('click touchstart', function(event) {
   showHideNav();
   event.preventDefault();
 });
@@ -113,3 +113,24 @@ $('body').keydown(function(e) {
   }
 
 });
+
+/* function to show animation in menu button*/
+(function() {
+
+  "use strict";
+
+  var toggles = document.querySelectorAll('.mobile-toggle');
+
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  }
+
+  function toggleHandler(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      (this.classList.contains('is-active') === true) ? this.classList.remove('is-active') : this.classList.add('is-active');
+    });
+  }
+  
+})();
