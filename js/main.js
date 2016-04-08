@@ -24,9 +24,11 @@ $(function(){
   });
 
 
+/****************** function for menu hide and show ***************************/
+
 var previousScroll = 0, // previous scroll position
-menuOffset = 54, // height of menu (once scroll passed it, menu is hidden)
-detachPoint = 650, // point of detach (after scroll passed it, menu is fixed)
+menuOffset = 50, // height of menu (once scroll passed it, menu is hidden)
+detachPoint = 560, // point of detach (after scroll passed it, menu is fixed)
 hideShowOffset = 6; // scrolling value after which triggers hide/show menu
 // on scroll hide/show menu
 $(window).scroll(function() {
@@ -86,16 +88,16 @@ function showHideNav() {
 // shows the navigation’s popover
 function showNav() {
   $('#site-nav').removeClass('invisible').addClass('expanded');
+  $('.mobile-toggle').addClass('is-active'); // menu toggle animation to X
   window.setTimeout(function(){$('body').addClass('no_scroll');}, 200); // Firefox hack. Hides scrollbar as soon as menu animation is done
-  $('#site-nav-mobile a').attr('tabindex', ''); // links inside navigation should be TAB selectable
-}
+  }
 // hides the navigation’s popover
 function hideNav() {
   window.setTimeout(function(){$('body').removeClass();}, 10); // allow animations to start before removing class (Firefox)
   $('#site-nav').removeClass('expanded');
-  $('#site-nav-mobile a').attr('tabindex', '-1'); // links inside hidden navigation should not be TAB selectable
-  $('.icon').blur(); // deselect icon when navigation is hidden
+  $('.mobile-toggle').removeClass('is-active'); // menu toggle animation to burger icon
 }
+
 // keyboard shortcuts
 $('body').keydown(function(e) {
   // menu accessible via TAB as well
@@ -132,5 +134,5 @@ $('body').keydown(function(e) {
       (this.classList.contains('is-active') === true) ? this.classList.remove('is-active') : this.classList.add('is-active');
     });
   }
-  
+
 })();
