@@ -1,10 +1,14 @@
-/* when navigation is shown, don’t allow scrolling of content */
+$size--site-nav-height:                                12rem;
+$color--branding-text:                                 $white;
+$color--branding-text-hover:                           #d9d9d9;
+
+// when navigation is shown, don’t allow scrolling of content
 body.no_scroll {
   overflow: hidden;
   height: 100%;
 }
 
-/* Firefox fix for overflow: hidden. Scroll bar is hidden and moves everything to the right */
+// Firefox fix for overflow: hidden. Scroll bar is hidden and moves everything to the right
 @-moz-document url-prefix() {
   body.no_scroll {
     /*margin-right: 23px;*/
@@ -16,31 +20,7 @@ body.no_scroll {
   }
 }
 
-/* === TOP MENU LAYOUT === */
-/* ======================= */
-
-#site-nav {
-  //color: #333;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 16rem; /* smaller height because font is smaller */
-  right: 0;
-  z-index: 1000;
-  overflow: hidden;
-  -webkit-transform: translate(0,0);
-  -moz-transform: translate(0,0);
-  -o-transform: translate(0,0);
-  transform: translate(0,0);
-  -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
-  -moz-transition: -moz-transform .4s, height .3s, background .4s;
-  transition: transform .4s, height .3s, background .4s;
-  -webkit-animation: firstFadeInAndDrop .5s;
-  -moz-animation: firstFadeInAndDrop .5s;
-  animation: firstFadeInAndDrop .5s;
-}
-
-/* on intial load fade in the menu */
+// on intial load fade in the menu
 @-webkit-keyframes firstFadeInAndDrop {
   0%   {-webkit-transform: translate(0,-54px);}
   100% {-webkit-transform: translate(0,0);}
@@ -56,151 +36,143 @@ body.no_scroll {
   100% {transform: translate(0,0);}
 }
 
-/* limits width of menu to site width */
-.site-width {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 2%;
-}
+// === TOP MENU LAYOUT ===
+// =======================
 
-/* name of site in main menu (not user selectable) */
-.site-width>a {
-  font-weight: bold;
-  color: #555;
-  line-height: 1.9em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-/* when hidden it goes up */
-#site-nav.invisible {
-  -webkit-transform: translate(0,-64px);
-  -moz-transform: translate(0,-64px);
-  -o-transform: translate(0,-64px);
-  transform: translate(0,-64px);
-  -webkit-transition: -webkit-transform .2s;
-  -moz-transition: -moz-transform .2s;
-  -o-transition: -o-transform .2s;
-  transition: transform .2s;
-  opacity: 0;
-}
-
-/* when shown & detached position is fixed */
-#site-nav.detached {
-  position: fixed;
-  background: rgba(255,88,36,.9);
-  -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
-  -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
-  -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
-  transition: transform .3s, height .3s, background .4s, opacity .3s;
-}
-
-/* === MENU NAVIGATION === */
-/* ======================= */
-
-/* increases menu width & height */
-#site-nav.expanded {
+#site-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 100%;
-  height: 100%;
-  position: fixed;
-  cursor: default;
-  background: rgba(255,88,36,.85);
+  height: $size--site-nav-height;
+  z-index: 2;
+  overflow: hidden;
+
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+
+  -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
+  -moz-transition: -moz-transform .4s, height .3s, background .4s;
+  transition: transform .4s, height .3s, background .4s;
+
+  -webkit-animation: firstFadeInAndDrop .5s;
+  -moz-animation: firstFadeInAndDrop .5s;
+  animation: firstFadeInAndDrop .5s;
+
+  // when hidden it goes up
+  &.invisible {
+    -webkit-transform: translate(0,-64px);
+    -moz-transform: translate(0,-64px);
+    -o-transform: translate(0,-64px);
+    transform: translate(0,-64px);
+
+    -webkit-transition: -webkit-transform .2s;
+    -moz-transition: -moz-transform .2s;
+    -o-transition: -o-transform .2s;
+    transition: transform .2s;
+
+    opacity: 0;
+  }
+
+  // when shown & detached position is fixed
+  &.detached {
+    position: fixed;
+    background: rgba(255,88,36,.80);
+
+    -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
+    -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
+    -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
+    transition: transform .3s, height .3s, background .4s, opacity .3s;
+
+    // small header
+    & .site-header {
+      padding-top: $grid-gutter-width/2;
+    }
+  }
+
+  // increases menu width & height
+  &.expanded {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    cursor: default;
+    background: rgba(255,88,36,.90);
+  }
 }
 
-/* positions navigation content */
+// === MENU NAVIGATION ===
+// positions navigation content
 #site-nav-mobile {
   -webkit-transform: translate(0,-700px);
   -moz-transform: translate(0,-700px);
   -o-transform: translate(0,-700px);
   transform: translate(0,-700px);
+
   opacity: 0;
-  //padding-top: 1rem;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
+  padding-top: $size--site-nav-height;
+
   -webkit-transition: -webkit-transform .15s, opacity .7s;
   -moz-transition: -moz-transform .15s, opacity .7s;
   -o-transition: -o-transform .15s, opacity .7s;
   transition: transform .15s, opacity .7s;
 }
 
-/* shows navigation */
+// shows navigation
 #site-nav.expanded #site-nav-mobile {
-  -webkit-transform: translate(0,0); /* hardware acceleration */
+  -webkit-transform: translate(0,0);
   -moz-transform: translate(0,0);
   -o-transform: translate(0,0);
   transform: translate(0,0);
+
   opacity: 1;
 }
 
+// === MENU NAVIGATION CONTENT === */
+// =============================== */
 
-/* === MENU NAVIGATION CONTENT === */
-/* =============================== */
+.site-nav-mobile {
+  height: 100%;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  //hidde scroll bar
+  margin-right: -20px;
+  padding-right: 20px;
+  overflow: auto;
 
-/* adds vertical spacing between menu links
-#site-nav-mobile ul li {
-  padding: 1em 0;
+  &-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-link {
+    display: block;
+    padding:  0;
+
+    & > a {
+      display: inline-block;
+    }
+
+    & > a:hover &__text,
+    & > a:hover &__info {
+      color: $color--branding-text-hover;
+    }
+
+    &__text,
+    &__info {
+      color: $color--branding-text;
+      @include simple-transition();
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
 }
-
-/* makes link font bigger
-#site-nav-mobile ul a {
-  font-size: 1.8em;
-  font-weight: bold;
-  padding: 0 15%;
-}
-
-/* subheading span styling
-#site-nav-mobile ul span {
-  font-family: Georgia, serif;
-  font-size: .75em;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: #666;
-  display: block;
-}
-
-/* === MENU ICONS === */
-/* ================== */
-
-/* adds padding to icons */
-/*
-.icon {
-  padding: 2% 3%;
-  margin: -2% -3%;
-  cursor: pointer;
-  float: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-/* hides extra text of icon (accessibility) *//*
-.icon span {
-  display: none;
-}
-
-/* on focus, don’t show outline *//*
-.icon:focus {
-  outline: none;
-}
-
-/* icon colour *//*
-.icon:before, .icon:active:before {
-  color: #2ecc71;
-}
-
-/* changes colour on hover or keyboard focus *//*
-.icon:hover:before, .icon:focus:before {
-  color: #555;
-}
-
-/* changes icon to an “X” *//*
-.expanded .icon:before {
-  content: 'x';
-  font-size: 1.4em;
-  line-height: 1.4em;
-  padding-right: .15em;
-*/
