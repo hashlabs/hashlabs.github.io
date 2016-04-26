@@ -20,22 +20,6 @@ body.no_scroll {
   }
 }
 
-// on intial load fade in the menu
-@-webkit-keyframes firstFadeInAndDrop {
-  0%   {-webkit-transform: translate(0,-54px);}
-  100% {-webkit-transform: translate(0,0);}
-}
-
-@-moz-keyframes firstFadeInAndDrop {
-  0%   {-moz-transform: translate(0,-54px);}
-  100% {-moz-transform: translate(0,0);}
-}
-
-@keyframes firstFadeInAndDrop {
-  0%   {transform: translate(0,-54px);}
-  100% {transform: translate(0,0);}
-}
-
 // === TOP MENU LAYOUT ===
 // =======================
 
@@ -48,35 +32,28 @@ body.no_scroll {
   z-index: 2;
   overflow: hidden;
 
-  -webkit-animation: slideOutUp .5s;
-  -moz-animation: slideOutUp .5s;
-  animation: slideOutUp .5s;
-
+  &.animated {
+    animation-duration: .6s;
+  }
    // when hidden it goes up
   &.invisible {
-    position: fixed;
     background: rgba(255, 88, 36, .80);
-
-    -webkit-animation-name: slideOutUp;
-    -moz-animation-name: slideOutUp;
-    animation-name: slideOutUp;
+    opacity: 0;
   }
 
-  // when shown & detached position is fixed
-  &.detached,
-  &.fixed {
+  &.not-top {
     position: fixed;
-    background: rgba(255,88,36,.80);
+  }
 
+  &.fixed {
     -webkit-animation-name: slideInDown;
     -moz-animation-name: slideInDown;
     animation-name: slideInDown;
+  }
 
-    opacity: 1;
-    // small header
-    & .site-header {
-      padding-top: $grid-gutter-width/2;
-    }
+  &.slideInDown,
+  &.slideOutUp {
+    background: rgba(255, 88, 36, .80);
   }
 
   &.default {
