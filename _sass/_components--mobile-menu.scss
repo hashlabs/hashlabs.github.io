@@ -77,7 +77,8 @@ body.no_scroll {
   }
 
   // when shown & detached position is fixed
-  &.detached {
+  &.detached,
+  &.fixed {
     position: fixed;
     background: rgba(255,88,36,.80);
 
@@ -86,10 +87,15 @@ body.no_scroll {
     -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
     transition: transform .3s, height .3s, background .4s, opacity .3s;
 
+    opacity: 1;
     // small header
     & .site-header {
       padding-top: $grid-gutter-width/2;
     }
+  }
+
+  &.default {
+    background: transparent;
   }
 
   // increases menu width & height
@@ -100,6 +106,8 @@ body.no_scroll {
     cursor: default;
     background: rgba(255,88,36,.90);
   }
+
+
 }
 
 // === MENU NAVIGATION ===
