@@ -22,7 +22,7 @@ $(function(){
     // either html or text
     contentType: 'html',
   });
-
+});
 
 /****************** function for menu hide and show **************************
 */
@@ -32,7 +32,9 @@ var myElement = document.querySelector("#site-nav");
 var headroom  = new Headroom(myElement, {
     offset: menuOffset,
     classes: {
+      initial: "animated",
       pinned: "detached", // scrolling up
+      unpinned: "invisible", // scrolling down
       bottom: "fixed", // bottom of the page
       top: "default" // top of the page
     }
@@ -61,7 +63,7 @@ function showNav() {
   $('#site-nav').addClass('expanded');
   $('.mobile-toggle').addClass('is-active'); // menu toggle animation to X
   $('body').addClass('no_scroll');
-  }
+}
 // hides the navigation’s popover
 function hideNav() {
   $('#site-nav').removeClass('expanded');

@@ -48,32 +48,18 @@ body.no_scroll {
   z-index: 2;
   overflow: hidden;
 
-  -webkit-transform: translate(0,0);
-  -moz-transform: translate(0,0);
-  -o-transform: translate(0,0);
-  transform: translate(0,0);
+  -webkit-animation: slideOutUp .5s;
+  -moz-animation: slideOutUp .5s;
+  animation: slideOutUp .5s;
 
-  -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
-  -moz-transition: -moz-transform .4s, height .3s, background .4s;
-  transition: transform .4s, height .3s, background .4s;
-
-  -webkit-animation: firstFadeInAndDrop .5s;
-  -moz-animation: firstFadeInAndDrop .5s;
-  animation: firstFadeInAndDrop .5s;
-
-  // when hidden it goes up
+   // when hidden it goes up
   &.invisible {
-    -webkit-transform: translate(0,-64px);
-    -moz-transform: translate(0,-64px);
-    -o-transform: translate(0,-64px);
-    transform: translate(0,-64px);
+    position: fixed;
+    background: rgba(255, 88, 36, .80);
 
-    -webkit-transition: -webkit-transform .2s;
-    -moz-transition: -moz-transform .2s;
-    -o-transition: -o-transform .2s;
-    transition: transform .2s;
-
-    opacity: 0;
+    -webkit-animation-name: slideOutUp;
+    -moz-animation-name: slideOutUp;
+    animation-name: slideOutUp;
   }
 
   // when shown & detached position is fixed
@@ -82,10 +68,9 @@ body.no_scroll {
     position: fixed;
     background: rgba(255,88,36,.80);
 
-    -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
-    -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
-    -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
-    transition: transform .3s, height .3s, background .4s, opacity .3s;
+    -webkit-animation-name: slideInDown;
+    -moz-animation-name: slideInDown;
+    animation-name: slideInDown;
 
     opacity: 1;
     // small header
@@ -106,8 +91,6 @@ body.no_scroll {
     cursor: default;
     background: rgba(255,88,36,.90);
   }
-
-
 }
 
 // === MENU NAVIGATION ===
