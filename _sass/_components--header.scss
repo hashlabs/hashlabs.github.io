@@ -5,12 +5,17 @@ $color--branding-text:                           $white;
 .site-header {
   font-size: $size--header-font;
   left: 0;
-  padding-bottom: $grid-gutter-width;
-  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width-half;
+  padding-top: $grid-gutter-width-half;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 1;
+
+  @media #{$from-medium-resolutions} {
+    padding-bottom: $grid-gutter-width;
+    padding-top: $grid-gutter-width;
+  }
 
   body.alternative & {
     background-color: $color--tertiary;

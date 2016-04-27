@@ -1,4 +1,5 @@
-$size--site-nav-height:                                12rem;
+$size--site-nav-height-mobile:                         12rem;
+$size--site-nav-height-desktop:                        14rem;
 $color--branding-text:                                 $white;
 $color--branding-text-hover:                           #d9d9d9;
 
@@ -28,9 +29,13 @@ body.no_scroll {
   top: 0;
   right: 0;
   width: 100%;
-  height: $size--site-nav-height;
+  height: $size--site-nav-height-mobile;
   z-index: 2;
   overflow: hidden;
+
+  @media #{$from-medium-resolutions} {
+    height: $size--site-nav-height-desktop;
+  }
 
   &.animated {
     animation-duration: .6s;
@@ -41,22 +46,24 @@ body.no_scroll {
     opacity: 0;
   }
 
-  &.not-top {
+  &.site-nav-not-top {
+    background: rgba(255, 88, 36, .80);
     position: fixed;
   }
 
-  &.fixed {
+  &.site-nav-bottom {
     -webkit-animation-name: slideInDown;
     -moz-animation-name: slideInDown;
     animation-name: slideInDown;
   }
 
+/*
   &.slideInDown,
   &.slideOutUp {
     background: rgba(255, 88, 36, .80);
   }
-
-  &.default {
+*/
+  &.site-nav-top {
     background: transparent;
   }
 
@@ -84,7 +91,7 @@ body.no_scroll {
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
-  padding-top: $size--site-nav-height;
+  padding-top: $size--site-nav-height-mobile;
 
   -webkit-transition: -webkit-transform .15s, opacity .7s;
   -moz-transition: -moz-transform .15s, opacity .7s;

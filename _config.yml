@@ -26,3 +26,5 @@ markdown: kramdown
 sass:
   style: compressed
   sass_dir: _sass
+
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']

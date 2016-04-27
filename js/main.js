@@ -20,9 +20,9 @@ $(document).ready(function () {
     classes: {
       pinned: "slideInDown",
       unpinned: "slideOutUp",
-      bottom: "fixed",
-      top: "default",
-      notTop: "not-top"
+      bottom: "site-nav-bottom",
+      top: "site-nav-top",
+      notTop: "site-nav-not-top"
     },
     tolerance: 3
   });
