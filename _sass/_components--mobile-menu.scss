@@ -20,7 +20,6 @@ body.no_scroll {
   width: 100%;
   height: $size--site-nav-height;
   z-index: 2;
-  overflow: hidden;
 
   @media #{$from-medium-resolutions} {
     height: $size--site-nav-height-desktop;
@@ -33,15 +32,15 @@ body.no_scroll {
   // when shown & detached position is fixed
   &.header-detached {
     position: fixed;
-    background: rgba(255,88,36,.80);
 
     -webkit-animation-name: slideInDown;
     -moz-animation-name: slideInDown;
     animation-name: slideInDown;
 
-    // small header
+    // Small and color site-header
     & .site-header {
       padding-top: $grid-gutter-width/2;
+      background: rgba(255,88,36,.90);
     }
   }
 
@@ -51,48 +50,33 @@ body.no_scroll {
     -moz-animation-name: slideOutUp;
     animation-name: slideOutUp;
   }
-
-  // increases menu width & height
-  &.expanded {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    cursor: default;
-    background: rgba(255,88,36,.90);
-  }
 }
-
 
 // === MENU NAVIGATION ===
 // positions navigation content
 #site-nav-mobile {
-  -webkit-transform: translate(0,-700px);
-  -moz-transform: translate(0,-700px);
-  -o-transform: translate(0,-700px);
-  transform: translate(0,-700px);
+  -webkit-animation-name: fadeOutUp;
+  -moz-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
 
-  opacity: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
   padding-top: $size--site-nav-height-mobile;
+  background: rgba(255,88,36,1);
 
-  -webkit-transition: -webkit-transform .15s, opacity .7s;
-  -moz-transition: -moz-transform .15s, opacity .7s;
-  -o-transition: -o-transform .15s, opacity .7s;
-  transition: transform .15s, opacity .7s;
+  &.animated {
+    animation-duration: .416s;
+  }
 }
 
 // shows navigation
 #site-nav.expanded #site-nav-mobile {
-  -webkit-transform: translate(0,0);
-  -moz-transform: translate(0,0);
-  -o-transform: translate(0,0);
-  transform: translate(0,0);
-
-  opacity: 1;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }
 
 // === MENU NAVIGATION CONTENT === */
