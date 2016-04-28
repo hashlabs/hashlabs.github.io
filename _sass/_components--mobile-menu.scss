@@ -3,6 +3,8 @@ $size--site-nav-height-desktop:          10.5rem;
 $size--site-nav-height:                  $size--site-nav-height-mobile;
 $color--branding-text:                   $white;
 $color--branding-text-hover:             #d9d9d9;
+$color--layout-default-background:       $color--accent;
+$color--layout-alternative-background:   $color--tertiary;
 
 // when navigation is shown, don’t allow scrolling of content
 body.no_scroll {
@@ -19,7 +21,7 @@ body.no_scroll {
   right: 0;
   width: 100%;
   height: $size--site-nav-height;
-  z-index: 2;
+  z-index: 5;
 
   @media #{$from-medium-resolutions} {
     height: $size--site-nav-height-desktop;
@@ -40,7 +42,6 @@ body.no_scroll {
     // Small and color site-header
     & .site-header {
       padding-top: $grid-gutter-width/2;
-      background: rgba(255,88,36,.90);
     }
   }
 
@@ -65,7 +66,6 @@ body.no_scroll {
   text-align: center;
   overflow: hidden;
   padding-top: $size--site-nav-height-mobile;
-  background: rgba(255,88,36,1);
 
   &.animated {
     animation-duration: .416s;
@@ -77,6 +77,23 @@ body.no_scroll {
   -webkit-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
   animation-name: fadeInDown;
+}
+
+// Background on .site-header and #site-nav-mobile
+#site-nav.header-detached .site-header {
+  @include background-opacity($color--layout-default-background, 0.9);
+
+  .alternative & {
+    @include background-opacity($color--layout-alternative-background, 0.9);
+  }
+}
+
+#site-nav-mobile {
+  background: $color--layout-default-background;
+
+  .alternative & {
+    background: $color--layout-alternative-background;
+  }
 }
 
 // === MENU NAVIGATION CONTENT === */
