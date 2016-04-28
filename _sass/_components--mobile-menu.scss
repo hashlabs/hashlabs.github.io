@@ -22,6 +22,7 @@ body.no_scroll {
   width: 100%;
   height: $size--site-nav-height;
   z-index: 5;
+  overflow: hidden;
 
   @media #{$from-medium-resolutions} {
     height: $size--site-nav-height-desktop;
@@ -53,6 +54,7 @@ body.no_scroll {
     -moz-animation-name: slideOutUp;
     animation-name: slideOutUp;
 
+    // fixes high speed scrolling bug
     opacity: 0;
   }
 }
@@ -60,31 +62,33 @@ body.no_scroll {
 // === MENU NAVIGATION ===
 // positions navigation content
 #site-nav-mobile {
-  opacity: 0;
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  overflow: hidden;
+  height: 100%;
   padding-top: $size--site-nav-height-mobile;
+  background: rgba(226,61,40,.97);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all .5s;
+  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
+  z-index: 4;
 
   &.animated {
     animation-duration: .416s;
   }
 }
 
-#site-nav-mobile.mobile-menu-hidden {
-  -webkit-animation-name: fadeOutUp;
-  -moz-animation-name: fadeOutUp;
-  animation-name: fadeOutUp;
-}
-
 // shows navigation
-#site-nav.expanded #site-nav-mobile {
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+#site-nav-mobile.expanded {
   opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 // Background on .site-header and #site-nav-mobile

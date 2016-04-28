@@ -40,7 +40,7 @@ $(document).ready(function () {
   });
 
   function showHideNav() {
-    if ($('#site-nav').hasClass('expanded')) {
+    if ($('#site-nav-mobile').hasClass('expanded')) {
       hideNav();
     } else {
       showNav();
@@ -48,15 +48,13 @@ $(document).ready(function () {
   }
 
   function showNav() {
-    $('#site-nav-mobile').removeClass('mobile-menu-hidden');
-    $('#site-nav').addClass('expanded');
+    $('#site-nav-mobile').addClass('expanded');
     $('.mobile-toggle').addClass('is-active');
     $('body').addClass('no_scroll');
   }
 
   function hideNav() {
-    $('#site-nav').removeClass('expanded');
-    $('#site-nav-mobile').addClass('mobile-menu-hidden');
+    $('#site-nav-mobile').removeClass('expanded');
     $('.mobile-toggle').removeClass('is-active');
     $('body').removeClass('no_scroll');
   }
