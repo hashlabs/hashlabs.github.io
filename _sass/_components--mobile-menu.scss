@@ -39,6 +39,8 @@ body.no_scroll {
     -moz-animation-name: slideInDown;
     animation-name: slideInDown;
 
+    transition: transform .216s,height .216s,background .316s,opacity .216s;
+
     // Small and color site-header
     & .site-header {
       padding-top: $grid-gutter-width/2;
@@ -50,6 +52,8 @@ body.no_scroll {
     -webkit-animation-name: slideOutUp;
     -moz-animation-name: slideOutUp;
     animation-name: slideOutUp;
+
+    opacity: 0;
   }
 }
 

@@ -17,10 +17,10 @@ $(document).ready(function () {
   var teehanNav  = new TeehanLax(navbarHeader, {
     menuOffset: 100,
     hideShowOffset: 6,
+    detachPoint: 500,
     classes: {
       detached: "header-detached",
-      hidden: "header-hidden",
-      expanded: "expanded"
+      hidden: "header-hidden"
     }
   });
 
