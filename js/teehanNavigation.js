@@ -90,9 +90,9 @@
     this.scroller = window;
     this.initialised = false;
     this.lastKnownScrollY = 0;
-    this.menuOffset = 100;
-    this.detachPoint = 500;
-    this.hideShowOffset = 6;
+    this.menuOffset = options.menuOffset;
+    this.detachPoint = options.detachPoint;
+    this.hideShowOffset = options.hideShowOffset;
   }
 
   TeehanLax.prototype = {
@@ -206,8 +206,7 @@
     hideShowOffset: 6,
     classes: {
       detached: "nav-detached",
-      hidden: "nav-hidden",
-      expanded: "nav-expanded"
+      hidden: "nav-hidden"
     }
   }
 

@@ -56,10 +56,7 @@ body.no_scroll {
 // === MENU NAVIGATION ===
 // positions navigation content
 #site-nav-mobile {
-  -webkit-animation-name: fadeOutUp;
-  -moz-animation-name: fadeOutUp;
-  animation-name: fadeOutUp;
-
+  opacity: 0;
   height: 100vh;
   width: 100%;
   margin: 0 auto;
@@ -72,11 +69,18 @@ body.no_scroll {
   }
 }
 
+#site-nav-mobile.mobile-menu-hidden {
+  -webkit-animation-name: fadeOutUp;
+  -moz-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
 // shows navigation
 #site-nav.expanded #site-nav-mobile {
   -webkit-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
   animation-name: fadeInDown;
+  opacity: 1;
 }
 
 // Background on .site-header and #site-nav-mobile

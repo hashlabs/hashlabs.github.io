@@ -15,6 +15,8 @@ $(document).ready(function () {
 
   var navbarHeader = $("#site-nav");
   var teehanNav  = new TeehanLax(navbarHeader, {
+    menuOffset: 100,
+    hideShowOffset: 6,
     classes: {
       detached: "header-detached",
       hidden: "header-hidden",
@@ -23,49 +25,6 @@ $(document).ready(function () {
   });
 
   teehanNav.init();
-
-  // var previousScroll = 0,
-  // menuOffset = 100,
-  // detachPoint = 560,
-  // hideShowOffset = 6;
-
-  // $(window).scroll(function() {
-  //   if (!$('#site-nav').hasClass('expanded')) {
-  //     var currentScroll = $(this).scrollTop(),
-  //     scrollDifference = Math.abs(currentScroll - previousScroll); //
-
-  //     if (currentScroll > menuOffset) {
-
-  //       if (currentScroll > detachPoint) {
-  //         if (!$('#site-nav').hasClass('header-detached'))
-  //         $('#site-nav').addClass('header-detached');
-  //       }
-
-  //       if (scrollDifference >= hideShowOffset) {
-  //         if (currentScroll > previousScroll) {
-
-  //           if (!$('#site-nav').hasClass('header-hidden'))
-  //           $('#site-nav').addClass('header-hidden');
-  //         } else {
-
-  //           if ($('#site-nav').hasClass('header-hidden'))
-  //           $('#site-nav').removeClass('header-hidden');
-  //         }
-  //       }
-  //     } else {
-
-  //       if (currentScroll <= 0){
-  //         $('#site-nav').removeClass("header-hidden header-detached");
-  //       }
-  //     }
-
-  //     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-  //       $('#site-nav').removeClass('header-hidden');
-  //     }
-
-  //     previousScroll = currentScroll;
-  //   }
-  // });
 
   $('.mobile-toggle').on('click touchstart', function(event) {
     showHideNav();
@@ -85,6 +44,7 @@ $(document).ready(function () {
   }
 
   function showNav() {
+    $('#site-nav-mobile').removeClass('mobile-menu-hidden');
     $('#site-nav').addClass('expanded');
     $('.mobile-toggle').addClass('is-active');
     $('body').addClass('no_scroll');
@@ -92,6 +52,7 @@ $(document).ready(function () {
 
   function hideNav() {
     $('#site-nav').removeClass('expanded');
+    $('#site-nav-mobile').addClass('mobile-menu-hidden');
     $('.mobile-toggle').removeClass('is-active');
     $('body').removeClass('no_scroll');
   }
