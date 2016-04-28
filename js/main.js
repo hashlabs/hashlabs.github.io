@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  $(window).on('beforeunload', function() {
+      $(window).scrollTop(0);
+  });
+
   new WOW().init();
 
   $("#typed").typed({
