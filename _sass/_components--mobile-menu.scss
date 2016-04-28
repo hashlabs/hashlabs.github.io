@@ -1,24 +1,13 @@
-$size--site-nav-height-mobile:                         12rem;
-$size--site-nav-height-desktop:                        14rem;
-$color--branding-text:                                 $white;
-$color--branding-text-hover:                           #d9d9d9;
+$size--site-nav-height-mobile:           12rem;
+$size--site-nav-height-desktop:          10.5rem;
+$size--site-nav-height:                  $size--site-nav-height-mobile;
+$color--branding-text:                   $white;
+$color--branding-text-hover:             #d9d9d9;
 
 // when navigation is shown, don’t allow scrolling of content
 body.no_scroll {
   overflow: hidden;
   height: 100%;
-}
-
-// Firefox fix for overflow: hidden. Scroll bar is hidden and moves everything to the right
-@-moz-document url-prefix() {
-  body.no_scroll {
-    /*margin-right: 23px;*/
-  }
-
-  body.no_scroll .expanded {
-    /*padding-right: 7px;*/
-    background: rgba(255,88,36,.98); /* because FF no blur, reduce bg transparency */
-  }
 }
 
 // === TOP MENU LAYOUT ===
@@ -29,7 +18,7 @@ body.no_scroll {
   top: 0;
   right: 0;
   width: 100%;
-  height: $size--site-nav-height-mobile;
+  height: $size--site-nav-height;
   z-index: 2;
   overflow: hidden;
 
@@ -38,33 +27,29 @@ body.no_scroll {
   }
 
   &.animated {
-    animation-duration: .6s;
-  }
-   // when hidden it goes up
-  &.invisible {
-    background: rgba(255, 88, 36, .80);
-    opacity: 0;
+    animation-duration: .216s;
   }
 
-  &.site-nav-not-top {
-    background: rgba(255, 88, 36, .80);
+  // when shown & detached position is fixed
+  &.header-detached {
     position: fixed;
-  }
+    background: rgba(255,88,36,.80);
 
-  &.site-nav-bottom {
     -webkit-animation-name: slideInDown;
     -moz-animation-name: slideInDown;
     animation-name: slideInDown;
+
+    // small header
+    & .site-header {
+      padding-top: $grid-gutter-width/2;
+    }
   }
 
-/*
-  &.slideInDown,
-  &.slideOutUp {
-    background: rgba(255, 88, 36, .80);
-  }
-*/
-  &.site-nav-top {
-    background: transparent;
+  // when hidden it goes up
+  &.header-hidden {
+    -webkit-animation-name: slideOutUp;
+    -moz-animation-name: slideOutUp;
+    animation-name: slideOutUp;
   }
 
   // increases menu width & height
@@ -76,6 +61,7 @@ body.no_scroll {
     background: rgba(255,88,36,.90);
   }
 }
+
 
 // === MENU NAVIGATION ===
 // positions navigation content
