@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.preload-image').preloadImage();
+  $('.preload-image').preloadImage(".section-lead-background");
 
   $(window).on('beforeunload', function() {
       $(window).scrollTop(0);
