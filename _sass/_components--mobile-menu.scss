@@ -1,4 +1,5 @@
 $size--site-nav-height-mobile:           12rem;
+$size--site-nav-height-alternative:      14rem;
 $size--site-nav-height-desktop:          10.5rem;
 $size--site-nav-height:                  $size--site-nav-height-mobile;
 $color--branding-text:                   $white;
@@ -26,6 +27,14 @@ body.no_scroll {
 
   @media #{$from-medium-resolutions} {
     height: $size--site-nav-height-desktop;
+
+    .alternative & {
+      height: $size--site-nav-height-alternative;
+
+      &.header-detached {
+        height: $size--site-nav-height-desktop;
+      }
+    }
   }
 
   &.animated {
@@ -68,7 +77,6 @@ body.no_scroll {
   width: 100%;
   height: 100%;
   padding-top: $size--site-nav-height-mobile;
-  background: rgba(226,61,40,.97);
   text-align: center;
   opacity: 0;
   visibility: hidden;
@@ -77,10 +85,6 @@ body.no_scroll {
   -webkit-transform: translate3d(0,-100%,0);
   transform: translate3d(0,-100%,0);
   z-index: 4;
-
-  &.animated {
-    animation-duration: .416s;
-  }
 }
 
 // shows navigation
@@ -97,6 +101,7 @@ body.no_scroll {
 
   .alternative & {
     @include background-opacity($color--layout-alternative-background, 0.9);
+
   }
 }
 
