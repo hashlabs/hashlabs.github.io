@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  $('.preload-image').preloadImage();
+
   $(window).on('beforeunload', function() {
       $(window).scrollTop(0);
   });
