@@ -1,4 +1,4 @@
-$size--header-height:                            $size--header-height;
+$size--header-height:                            55px;
 $size--header-font:                              85%;
 $color--branding-text:                           $white;
 
@@ -11,11 +11,7 @@ $color--branding-text:                           $white;
   top: 0;
   width: 100%;
   z-index: 1;
-
-  @media #{$from-medium-resolutions} {
-    padding-bottom: $grid-gutter-width;
-    padding-top: $grid-gutter-width;
-  }
+  transition: background .15s linear;
 
   body.alternative & {
     background-color: $color--tertiary;
@@ -27,24 +23,25 @@ $color--branding-text:                           $white;
   position: relative;
   white-space: nowrap;
 
-  img {
-    height: $size--header-height;
-  }
-
   .branding-text {
     font-size: 120%;
     bottom: 0;
     color: $color--branding-text;
     margin: 0;
     line-height: 1;
-    left: $size--header-height + $space;
     position: absolute;
+    left: $size--header-height + 20px;
   }
 }
 
+.header-branding img,
+.header-links, {
+  height: $size--header-height;
+}
+
+
 .header-links {
   float: right;
-  height: $size--header-height;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -54,6 +51,7 @@ $color--branding-text:                           $white;
     font-size: 100%;
     float: left;
     height: 100%;
+    line-height: 1;
 
     & + .header-link {
       padding-left: $space*2;
