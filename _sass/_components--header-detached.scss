@@ -8,7 +8,6 @@ $color--layout-alternative-background:   $color--tertiary;
 
 // === TOP MENU LAYOUT ===
 // =======================
-
 #site-nav {
   position: absolute;
   top: 0;
@@ -61,7 +60,7 @@ $color--layout-alternative-background:   $color--tertiary;
   }
 }
 
-// Background on .site-header and #site-nav-mobile
+// Background on .site-header
 #site-nav.header-detached .site-header {
   @include background-opacity($color--layout-default-background, 0.9);
 
