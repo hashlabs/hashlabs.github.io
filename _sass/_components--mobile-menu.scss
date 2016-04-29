@@ -1,72 +1,65 @@
-$size--site-nav-height-mobile:           12rem;
-$size--site-nav-height-alternative:      14rem;
-$size--site-nav-height-desktop:          10.5rem;
-$size--site-nav-height:                  $size--site-nav-height-mobile;
+$size--site-nav-mobile-padding-top:         $size--site-nav-height-mobile;
+// $size--site-nav-height-alternative:      14rem;
+// $size--site-nav-height-desktop:          10.5rem;
 $color--branding-text:                   $white;
 $color--branding-text-hover:             #d9d9d9;
 $color--layout-default-background:       $color--accent;
 $color--layout-alternative-background:   $color--tertiary;
 
-// when navigation is shown, don’t allow scrolling of content
-body.no_scroll {
-  overflow: hidden;
-  height: 100%;
-}
+// // === TOP MENU LAYOUT ===
+// // =======================
 
-// === TOP MENU LAYOUT ===
-// =======================
+// #site-nav {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   width: 100%;
+//   height: $size--site-nav-height-mobile;
+//   z-index: 5;
+//   overflow: hidden;
 
-#site-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: $size--site-nav-height;
-  z-index: 5;
-  overflow: hidden;
+//   @media #{$from-medium-resolutions} {
+//     height: $size--site-nav-height-desktop;
 
-  @media #{$from-medium-resolutions} {
-    height: $size--site-nav-height-desktop;
+//     .alternative & {
+//       height: $size--site-nav-height-alternative;
 
-    .alternative & {
-      height: $size--site-nav-height-alternative;
+//       &.header-detached {
+//         height: $size--site-nav-height-desktop;
+//       }
+//     }
+//   }
 
-      &.header-detached {
-        height: $size--site-nav-height-desktop;
-      }
-    }
-  }
+//   &.animated {
+//     animation-duration: .216s;
+//   }
 
-  &.animated {
-    animation-duration: .216s;
-  }
+//   // when shown & detached position is fixed
+//   &.header-detached {
+//     position: fixed;
 
-  // when shown & detached position is fixed
-  &.header-detached {
-    position: fixed;
+//     -webkit-animation-name: slideInDown;
+//     -moz-animation-name: slideInDown;
+//     animation-name: slideInDown;
 
-    -webkit-animation-name: slideInDown;
-    -moz-animation-name: slideInDown;
-    animation-name: slideInDown;
+//     transition: transform .216s,height .216s,background .316s,opacity .216s;
 
-    transition: transform .216s,height .216s,background .316s,opacity .216s;
+//     // Small and color site-header
+//     & .site-header {
+//       padding-top: $grid-gutter-width/2;
+//     }
+//   }
 
-    // Small and color site-header
-    & .site-header {
-      padding-top: $grid-gutter-width/2;
-    }
-  }
+//   // when hidden it goes up
+//   &.header-hidden {
+//     -webkit-animation-name: slideOutUp;
+//     -moz-animation-name: slideOutUp;
+//     animation-name: slideOutUp;
 
-  // when hidden it goes up
-  &.header-hidden {
-    -webkit-animation-name: slideOutUp;
-    -moz-animation-name: slideOutUp;
-    animation-name: slideOutUp;
-
-    // fixes high speed scrolling bug
-    opacity: 0;
-  }
-}
+//     // fixes high speed scrolling bug
+//     opacity: 0;
+//   }
+// }
 
 // === MENU NAVIGATION ===
 // positions navigation content
@@ -76,7 +69,7 @@ body.no_scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: $size--site-nav-height-mobile;
+  padding-top: $size--site-nav-mobile-padding-top;
   text-align: center;
   opacity: 0;
   visibility: hidden;
@@ -95,15 +88,15 @@ body.no_scroll {
   transform: translate3d(0,0,0);
 }
 
-// Background on .site-header and #site-nav-mobile
-#site-nav.header-detached .site-header {
-  @include background-opacity($color--layout-default-background, 0.9);
+// // Background on .site-header and #site-nav-mobile
+// #site-nav.header-detached .site-header {
+//   @include background-opacity($color--layout-default-background, 0.9);
 
-  .alternative & {
-    @include background-opacity($color--layout-alternative-background, 0.9);
+//   .alternative & {
+//     @include background-opacity($color--layout-alternative-background, 0.9);
 
-  }
-}
+//   }
+// }
 
 #site-nav-mobile {
   background: $color--layout-default-background;

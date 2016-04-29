@@ -145,3 +145,8 @@ $properties: ('top', 'right', 'left', 'bottom');
 .lapse-seven {
   @include lapse-delay(2.8s);
 }
+
+body.no_scroll {
+  overflow: hidden;
+  height: 100%;
+}
