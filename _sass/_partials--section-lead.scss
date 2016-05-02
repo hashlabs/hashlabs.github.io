@@ -1,8 +1,6 @@
 $rule--section-lead-background:                  'url(../images/hero_background.jpg)';
 
 .section-lead {
-  background: linear-gradient(-155deg, rgba(0,0,0,0.90) 30%, rgba(255,88,36,0.90) 100%);
-  opacity: 1;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: $space*50;
@@ -22,29 +20,48 @@ $rule--section-lead-background:                  'url(../images/hero_background.
   .section-wrapper {
     height: 100%;
   }
+
+  &::after {
+    z-index: -1;
+
+    content: '';
+    @extend %hero-black-orange;
+  }
+
+  &.img-loaded::before {
+      //background-image: #{$rule--section-lead-background};
+      transition: opacity .5s 1s linear;
+      opacity: 1;
+  }
+
+  &::before {
+    content: '';
+    @include overlay;
+    opacity: 0;
+  }
 }
 
 #typed-strings {
   display: none;
 }
 
-.section-lead-background-image {
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+// .section-lead-background-image {
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   display: block;
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
 
-.section-lead-background-image {
-  opacity: 0;
+// .section-lead-background-image {
+//   opacity: 0;
 
-  &.img-loaded {
-    background-image: #{$rule--section-lead-background};
-    transition: opacity .5s 1s linear;
-    opacity: 1;
-  }
-}
+//   &.img-loaded {
+//     background-image: #{$rule--section-lead-background};
+//     transition: opacity .5s 1s linear;
+//     opacity: 1;
+//   }
+// }

@@ -5,7 +5,9 @@ $(document).ready(function () {
 
   $.imgpreload(imagesToLoad, function()
   {
-      $('.preload-image').addClass('img-loaded');
+      $('.preload-image').css({
+        backgroundImage: "url(../images/hero_background.jpg)"
+      }).addClass('img-loaded');
   });
 
   $(window).on('beforeunload', function() {
