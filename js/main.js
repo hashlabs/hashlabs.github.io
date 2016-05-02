@@ -1,5 +1,12 @@
 $(document).ready(function () {
-  $('.preload-image').preloadImage(".section-lead-background");
+  var imagesToLoad = $.map($('.preload-image'), function(el) {
+       return $(el).data('img-src')
+  });
+
+  $.imgpreload(imagesToLoad, function()
+  {
+      $('.preload-image').addClass('img-loaded');
+  });
 
   $(window).on('beforeunload', function() {
       $(window).scrollTop(0);
@@ -61,3 +68,4 @@ $(document).ready(function () {
     $('body').removeClass('no_scroll');
   }
 });
+
