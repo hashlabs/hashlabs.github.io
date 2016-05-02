@@ -53,7 +53,7 @@ img {
 .container {
   @media #{$from-fhd-resolutions} {
     max-width: $space*117;
-    width: 100%;
+    width: $screens-fhd - $grid-gutter-width;
   }
 }
 
