@@ -6,8 +6,9 @@ Lab Coat is the www.hashlabs.com website.
 
 1. Make sure you have bundler installed (gem install bundler)
 2. `bundle install`
-3. `jekyll serve --watch` to serve and watch for changes
-4. run `jekyll build` when you want to build the site
+3. `rbenv rehash`
+4. `jekyll serve --watch` to serve and watch for changes
+5. run `jekyll build` when you want to build the site
 
 ## SASS
 

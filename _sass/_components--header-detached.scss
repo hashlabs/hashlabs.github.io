@@ -1,0 +1,62 @@
+$size--site-nav-height:               $size--header-height + $grid-gutter-width;
+$color--branding-text:                  $white;
+$color--branding-text-hover:            #d9d9d9;
+$color--layout-default-background:      $color--accent;
+$color--layout-alternative-background:  $color--tertiary;
+
+// === TOP MENU LAYOUT ===
+// =======================
+#site-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 5;
+  overflow: hidden;
+  height: $size--site-nav-height;
+
+  &.animated {
+    animation-duration: .216s;
+  }
+
+  // when shown & detached position is fixed
+  &.header-detached {
+    position: fixed;
+
+    -webkit-animation-name: slideInDown;
+    -moz-animation-name: slideInDown;
+    animation-name: slideInDown;
+
+    transition: transform .216s,height .216s,background .316s,opacity .216s;
+
+    // Small and color site-header
+    & .site-header {
+      padding-top: $grid-gutter-width/2;
+    }
+  }
+
+  // when hidden it goes up
+  &.header-hidden {
+    -webkit-animation-name: slideOutUp;
+    -moz-animation-name: slideOutUp;
+    animation-name: slideOutUp;
+
+    // fixes high speed scrolling bug
+    opacity: 0;
+  }
+}
+
+// Background on .site-header
+#site-nav.header-detached .site-header {
+  .default & {
+    @include background-opacity($color--layout-default-background, 0.9);
+    & .text-accent {
+      color: $white;
+    }
+  }
+
+  .alternative & {
+    @include background-opacity($color--layout-alternative-background, 0.9);
+
+  }
+}

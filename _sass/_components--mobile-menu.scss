@@ -1,0 +1,83 @@
+$size--site-nav-mobile-padding-top:         $size--site-nav-height;
+$color--branding-text:                   $white;
+$color--branding-text-hover:             #d9d9d9;
+$color--layout-default-background:       $color--accent;
+$color--layout-alternative-background:   $color--tertiary;
+
+// === MENU NAVIGATION ===
+// positions navigation content
+#site-nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: $size--site-nav-mobile-padding-top;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all .5s;
+  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
+  z-index: 4;
+}
+
+// shows navigation
+#site-nav-mobile.expanded {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+// Background on .site-nav-mobile
+#site-nav-mobile {
+  background: $color--layout-default-background;
+
+  .alternative & {
+    background: $color--layout-alternative-background;
+  }
+}
+
+// === MENU NAVIGATION CONTENT === */
+// =============================== */
+.site-nav-mobile {
+  height: 100%;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  //hidde scroll bar
+  margin-right: -20px;
+  padding-right: 20px;
+  overflow: auto;
+
+  &-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-link {
+    display: block;
+    padding:  0;
+
+    & > a {
+      display: inline-block;
+    }
+
+    & > a:hover &__text,
+    & > a:hover &__info {
+      color: $color--branding-text-hover;
+    }
+
+    &__text,
+    &__info {
+      color: $color--branding-text;
+      @include simple-transition();
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
+}
