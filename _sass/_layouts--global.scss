@@ -36,7 +36,7 @@ $rule--row-border:                               '2px solid #{$concrete}';
 html {
   font-size: 7px;
   @media #{$from-medium-resolutions} {font-size: 10px;}
-  @media #{$from-fhd-resolutions} {font-size: 20px;}
+  @media #{$from-fhd-resolutions} {font-size: 14px;}
 }
 
 // change font size units base
@@ -53,7 +53,7 @@ img {
 .container {
   @media #{$from-fhd-resolutions} {
     max-width: $space*117;
-    width: 100%;
+    width: $screens-fhd - $grid-gutter-width;
   }
 }
 

@@ -82,6 +82,10 @@
   .client-branding {
     margin-bottom: $space*4;
     padding-top: $space*25;
+
+    @media #{$from-fhd-resolutions} {
+      padding-top: $space*20;
+    }
   }
 
   .client-brief {
