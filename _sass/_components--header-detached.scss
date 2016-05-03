@@ -6,7 +6,7 @@ $color--layout-alternative-background:  $color--tertiary;
 
 // === TOP MENU LAYOUT ===
 // =======================
-#site-nav {
+.site-nav {
   position: absolute;
   top: 0;
   right: 0;
@@ -28,11 +28,6 @@ $color--layout-alternative-background:  $color--tertiary;
     animation-name: slideInDown;
 
     transition: transform .216s,height .216s,background .316s,opacity .216s;
-
-    // Small and color site-header
-    & .site-header {
-      padding-top: $grid-gutter-width/2;
-    }
   }
 
   // when hidden it goes up
@@ -47,7 +42,7 @@ $color--layout-alternative-background:  $color--tertiary;
 }
 
 // Background on .site-header
-#site-nav.header-detached .site-header {
+.site-nav.header-detached .site-header {
   .default & {
     @include background-opacity($color--layout-default-background, 0.9);
     & .text-accent {
@@ -57,6 +52,5 @@ $color--layout-alternative-background:  $color--tertiary;
 
   .alternative & {
     @include background-opacity($color--layout-alternative-background, 0.9);
-
   }
 }
