@@ -6,7 +6,7 @@ $color--layout-alternative-background:   $color--tertiary;
 
 // === MENU NAVIGATION ===
 // positions navigation content
-#site-nav-mobile {
+.site-nav-mobile-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +24,7 @@ $color--layout-alternative-background:   $color--tertiary;
 }
 
 // shows navigation
-#site-nav-mobile.expanded {
+.site-nav-mobile-wrapper.expanded {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate3d(0,0,0);
@@ -32,7 +32,7 @@ $color--layout-alternative-background:   $color--tertiary;
 }
 
 // Background on .site-nav-mobile
-#site-nav-mobile {
+.site-nav-mobile-wrapper {
   background: $color--layout-default-background;
 
   .alternative & {
