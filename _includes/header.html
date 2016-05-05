@@ -22,7 +22,7 @@
             <ul class="header-links">
               {% for links in site.data.menus %}
                 {% assign link = links[1] %}
-                <li class="header-link"><a href="{{link.href}}">{{link.link}}</a></li>
+                <li class="header-link"><a href="{{link.href}}">{{link.name}}</a></li>
               {% endfor %}
             </ul>
           </div>
@@ -40,7 +40,7 @@
           {% assign link = links[1] %}
           <li class="site-nav-mobile-link">
             <a href="{{link.href}}">
-              <h3 class="site-nav-mobile-link__text">{{link.link}}</h3>
+              <h3 class="site-nav-mobile-link__text">{{link.name}}</h3>
               <p class="site-nav-mobile-link__info">{{link.text}}</p>
             </a>
           </li>
