@@ -1,0 +1,15 @@
+facebook:
+  name: Facebook
+  href: http://www.facebook.com
+
+twitter:
+  name: Twitter
+  href: http://www.twitter.com
+
+blog:
+  name: Blog
+  href: /blog
+
+legal:
+  name: Legal
+  href: /legal

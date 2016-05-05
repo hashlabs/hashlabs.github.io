@@ -11,10 +11,10 @@
   <div class="row">
     <div class="col-xs-12">
       <ul class="footer-links">
-        <li class="footer-link"><a href="/facebook">facebook</a></li>
-        <li class="footer-link"><a href="/twitter">twitter</a></li>
-        <li class="footer-link"><a href="/blog">blog</a></li>
-        <li class="footer-link"><a href="/legal">legal</a></li>
+        {% for socials in site.data.menus-social %}
+          {% assign social = socials[1] %}
+          <li class="footer-link"><a href="{{social.href}}">{{social.name}}</a></li>
+        {% endfor %}
       </ul>
     </div>
   </div>
