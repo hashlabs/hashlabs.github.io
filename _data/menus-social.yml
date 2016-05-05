@@ -13,3 +13,7 @@ blog:
 legal:
   name: Legal
   href: /legal
+
+thanks:
+  name: Thanks
+  href: /thanks
