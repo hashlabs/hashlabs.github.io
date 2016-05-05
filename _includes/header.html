@@ -20,10 +20,10 @@
 
           <div class="col-sm-6 hidden-xs">
             <ul class="header-links">
-              <li class="header-link"><a href="/about.html">Who we are</a></li>
-              <li class="header-link"><a href="/team.html">Team</a></li>
-              <li class="header-link"><a href="/projects">Work</a></li>
-              <li class="header-link"><a href="/hire-us.html">Hire us</a></li>
+              {% for links in site.data.menus %}
+                {% assign link = links[1] %}
+                <li class="header-link"><a href="{{link.href}}">{{link.link}}</a></li>
+              {% endfor %}
             </ul>
           </div>
 
@@ -36,33 +36,15 @@
     <div class="site-nav-mobile">
       <ul class="site-nav-mobile-links">
 
-        <li class="site-nav-mobile-link">
-          <a href="/about.html">
-            <h3 class="site-nav-mobile-link__text">Who we are</h3>
-            <p class="site-nav-mobile-link__info">Who we are?</p>
-          </a>
-        </li>
-
-        <li class="site-nav-mobile-link">
-          <a href="/team.html">
-            <h3 class="site-nav-mobile-link__text">Team</h3>
-            <p class="site-nav-mobile-link__info">We're Hash Labs</p>
-          </a>
-        </li>
-
-        <li class="site-nav-mobile-link">
-          <a href="/projects">
-            <h3 class="site-nav-mobile-link__text">Our Work</h3>
-            <p class="site-nav-mobile-link__info">This is what we do best!</p>
-          </a>
-        </li>
-
-        <li class="site-nav-mobile-link">
-          <a href="/hire-us.html">
-            <h3 class="site-nav-mobile-link__text">Hire us</h3>
-            <p class="site-nav-mobile-link__info">Ready to create something awesome?</p>
-          </a>
-        </li>
+        {% for links in site.data.menus %}
+          {% assign link = links[1] %}
+          <li class="site-nav-mobile-link">
+            <a href="{{link.href}}">
+              <h3 class="site-nav-mobile-link__text">{{link.link}}</h3>
+              <p class="site-nav-mobile-link__info">{{link.text}}</p>
+            </a>
+          </li>
+        {% endfor %}
 
       </ul>
     </div>
