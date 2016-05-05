@@ -1,0 +1,17 @@
+- name: yummly
+  logo: /images/yummly_500x380.png
+
+- name: realscout
+  logo: /images/realscout_500x380.png
+
+- name: save1
+  logo: /images/save1_500x380.png
+
+- name: fundingcircle
+  logo: /images/fundingcircle_500x380.png
+
+- name: rxspeed
+  logo: /images/rxspeed_500x380.png
+
+- name: nextgalaxy
+  logo: /images/nextgalaxy_500x380.png
