@@ -2,24 +2,11 @@
   <div class="container-fluid section-wrapper">
     <div class="squared-grid">
       <div class="row">
-        <div class="col-xs-6 col-sm-4 square">
-          <img class="member-picture" src="/images/orlando.jpg" alt="Orlando Del Aguila" />
-        </div>
-        <div class="col-xs-6 col-sm-4 square">
-          <img class="member-picture" src="/images/luis.jpg" alt="Luis Castro" />
-        </div>
-        <div class="col-xs-6 col-sm-4 square">
-          <img class="member-picture" src="/images/jose.jpg" alt="Jose Bahiano" />
-        </div>
-        <div class="col-xs-6 col-sm-4 square">
-          <img class="member-picture" src="/images/david.jpg" alt="David Lucena" />
-        </div>
-        <div class="col-xs-6 col-sm-4 square">
-          <img class="member-picture" src="/images/marilia.jpg" alt="Marilia Prado" />
-        </div>
-        <div class="col-xs-6 col-sm-4 square">
-          <img class="member-picture" src="/images/alexis.jpg" alt="Alexis Duran" />
-        </div>
+        {% for member in site.data.members %}
+          <div class="col-xs-6 col-sm-4 square">
+            <img class="member-picture" src="{{member.photo}}" alt="{{member.name}}" />
+          </div>
+        {% endfor %}
       </div>
     </div>
     <div class="surface">
