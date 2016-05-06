@@ -1,8 +1,18 @@
 $(document).ready(function () {
 
-  $('img.lazy').lazyload({
-    effect: "fadeIn"
-  });
+  //$('img.lazy').lazyLoadXT();
+
+
+  $.lazyLoadXT.onload = function() {
+      var $el = $(this);
+      $el
+        .removeClass('lazy-hidden')
+        .addClass('img-total ' + 'animated ' + $el.attr('data-effect'));
+  };
+
+  // $('img.lazy').lazyload({
+  //   effect: "fadeIn"
+  // });
 
   $(window).on('beforeunload', function() {
       $(window).scrollTop(0);

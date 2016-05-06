@@ -1,20 +1,9 @@
-.img-total {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  object-fit: cover;
-  display: none;
-}
-
 .section-lead {
   min-height: $space*50;
   height: 100vh;
   text-align: center;
   width: 100%;
+  position: relative;
 
   .row:first-of-type {
     margin-top: $space*20;
