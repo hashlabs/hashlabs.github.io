@@ -1,19 +1,5 @@
 $(document).ready(function () {
 
-  //$('img.lazy').lazyLoadXT();
-
-
-  $.lazyLoadXT.onload = function() {
-      var $el = $(this);
-      $el
-        .removeClass('lazy-hidden')
-        .addClass('img-total ' + 'animated ' + $el.attr('data-effect'));
-  };
-
-  // $('img.lazy').lazyload({
-  //   effect: "fadeIn"
-  // });
-
   $(window).on('beforeunload', function() {
       $(window).scrollTop(0);
   });
@@ -73,4 +59,13 @@ $(document).ready(function () {
     $('.mobile-toggle').removeClass('is-active');
     $('body').removeClass('no_scroll');
   }
+
+  $.lazyLoadXT.onerror = null;
+
+  $.lazyLoadXT.onload = function() {
+    var $el = $(this);
+    $el
+      .removeClass('lazy-hidden')
+      .addClass('img-overlay ' + 'animated ' + $el.attr('data-effect'));
+  };
 });
