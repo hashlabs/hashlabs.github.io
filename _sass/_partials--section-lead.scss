@@ -1,8 +1,16 @@
-$rule--section-lead-background:                  'url(../images/hero_background.jpg)';
+.img-total {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  display: none;
+}
 
 .section-lead {
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height: $space*50;
   height: 100vh;
   text-align: center;
@@ -23,45 +31,11 @@ $rule--section-lead-background:                  'url(../images/hero_background.
 
   &::after {
     z-index: -1;
-
     content: '';
     @extend %hero-black-orange;
-  }
-
-  &.img-loaded::before {
-      //background-image: #{$rule--section-lead-background};
-      transition: opacity .5s 1s linear;
-      opacity: 1;
-  }
-
-  &::before {
-    content: '';
-    @include overlay;
-    opacity: 0;
   }
 }
 
 #typed-strings {
   display: none;
 }
-
-// .section-lead-background-image {
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   display: block;
-//   height: 100%;
-//   width: 100%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-// }
-
-// .section-lead-background-image {
-//   opacity: 0;
-
-//   &.img-loaded {
-//     background-image: #{$rule--section-lead-background};
-//     transition: opacity .5s 1s linear;
-//     opacity: 1;
-//   }
-// }

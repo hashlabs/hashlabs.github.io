@@ -1,13 +1,7 @@
 $(document).ready(function () {
-  var imagesToLoad = $.map($('.preload-image'), function(el) {
-       return $(el).data('img-src')
-  });
 
-  $.imgpreload(imagesToLoad, function()
-  {
-      $('.preload-image').css({
-        backgroundImage: "url(../images/hero_background.jpg)"
-      }).addClass('img-loaded');
+  $('img.lazy').lazyload({
+    effect: "fadeIn"
   });
 
   $(window).on('beforeunload', function() {
@@ -70,4 +64,3 @@ $(document).ready(function () {
     $('body').removeClass('no_scroll');
   }
 });
-
