@@ -66,6 +66,6 @@ $(document).ready(function () {
     var $el = $(this);
     $el
       .removeClass('lazy-hidden')
-      .addClass('img-overlay ' + 'animated ' + $el.attr('data-effect'));
+      .addClass('animated ' + $el.attr('data-effect'));
   };
 });
