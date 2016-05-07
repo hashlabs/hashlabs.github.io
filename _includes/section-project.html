@@ -1,0 +1,20 @@
+<section class="section-project">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 wow fadeIn lapse-one">
+        <h1 class="leadtext text-accent text-center">Clients</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="brand-lister">
+          {% for brand in site.data.brands %}
+            <li class="brand-item wow fadeIn lapse-two">
+              <img class="image" src="{{brand.logo}}" alt="{{brand.name}}" />
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+name:
+  type: text
+  name: name
+  id: name
+  placeholder: Your name
+  other: required
+
+replyto:
+  type: email
+  name: _replyto
+  id: _replyto
+  placeholder: Your email
+  other: required
+
+phone:
+  type: text
+  name: phone
+  id: phone
+  placeholder: Your phone number
+
+context:
+  type: textarea
+  name: context
+  id: context
+  placeholder: What would you like Hash Labs to do for you?
+
+budget:
+  type: text
+  name: budget
+  id: budget
+  placeholder: What is your budget?
+  other: required
+
+source:
+  type: text
+  name: source
+  id: source
+  placeholder: How did you hear about Hash Labs?

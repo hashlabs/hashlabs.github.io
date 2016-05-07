@@ -1,0 +1,19 @@
+whoweare:
+  name: Who we are
+  href: /about
+  text: Who we are?
+
+team:
+  name: Team
+  href: /team
+  text: We're Hash Labs
+
+work:
+  name: Work
+  href: /projects
+  text: This is what we do best!
+
+hireus:
+  name: Hire us
+  href: /contact
+  text: Ready to create something awesome?

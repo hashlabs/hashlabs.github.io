@@ -1,0 +1,33 @@
+<section class="section-team">
+  <div class="container-fluid section-wrapper">
+    <div class="squared-grid">
+      <div class="row">
+        {% for member in site.data.members %}
+          <div class="col-xs-6 col-sm-4 square">
+            <img class="member-picture" src="{{member.photo}}" alt="{{member.name}}" />
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="surface">
+      <div class="valign">
+        <div class="vobject">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1 class="leadtext hidden-xs wow fadeIn lapse-three">We're Hash Labs</h1>
+                <h1 class="leadtext visible-xs wow fadeIn lapse-three">We're <br> Hash Labs</h1>
+                <h2 class="subleadtext wow fadeIn lapse-four">A team of coders and designers ready to solve all your development problems!</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 wow fadeInUp lapse-five">
+                <a href="{{site.data.menus.team.href}}" class="btn-primary cta-team">Look who we are</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
