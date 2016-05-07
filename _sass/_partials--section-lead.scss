@@ -1,13 +1,9 @@
-$rule--section-lead-background:                  'url(../images/hero_background.jpg)';
-
 .section-lead {
-  background: #{$rule--section-lead-background};
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height: $space*50;
   height: 100vh;
   text-align: center;
   width: 100%;
+  position: relative;
 
   .row:first-of-type {
     margin-top: $space*20;
@@ -20,6 +16,12 @@ $rule--section-lead-background:                  'url(../images/hero_background.
 
   .section-wrapper {
     height: 100%;
+  }
+
+  &::after {
+    z-index: -1;
+    content: '';
+    @extend %hero-black-orange;
   }
 }
 

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   $(window).on('beforeunload', function() {
       $(window).scrollTop(0);
   });
@@ -58,4 +59,13 @@ $(document).ready(function () {
     $('.mobile-toggle').removeClass('is-active');
     $('body').removeClass('no_scroll');
   }
+
+  $.lazyLoadXT.onerror = null;
+
+  $.lazyLoadXT.onload = function() {
+    var $el = $(this);
+    $el
+      .removeClass('lazy-hidden')
+      .addClass('animated ' + $el.attr('data-effect'));
+  };
 });
