@@ -9,9 +9,8 @@
         <div class="row">
           <div class="col-xs-12">
             <div id="typed-strings">
-              {% for lead-text in site.data.lead-texts %}
-                {% assign sentence = lead-text.sentence %}
-                <p>{{ sentence }}</p>
+              {% for sentence in site.data.section-lead.leadtext %}
+                <p>{{ sentence.text }}</p>
               {% endfor %}
             </div>
             <h1 class="leadtext">We <span id="typed"></span></h1>
@@ -20,7 +19,7 @@
         <div class="row">
           <div class="col-xs-12 wow fadeIn lapse-five">
             <h2 class="subleadtext">
-              We help you grow your project and keep headaches away!
+              {{site.data.section-lead.subleadtext.text}}
             </h2>
           </div>
         </div>
