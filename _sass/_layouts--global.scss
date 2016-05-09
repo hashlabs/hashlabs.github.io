@@ -7,6 +7,12 @@ $rule--row-border:                               '2px solid #{$concrete}';
   opacity: 1;
 }
 
+%hero-black-blue {
+  @include overlay;
+  background: linear-gradient(-145deg, rgba(#000000, .85), rgba(#100F2A, .80) 50%);
+  opacity: 1;
+}
+
 %material-background {
   background-color: $color--material-bg;
 }
