@@ -1,4 +1,4 @@
-leadtext:
+lead:
   - text: help startups to launch.
   - text: prototype MVPs.
   - text: run product design sprints.
@@ -6,5 +6,8 @@ leadtext:
   - text: craft gluten-free code.
   - text: build awesome products.
 
-subleadtext:
+sublead:
   text: We help you grow your project and keep headaches away!
+
+background:
+  src: /images/hero_background.jpg

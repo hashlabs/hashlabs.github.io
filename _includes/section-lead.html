@@ -1,7 +1,7 @@
 <section class="section-lead">
-  <img class="lazy img-overlay" data-src="/images/hero_background.jpg" data-effect="fadeIn">
+  <img class="lazy img-overlay" data-src="{{ site.data.section-lead.background.src }}" data-effect="fadeIn">
   <noscript>
-    <img class="img-overlay" src="/images/hero_background.jpg">
+    <img class="img-overlay" src="{{ site.data.section-lead.background.src }}">
   </noscript>
   <div class="container section-wrapper">
     <div class="valign">
@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-xs-12">
             <div id="typed-strings">
-              {% for sentence in site.data.section-lead.leadtext %}
+              {% for sentence in site.data.section-lead.lead %}
                 <p>{{ sentence.text }}</p>
               {% endfor %}
             </div>
@@ -19,13 +19,13 @@
         <div class="row">
           <div class="col-xs-12 wow fadeIn lapse-five">
             <h2 class="subleadtext">
-              {{site.data.section-lead.subleadtext.text}}
+              {{ site.data.section-lead.sublead.text }}
             </h2>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 wow fadeInUp lapse-six">
-            <a href="#" class="btn-primary cta-lead">How we do it</a>
+            <a href="/contact" class="btn-primary cta-lead">How we do it</a>
           </div>
         </div>
       </div>
