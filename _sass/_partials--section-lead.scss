@@ -18,7 +18,7 @@
     height: 100%;
   }
 
-  &::after {
+  &::before {
     z-index: -1;
     content: '';
     @extend %hero-black-orange;
