@@ -8,6 +8,7 @@
 		&:before {
 			content: '';
 			@extend %hero-black-orange;
+      z-index: -1;
 		}
 
     &:after {
