@@ -4,8 +4,12 @@
   padding-top: $space*7;
 
   @media #{$from-medium-resolutions} {
-    padding-bottom: $space*20;
-    padding-top: $space*20;
+    padding-bottom: $space*15;
+    padding-top: $space*15;
+  }
+
+  .row + .row {
+    padding-top: $space*10;
   }
 }
 
