@@ -5,37 +5,25 @@
   text-align: center;
   width: 100%;
 
-  &__text {
-    &-1,
-    &-2,
-    &-3 {
-      color: white;
-    }
+  & .leadtext {
+    font-size: 17rem;
+    line-height: 0.8;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: $space;
+    display: inline-block;
+    border-bottom: solid 5px $color--accent;
+  }
 
-    &-2,
-    &-3 {
-      line-height: 1;
-      margin-top: $space;
-      margin-bottom: $space;
-    }
+  & .subleadtext{
+    font-size: 4rem;
+    line-height: 1;
+    margin-top: $space;
+    margin-bottom: $space;
+  }
 
-    &-1 {
-      font-size: 17rem;
-      line-height: 0.8;
-      margin-bottom: 0;
-      margin-top: 0;
-      padding-bottom: $space;
-      display: inline-block;
-      border-bottom: solid 5px $color--accent;
-    }
-
-    &-2 {
-      font-size: 4rem;
-    }
-
-    &-3 {
-      font-size: 2rem;
-    }
+  & .subleadtext + .subleadtext {
+    font-size: 2rem;
   }
 
   .row:first-of-type {
