@@ -1,0 +1,37 @@
+name: Yummly
+city: Redwood City, CA
+href: http://www.yummly.com
+title: Needed a site for his brand new iOS application, we took the job and delivered it.
+logo: /images/yummly_logo.png
+background: /images/project_yummly_background.jpg
+mediaclose: /images/yummly_media_II.jpg
+
+developers:
+  - name: Orlando
+    photo: /images/orlando_small.jpg
+    job: Developer
+    gender: guy
+
+  - name: Luis
+    photo: /images/luis_small.jpg
+    job: Developer
+    gender: guy
+
+  - name: Alexis
+    photo: /images/alexis_small.jpg
+    job: Developer
+    gender: guy
+
+intro:
+  title: First Steps
+  content: We started this project with one goal in mind, bring the best landing page for the best food recipe app you can find in iOS and we did it combining CSS3 animations and Responsive Web Design. The result, a site that adjusts itself to any resolution and have a max width for some of those crazy screens that go beyond 1440p, we created different images for each asset that we got in the design so we could serve them if they were needed. This boost the performance of the site by a lotcheck our performance review to learn more, you can check the site and how it looks below.</p>
+  media: /images/yummly_media_I.jpg
+
+develop:
+  title: The Tools
+  content: We used grunt for testing, which is a great technology to develop in agile cycles since we needed a lot of feedback for each step. Our own framework "Element CSS" which help us make the greatest sites without overthinking grids and doing unnecessary code. And the usual developer tools, to ensure what we created is SEO compliant in every way, to run and load fast.
+
+close:
+  title: Amazing Performance
+  content: To ensure a whooping 60fps application and have smooth transitions on every effect; We have to talk a little bit of refresh rates. Current LCD monitors work at 60-120hz that's why our goal is to run all our animations at the same speed your monitor can render them, doing this, we make sure you don't notice any latency in the time you scroll and the monitor takes to show the next image or effect to you. We disable some important events that create a constant overload on the CPU to render something that it's already rendered on scroll. We load and show only what the client is looking at, no need to load fancy animations and effects if you are not looking at them, this give us the advantage of being selective with more crucial enviroments like 3G data conection where you shouldn't wait more than 6 seconds to load a site.
+  media: /images/yummly_media_II.jpg
