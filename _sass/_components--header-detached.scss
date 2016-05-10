@@ -3,6 +3,8 @@ $color--branding-text:                  $white;
 $color--branding-text-hover:            #d9d9d9;
 $color--layout-default-background:      $color--accent;
 $color--layout-alternative-background:  $color--tertiary;
+$color--link-hover:                     $color--tertiary;
+$color--link-alternative-hover:         $color--accent;
 
 // === TOP MENU LAYOUT ===
 // =======================
@@ -45,6 +47,11 @@ $color--layout-alternative-background:  $color--tertiary;
 .site-nav.header-detached .site-header {
   .default & {
     @include background-opacity($color--layout-default-background, 0.9);
+
+    & a:hover {
+      color: $color--link-hover;
+    }
+
     & .text-accent {
       color: $white;
     }
@@ -52,5 +59,9 @@ $color--layout-alternative-background:  $color--tertiary;
 
   .alternative & {
     @include background-opacity($color--layout-alternative-background, 0.9);
+
+    & a:hover {
+      color: $color--link-alternative-hover;
+    }
   }
 }
