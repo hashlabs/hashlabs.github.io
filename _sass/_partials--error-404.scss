@@ -15,14 +15,18 @@
     border-bottom: solid 5px $color--accent;
   }
 
-  & .subleadtext{
-    font-size: 4rem;
+  & .subleadtext,
+  & .messagetext {
     line-height: 1;
     margin-top: $space;
     margin-bottom: $space;
   }
 
-  & .subleadtext + .subleadtext {
+  & .subleadtext {
+    font-size: 4rem;
+  }
+  
+  & .messagetext {
     font-size: 2rem;
   }
 
