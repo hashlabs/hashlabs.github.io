@@ -1,9 +1,10 @@
 ---
 layout: default
 ---
+{% assign projects = site.data.projects %}
 
 <div class="view-projects-hero valign">
-  {% for background in site.data.projects limit: 1 %}
+  {% for background in projects limit: 1 %}
     <img class="lazy img-overlay img-behind" data-src="{{ background.src }}" data-effect="fadeIn">
     <noscript>
       <img class="img-overlay img-behind" src="{{ background.src }}">
@@ -17,7 +18,7 @@ layout: default
 <section class="view-projects view-holder">
   <div class="container-fluid">
     <div class="projects-listing">
-      {% for project in site.data.projects offset: 1 %}
+      {% for project in projects offset: 1 %}
         <div class="row row-project-cabinet">
           <div class="col-xs-12">
             <img class="project-cabinet-image" src="{{project.image}}" alt="">
