@@ -4,11 +4,10 @@ title: 404
 permalink: /404.html
 ---
 
+{% assign background = '/images/404_background.jpg' %}
+
 <section class="section-error-404">
-  <img class="lazy img-overlay img-behind" data-src="/images/404_background.jpg" data-effect="fadeIn">
-  <noscript>
-    <img class="img-overlay img-behind" src="/images/404_background.jpg">
-  </noscript>
+  {% include background-behind-template.html %}
   <div class="container-fluid section-wrapper">
     <div class="valign">
       <div class="vobject">
