@@ -2,12 +2,12 @@
 layout: default
 ---
 
+{% assign about = site.data.page-about %}
+
 <div class="view-about-hero valign">
-
   {% include background-generic.html %}
-
   <div class="vobject text-center">
-    <h1 class="leadtext">{{ site.data.page-about.lead.text }}</h1>
+    <h1 class="leadtext">{{ about.lead.text }}</h1>
   </div>
 </div>
 
@@ -15,17 +15,17 @@ layout: default
   <div class="row">
     <div class="col-xs-12">
       <h2 class="about-intro paragraph-content">
-        {{ site.data.page-about.lead.intro }}
+        {{ about.lead.intro }}
       </h2>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <h2 class="leadtext">{{ site.data.page-about.lead.title }}</h2>
+      <h2 class="leadtext">{{ about.lead.title }}</h2>
     </div>
   </div>
 
-  {% for portion in site.data.page-about.portion %}
+  {% for portion in about.portion %}
     <div class="row">
       <div class="col-xs-12">
         <div class="about-portion">
