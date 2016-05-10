@@ -3,10 +3,8 @@ layout: default
 ---
 
 <div class="view-about-hero valign">
-  <img class="lazy img-overlay" data-src="{{ site.data.page-about.background.src }}" data-effect="fadeIn">
-  <noscript>
-    <img class="img-overlay" src="{{ site.data.page-about.background.src }}">
-  </noscript>
+
+  {% include background-generic.html %}
 
   <div class="vobject text-center">
     <h1 class="leadtext">{{ site.data.page-about.lead.text }}</h1>
