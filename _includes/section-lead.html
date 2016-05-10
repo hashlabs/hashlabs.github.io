@@ -1,10 +1,9 @@
 {% assign lead = site.data.section-lead%}
 
+{% assign background = lead.background.src %}
+
 <section class="section-lead">
-  <img class="lazy img-overlay" data-src="{{ lead.background.src }}" data-effect="fadeIn">
-  <noscript>
-    <img class="img-overlay" src="{{ lead.background.src }}">
-  </noscript>
+  {% include background-template.html %}
   <div class="container section-wrapper">
     <div class="valign">
       <div class="vobject">

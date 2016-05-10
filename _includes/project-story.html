@@ -1,9 +1,7 @@
-<div class="view-project-hero valign">
-  <img class="lazy img-overlay img-behind" data-src="{{ data.background }}" data-effect="fadeIn">
-  <noscript>
-    <img class="img-overlay img-behind" src="../..{{ data.background }}">
-  </noscript>
+{% assign background = data.background %}
 
+<div class="view-project-hero valign">
+  {% include background-behind-template.html %}
   <div class="vobject text-center">
     <div class="inner over-layer-element">
       <img class="client-branding" src="../..{{ data.logo }}" alt="{{ data.name }}" />
