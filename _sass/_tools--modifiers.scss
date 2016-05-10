@@ -149,3 +149,7 @@ body.no_scroll {
   right: 0;
   object-fit: cover;
 }
+
+.img-behind {
+  z-index: -1;
+}

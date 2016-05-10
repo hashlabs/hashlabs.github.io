@@ -1,6 +1,4 @@
 .view-projects-hero {
-  background: url('../images/projects_background.jpg');
-  background-size: cover;
   @extend %view-hero-small;
 
   &::before {
