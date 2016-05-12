@@ -4,7 +4,9 @@ $(document).ready(function () {
       $(window).scrollTop(0);
   });
 
-  new WOW().init();
+  if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+    new WOW().init();
+  }
 
   $("#typed").typed({
     stringsElement: $('#typed-strings'),
