@@ -2,14 +2,12 @@
 layout: default
 ---
 
-<div class="view-about-hero valign">
-  <img class="lazy img-overlay" data-src="/images/about_background.jpg" data-effect="fadeIn">
-  <noscript>
-    <img class="img-overlay" src="/images/about_background.jpg">
-  </noscript>
+{% assign about = site.data.page-about %}
 
+<div class="view-about-hero valign">
+  {% include background-generic.html %}
   <div class="vobject text-center">
-    <h1 class="leadtext">Who we are?</h1>
+    <h1 class="leadtext">{{ about.lead.text }}</h1>
   </div>
 </div>
 
@@ -17,57 +15,27 @@ layout: default
   <div class="row">
     <div class="col-xs-12">
       <h2 class="about-intro paragraph-content">
-        Our business is about making yours better. In Hash Labs we work hard to make the best sites your company deserves
+        {{ about.lead.intro }}
       </h2>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <h2 class="leadtext">We have a process</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="about-portion">
-        <h2 class="section-title">We know each other</h2>
-        <p class="paragraph-content">
-          We work whit you to discover more about your company and determinate your projects goals
-        </p>
-      </div>
+      <h2 class="leadtext">{{ about.lead.title }}</h2>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="about-portion">
-        <h2 class="section-title">Design and feedback</h2>
-        <p class="paragraph-content">
-          We develop sketches based on the information collected and present you the best solution
-        </p>
+  {% for portion in about.portion %}
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="about-portion">
+          <h2 class="section-title">{{ portion.title }}</h2>
+          <p class="paragraph-content">
+            {{ portion.content }}
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="about-portion">
-        <h2 class="section-title">Development for production</h2>
-        <p class="paragraph-content">
-          We construct the solution incrementally on what we agreed. You will see parts of your product running every week and we’ll ask for your opinions
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="about-portion">
-        <h2 class="section-title">Monitoring services 24/7</h2>
-        <p class="paragraph-content">
-          We deliver the solution and monitor the product 24 hours, every day. So rest assured we got your back. If a problem happen, we’ll fix it
-        </p>
-      </div>
-    </div>
-  </div>
+  {% endfor %}
 
 </div>

@@ -1,17 +1,17 @@
+{% assign lead = site.data.section-lead%}
+
+{% assign background = lead.background.src %}
+
 <section class="section-lead">
-  <img class="lazy img-overlay" data-src="/images/hero_background.jpg" data-effect="fadeIn">
-  <noscript>
-    <img class="img-overlay" src="/images/hero_background.jpg">
-  </noscript>
+  {% include background-template.html %}
   <div class="container section-wrapper">
     <div class="valign">
       <div class="vobject">
         <div class="row">
           <div class="col-xs-12">
             <div id="typed-strings">
-              {% for lead-text in site.data.lead-texts %}
-                {% assign sentence = lead-text.sentence %}
-                <p>{{ sentence }}</p>
+              {% for sentence in lead.lead %}
+                <p>{{ sentence.text }}</p>
               {% endfor %}
             </div>
             <h1 class="leadtext">We <span id="typed"></span></h1>
@@ -20,13 +20,13 @@
         <div class="row">
           <div class="col-xs-12 wow fadeIn lapse-five">
             <h2 class="subleadtext">
-              We help you grow your project and keep headaches away!
+              {{ lead.sublead.text }}
             </h2>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 wow fadeInUp lapse-six">
-            <a href="#" class="btn-primary cta-lead">How we do it</a>
+            <a href="{{site.data.menus.hireus.href}}" class="btn-primary cta-lead">How we do it</a>
           </div>
         </div>
       </div>

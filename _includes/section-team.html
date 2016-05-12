@@ -1,3 +1,5 @@
+{% assign team = site.data.section-team %}
+
 <section class="section-team">
   <div class="container-fluid section-wrapper">
     <div class="squared-grid">
@@ -15,9 +17,11 @@
           <div class="container">
             <div class="row">
               <div class="col-xs-12">
-                <h1 class="leadtext hidden-xs wow fadeIn lapse-three">We're Hash Labs</h1>
-                <h1 class="leadtext visible-xs wow fadeIn lapse-three">We're <br> Hash Labs</h1>
-                <h2 class="subleadtext wow fadeIn lapse-four">A team of coders and designers ready to solve all your development problems!</h2>
+                <h1 class="leadtext hidden-xs wow fadeIn lapse-three">{{ team.lead.text }}</h1>
+                <h1 class="leadtext visible-xs wow fadeIn lapse-three">{{ team.lead.mobile }}</h1>
+                <h2 class="subleadtext wow fadeIn lapse-four">
+                  {{ team.sublead.text }}
+                </h2>
               </div>
             </div>
             <div class="row">
