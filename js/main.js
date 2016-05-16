@@ -4,7 +4,11 @@ $(document).ready(function () {
       $(window).scrollTop(0);
   });
 
-  if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  if(!isMobile) {
     new WOW().init();
   }
 
