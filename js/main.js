@@ -4,13 +4,9 @@ $(document).ready(function () {
       $(window).scrollTop(0);
   });
 
-  function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
-
-  if(!isMobile) {
-    new WOW().init();
-  }
+  new WOW({
+    mobile: false
+  }).init();
 
   $("#typed").typed({
     stringsElement: $('#typed-strings'),
