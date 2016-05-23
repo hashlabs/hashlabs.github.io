@@ -4,7 +4,9 @@ $(document).ready(function () {
       $(window).scrollTop(0);
   });
 
-  new WOW().init();
+  new WOW({
+    mobile: false
+  }).init();
 
   $("#typed").typed({
     stringsElement: $('#typed-strings'),
