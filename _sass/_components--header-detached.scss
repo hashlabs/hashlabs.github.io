@@ -13,7 +13,7 @@ $color--link-alternative-hover:         $color--accent;
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 5;
+  z-index: z('header');
   overflow: hidden;
   height: $size--site-nav-height;
 
