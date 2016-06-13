@@ -15,10 +15,6 @@ $(document).ready(function () {
     });
   }
 
-  $(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-  });
-
   new WOW({
     mobile: false
   }).init();
@@ -33,6 +29,14 @@ $(document).ready(function () {
     loopCount: false,
     showCursor: false,
     contentType: 'html',
+    onStringTyped: function () {
+      this.stringsCount = this.stringsCount || 1;
+      if (this.stringsCount === 1) {
+        $('.leadtext.static').css({display: 'none'});
+        $('.leadtext:not(.static)').css({display: 'block'});
+      }
+      this.stringsCount++;
+    }
   });
 
   var navbarHeader = $('#site-nav');
