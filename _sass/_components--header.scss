@@ -16,6 +16,10 @@ $color--branding-text:                           $white;
   body.alternative & {
     background-color: $color--tertiary;
   }
+
+  .sitelogo {
+    display: inline-block;;
+  }
 }
 
 .header-branding {
@@ -29,8 +33,8 @@ $color--branding-text:                           $white;
     color: $color--branding-text;
     margin: 0;
     line-height: 1;
-    position: absolute;
-    left: $size--header-height + 20px;
+    display: inline-block;
+    margin-left: $grid-gutter-width-half;
   }
 }
 
@@ -59,7 +63,7 @@ $color--branding-text:                           $white;
 
     > a {
       display: table-cell;
-      vertical-align: bottom;
+      vertical-align: middle;
       @include simple-transition;
     }
 
