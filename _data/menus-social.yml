@@ -1,19 +1,15 @@
+github:
+  name: Github
+  href: //www.github.com/hashlabs
+
 facebook:
   name: Facebook
-  href: http://www.facebook.com
+  href: //www.facebook.com/hashlabsca
 
 twitter:
   name: Twitter
-  href: http://www.twitter.com
+  href: //www.twitter.com/hashlabs
 
 blog:
   name: Blog
   href: /blog
-
-legal:
-  name: Legal
-  href: /legal
-
-thanks:
-  name: Thanks
-  href: /thanks

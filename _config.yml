@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Hash Labs | Hassle free Web Engineering
+title: Hash Labs | Hassle free software engineering
 email: contact@hashlabs.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -18,6 +18,7 @@ twitter_username: hashlabs
 github_username:  hashlabs
 form_action: https://formspree.io/contact@hashlabs.com
 thanks_url: https://www.hashlabs.com/thanks
+permalink: /blog/:title
 
 # Build settings
 markdown: kramdown
