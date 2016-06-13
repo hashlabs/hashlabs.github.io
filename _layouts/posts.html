@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class="default">
+    {% include header.html %}
+
+    {{ content }}
+
+    <footer class="site-footer">
+      <div class="container-fluid">
+        <hr class="pretty-divider">
+        {% include footer-bottom.html %}
+      </div>
+    </footer>
+    {% include footer-scripts.html %}
+  </body>
+</html>

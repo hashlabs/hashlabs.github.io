@@ -13,7 +13,7 @@
       <ul class="footer-links">
         {% for socials in site.data.menus-social limit:4 %}
           {% assign social = socials[1] %}
-          <li class="footer-link"><a href="{{social.href}}">{{social.name}}</a></li>
+          <li class="footer-link"><a target="_blank" href="{{social.href}}">{{social.name}}</a></li>
         {% endfor %}
       </ul>
     </div>
