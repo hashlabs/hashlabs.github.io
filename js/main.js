@@ -1,14 +1,29 @@
 $(document).ready(function () {
+  var video = $('.fullscreen-video-object').get(0);
+  $(video).css({display: 'none'});
+
+  reproduceVideo = function(elementVideo) {
+    $(elementVideo).css({display: 'block'});
+    elementVideo.play();
+  }
+
+  if (video && video.readyState >= video.HAVE_ENOUGH_DATA) {
+    reproduceVideo(video);
+  } else if (video) {
+    video.addEventListener('canplay', function() {
+      reproduceVideo(video);
+    });
+  }
 
   $(window).on('beforeunload', function() {
-      $(window).scrollTop(0);
+    $(window).scrollTop(0);
   });
 
   new WOW({
     mobile: false
   }).init();
 
-  $("#typed").typed({
+  $('#typed').typed({
     stringsElement: $('#typed-strings'),
     typeSpeed: 30,
     startDelay: 80,
@@ -20,7 +35,7 @@ $(document).ready(function () {
     contentType: 'html',
   });
 
-  var navbarHeader = $("#site-nav");
+  var navbarHeader = $('#site-nav');
   var teehanNav  = new TeehanLax(navbarHeader, {
     menuOffset: 100,
     hideShowOffset: 6,

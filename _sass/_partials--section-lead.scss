@@ -4,6 +4,7 @@
   text-align: center;
   width: 100%;
   position: relative;
+  overflow: hidden;
 
   .row:first-of-type {
     margin-top: $space*20;
@@ -16,12 +17,17 @@
 
   .section-wrapper {
     height: 100%;
+    position: relative;
   }
 
   &::before {
-    z-index: -1;
     content: '';
     @extend %hero-black-orange;
+  }
+
+  .section-wrapper,
+  &::before {
+    z-index: z('background-decorative');
   }
 }
 

@@ -1,0 +1,12 @@
+$z-layers: (
+  'initial': 0,
+  'background-decorative': 10,
+  'header': 20
+);
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn 'No layer found for `#{$layer}` in $z-layers map. Property omitted.';
+  }
+  @return map-get($z-layers, $layer);
+}
