@@ -65,6 +65,7 @@ $size--crew-avatar-dimension:                    $space*9;
 .blog-post-preview {
   padding-bottom: $space*2;
   padding-top: $space*2;
+  pointer-events: none;
 
   &:not(:last-of-type) {
     border-bottom: 1px solid $concrete;
@@ -84,4 +85,8 @@ $size--crew-avatar-dimension:                    $space*9;
     padding-top: $space*5;
     padding-bottom: $space*7;
   }
+}
+
+.blog-post-preview-link {
+  pointer-events: all; 
 }

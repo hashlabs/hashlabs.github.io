@@ -15,19 +15,21 @@ layout: default
   <ul class="blog-feed">
     {% for post in site.posts %}
       <li class="blog-post-preview">
-        <div class="crew-avatar">
-          <img class="avatar-picture" src="/images/{{ post.author | slugify }}_small.jpg" alt="{{ post.author }}" />
-        </div>
-        <div class="content">
-          <a href="{{ post.url }}" class="post-excerpt">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.brief %}
-              <p>{{ post.brief }}</p>
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </a>
-        </div>
+        <a class="blog-post-preview-link display-block" href="{{ post.url }}">
+          <div class="crew-avatar">
+            <img class="avatar-picture" src="/images/{{ post.author | slugify }}_small.jpg" alt="{{ post.author }}" />
+          </div>
+          <div class="content">
+            <div class="post-excerpt">
+              <h2 class="post-title">{{ post.title }}</h2>
+              {% if post.brief %}
+                <p>{{ post.brief }}</p>
+              {% else %}
+                {{ post.excerpt }}
+              {% endif %}
+            </div>
+          </div>
+        </a>
       </li>
     {% endfor %}
   </ul>

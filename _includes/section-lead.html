@@ -15,18 +15,19 @@
                 <p>{{ sentence.text }}</p>
               {% endfor %}
             </div>
-            <h1 class="leadtext">We <span id="typed"></span></h1>
+            <h1 class="leadtext static">We help startups to launch.</h1>
+            <h1 class="leadtext" style="display: none;">We <span id="typed">help startups to launch.</span></h1>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 wow fadeIn lapse-five">
+          <div class="col-xs-12 wow fadeIn lapse-five" style="visibility: hidden;">
             <h2 class="subleadtext">
               {{ lead.sublead.text }}
             </h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 wow fadeInUp lapse-six">
+          <div class="col-xs-12 wow fadeInUp lapse-six" style="visibility: hidden;">
             <a href="{{site.data.menus.hireus.href}}" class="btn-primary cta-lead">How we do it</a>
           </div>
         </div>
