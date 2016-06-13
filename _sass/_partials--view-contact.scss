@@ -4,6 +4,9 @@
   }
 
   .view-contact-form {
+    max-width: 960px;
+    margin: 0 auto;
+
     .form-group {
       &:last-of-type {
         margin-bottom: $space*10;

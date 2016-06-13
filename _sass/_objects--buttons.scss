@@ -1,4 +1,6 @@
 $color--btn-primary-font:                        $white;
+$color--btn-outline:                             $color--accent;
+
 $rule--btn-primary-border:                       '3px solid #{$color--accent}';
 $rule--btn-secondary-border:                     '3px solid transparent';
 
@@ -6,6 +8,7 @@ $rule--btn-secondary-border:                     '3px solid transparent';
   display: inline-block;
   max-width: 100%;
   min-width: 230px;
+  outline-color: $color--btn-outline;
   padding: $space*1.75 $space*6;
   @include simple-transition;
 

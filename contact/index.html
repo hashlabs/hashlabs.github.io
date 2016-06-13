@@ -1,24 +1,26 @@
 ---
 layout: contact
 ---
-<section class="view-thanks view-holder tertiary-background">
+<section class="view-contact view-thanks view-holder tertiary-background">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h1 class="leadtext text-center">Hire us and let's make an amazing project!</h1>
+        <h1 class="leadtext text-center">
+          Hire us and let's make an <br class="visible-lg"> amazing project!
+        </h1>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <form id="form-fire" class="view-contact-form" action="{{ site.form_action }}" method="POST">
 
-          {% for forms in site.data.contact-forms %}
-            {% assign form = forms[1] %}
+          {% for input in site.data.contact-inputs %}
+            {% assign inputProps = input[1] %}
             <div class="form-group has-form-bullet">
-              {% if form.type == 'textarea' %}
-                <textarea class="form-control" name="{{form.name}}" id="{{form.id}}" placeholder="{{form.placeholder}}"></textarea>
+              {% if inputProps.type == 'textarea' %}
+                <textarea class="form-control" name="{{inputProps.name}}" id="{{inputProps.id}}" placeholder="{{inputProps.placeholder}}"></textarea>
               {% else %}
-                <input type="{{form.type}}" class="form-control" name="{{form.name}}" id="{{form.id}}" placeholder="{{form.placeholder}}" {{form.other}}>
+                <input type="{{inputProps.type}}" class="form-control" name="{{inputProps.name}}" id="{{inputProps.id}}" placeholder="{{inputProps.placeholder}}" {{inputProps.other}}>
               {% endif %}
               <span class="form-control-bullet">&bull;</span>
             </div>
