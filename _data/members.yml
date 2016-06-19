@@ -21,13 +21,13 @@
   photo: /images/jose.jpg
   twitter: cocobahiano
 
-- name: David Lucena
+- name: Alexis Duran
+  city: Maturin
   description: description here
-  city: Valencia
-  github: delbit
-  image: /images/david_tall.jpg
-  photo: /images/david.jpg
-  twitter: delbit
+  github: duranmla
+  image: /images/alexis_tall.jpg
+  photo: /images/alexis.jpg
+  twitter: duranmla
 
 - name: Marilia Prado
   city: Valencia
@@ -36,10 +36,26 @@
   photo: /images/marilia.jpg
   twitter: mariliapradoo
 
-- name: Alexis Duran
-  city: Maturin
+- name: David Lucena
   description: description here
-  github: duranmla
-  image: /images/alexis_tall.jpg
-  photo: /images/alexis.jpg
-  twitter: duranmla
+  city: Valencia
+  github: delbit
+  image: /images/david_tall.jpg
+  photo: /images/david.jpg
+  twitter: delbit
+
+- name: Carlos Martinez
+  city: Valencia
+  description: description here
+  github: carlows
+  image: /images/carlos_tall.jpg
+  photo: /images/carlos.jpg
+  twitter: carlows
+
+- name: Karlos Prado
+  city: Valencia
+  description: description here
+  github: karlosprado
+  image: /images/karlos_tall.jpg
+  photo: /images/karlos.jpg
+  twitter: karlos
