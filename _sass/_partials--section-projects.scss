@@ -1,8 +1,59 @@
+$size--intro-text:                  80%;
+$size--lead-text:                   180%;
+$color--background-testimonial:     $white-smoke;
+$size--testimonial-owner-text:      80%;
+$size--testimonial-content-text:    100%;
+
 .section-project {
-  padding-bottom: $space*7;
-  padding-top: $space*10;
+  padding-top: $space*2;
 
   .leadtext {
     margin-bottom: $space*3;
+    font-size: $size--lead-text;
+  }
+
+  .introtext {
+    font-size: $size--intro-text;
+    margin-bottom: $space*5;
+  }
+
+  .testimonial {
+    background-color: $color--background-testimonial;
+    text-align: center;
+    padding: $pad-double;
+
+    .testimonial-owner {
+      font-size: $size--testimonial-owner-text;
+      margin: $space*2;
+    }
+
+    .testimonial-content {
+      font-size: $size--testimonial-content-text;
+    }
+  }
+
+  .testimonial-img {
+    width: 25%;
+  }
+
+  .brand-lister {
+    margin: $space*4 0;
+  }
+
+  @media #{$from-small-resolutions} {
+    padding-top: $space*6;
+
+    .testimonial {
+      padding: $pad-double*3;
+
+      .testimonial-owner {
+        font-size: $size--testimonial-owner-text;
+        margin: $space*4;
+      }
+    }
+
+    .testimonial-img {
+      width: 10%;
+    }
   }
 }

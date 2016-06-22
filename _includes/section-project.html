@@ -1,19 +1,34 @@
+{% assign project = site.data.section-project %}
+{% assign testimonial = site.data.section-testimonials %}
+
 <section class="section-project" id="clients">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 wow fadeIn lapse-one">
-        <h1 class="leadtext text-accent text-center">Our clients</h1>
+        <h1 class="leadtext text-accent text-center">{{ project.content.leadtext }}</h1>
+        <p class="introtext">{{ project.content.introtext }}</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12">
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="testimonial">
+        <p class="testimonial-content">"{{ testimonial.yummly.testimonial }}"</p>
+        <p class="testimonial-owner">{{ testimonial.yummly.author }} &#9679; {{ testimonial.yummly.job }} <a href="#">{{ testimonial.yummly.company }}</a></p>
+        <img class="img-circle testimonial-img" src="{{ testimonial.yummly.photo }}" alt="david feller">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="brands">
         <ul class="brand-lister">
           {% for brand in site.data.brands %}
-            <li class="brand-item wow fadeIn lapse-two">
-              <a href="{{ brand.link }}">
-                <img class="image" src="{{ brand.logo }}" alt="{{ brand.name }}" />
-              </a>
-            </li>
+          <li class="brand-item wow fadeIn lapse-two">
+            <a href="{{ brand.link }}">
+              <img class="image" src="{{ brand.logo }}" alt="{{ brand.name }}" />
+            </a>
+          </li>
           {% endfor %}
         </ul>
       </div>
