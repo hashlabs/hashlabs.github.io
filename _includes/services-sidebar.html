@@ -1,0 +1,16 @@
+{% assign services = site.data.services %}
+
+<div class="services-sidebar">
+  <p class="title">Our Services</p>
+
+  <div class="sidebar-services-list">
+  {% for service in services %}
+  <a href="{{ service.link }}">
+    <div class="sidebar-services-item">
+      <img src="{{ service.alticonsrc }}" alt="{{ service.title }}" class="image">
+      <div class="title">{{ service.title }}</div>
+    </div>
+  </a>
+  {% endfor %}
+  </div>
+</div>
