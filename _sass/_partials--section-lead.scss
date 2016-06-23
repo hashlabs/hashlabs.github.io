@@ -6,13 +6,8 @@
   position: relative;
   overflow: hidden;
 
-  .row:first-of-type {
-    margin-top: $space*20;
-  }
-
   .row:last-of-type {
     margin-top: $space*5;
-    margin-bottom: $space*10;
   }
 
   .section-wrapper {
