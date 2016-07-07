@@ -1,8 +1,9 @@
-$color--btn-primary-font:                        $white;
-$color--btn-outline:                             $color--accent;
+$color--btn-primary-font:                      $white;
+$color--btn-outline:                           $color--accent;
 
-$rule--btn-primary-border:                       '3px solid #{$color--accent}';
-$rule--btn-secondary-border:                     '3px solid transparent';
+$rule--btn-primary-border:                     '3px solid #{$color--accent}';
+$rule--btn-secondary-border:                   '3px solid transparent';
+$rule--btn-tertiary-border:                    '3px solid #{$color--tertiary}';
 
 %btn-boilerplate {
   display: inline-block;
@@ -41,5 +42,17 @@ $rule--btn-secondary-border:                     '3px solid transparent';
     background-color: transparent;
     border-color: $color--accent;
     color: $color--accent;
+  }
+}
+
+.btn-tertiary {
+  @extend %btn-boilerplate;
+  background-color: $color--accent;
+  border: #{$rule--btn-tertiary-border};
+  color: $color--base;
+
+  &:hover {
+    background-color: $color--tertiary;
+    border-color: $color--tertiary;
   }
 }

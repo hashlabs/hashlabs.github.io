@@ -1,0 +1,17 @@
+- title: Team Augmentation
+  iconsrc: /images/team_augmentation.png
+  alticonsrc: /images/team_augmentation_white.png
+  previewtext: Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Nulla facilisi. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus.
+  link: /services/team
+
+- title: Build your Web app
+  iconsrc: /images/web_app.png
+  alticonsrc: /images/web_app_white.png
+  previewtext: Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Nulla facilisi. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus.
+  link: /services/web
+
+- title: Build your Mobile app
+  iconsrc: /images/mobile_app.png
+  alticonsrc: /images/mobile_app_white.png
+  previewtext: Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Nulla facilisi. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus.
+  link: /services/mobile

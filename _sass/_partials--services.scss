@@ -1,0 +1,33 @@
+$color--normal-text:            $black;
+$size--leadtext:                170%;
+$size--title-sidebar-sm:        80%;
+$size--title-sidebar:           100%;
+
+.services-row {
+  margin-top: $space*15;
+}
+
+.service-content {
+
+  .title {
+    font-size: $size--title-sidebar;
+    color: $color--accent;
+  }
+
+  .leadtext {
+    font-size: $size--leadtext;
+    text-align: left;
+  }
+
+  &, .leadtext, .descriptiontext {
+    color: $color--normal-text;
+  }
+}
+
+@media #{$from-medium-resolutions} {
+  .service-content {
+    .title {
+      font-size: $size--title-sidebar-sm;
+    }
+  }
+}
