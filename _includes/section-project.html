@@ -1,7 +1,7 @@
 {% assign project = site.data.section-project %}
 {% assign testimonial = site.data.section-testimonials %}
 
-<section class="section-project">
+<section id="project" class="section-project">
   <div class="clients text-center">
     <div class="container">
       <div class="row">
@@ -19,9 +19,9 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="testimonial">
-            <p class="testimonial-content">"{{ testimonial.yummly.testimonial }}"</p>
-            <p class="testimonial-owner">{{ testimonial.yummly.author }} &#9679; {{ testimonial.yummly.job }} <a href="#">{{ testimonial.yummly.company }}</a></p>
-            <img class="img-circle testimonial-img" src="{{ testimonial.yummly.photo }}" alt="david feller">
+            <p class="testimonial-content">"{{ testimonial.funding_circle.testimonial }}"</p>
+            <p class="testimonial-owner">{{ testimonial.funding_circle.author }} &#9679; {{ testimonial.funding_circle.job }} <a href="{{ testimonial.funding_circle.url }}">{{ testimonial.funding_circle.company }}</a></p>
+            <img class="img-circle testimonial-img" src="{{ testimonial.funding_circle.photo }}" alt="david feller">
           </div>
         </div>
       </div>

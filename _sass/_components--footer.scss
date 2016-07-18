@@ -1,7 +1,7 @@
 $color--copyright-font:                          $aluminium;
 
 .site-footer {
-  padding-top: $space*10;
+  padding-top: $space*5;
   text-align: center;
 
   .section-title {
@@ -39,8 +39,6 @@ $color--copyright-font:                          $aluminium;
   }
 
   .bottom-section {
-    padding-top: $space*4;
-
     .row {
       margin-bottom: $space*1.5;
     }

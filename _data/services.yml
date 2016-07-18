@@ -1,17 +1,14 @@
 - title: Team Augmentation
   iconsrc: /images/team_augmentation.png
   alticonsrc: /images/team_augmentation_white.png
-  previewtext: Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Nulla facilisi. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus.
-  link: /services/team
+  previewtext: Our engineers have experience across the full development stack. We will work as part of your team to help you meet your goals.
 
 - title: Build your Web app
   iconsrc: /images/web_app.png
   alticonsrc: /images/web_app_white.png
-  previewtext: Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Nulla facilisi. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus.
-  link: /services/web
+  previewtext: Our iterative process allow us to continuously deliver features every sprint, while working with you prioritizing and refining what the application should work.
 
 - title: Build your Mobile app
   iconsrc: /images/mobile_app.png
   alticonsrc: /images/mobile_app_white.png
-  previewtext: Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Nulla facilisi. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus.
-  link: /services/mobile
+  previewtext: Using React Native, we build cross-plataform applications for Android and iOS. This while maintaining great application performance and development speed.

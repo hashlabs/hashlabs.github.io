@@ -37,7 +37,7 @@ $size--name-tech-item:      80%;
     }
 
     @media #{$from-small-resolutions} {
-      $tech-items-by-row: 5;
+      $tech-items-by-row: 6;
       width: 100%/$tech-items-by-row;
 
       padding: 0 $pad;
