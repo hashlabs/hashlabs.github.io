@@ -1,7 +1,7 @@
 $size--lead-text:             180%;
 $color--background-whoweare:  $white-smoke;
 $size--lead-text-md:          160%;
-$size--text-md:               70%;
+$size--text-md:               80%;
 $size--lead-text-lg:          180%;
 $size--text-lg:               80%;
 
@@ -30,9 +30,7 @@ $size--text-lg:               80%;
     .introtext {
       margin-top: $space*4;
     }
-  }
 
-  @media #{$from-medium-resolutions} {
     .leadtext {
       font-size: $size--lead-text-md;
     }

@@ -1,9 +1,14 @@
+who_we_are:
+  name: Who we are
+  href: /#whoweare
+  text: Who we are
+
 clients:
   name: Our clients
-  href: /#clients
+  href: /#project
   text: Our clients
 
 hireus:
-  name: Hire us!
-  href: /contact
-  text: Hire us!
+  name: Start a project with us
+  href: /hire-us
+  text: Start a project with us

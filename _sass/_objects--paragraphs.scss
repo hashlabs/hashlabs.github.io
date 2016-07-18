@@ -3,7 +3,7 @@ $color--section-title-text:                      $white;
 
 %text-double-size {
   font-size: 200%;
-  @media #{$from-fhd-resolutions} {font-size: 170%;}
+  @media #{$from-fhd-resolutions} {font-size: 150%;}
 }
 
 .leadtext {

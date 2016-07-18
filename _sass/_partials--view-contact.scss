@@ -1,6 +1,6 @@
 .view-contact {
   .leadtext {
-    padding-bottom: $space*10;
+    padding-bottom: $space*2;
   }
 
   .view-contact-form {
@@ -9,7 +9,7 @@
 
     .form-group {
       &:last-of-type {
-        margin-bottom: $space*10;
+        margin-bottom: $space*4;
       }
     }
 

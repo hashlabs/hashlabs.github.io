@@ -15,14 +15,12 @@
           <img class="image" src="{{ service.iconsrc }}" alt="{{ service.title }}">
           <div class="title">{{ service.title }}</div>
         </div>
-        <a href="{{ service.link }}">
-          <div class="service-overlay">
-            <div class="service-overlay--copy">
-              <h5>{{ service.title }}</h5>
-              <p>{{ service.previewtext }}</p>
-            </div>
+        <div class="service-overlay">
+          <div class="service-overlay--copy">
+            <h5>{{ service.title }}</h5>
+            <p>{{ service.previewtext }}</p>
           </div>
-        </a>
+        </div>
       </div>
     </div>
     {% endfor %}

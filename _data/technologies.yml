@@ -7,6 +7,9 @@
 - name: JAVASCRIPT
   link: /images/logo_js.png
 
+- name: REACT
+  link: /images/react_logo.png
+
 - name: GOLANG
   link: /images/logo_golang.png
 

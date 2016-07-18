@@ -12,7 +12,8 @@ $color--button-primary-stripe:                   $white;
   }
 
   .section-title {
-    @extend %text-double-size;
+    font-size: 150%;
+    @media #{$from-fhd-resolutions} {font-size: 200%;}
     margin: 0;
   }
 
