@@ -38,4 +38,4 @@ these files using `site.data.{filename}`.
 
 ![hash labs logo](https://www.hashlabs.com/images/hashlabs_logo_horizontal_02.png)
 
-Lab Coat is maintained by [Hash Labs LLC](www.hashlabs.com)
+Lab Coat is maintained by [Hash Labs LLC](http://www.hashlabs.com)
