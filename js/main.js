@@ -5,7 +5,7 @@ $(document).ready(function () {
   reproduceVideo = function(elementVideo) {
     $(elementVideo).css({display: 'block'});
     elementVideo.play();
-  }
+  };
 
   if (video && video.readyState >= video.HAVE_ENOUGH_DATA) {
     reproduceVideo(video);
@@ -52,13 +52,18 @@ $(document).ready(function () {
 
   teehanNav.init();
 
-  $('.mobile-toggle').on('click touchstart', function(event) {
+  $('.mobile-toggle').on('click touchstart', function (event) {
     showHideNav();
     event.preventDefault();
   });
 
-  $('#site-nav-mobile').on('click touchstart', function(event){
+  $('#site-nav-mobile').on('click touchstart', function (event) {
     event.stopPropagation();
+  });
+
+  $('.site-nav-mobile-link').on('click touchstart', function (event) {
+    console.log('clicked');
+    hideNav();
   });
 
   function showHideNav() {
