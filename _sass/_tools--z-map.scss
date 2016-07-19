@@ -1,7 +1,8 @@
 $z-layers: (
   'initial': 0,
   'background-decorative': 10,
-  'header': 20
+  'mobile-menu': 20,
+  'header': 30,
 );
 
 @function z($layer) {

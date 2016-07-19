@@ -20,7 +20,7 @@ $color--layout-alternative-background:   $color--tertiary;
   transition: all .5s;
   -webkit-transform: translate3d(0,-100%,0);
   transform: translate3d(0,-100%,0);
-  z-index: 4;
+  z-index: z('mobile-menu');
 }
 
 // shows navigation
