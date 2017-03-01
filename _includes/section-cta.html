@@ -1,0 +1,17 @@
+<section class="section-cta-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 section-cta">
+        {% assign section = site.data.section-cta %}
+        {% assign email_subject = site.email_subject %}
+        {% if page.email_subject %}
+          {% assign email_subject = page.email_subject %}
+        {% endif %}
+        <h2 class="prevent-orphan">
+          {{ section.title }}
+        </h2>
+        <a href="mailto:{{ site.email }}?subject={{ email_subject }}" class="btn btn-primary">{{ section.button_text }}</a>
+      </div>
+    </div>
+  </div>
+</section>

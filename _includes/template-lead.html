@@ -1,0 +1,68 @@
+<section class="section-lead-container">
+  <div class="container">
+
+    {% assign section = site.data.section-lead %}
+    {% assign email_subject = site.email_subject %}
+    {% if page.email_subject %}
+      {% assign email_subject = page.email_subject %}
+    {% endif %}
+
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <section class="section-lead">
+          {% if include.title %}
+            {% assign title = include.title %}
+          {% else %}
+            {% assign title = section.title %}
+          {% endif %}
+
+          {% if page.ignore_prevent-orphan %}
+            <h1>{{ title }}</h1>
+          {% else %}
+            <h1 class="prevent-orphan">{{ title }}</h1>
+          {% endif %}
+
+
+
+          <p class="prevent-orphan">
+            {% if include.subtitle %}
+              {{ include.subtitle }}
+            {% else %}
+              {{ section.subtitle }}
+            {% endif %}
+          </p>
+          <div class="lead-button">
+            <a href="mailto:{{ site.email }}?subject={{ email_subject }}" class="btn btn-primary hidden-sm-down">{{ section.button_text }}</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <div class="section-lead-video embed-responsive embed-responsive-16by9">
+          <video class="embed-responsive-item" id="lead-video" autoplay>
+            {% if include.video %}
+              {% assign video_name = include.video %}
+            {% else %}
+              {% assign video_name = section.video %}
+            {% endif %}
+            <source src="/videos/{{video_name}}.mp4" type="video/mp4" />
+            <source src="/videos/{{video_name}}.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 section-lead-button-mobile text-center">
+        <button class="btn btn-primary hidden-md-up">
+          {% if include.button_text %}
+            {{ include.button_text }}
+          {% else %}
+            {{ section.button_text }}
+          {% endif %}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

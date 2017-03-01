@@ -1,0 +1,28 @@
+---
+page_title: Hire React Developers | Hash Labs
+title: Hire React Developers
+subtitle: Our team of expert React developers will join your team full-time and help you achieve your goals and meet your deadlines.
+layout: services
+email_subject: We are requiring React Developers
+content_ready: false
+video: conversation_redux_react_js
+---
+
+{% assign service = site.data.services-react %}
+
+{% if content_ready %}
+  {%
+    include template-service-info.html
+    title = service.section_subtitle
+    content = service.section_content
+    list_title = service.list_title
+    list = service.list_items
+  %}
+{% endif %}
+
+{%
+  include template-technologies.html
+  title = "Other technologies that go well with React"
+  technologies = service.technologies
+  technology_class = "site-technology--service"
+%}

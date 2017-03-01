@@ -1,4 +1,3 @@
-```
 # Context
 Here you should write the context/background of the code changes, a
 good format to follow is.
@@ -20,4 +19,3 @@ should add a gif or a video of the behavior otherwise you may just need
 an image to do the trick. For gifs/videos we use [recordit.co](http://recordit.co)/
 
 If it's a feature without UI or visual changes you can ignore this part.
-```

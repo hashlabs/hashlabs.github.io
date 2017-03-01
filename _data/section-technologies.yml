@@ -1,0 +1,31 @@
+title: Our developers love these technologies
+technologies:
+  - name: RUBY
+    image: /images/logo_ruby.svg
+    alt: Ruby logo
+    href: /hire-ruby-developers
+
+  - name: JAVASCRIPT
+    image: /images/logo_js.svg
+    alt: javascript logo
+    href: /hire-javascript-developers
+
+  - name: REACT
+    image: /images/logo_react.png
+    alt: React logo
+    href: /hire-react-developers
+
+  - name: AWS
+    image: /images/logo_aws.png
+    alt: AWS logo
+    href: /hire-devops-specialists
+
+  - name: GOLANG
+    image: /images/logo_golang.png
+    alt: Golang logo
+    href: /hire-golang-developers
+
+  - name: DOCKER
+    image: /images/logo_docker.svg
+    alt: Docker logo
+    href: /hire-devops-specialists

@@ -1,40 +1,5 @@
-{% assign lead = site.data.section-lead%}
-
-{% assign background = lead.background.src %}
-
-<section class="section-lead">
-  {% include background-template.html %}
-  {% include fullscreen-video-template.html %}
-  <div class="container section-wrapper">
-    <div class="valign">
-      <div class="vobject">
-        <div class="row">
-          <div class="col-xs-12">
-            <div id="typed-strings">
-              {% for sentence in lead.lead %}
-                <p>{{ sentence.text }}</p>
-              {% endfor %}
-            </div>
-            <h1 class="leadtext static">We help startups to launch.</h1>
-            <h1 class="leadtext" style="display: none;">We <span id="typed">help startups to launch.</span></h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 wow fadeIn lapse-five" style="visibility: hidden;">
-            <h2 class="subleadtext">
-              {{ lead.sublead.text }}
-            </h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 wow fadeInUp lapse-six" style="visibility: hidden;">
-            <a href="{{site.data.menus.hireus.href}}" class="btn-primary cta-lead">Let's talk!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="down-caret animated infinite bounce">
-      <img class="image" src="{{ lead.background.arrow }}" alt="down-caret">
-    </div>
-  </div>
-</section>
+<!--
+  The lead template, accepts some include parameters, but if
+  they are not used section-lead.yml values will be used.
+-->
+{% include template-lead.html %}

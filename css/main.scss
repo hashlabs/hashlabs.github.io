@@ -18,7 +18,6 @@
 
 @import 'tools--functions';
 @import 'tools--mixins';
-@import 'tools--modifiers';
 @import 'tools--z-map';
 
 /**
@@ -26,52 +25,29 @@
  */
 
 @import 'objects--buttons';
-@import 'objects--brand-listers';
-@import 'objects--technology-listers';
-@import 'objects--crew-avatar';
-@import 'objects--cards';
-@import 'objects--paragraphs';
-@import 'objects--services-sidebar';
-@import 'objects-button-menu';
-@import 'objects--down-caret';
 
 /**
  * Components
  */
 
-@import 'components--header';
+@import 'components--navbar';
+@import 'components--navbar-mobile';
 @import 'components--footer';
-@import 'components--member-profile';
-@import 'components--header-detached';
-@import 'components--mobile-menu';
+@import 'components--lead';
+@import 'components--brands';
+@import 'components--what-we-do';
+@import 'components--technologies';
+@import 'components--how';
+@import 'components--cta'; // Call to Action section
+@import 'components--faq'; // Frequently asked questions section
+@import 'components--service';
 
 /**
  * Layouts
  */
 
 @import 'layouts--global';
-@import 'layouts--forms';
-@import 'layouts--blog';
-@import 'layouts--post';
 
 /**
  * Partials
  */
-
-@import 'partials--section-lead';
-@import 'partials--section-projects';
-@import 'partials--section-whoweare';
-@import 'partials--section-services';
-@import 'partials--services';
-@import 'partials--section-stripe';
-@import 'partials--section-fullscreen-video';
-@import 'partials--section-testimonials';
-@import 'partials--section-team';
-@import 'partials--error-404';
-
-@import 'partials--view-about';
-@import 'partials--view-team';
-@import 'partials--view-contact';
-@import 'partials--view-projects';
-@import 'partials--view-project';
-@import 'partials--view-thanks';

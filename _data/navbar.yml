@@ -1,0 +1,21 @@
+title: Hash Labs
+menus:
+  - who_we_are:
+    name: What we do?
+    href: /#what-we-do
+    text: What we do?
+
+  - technologies:
+    name: Technologies
+    href: /#technologies
+    text: Technologies
+
+  - our_model:
+    name: How we work
+    href: /#how-we-work
+    text: How we work
+
+  - faq:
+    name: FAQ
+    href: /#faq
+    text: FAQ

@@ -10,15 +10,22 @@ require 'rails'
   require "#{framework}/railtie"
 end
 
+require 'autoprefixer-rails'
+require 'compass'
 require 'slim-rails'
-require 'jquery-rails'
-require 'bootstrap-sass'
 require 'uglifier'
+
+require 'bootstrap'
+require 'jquery-rails'
+require 'rails-assets-tether'
 
 module Dummy
   class Application < Rails::Application
     config.assets.enabled = true if config.assets.respond_to?(:enabled)
-    config.assets.precompile += %w( application.css application.js )
+    if Rails::VERSION::MAJOR > 4
+      # Rails 4 precompiles application.css|js by default, but future version of Rails do not.
+      config.assets.precompile += %w( application.css application.js )
+    end
     config.to_prepare do
       if ENV['VERBOSE']
         STDERR.puts "Loaded Rails #{Rails::VERSION::STRING}, Sprockets #{Sprockets::VERSION}",
