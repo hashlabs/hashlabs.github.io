@@ -38,8 +38,7 @@ these files using `site.data.{filename}`.
 # Known Issues
 
 *Be aware we are including all bootstrap files whitin the repo at `_sass/_bootstrap-sass`.
-This folder will be removed and refactored in the future.
-The problem is due to how gh-pages handles jekyll dependencies.*
+This folder will be removed and refactored in the future, currently problem is due to how gh-pages handles jekyll dependencies.*
 
 # About
 
