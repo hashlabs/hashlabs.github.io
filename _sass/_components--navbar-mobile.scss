@@ -1,0 +1,58 @@
+$color--navbar-background: $hint-of-red;
+$size--navbar-height: 70px;
+$size--nav-links-padding-top: 26px;
+$size--menu-toggle-height: 2px;
+$size--menu-toggle-width: 28px;
+
+.site-nav-mobile-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all .3s ease;
+  z-index: z('navbar-mobile');
+  transform: translateY(-100%);
+
+  &.active {
+    margin-top: $size--navbar-height;
+    transform: translateY(0);
+  }
+}
+
+.site-nav-mobile {
+  background-color: $color--navbar-background;
+}
+
+.site-nav-mobile-links {
+  list-style: none;
+}
+
+.menu-toggle {
+  width: $size--menu-toggle-width;
+  height: $size--menu-toggle-height;
+  background-color: $orange-red;
+  position: absolute;
+  top: 60%;
+  right: 40%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: inherit;
+    height: inherit;
+    background-color: $orange-red;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: inherit;
+    height: inherit;
+    background-color: $orange-red;
+  }
+}

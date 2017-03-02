@@ -1,49 +1,6 @@
-/*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
- * Add into this file the variables that are going
- * to be used by Bootstrap to delivery its grid and
- * overall styles. A complete list of variables
- * can be found at: (http://getbootstrap.com/customize/#less-variables)
- */
 
-// Colors
+// This is for navbar .nav-link color.
+$navbar-light-color: $black;
 
-$brand-primary:                   $color--base;
-$brand-secondary:                 $color--accent;
-
-// Scaffolding
-
-$body-bg-transparent:             false;
-
-$body-bg:                         null;
-$text-color:                      $custom-black;
-$link-color:                      $brand-primary;
-$link-hover-color:                null;
-$link-hover-decoration:           none;
-
-// Grid system
-
-$grid-gutter-width:               30px;
-$grid-gutter-width-half:          $grid-gutter-width/2;
-
-// Components
-
-$border-radius-base:              3px;
-$border-radius-small:             3px;
-$border-radius-large:             4px;
-$padding-large-vertical:          20px;
-$padding-large-horizontal:        30px;
-
-// Buttons
-
-$btn-primary-border:              $brand-primary;
-
-// Forms
-
-$input-border:                    $aluminium;
-$input-color:                     $aluminium;
-$input-color-placeholder:         $aluminium;
-$input-border-focus:              $color--accent;
-$input-bg:                        transparent;
-$form-group-margin-bottom:        30px;
-$input-height-small:              75px;
+// $navbar-light-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$orange-red}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23");
+// $navbar-light-toggler-border: transparent;

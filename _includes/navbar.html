@@ -1,0 +1,47 @@
+<nav class="site-navbar">
+  <header class="site-header">
+    <div class="row">
+
+      <div class="col-2">
+        <a href="#" class="site-logo text-center">
+          <img src="/images/logo_orange.svg" alt="Hash Labs logo">
+        </a>
+      </div>
+
+      <div class="col-8 hidden-md-up text-center">
+        <h3 class="header-title">Hash Labs</h3>
+      </div>
+
+      <div id="mobile-nav-toggle" class="col-2 hidden-md-up text-center">
+        <span class="menu-toggle"></span>
+      </div>
+
+      <div class="col-md-10 hidden-sm-down">
+        <ul class="header-links">
+          {% for links in site.data.menus %}
+            {% assign link = links[1] %}
+            <li class="header-link">
+              <a href="{{link.href}}">{{link.name}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </header>
+</nav>
+
+<div id="mobile-nav" class="site-nav-mobile-wrapper">
+  <nav class="site-nav-mobile">
+    <ul class="site-nav-mobile-links">
+
+      {% for links in site.data.menus %}
+        {% assign link = links[1] %}
+        <li class="site-nav-mobile-link">
+          <a href="{{link.href}}">{{link.name}}</a>
+        </li>
+      {% endfor %}
+
+    </ul>
+  </nav>
+</div>
