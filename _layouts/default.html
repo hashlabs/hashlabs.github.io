@@ -5,9 +5,13 @@
 
   <body class="default">
 
-    {{ content }}
+    {% include navbar.html %}
 
-    {% include footer-scripts.html %}
+    <div class="main-wrapper">
+      {{ content }}
+
+      {% include footer-scripts.html %}
+    </div>
 
   </body>
 
