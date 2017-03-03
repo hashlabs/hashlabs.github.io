@@ -3,15 +3,17 @@
 
   {% include head.html %}
 
-  <body class="default">
+  <body class="default site">
 
     {% include navbar.html %}
 
-    <div class="main-wrapper">
+    <main class="site-content">
       {{ content }}
+    </main>
 
-      {% include footer-scripts.html %}
-    </div>
+    {% include section-footer.html %}
+
+    {% include footer-scripts.html %}
 
   </body>
 

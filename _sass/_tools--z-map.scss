@@ -4,7 +4,7 @@ $z-layers: (
   'navbar-mobile': 20,
   'header': 30,
   'navbar': 40,
-  'navbar-not-active': -1
+  'navbar-not-active': -1,
 );
 
 @function z($layer) {
