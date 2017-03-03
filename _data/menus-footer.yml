@@ -1,0 +1,111 @@
+company:
+  name: COMPANY
+  links:
+    about_us:
+      name: About Us
+      href: /#aboutus
+      text: About Us
+    our_work:
+      name: Our Work
+      href: /#ourwork
+      text: Our Work
+    unleash:
+      name: Unleash
+      href: /#unleash
+      text: Unleash
+    our_developers:
+      name: Our Developers
+      href: /#ourdevelopers
+      text: Our Developers
+    hire_developers:
+      name: Hire Developers
+      href: /#hiredevelopers
+      text: Hire Developers
+    join_as_a_developer:
+      name: Join as a Developer
+      href: /#joinasadeveloper
+      text: Join as a Developer
+
+resources:
+  name: RESOURCE
+  links:
+    case_studies:
+      name: Case Studies
+      href: /#casestudies
+      text: Case Studies
+    write_for_us:
+      name: Write For Us
+      href: /#writeforus
+      text: Write For Us
+
+hire_developers:
+  name: HIRE DEVELOPERS
+  links:
+    react_developers:
+      name: React Developers
+      href: /#reactdevelopers
+      text: React Developers
+    react_native_developers:
+      name: React Native Developers
+      href: /#reactnativedevelopers
+      text: React Native Developers
+    angular_developers:
+      name: Angular Developers
+      href: /#angulardevelopers
+      text: Angular Developers
+    javascript_developers:
+      name: Javascript Developers
+      href: /#javascriptdevelopers
+      text: Javascript Developers
+    node_developers:
+      name: Node Developers
+      href: /#nodedevelopers
+      text: Node Developers
+    ruby_developers:
+      name: Ruby Developers
+      href: /#rubydevelopers
+      text: Ruby Developers
+    php_developers:
+      name: PHP Developers
+      href: /#phpdevelopers
+      text: PHP Developers
+    laravel_developers:
+      name: Laravel Developers
+      href: /#laraveldevelopers
+      text: Laravel Developers
+    symfony_developers:
+      name: Symfony Developers
+      href: /#symfonydevelopers
+      text: Symfony Developers
+    Infrastructure_engineers:
+      name: Infrastructure Engineers
+      href: /#infrastructureengineers
+      text: Infrastructure Engineers
+
+connect:
+  name: CONNECT
+  links:
+    blog:
+      name: Blog
+      href: /#blog
+      text: Blog
+    twitter:
+      name: Twitter
+      href: /#twitter
+      text: Twitter
+    facebook:
+      name: Facebook
+      href: /#facebook
+      text: Facebook
+    linkedin:
+      name: Linkedin
+      href: /#linkedin
+      text: Linkedin
+    youtube:
+      name: Youtube
+      href: /#youtube
+      text: Youtube
+    contact_us:
+      name: Contact Us
+      href: /#contact_us
+      text: Contact Us
