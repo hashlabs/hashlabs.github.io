@@ -1,0 +1,74 @@
+$size--techs-per-row:              6;
+$size--techs-per-row-tablet:       3;
+$size--techs-per-row-phone:        2;
+// all techs on a single row on desktop
+$size--tech-width-large:           100% / $size--techs-per-row;
+// 3 techs per row on tablets
+$size--tech-width-medium:          100% / $size--techs-per-row-tablet;
+// 3 techs per row on phones
+$size--tech-width-small:           100% / $size--techs-per-row-phone;
+$size--tech-title-font:            14px;
+$size--title-font:                 28px;
+$size--title-font-tablet:          24px;
+$size--title-font-phone:          20px;
+$size--tech-image-width:           40%;
+
+
+.site-technologies-container {
+  background-color: $hint-of-red;
+  padding: $space*3 0 $space*2 0;
+}
+
+.site-technologies-title {
+  font-size: $size--title-font;
+  font-weight: bold;
+  color: $darker-gray;
+  margin-bottom: $space*2;
+
+  @media #{$just-medium-resolutions} {
+    font-size: $size--title-font-tablet;
+  }
+
+  @media #{$just-medium-resolutions} {
+    // font-size: $size--title-font-phone;
+  }
+}
+
+.site-technologies {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.site-technology {
+  display: inline-block;
+  width: $size--tech-width-large;
+  cursor: pointer;
+
+  h3 {
+    font-size: $size--tech-title-font;
+    color: $black;
+    font-weight: $size--font-weight-default;
+    padding-top: $space;
+  }
+
+  img {
+    width: $size--tech-image-width;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media #{$just-medium-resolutions} {
+    width: $size--tech-width-medium;
+    padding: 0;
+  }
+
+  @media #{$just-very-small-resolutions} {
+    width: $size--tech-width-small;
+    padding: 0;
+  }
+}

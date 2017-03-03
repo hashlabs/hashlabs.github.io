@@ -1,0 +1,59 @@
+$size--title-font:                    28px;
+$size--title-font-tablet:             24px;
+$size--content-line-height:           2.13;
+$size--content-line-height-small:     1.88;
+
+.site-what-container {
+  background-color: $white;
+  padding: $space*3 0;
+}
+
+
+.site-what {
+  color: $darker-gray;
+
+  h2 {
+    font-size: $size--title-font;
+    font-weight: bold;
+    margin-bottom: $space*1.5;
+  }
+
+  p {
+    line-height: $size--content-line-height;
+    font-weight: $size--font-weight-default;
+  }
+
+  img {
+    display: block;
+  }
+
+  @media #{$just-medium-resolutions} {
+    text-align: center;
+
+    h2 {
+      font-size: $size--title-font-tablet;
+    }
+  }
+
+  @media #{$just-small-resolutions} {
+    p {
+      line-height: $size--content-line-height-small;
+
+      // This negative margin issues an orphan word.
+      // Not an orphan anymore.
+      margin-left: -$space*0.25;
+      margin-right: -$space*0.25;
+    }
+
+    img {
+      margin-bottom: $space*2;
+    }
+  }
+}
+
+.site-what-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

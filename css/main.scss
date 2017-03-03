@@ -24,7 +24,7 @@
  * Objects
  */
 
-
+@import 'objects--buttons';
 
 /**
  * Components
@@ -33,6 +33,13 @@
 @import 'components--navbar';
 @import 'components--navbar-mobile';
 @import 'components--footer';
+@import 'components--lead';
+@import 'components--brands';
+@import 'components--what-we-do';
+@import 'components--technologies';
+@import 'components--how';
+@import 'components--cta'; // Call to Action section
+@import 'components--faq'; // Frequently asqued questions section
 
 /**
  * Layouts
