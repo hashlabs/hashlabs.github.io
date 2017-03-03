@@ -1,0 +1,47 @@
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-3">
+        <a href="#">
+          <img src="/images/logo_grey.svg" alt="Hash Labs Logo">
+        </a>
+      </div>
+
+      <div class="col-9 footer-links-groups">
+        <div class="row">
+
+          {% for groups in site.data.menus-footer %}
+            {% assign group = groups[1] %}
+            <div class="col-lg-3 col-md-6 footer-links-group">
+              <h3 class="footer-links-title">{{group.name}}</h3>
+              <ul class="footer-links">
+                {% for links in group.links %}
+                  {% assign link = links[1] %}
+                  <li class="footer-link">
+                    <a href="{{link.href}}">{{link.name}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="footer-copyright">
+        <p class="text-center">
+          Hash Labs <i class="fa fa-copyright" aria-hidden="true"></i>
+          LLC All Right Reserved
+        </p>
+        <p class="text-center">
+          Made with <i class="fa fa-heart-o" aria-hidden="true"></i>
+          by Hash Labs
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
