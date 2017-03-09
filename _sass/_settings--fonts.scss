@@ -11,7 +11,7 @@
  // font-import
  // -----------------------------------------------------------------------------
 
-  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
 
 // -----------------------------------------------------------------------------
 // font-colors
@@ -32,7 +32,9 @@
   $font-family-monospace:       null;
 
   $font-family-base:            $primary-font;
-  $font-size-base:              24;
+
+  // This cannot be px!!! (Bootstrap 4 thing)
+  $font-size-base:              1rem;
   $font-size-slightly-large:    ceil($font-size-base*1.125);
   $font-size-large:             ceil($font-size-base*1.25);
   $font-size-small:             ceil($font-size-base*0.85);

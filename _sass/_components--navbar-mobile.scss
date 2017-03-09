@@ -1,8 +1,10 @@
-$color--navbar-background: $hint-of-red;
-$size--navbar-height: 70px;
-$size--nav-links-padding-top: 26px;
-$size--menu-toggle-height: 2px;
-$size--menu-toggle-width: 28px;
+$color--navbar-background:           $hint-of-red;
+$size--navbar-height:                70px;
+$size--nav-links-padding-top:        26px;
+$size--menu-toggle-height:           2px;
+$size--menu-toggle-width:            28px;
+$size--menu-toggle-top:              60%;
+$size--menu-toggle-left:             40%;
 
 .site-nav-mobile-wrapper {
   height: 100%;
@@ -15,8 +17,10 @@ $size--menu-toggle-width: 28px;
   transform: translateY(-100%);
 
   &.active {
-    margin-top: $size--navbar-height;
-    transform: translateY(0);
+    @media #{$just-small-resolutions} {
+      margin-top: $size--navbar-height;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -33,8 +37,8 @@ $size--menu-toggle-width: 28px;
   height: $size--menu-toggle-height;
   background-color: $orange-red;
   position: absolute;
-  top: 60%;
-  right: 40%;
+  top: $size--menu-toggle-top;
+  right: $size--menu-toggle-left;
 
   &::before {
     content: '';

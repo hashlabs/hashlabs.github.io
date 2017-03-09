@@ -1,17 +1,30 @@
 - name: RUBY
-  link: /images/ruby_logo.png
+  image: /images/ruby_logo.svg
+  alt: Ruby logo
+  link: https://www.ruby-lang.org
 
-- name: RAILS
-  link: /images/logo_rails.png
+- name: AWS
+  image: /images/logo_aws.png
+  alt: AWS logo
+  link: https://aws.amazon.com/
 
 - name: JAVASCRIPT
-  link: /images/logo_js.png
+  image: /images/logo_js.svg
+  alt: javascript logo
+  link: https://www.javascript.com/
 
-- name: REACT
-  link: /images/react_logo.png
 
 - name: GOLANG
-  link: /images/logo_golang.png
+  image: /images/logo_golang.png
+  alt: Golang logo
+  link: https://golang.org/
 
 - name: DOCKER
-  link: /images/logo_docker.png
+  image: /images/logo_docker.svg
+  alt: Docker logo
+  link: https://www.docker.com/
+
+- name: REACT
+  image: /images/react_logo.png
+  alt: React logo
+  link: https://facebook.github.io/react/

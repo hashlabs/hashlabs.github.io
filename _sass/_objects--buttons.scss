@@ -1,0 +1,39 @@
+$size--btn-font-size:                    22px;
+$size--btn-border-radius:                2px;
+$size--btn-height:                       45px;
+$size--btn-padding-top:                  50px;
+$color--btn-primary:                     $orange-red;
+$color--btn-primary-accent:              $accent-orange-red;
+
+%btn-boilerplate {
+  display: inline-block;
+  max-width: 100%;
+  font-family: $primary-font;
+  text-align: center;
+  font-size: $size--btn-font-size;
+  transition: all .2s ease;
+  cursor: pointer;
+  @include simple-transition;
+}
+
+.btn--primary {
+  @extend %btn-boilerplate;
+  border-radius: $size--btn-border-radius;
+  border: 0;
+  background-color: $color--btn-primary;
+  font-weight: bold;
+  color: $white;
+  padding: $space-quarter $space*4;
+
+  @media #{$just-small-resolutions} {
+    padding: $space-quarter $space*3;
+  }
+
+  @media #{$just-very-small-resolutions} {
+    min-width: 80%;
+  }
+
+  &:hover {
+    background-color: $color--btn-primary-accent;
+  }
+}

@@ -20,6 +20,9 @@ permalink: /blog/:title
 # Build settings
 markdown: kramdown
 
+gems:
+  - jekyll-autoprefixer
+
 # SASS
 sass:
   style: compressed

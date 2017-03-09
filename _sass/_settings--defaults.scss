@@ -33,19 +33,24 @@
 
   $size--header-height:                          $space*7.5;
 
+  $size--font-weight-default:                   500;
+
 
 // -----------------------------------------------------------------------------
 // media queries
 // -----------------------------------------------------------------------------
 
-  $minimun-screen-resolution:     320px;
+  $minimum-screen-resolution:     320px;
 
+  $bootstrap-very-sm:             576px;
   $bootstrap-sm:                  768px;
   $bootstrap-md:                  992px;
   $bootstrap-lg:                  1200px;
   $screens-fhd:                   1920px;
   $tablet-landscape:              1024px;
 
+  $just-minimum-resolution:                 "only screen and (max-width: #{$minimum-screen-resolution})";
+  $just-very-small-resolutions:             "only screen and (max-width: #{$bootstrap-very-sm})";
   $just-small-resolutions:                  "only screen and (max-width: #{$bootstrap-sm})";
   $just-medium-resolutions:                 "only screen and (max-width: #{$bootstrap-md})";
 
@@ -56,3 +61,6 @@
 
 
   $from-small-to-medium-resolutions:        "only screen and (min-width: #{$bootstrap-sm}) and (max-width: #{$bootstrap-md})";
+
+  $size--logo-width: 44px;
+  $size--logo-height: 44px;

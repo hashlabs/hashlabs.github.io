@@ -1,0 +1,21 @@
+<section class="site-how-container">
+  <div class="container">
+
+    <div class="row section-how-title">
+      <div class="col-12">
+        <h2 class="text-center">How we make it work</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for section in site.data.section-how %}
+        <section class="col-xs-12 col-md-4 section-how">
+          <img class="img-fluid" src="{{ section.image }}" alt="{{ section.alt }}">
+          <h3>{{ section.title }}</h3>
+          <p>{{ section.content }}</p>
+        </section>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
