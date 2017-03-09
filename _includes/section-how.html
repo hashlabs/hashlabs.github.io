@@ -3,7 +3,7 @@
 
     <div class="row section-how-title">
       <div class="col-12">
-        <h2 class="text-center">How we make it work</h2>
+        <h2 class="text-center widont">How we make it work</h2>
       </div>
     </div>
 
@@ -11,8 +11,8 @@
       {% for section in site.data.section-how %}
         <section class="col-xs-12 col-md-4 section-how">
           <img class="img-fluid" src="{{ section.image }}" alt="{{ section.alt }}">
-          <h3>{{ section.title }}</h3>
-          <p>{{ section.content }}</p>
+          <h3 class="widont">{{ section.title }}</h3>
+          <p class="widont">{{ section.content }}</p>
         </section>
       {% endfor %}
     </div>

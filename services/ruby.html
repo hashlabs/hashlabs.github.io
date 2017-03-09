@@ -1,0 +1,21 @@
+---
+title: Turbocharger Ruby skills of your developers
+layout: services
+---
+
+{% assign service = site.data.services-ruby %}
+
+{%
+  include template-service-info.html
+  title = service.section_subtitle
+  content = service.section_content
+  list_title = service.list_title
+  list = service.list_items
+%}
+
+{%
+  include template-technologies.html
+  title = "Technologies we will&nbsp;use"
+  technologies = service.technologies
+  techonoly_class = "site-technology--service"
+%}
