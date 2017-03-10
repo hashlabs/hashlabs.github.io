@@ -3,7 +3,9 @@ $(document).ready(function () {
   var mobileMenu = $('#mobile-nav');
   var siteNav = $('.site-navbar');
   var mobileMenuToggle = $('#mobile-nav-toggle');
+  var toggleEl = $('.menu-toggle');
   var video = $('#lead-video');
+
   videoElement = video[0];
 
   $('.site-navbar').headroom();
@@ -17,6 +19,7 @@ $(document).ready(function () {
   mobileMenuToggle.on('click', function(event) {
     mobileMenu.toggleClass('active');
     siteNav.toggleClass('active');
+    toggleEl.toggleClass('active');
   });
 
   video.on('ended', function(event) {
