@@ -10,8 +10,12 @@ $size--tech-width-small:           100% / $size--techs-per-row-phone;
 $size--tech-title-font:            14px;
 $size--title-font:                 28px;
 $size--title-font-tablet:          24px;
-$size--title-font-phone:          20px;
+$size--title-font-phone:           20px;
 $size--tech-image-width:           40%;
+// These are for the service section
+$size--image-service:              70px;
+$size--tech-ruby:                  25%;
+$size--tech-ruby:                  25%;
 
 
 .site-technologies-container {
@@ -28,15 +32,11 @@ $size--tech-image-width:           40%;
   @media #{$just-medium-resolutions} {
     font-size: $size--title-font-tablet;
   }
-
-  @media #{$just-medium-resolutions} {
-    // font-size: $size--title-font-phone;
-  }
 }
 
 .site-technologies {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
@@ -44,9 +44,8 @@ $size--tech-image-width:           40%;
   width: 100%;
 }
 
-.site-technology {
+.site-technology, .site-technology--service {
   display: inline-block;
-  width: $size--tech-width-large;
   cursor: pointer;
 
   h3 {
@@ -61,6 +60,10 @@ $size--tech-image-width:           40%;
     display: block;
     margin: 0 auto;
   }
+}
+
+.site-technology {
+  width: $size--tech-width-large;
 
   @media #{$just-medium-resolutions} {
     width: $size--tech-width-medium;
@@ -70,5 +73,33 @@ $size--tech-image-width:           40%;
   @media #{$just-very-small-resolutions} {
     width: $size--tech-width-small;
     padding: 0;
+  }
+}
+
+.site-technology--service {
+  margin-left: $space*3;
+  margin-right: $space*3;
+
+  img {
+    width: $size--image-service;
+    height: $size--image-service;
+  }
+
+  @media #{$just-medium-resolutions} {
+    width: $size--tech-width-medium;
+    margin: $space;
+
+    @include quantity-query(4) {
+      width: $size--tech-width-large;
+    }
+  }
+
+  @media #{$just-very-small-resolutions} {
+    width: $size--tech-width-small;
+    margin: 0;
+
+    @include quantity-query(4) {
+      width: $size--tech-width-small;
+    }
   }
 }

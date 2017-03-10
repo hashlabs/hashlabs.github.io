@@ -1,3 +1,26 @@
 @mixin simple-transition {
   transition: all .2s ease;
 }
+
+// This mixin apply the rules inserted on @content
+// Only when you have $number of childs.
+@mixin quantity-query( $number, $comparison: 'equal' ) {
+  $nth: '';
+
+  @if index( ('greater' 'more' '>'), $comparison ) {
+    $nth: 'n + #{$number}';
+  } @else if index( ('less' 'fewer' '<'), $comparison ) {
+    $nth: '-n + #{$number}';
+  } @else if index( ('equal' 'same' '='), $comparison ) {
+    $nth: $number;
+  } @else {
+    @warn "Sorry, that's an invalid $comparison value."
+  }
+
+  // Selector Magic here
+  &:nth-last-child(#{$nth}):first-child {
+    &, & ~ * {
+      @content;
+    }
+  }
+}

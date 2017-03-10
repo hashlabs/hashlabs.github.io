@@ -7,15 +7,12 @@ $(document).ready(function () {
   videoElement = video[0];
 
   $('.site-navbar').headroom();
-  $('p').widont();
-  $('h2').widont();
-  $('h3').widont();
 
-  // jQuery(function($) {
-  //   $('h1,h2,h3,li,p').each(function() {
-  //     $(this).html($(this).html().replace(/\s([^\s<]{0,10})\s*$/,'&nbsp;$1'));
-  //   });
-  // });
+  // Stop automatic widont initialisation
+  // Without this h1 to h6 tags would get
+  // widont applied.
+  $.jqwidont.auto(false);
+  $('.widont').widont();
 
   mobileMenuToggle.on('click', function(event) {
     mobileMenu.toggleClass('active');

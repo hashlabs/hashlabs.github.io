@@ -1,0 +1,26 @@
+<section class="site-technologies-container">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center site-technologies-title">
+          {{ include.title }}
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <ul class="site-technologies">
+        {% for tech in include.technologies %}
+          <li class="{{ include.techonoly_class }}">
+            <a href="{{ tech.link }}" target="_blank">
+              <img class="img-fluid" src="{{ tech.image }}" alt="{{ tech.alt }}">
+              <h3 class="text-center">{{ tech.name }}</h3>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+</section>
