@@ -4,7 +4,7 @@
       {% for brand in site.data.brands %}
         <li class="site-brand">
           <a href="{{ brand.link }}" target="_blank">
-            <img class="img-fluid" src="{{ brand.logo }}" alt="" />
+            <img class="img-fluid" src="{{ brand.logo }}" alt="{{ brand.alt }}" />
           </a>
         </li>
       {% endfor %}

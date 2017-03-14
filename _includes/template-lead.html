@@ -1,12 +1,25 @@
 <section class="section-lead-container">
   <div class="container">
 
+    {% assign lead_section = site.data.section-lead %}
+
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <section class="section-lead">
-          <!-- <h1>Turbocharge your development team</h1> -->
-          <h1 class="widont">{{ include.title }}</h1>
-          <p>We join the team to help them increase their skills and succesfully meet their deadlines</p>
+          <h1 class="widont">
+            {% if include.title %}
+              {{ include.title }}
+            {% else %}
+              {{ lead_section.title }}
+            {% endif %}
+          </h1>
+          <p class="widont">
+            {% if include.subtitle %}
+              {{ include.subtitle }}
+            {% else %}
+              {{ lead_section.subtitle }}
+            {% endif %}
+          </p>
           <div class="lead-button">
             <button class="btn--primary hidden-sm-down">Work with Us</button>
           </div>
@@ -16,7 +29,7 @@
       <div class="col-xs-12 col-md-6">
         <div class="section-lead-video embed-responsive embed-responsive-16by9">
           <video class="embed-responsive-item" id="lead-video" autoplay>
-            <source src="/videos/Animation_HL.mp4" type="video/mp4" />
+            <source src="{% if include.video %}{{ include.video }}{% else %}{{ lead_section.video }}{% endif %}" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -25,7 +38,13 @@
 
     <div class="row">
       <div class="col-xs-12 section-lead-button-mobile text-center">
-        <button class="btn--primary hidden-md-up">Work with Us</button>
+        <button class="btn--primary hidden-md-up">
+          {% if include.button_text %}
+            {{ include.button_text }}
+          {% else %}
+            {{ lead_section.button_text }}
+          {% endif %}
+        </button>
       </div>
     </div>
 

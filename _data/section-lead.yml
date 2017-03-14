@@ -1,14 +1,4 @@
-lead:
-  - text: help startups to launch.
-  - text: do team augmentation.
-  - text: prototype MVPs.
-  - text: help to develop internal tooling.
-  - text: craft gluten-free code.
-  - text: build awesome products.
-
-sublead:
-  text: We develop digital products for web and mobile
-
-background:
-  src: /images/hero_background.jpg
-  arrow: /images/arrow.png
+title: Turbocharge your development team
+subtitle: We join the team to help them increase their skills and succesfully meet their deadlines
+video: /videos/Animation_HL.mp4
+button_text: Work with Us

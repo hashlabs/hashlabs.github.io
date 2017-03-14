@@ -1,18 +1,20 @@
 <section class="site-how-container">
   <div class="container">
 
+    {% assign section = site.data.section-how %}
+
     <div class="row section-how-title">
       <div class="col-12">
-        <h2 class="text-center widont">How we make it work</h2>
+        <h2 class="text-center widont">{{ section.title }}</h2>
       </div>
     </div>
 
     <div class="row">
-      {% for section in site.data.section-how %}
+      {% for item in section.groups %}
         <section class="col-xs-12 col-md-4 section-how">
-          <img class="img-fluid" src="{{ section.image }}" alt="{{ section.alt }}">
-          <h3 class="widont">{{ section.title }}</h3>
-          <p class="widont">{{ section.content }}</p>
+          <img class="img-fluid" src="{{ item.image }}" alt="{{ item.alt }}">
+          <h3 class="widont">{{ item.title }}</h3>
+          <p class="widont">{{ item.content }}</p>
         </section>
       {% endfor %}
     </div>
