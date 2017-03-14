@@ -2,12 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col-12 section-cta">
-        <h2>
-          We work directly with the team increasing their skills and following their
-          <br class="hidden-sm-up"> 
-          development process
-         </h2>
-        <button class="btn--primary">Work with Us</button>
+        {% assign section = site.data.section-cta %}
+        <h2 class="widont">
+          {{ section.title }}
+        </h2>
+        <button class="btn--primary">{{ section.button_text }}</button>
       </div>
     </div>
   </div>

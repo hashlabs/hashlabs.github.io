@@ -1,5 +1,7 @@
 <footer class="site-footer">
 
+  {% assign section = site.data.section-footer %}
+
   <a href="#" class="footer-logo-small hidden-lg-up">
     <img src="/images/logo_grey.svg" alt="Hash Labs Logo">
   </a>
@@ -15,13 +17,11 @@
       <div class="col-9 col-xs-9 col-md-10 footer-links-groups">
         <div class="row">
 
-          {% for groups in site.data.menus-footer %}
-            {% assign group = groups[1] %}
+          {% for menu in section.menus %}
             <div class="col-lg-3 col-md-6 footer-links-group">
-              <h3 class="footer-links-title">{{group.name}}</h3>
+              <h3 class="footer-links-title">{{menu.name}}</h3>
               <ul class="footer-links">
-                {% for links in group.links %}
-                  {% assign link = links[1] %}
+                {% for link in menu.links %}
                   <li class="footer-link">
                     <a href="{{link.href}}">{{link.name}}</a>
                   </li>
@@ -37,12 +37,10 @@
     <div class="row">
       <div class="footer-copyright">
         <p class="text-center">
-          Hash Labs <i class="fa fa-copyright" aria-hidden="true"></i>
-          LLC All Right Reserved
+          {{ section.copyright }}
         </p>
         <p class="text-center">
-          Made with <i class="fa fa-heart-o" aria-hidden="true"></i>
-          by Hash Labs
+          {{ section.note }}
         </p>
       </div>
     </div>

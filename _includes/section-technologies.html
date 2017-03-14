@@ -1,6 +1,8 @@
+{% assign section = site.data.section-technologies %}
+
 {%
   include template-technologies.html
-  title = "We work with more current&nbsp;technologies"
-  technologies = site.data.technologies
+  title = section.title
+  technologies = section.technologies
   techonoly_class = "site-technology"
 %}
