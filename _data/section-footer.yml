@@ -30,18 +30,6 @@ menus:
         href: /#joinasadeveloper
         text: Join as a Developer
 
-  - resources:
-    name: RESOURCES
-    links:
-      - case_studies:
-        name: Case Studies
-        href: /#casestudies
-        text: Case Studies
-      - write_for_us:
-        name: Write For Us
-        href: /#writeforus
-        text: Write For Us
-
   - hire_developers:
     name: HIRE DEVELOPERS
     links:

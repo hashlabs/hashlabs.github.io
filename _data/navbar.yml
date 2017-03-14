@@ -2,7 +2,7 @@ title: Hash Labs
 menus:
   - who_we_are:
     name: What we do?
-    href: /#whatwedo
+    href: /#what-we-do
     text: What we do?
 
   - technologies:
@@ -10,10 +10,10 @@ menus:
     href: /#technologies
     text: Technologies
 
-  - how_does_it_work:
-    name: How does it work
-    href: /#howdoesitwork
-    text: How does it work
+  - our_model:
+    name: How we work
+    href: /#how-we-work
+    text: How we work
 
   - faq:
     name: FAQ
