@@ -6,13 +6,15 @@ $color--btn-primary:                     $orange-red;
 $color--btn-primary-accent:              $accent-orange-red;
 
 %btn-boilerplate {
-  display: inline-block;
-  max-width: 100%;
-  font-family: $primary-font;
-  text-align: center;
-  font-size: $size--btn-font-size;
-  transition: all .2s ease;
   cursor: pointer;
+  display: inline-block;
+  font-family: $primary-font;
+  font-size: $size--btn-font-size;
+  max-width: 100%;
+  text-align: center;
+  transition: all .2s ease;
+  -webkit-font-smoothing: antialiased;
+
   @include simple-transition;
 }
 
@@ -21,7 +23,6 @@ $color--btn-primary-accent:              $accent-orange-red;
   border-radius: $size--btn-border-radius;
   border: 0;
   background-color: $color--btn-primary;
-  font-weight: bold;
   color: $white;
   padding: $space-quarter $space*4;
 
@@ -33,7 +34,9 @@ $color--btn-primary-accent:              $accent-orange-red;
     min-width: 80%;
   }
 
-  &:hover {
+  &:hover, &:focus {
     background-color: $color--btn-primary-accent;
+    text-decoration: none;
+    color: $white;
   }
 }

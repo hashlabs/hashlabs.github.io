@@ -1,7 +1,7 @@
 <section class="section-lead-container">
   <div class="container">
 
-    {% assign lead_section = site.data.section-lead %}
+    {% assign section = site.data.section-lead %}
 
     <div class="row">
       <div class="col-xs-12 col-md-6">
@@ -10,18 +10,18 @@
             {% if include.title %}
               {{ include.title }}
             {% else %}
-              {{ lead_section.title }}
+              {{ section.title }}
             {% endif %}
           </h1>
           <p class="widont">
             {% if include.subtitle %}
               {{ include.subtitle }}
             {% else %}
-              {{ lead_section.subtitle }}
+              {{ section.subtitle }}
             {% endif %}
           </p>
           <div class="lead-button">
-            <button class="btn--primary hidden-sm-down">Work with Us</button>
+            <a href="mailto:{{ site.email }}?subject={{ site.email_subject }}" class="btn--primary">{{ section.button_text }}</a>
           </div>
         </section>
       </div>
@@ -29,7 +29,7 @@
       <div class="col-xs-12 col-md-6">
         <div class="section-lead-video embed-responsive embed-responsive-16by9">
           <video class="embed-responsive-item" id="lead-video" autoplay>
-            <source src="{% if include.video %}{{ include.video }}{% else %}{{ lead_section.video }}{% endif %}" type="video/mp4" />
+            <source src="{% if include.video %}{{ include.video }}{% else %}{{ section.video }}{% endif %}" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -42,7 +42,7 @@
           {% if include.button_text %}
             {{ include.button_text }}
           {% else %}
-            {{ lead_section.button_text }}
+            {{ section.button_text }}
           {% endif %}
         </button>
       </div>
