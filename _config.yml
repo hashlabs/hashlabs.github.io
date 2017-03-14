@@ -8,9 +8,9 @@
 # Site settings
 title: Developers as a Service | Hash Labs
 email: sales@hashlabs.com
-email_subject: We are requiring Hash Labs' Team Extension services
+email_subject: We are requiring Team Extension services
 description: >
-  Our team of experts developers will join your team full-time, to help you achieve your goals at meet your deadlines. We take care of our team training and growth path, so they stay up to date with new standards.
+  Our team of experts developers will join your team full-time, to help you achieve your goals at meet your deadlines. We take care of our team training and growth path, so they stay up to date with new technologies.
 url: "https://www.hashlabs.com" # the base hostname & protocol for your site
 twitter_username: hashlabs
 github_username:  hashlabs

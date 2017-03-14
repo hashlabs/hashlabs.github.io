@@ -17,6 +17,11 @@ list_items:
   - Aliquam erat nibh, placerat id molestie sit amet, tristique sit amet massa.
 
 technologies:
+  - name: NODE JS
+    image: /images/logo_nodejs.png
+    alt: Node JS logo
+    href: /hire-node-js-developers
+
   - name: RUBY ON RAILS
     image: /images/logo_rails.svg
     alt: Ruby on Rails logo
@@ -26,11 +31,6 @@ technologies:
     image: /images/logo_sass.svg
     alt: Sass logo
     href: /hire-sass-developers
-
-  - name: BOOTSTRAP
-    image: /images/logo_bootstrap.gif
-    alt: Bootstrap logo
-    href: /hire-bootstrap-developers
 
   - name: REACT
     image: /images/logo_react.svg

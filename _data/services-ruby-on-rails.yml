@@ -17,10 +17,10 @@ list_items:
   - Aliquam erat nibh, placerat id molestie sit amet, tristique sit amet massa.
 
 technologies:
-  - name: RUBY ON RAILS
-    image: /images/logo_rails.svg
-    alt: Ruby on Rails logo
-    href: /hire-ruby-on-rails-developers
+  - name: RUBY
+    image: /images/logo_ruby.svg
+    alt: Ruby logo
+    href: /hire-ruby-developers
 
   - name: SASS
     image: /images/logo_sass.svg

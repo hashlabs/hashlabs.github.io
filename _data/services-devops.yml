@@ -17,22 +17,17 @@ list_items:
   - Aliquam erat nibh, placerat id molestie sit amet, tristique sit amet massa.
 
 technologies:
-  - name: RUBY ON RAILS
-    image: /images/logo_rails.svg
-    alt: Ruby on Rails logo
-    href: /hire-ruby-on-rails-developers
+  - name: DOCKER
+    image: /images/logo_docker.svg
+    alt: Docker logo
+    href: /hire-devops-specialists
 
-  - name: SASS
-    image: /images/logo_sass.svg
-    alt: Sass logo
-    href: /hire-sass-developers
+  - name: TERRAFORM
+    image: /images/logo_terraform.png
+    alt: Terraform logo
+    href: /hire-devops-specialists
 
-  - name: BOOTSTRAP
-    image: /images/logo_bootstrap.gif
-    alt: Bootstrap logo
-    href: /hire-bootstrap-developers
-
-  - name: REACT
-    image: /images/logo_react.svg
-    alt: React logo
-    href: /hire-react-developers
+  - name: AWS
+    image: /images/logo_aws.png
+    alt: AWS logo
+    href: /hire-devops-specialists
