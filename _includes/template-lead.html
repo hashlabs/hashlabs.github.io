@@ -33,7 +33,13 @@
       <div class="col-xs-12 col-md-6">
         <div class="section-lead-video embed-responsive embed-responsive-16by9">
           <video class="embed-responsive-item" id="lead-video" autoplay>
-            <source src="{% if include.video %}{{ include.video }}{% else %}{{ section.video }}{% endif %}" type="video/mp4" />
+            {% if include.video %}
+              {% assign video_name = include.video %}
+            {% else %}
+              {% assign video_name = section.video %}
+            {% endif %}
+            <source src="/videos/{{video_name}}.mp4" type="video/mp4" />
+            <source src="/videos/{{video_name}}.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>

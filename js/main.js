@@ -1,4 +1,3 @@
-var videoElement;
 $(document).ready(function () {
   var mobileMenu = $('#mobile-nav');
   var siteNav = $('.site-navbar');
@@ -6,7 +5,13 @@ $(document).ready(function () {
   var toggleEl = $('.menu-toggle');
   var video = $('#lead-video');
 
-  videoElement = video[0];
+  /*
+    All of the videos used on the lead section, have a loop
+    that starts at second 11, so we set that on this variable
+  */
+  var loopResetTime = 11;
+
+  var videoElement = video[0];
 
   $('.site-navbar').headroom();
 
@@ -22,8 +27,10 @@ $(document).ready(function () {
     toggleEl.toggleClass('active');
   });
 
+  // This resets the video to the loopResetTime
+  // and starts reproducing it again.
   video.on('ended', function(event) {
-    videoElement.currentTime = 10.064;
+    videoElement.currentTime = loopResetTime;
     videoElement.play();
   });
 });
