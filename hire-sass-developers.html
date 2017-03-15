@@ -1,0 +1,27 @@
+---
+page_title: Hire Sass Developers | Hash Labs
+title: Hire Sass Developers
+subtitle: Our team of expert Sass developers will join your team full-time and help you achieve your goals and meet your deadlines.
+layout: services
+email_subject: We are requiring Sass Developers
+content_ready: false
+---
+
+{% assign service = site.data.services-sass %}
+
+{% if content_ready %}
+  {%
+    include template-service-info.html
+    title = service.section_subtitle
+    content = service.section_content
+    list_title = service.list_title
+    list = service.list_items
+  %}
+{% endif %}
+
+{%
+  include template-technologies.html
+  title = "Other technologies that go well with Sass"
+  technologies = service.technologies
+  technology_class = "site-technology--service"
+%}

@@ -1,0 +1,27 @@
+---
+page_title: Hire DevOps Specialists | Hash Labs
+title: Hire DevOps Specialists
+subtitle: Our team of expert DevOps Specialists will join your team full-time and help you achieve your goals and meet your deadlines.
+layout: services
+email_subject: We are requiring DevOps Specialists
+content_ready: false
+---
+
+{% assign service = site.data.services-devops %}
+
+{% if content_ready %}
+  {%
+    include template-service-info.html
+    title = service.section_subtitle
+    content = service.section_content
+    list_title = service.list_title
+    list = service.list_items
+  %}
+{% endif %}
+
+{%
+  include template-technologies.html
+  title = "Other technologies that go well with DevOps"
+  technologies = service.technologies
+  technology_class = "site-technology--service"
+%}

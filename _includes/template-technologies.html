@@ -12,9 +12,11 @@
     <div class="row">
       <ul class="site-technologies">
         {% for tech in include.technologies %}
-          <li class="{{ include.techonoly_class }}">
-            <img class="img-fluid" src="{{ tech.image }}" alt="{{ tech.alt }}">
-            <h3 class="text-center">{{ tech.name }}</h3>
+          <li class="{{ include.technology_class }}">
+            <a href="{{ tech.href }}">
+              <img class="img-fluid" src="{{ tech.image }}" alt="{{ tech.alt }}">
+              <h3 class="text-center">{{ tech.name }}</h3>
+            </a>
           </li>
         {% endfor %}
       </ul>
