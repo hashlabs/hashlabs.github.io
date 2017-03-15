@@ -13,7 +13,7 @@ $size--answer-width:                    45%;
 
 .section-faq-container {
   background-color: $white;
-  padding: $space*3 0;
+  padding: $space*3 0 $space*3 0;
 }
 
 .section-faq-title {
@@ -21,7 +21,7 @@ $size--answer-width:                    45%;
   font-size: $size--title-font;
   text-align: center;
   font-weight: bold;
-  margin-bottom: $space*2;
+  margin-bottom: $space*2.25;
 }
 
 .section-faq-questions {
@@ -30,6 +30,7 @@ $size--answer-width:                    45%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 0;
 
   @media #{$just-small-resolutions} {
     padding-left: $space*4;
@@ -40,6 +41,13 @@ $size--answer-width:                    45%;
 
 .section-faq-question {
   width: $size--answer-width;
+  margin-bottom: $space*.5;
+
+  @media #{$from-medium-resolutions} {
+    &:nth-last-of-type(-n+2) {
+      margin-bottom: 0;
+    }
+  }
 
   h3 {
     font-size: $size--question-font;
@@ -47,6 +55,7 @@ $size--answer-width:                    45%;
     color: $darker-gray;
     line-height: $size--question-line-height;
     position: relative;
+    margin-bottom: $space*.25;
 
     &::before {
       content: '';
@@ -64,10 +73,16 @@ $size--answer-width:                    45%;
     color: $blueish-gray;
     font-size: $size--answer-font;
     line-height: $size--answer-line-height;
+    margin: 0;
   }
 
   @media #{$just-small-resolutions} {
     width: 100%;
+    margin-bottom: $space*1.5;
+
+    &:nth-last-of-type(-n+1) {
+      margin-bottom: 0;
+    }
 
     h3 {
       font-size: $size--question-font-tablet;

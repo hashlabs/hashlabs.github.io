@@ -10,13 +10,20 @@
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <section class="section-lead">
-          <h1 class="widont">
-            {% if include.title %}
-              {{ include.title }}
-            {% else %}
-              {{ section.title }}
-            {% endif %}
-          </h1>
+          {% if include.title %}
+            {% assign title = include.title %}
+          {% else %}
+            {% assign title = section.title %}
+          {% endif %}
+
+          {% if page.ignore_widont %}
+            <h1>{{ title }}</h1>
+          {% else %}
+            <h1 class="widont">{{ title }}</h1>
+          {% endif %}
+
+
+
           <p class="widont">
             {% if include.subtitle %}
               {{ include.subtitle }}
@@ -25,7 +32,7 @@
             {% endif %}
           </p>
           <div class="lead-button">
-            <a href="mailto:{{ site.email }}?subject={{ email_subject }}" class="btn--primary">{{ section.button_text }}</a>
+            <a href="mailto:{{ site.email }}?subject={{ email_subject }}" class="btn btn-primary hidden-sm-down">{{ section.button_text }}</a>
           </div>
         </section>
       </div>
@@ -48,7 +55,7 @@
 
     <div class="row">
       <div class="col-xs-12 section-lead-button-mobile text-center">
-        <button class="btn--primary hidden-md-up">
+        <button class="btn btn-primary hidden-md-up">
           {% if include.button_text %}
             {{ include.button_text }}
           {% else %}

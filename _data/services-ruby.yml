@@ -18,21 +18,11 @@ list_items:
 
 technologies:
   - name: RUBY ON RAILS
-    image: /images/logo_rails.svg
+    image: /images/logo_rails.png
     alt: Ruby on Rails logo
     href: /hire-ruby-on-rails-developers
 
-  - name: SASS
-    image: /images/logo_sass.svg
-    alt: Sass logo
-    href: /hire-sass-developers
-
   - name: BOOTSTRAP
-    image: /images/logo_bootstrap.gif
+    image: /images/logo_bootstrap.png
     alt: Bootstrap logo
     href: /hire-bootstrap-developers
-
-  - name: REACT
-    image: /images/logo_react.svg
-    alt: React logo
-    href: /hire-react-developers

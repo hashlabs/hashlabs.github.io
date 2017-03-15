@@ -65,6 +65,7 @@ $size--not-named: 4;
   // We get the half of the remaining navbar height after we substract it
   // from the total height, then we add three times the toggle line height
   top: (($size--navbar-height - $size--menu-toggle-height) / 2) + $size--menu-toggle-line-height*3;
+  right: $space;
 
   &.active {
     .menu-toggle-line {

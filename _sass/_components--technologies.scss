@@ -1,21 +1,21 @@
-$size--techs-per-row:              6;
-$size--techs-per-row-tablet:       3;
-$size--techs-per-row-phone:        2;
+$size--techs-per-row:                       6;
+$size--techs-per-row-tablet:                3;
+$size--techs-per-row-phone:                 2;
 // all techs on a single row on desktop
-$size--tech-width-large:           100% / $size--techs-per-row;
+$size--tech-width-large:                    100% / $size--techs-per-row;
 // 3 techs per row on tablets
-$size--tech-width-medium:          100% / $size--techs-per-row-tablet;
+$size--tech-width-medium:                   100% / $size--techs-per-row-tablet;
 // 3 techs per row on phones
-$size--tech-width-small:           100% / $size--techs-per-row-phone;
-$size--tech-title-font:            14px;
-$size--title-font:                 28px;
-$size--title-font-tablet:          24px;
-$size--title-font-phone:           20px;
-$size--tech-image-width:           40%;
+$size--tech-width-small:                    100% / $size--techs-per-row-phone;
+$size--tech-title-font:                     14px;
+$size--title-font:                          28px;
+$size--title-font-tablet:                   24px;
+$size--title-font-phone:                    20px;
 // These are for the service section
-$size--image-service:              70px;
-$size--tech-ruby:                  25%;
-$size--tech-ruby:                  25%;
+$size--anchor-width:                        60%;
+$size--image:                               70%;
+$size--anchor--service-width:               60%;
+$size--image-service:                       60%;
 
 
 .site-technologies-container {
@@ -40,6 +40,7 @@ $size--tech-ruby:                  25%;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
+  align-items: flex-end;
   padding: 0;
   width: 100%;
 }
@@ -55,9 +56,17 @@ $size--tech-ruby:                  25%;
   }
 
   img {
-    width: $size--tech-image-width;
+    width: $size--image;
     display: block;
     margin: 0 auto;
+  }
+
+  a {
+    cursor: pointer;
+    display: block;
+    width: $size--anchor-width;
+    margin: 0 auto;
+    text-decoration: none;
   }
 }
 
@@ -76,12 +85,17 @@ $size--tech-ruby:                  25%;
 }
 
 .site-technology--service {
-  margin-left: $space*3;
-  margin-right: $space*3;
+  width: $size--tech-width-large;
+  margin-top: $space;
 
-  img {
-    width: $size--image-service;
-    height: $size--image-service;
+  @include quantity-query(4) {
+    a {
+      width: 60%;
+    }
+
+    img {
+      width: $size--image-service;
+    }
   }
 
   @media #{$just-medium-resolutions} {

@@ -1,3 +1,8 @@
+// Stop automatic widont initialisation
+// Without this h1 to h6 tags would get
+// widont applied.
+$.jqwidont.auto(false);
+
 $(document).ready(function () {
   var mobileMenu = $('#mobile-nav');
   var siteNav = $('.site-navbar');
@@ -10,15 +15,11 @@ $(document).ready(function () {
     that starts at second 11, so we set that on this variable
   */
   var loopResetTime = 11;
-
   var videoElement = video[0];
 
   $('.site-navbar').headroom();
 
-  // Stop automatic widont initialisation
-  // Without this h1 to h6 tags would get
-  // widont applied.
-  $.jqwidont.auto(false);
+  // Appliying widont plugin to all elements with this class
   $('.widont').widont();
 
   mobileMenuToggle.on('click', function(event) {

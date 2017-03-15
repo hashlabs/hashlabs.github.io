@@ -17,18 +17,8 @@ list_items:
   - Aliquam erat nibh, placerat id molestie sit amet, tristique sit amet massa.
 
 technologies:
-  - name: BOOTSTRAP
-    image: /images/logo_bootstrap.gif
-    alt: Bootstrap logo
-    href: /hire-bootstrap-developers
-
-  - name: NODE JS
-    image: /images/logo_nodejs.png
-    alt: Node JS logo
-    href: /hire-node-js-developers
-
   - name: JAVASCRIPT
-    image: /images/logo_javascript.jpg
+    image: /images/logo_js.svg
     alt: JavaScript logo
     href: /hire-javascript-developers
 
