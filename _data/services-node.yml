@@ -17,22 +17,23 @@ list_items:
   - Aliquam erat nibh, placerat id molestie sit amet, tristique sit amet massa.
 
 technologies:
-  - name: RUBY ON RAILS
-    image: /images/logo_rails.svg
-    alt: Ruby on Rails logo
-    href: /hire-ruby-on-rails-developers
+  - name: JAVASCRIPT
+    image: /images/logo_javascript.jpg
+    alt: JavaScript logo
+    href: /hire-javascript-developers
 
-  - name: SASS
-    image: /images/logo_sass.svg
-    alt: Sass logo
-    href: /hire-sass-developers
+  - name: REACT
+    image: /images/logo_react.png
+    alt: React logo
+    href: /hire-react-developers
+
+  - name: REDUX
+    image: /images/logo_redux.png
+    alt: Redux logo
+    href: /hire-redux-developers
 
   - name: BOOTSTRAP
     image: /images/logo_bootstrap.gif
     alt: Bootstrap logo
     href: /hire-bootstrap-developers
 
-  - name: REACT
-    image: /images/logo_react.svg
-    alt: React logo
-    href: /hire-react-developers
