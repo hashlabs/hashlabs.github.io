@@ -35,8 +35,8 @@ var HashLabs = {
 
     this.navBar.headroom({
       onUnpin: function() {
-        $(this.elem).toggleClass(this.classes.unpinned, !that.linkWasClicked);
-        $(this.elem).toggleClass(this.classes.pinned, that.linkWasClicked);
+        $(this).toggleClass(this.classes.unpinned, !that.linkWasClicked);
+        $(this).toggleClass(this.classes.pinned, that.linkWasClicked);
         that.linkWasClicked = false;
 
         return;
