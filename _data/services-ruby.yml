@@ -22,7 +22,17 @@ technologies:
     alt: Ruby on Rails logo
     href: /hire-ruby-on-rails-developers
 
+  - name: SASS
+    image: /images/logo_sass.png
+    alt: Sass logo
+    href: /hire-sass-developers
+
   - name: BOOTSTRAP
     image: /images/logo_bootstrap.png
     alt: Bootstrap logo
     href: /hire-bootstrap-developers
+
+  - name: REACT
+    image: /images/logo_react.png
+    alt: React logo
+    href: /hire-react-developers
