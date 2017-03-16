@@ -22,6 +22,16 @@ technologies:
     alt: Node JS logo
     href: /hire-node-js-developers
 
+  - name: RUBY ON RAILS
+    image: /images/logo_rails.png
+    alt: Ruby on Rails logo
+    href: /hire-ruby-on-rails-developers
+
+  - name: REACT
+    image: /images/logo_react.png
+    alt: React logo
+    href: /hire-react-developers
+
   - name: BOOTSTRAP
     image: /images/logo_bootstrap.png
     alt: Bootstrap logo

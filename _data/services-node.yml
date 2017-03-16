@@ -26,3 +26,13 @@ technologies:
     image: /images/logo_react.png
     alt: React logo
     href: /hire-react-developers
+
+  - name: REDUX
+    image: /images/logo_redux.png
+    alt: Redux logo
+    href: /hire-redux-developers
+
+  - name: BOOTSTRAP
+    image: /images/logo_bootstrap.png
+    alt: Bootstrap logo
+    href: /hire-bootstrap-developers
