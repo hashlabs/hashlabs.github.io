@@ -1,9 +1,10 @@
 $(document).ready(function () {
-  var mobileMenu = $('#mobile-nav');
-  var siteNav = $('.site-navbar');
+  var mobileMenuElements = $('#mobile-nav, .site-navbar, #mobile-nav-toggle');
   var mobileMenuToggle = $('#mobile-nav-toggle');
-  var toggleEl = $('.menu-toggle');
+  var mobileNavLinks = $('.nav-mobile-link');
+  var navBar = $('.site-navbar');
   var video = $('#lead-video');
+  var linkWasClicked = false;
 
   /*
     All of the videos used on the lead section, have a loop
@@ -12,7 +13,19 @@ $(document).ready(function () {
   var loopResetTime = 11;
   var videoElement = video[0];
 
-  $('.site-navbar').headroom();
+  /*
+    This makes sure headroom stays open when we click a nav link
+  */
+  $('.site-navbar').headroom({
+    onUnpin: function() {
+      $(this).toggleClass(this.classes.unpinned, !linkWasClicked);
+      $(this).toggleClass(this.classes.pinned, linkWasClicked);
+
+      linkWasClicked = false;
+
+      return false;
+    }
+  });
 
   /*
     We add a non breaking space (&nbsp;) between the last two
@@ -25,9 +38,14 @@ $(document).ready(function () {
   });
 
   mobileMenuToggle.on('click', function(event) {
-    mobileMenu.toggleClass('active');
-    siteNav.toggleClass('active');
-    toggleEl.toggleClass('active');
+    mobileMenuElements.toggleClass('active');
+  });
+
+  mobileNavLinks.on('click', function(event) {
+    event.preventDefault();
+    mobileMenuElements.removeClass('active');
+    linkWasClicked = true;
+    console.log(this.getAttribute('href'));
   });
 
   // This resets the video to the loopResetTime
