@@ -9,11 +9,20 @@
 
     <main class="site-content">
 
-      {%
-        include template-lead.html
-        title=page.title
-        subtitle=page.subtitle
-      %}
+      {% if page.video %}
+        {%
+          include template-lead.html
+          title = page.title
+          subtitle = page.subtitle
+          video = page.video
+        %}
+      {% else %}
+        {%
+          include template-lead.html
+          title = page.title
+          subtitle = page.subtitle
+        %}
+      {% endif %}
 
       {% include section-brands.html %}
 

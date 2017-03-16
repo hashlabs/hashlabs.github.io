@@ -17,11 +17,6 @@ list_items:
   - Aliquam erat nibh, placerat id molestie sit amet, tristique sit amet massa.
 
 technologies:
-  - name: NODE JS
-    image: /images/logo_nodejs.png
-    alt: Node JS logo
-    href: /hire-node-js-developers
-
   - name: REACT
     image: /images/logo_react.png
     alt: React logo
@@ -31,8 +26,3 @@ technologies:
     image: /images/logo_redux.png
     alt: Redux logo
     href: /hire-redux-developers
-
-  - name: BOOTSTRAP
-    image: /images/logo_bootstrap.gif
-    alt: Bootstrap logo
-    href: /hire-bootstrap-developers

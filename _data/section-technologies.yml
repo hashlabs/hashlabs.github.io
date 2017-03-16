@@ -1,7 +1,7 @@
 title: Our developers love these technologies
 technologies:
   - name: RUBY
-    image: /images/ruby_logo.svg
+    image: /images/logo_ruby.svg
     alt: Ruby logo
     href: /hire-ruby-developers
 
@@ -11,7 +11,7 @@ technologies:
     href: /hire-javascript-developers
 
   - name: REACT
-    image: /images/react_logo.png
+    image: /images/logo_react.png
     alt: React logo
     href: /hire-react-developers
 

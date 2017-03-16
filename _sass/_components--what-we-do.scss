@@ -16,6 +16,7 @@ $size--content-line-height-small:     1.88;
     font-size: $size--title-font;
     font-weight: bold;
     margin-bottom: $space*1.5;
+    align-self: flex-start;
   }
 
   p {
@@ -32,17 +33,14 @@ $size--content-line-height-small:     1.88;
 
     h2 {
       font-size: $size--title-font-tablet;
+      align-self: center;
     }
   }
 
   @media #{$just-small-resolutions} {
     p {
       line-height: $size--content-line-height-small;
-
-      // This negative margin issues an orphan word.
-      // Not an orphan anymore.
-      margin-left: -$space*0.25;
-      margin-right: -$space*0.25;
+      padding: 0 $space*.25;
     }
 
     img {

@@ -1,42 +1,34 @@
-$size--btn-font-size:                    22px;
-$size--btn-border-radius:                2px;
-$size--btn-height:                       45px;
-$size--btn-padding-top:                  50px;
+// If base font size is 16px, this will be 22px
+$size--btn-font-size:                    1.375rem;
+$size--btn-min-width-small:              80%;
 $color--btn-primary:                     $orange-red;
 $color--btn-primary-accent:              $accent-orange-red;
 
-%btn-boilerplate {
+.btn {
   cursor: pointer;
-  display: inline-block;
   font-family: $primary-font;
-  font-size: $size--btn-font-size;
+  font-weight: bold;
+  font-size: 1.375rem;
   max-width: 100%;
   text-align: center;
-  transition: all .2s ease;
   -webkit-font-smoothing: antialiased;
-
-  @include simple-transition;
 }
 
-.btn--primary {
-  @extend %btn-boilerplate;
-  border-radius: $size--btn-border-radius;
-  border: 0;
-  background-color: $color--btn-primary;
-  color: $white;
-  padding: $space-quarter $space*4;
-
-  @media #{$just-small-resolutions} {
-    padding: $space-quarter $space*3;
-  }
-
-  @media #{$just-very-small-resolutions} {
-    min-width: 80%;
-  }
+// Btn primary is set to $orange-red on _settings--bootstrap.scss file
+.btn-primary {
+  padding: $space*.5 $space*5;
 
   &:hover, &:focus {
     background-color: $color--btn-primary-accent;
     text-decoration: none;
     color: $white;
+  }
+
+  @media #{$just-small-resolutions} {
+    padding: $space*.5 $space*3;
+  }
+
+  @media #{$just-very-small-resolutions} {
+    min-width: $size--btn-min-width-small;
   }
 }

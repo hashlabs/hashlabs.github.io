@@ -23,16 +23,6 @@ technologies:
     href: /hire-react-native-developers
 
   - name: JAVASCRIPT
-    image: /images/logo_javascript.jpg
+    image: /images/logo_js.svg
     alt: JavaScript logo
     href: /hire-javascript-developers
-
-  - name: REACT
-    image: /images/logo_react.png
-    alt: React logo
-    href: /hire-react-developers
-
-  - name: REDUX
-    image: /images/logo_redux.png
-    alt: Redux logo
-    href: /hire-redux-developers

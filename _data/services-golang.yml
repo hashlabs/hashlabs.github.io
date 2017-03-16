@@ -22,17 +22,7 @@ technologies:
     alt: RabbitMQ logo
     href: /hire-golang-developers
 
-  - name: REACT
-    image: /images/logo_react.svg
-    alt: React logo
-    href: /hire-react-developers
-
-  - name: SASS
-    image: /images/logo_sass.svg
-    alt: Sass logo
-    href: /hire-sass-developers
-
-  - name: BOOTSTRAP
-    image: /images/logo_bootstrap.gif
-    alt: Bootstrap logo
-    href: /hire-bootstrap-developers
+  - name: AWS
+    image: /images/logo_aws.png
+    alt: AWS logo
+    href: /hire-devops-specialists
