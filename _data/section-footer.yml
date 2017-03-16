@@ -1,0 +1,71 @@
+copyright: Hash Labs <i class="fa fa-copyright" aria-hidden="true"></i> LLC All Rights Reserved
+note: Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Hash Labs
+
+menus:
+  - hire_developers:
+    name: HIRE DEVELOPERS
+    links:
+      - ruby_developers:
+        name: Hire Ruby Developers
+        href: /hire-ruby-developers
+        text: Hire Ruby Developers
+      - golang_developers:
+        name: Hire Golang Developers
+        href: /hire-golang-developers
+        text: Hire Golang Developers
+      - javascript_developers:
+        name: Hire JavaScript Developers
+        href: /hire-javascript-developers
+        text: Hire JavaScript Developers
+      - ruby_on_rails_developers:
+        name: Hire Ruby on Rails Developers
+        href: /hire-ruby-on-rails-developers
+        text: Hire Ruby Developers
+      - node_developers:
+        name: Hire Node Developers
+        href: /hire-node-developers
+        text: Hire Node Developers
+      - react_developers:
+        name: Hire React Developers
+        href: /hire-react-developers
+        text: Hire React Developers
+      - react_native_developers:
+        name: Hire React Native Developers
+        href: /hire-react-native-developers
+        text: Hire React Native Developers
+      - bootstrap_developers:
+        name: Hire Bootstrap Developers
+        href: /hire-bootstrap-developers
+        text: Hire Bootstrap Developers
+      - sass_developers:
+        name: Hire Sass Developers
+        href: /hire-sass-developers
+        text: Hire Sass Developers
+      - devops_specialists:
+        name: Hire DevOps Specialists
+        href: /hire-devops-specialists
+        text: Hire DevOps Specialists
+
+  - connect:
+    name: CONNECT
+    links:
+      - blog:
+        name: Blog
+        href: https://blog.hashlabs.com
+        text: Blog
+      - twitter:
+        name: Twitter
+        href: https://www.twitter.com/hashlabs
+        text: Twitter
+      - facebook:
+        name: Facebook
+        href: https://www.facebook.com/hashlabshq
+        text: Facebook
+      - linkedin:
+        name: LinkedIn
+        href: https://www.linkedin.com/company/hashlabs
+        text: LinkedIn
+      - contact_us:
+        name: Contact Us
+        href: mailto:contact@hashlabs.com
+        text: Contact Us

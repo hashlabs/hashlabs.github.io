@@ -1,0 +1,17 @@
+<section id="what-we-do" class="site-what-container">
+
+  {% assign section = site.data.section-what-we-do %}
+
+  <div class="container">
+    <div class="row site-what">
+      <div class="col-xs-12 col-md-6 site-what-content">
+        <img src="{{ section.image }}" class="img-fluid mx-auto" alt="">
+      </div>
+      <div class="col-xs-12 col-md-6 site-what-content">
+        <h2 class="prevent-orphan">{{ section.title }}</h2>
+        <p class="prevent-orphan">{{ section.content }}</p>
+      </div>
+    </div>
+  </div>
+
+</section>

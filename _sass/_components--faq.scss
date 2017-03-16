@@ -1,0 +1,91 @@
+$size--title-font:                      28px;
+$size--question-font:                   22px;
+$size--answer-font:                     16px;
+$size--question-font-tablet:            20px;
+$size--list-bullet:                     14px;
+$size--list-bullet-line-height:         1;
+$size--answer-line-height:              1.75;
+$size--question-line-height:            1.27;
+// This is 45% and not 45%, to give the bullet of
+// the list some space, as it is added with before.
+// Also space around with flexbox is used
+$size--answer-width:                    45%;
+
+.section-faq-container {
+  background-color: $white;
+  padding: $space*3 0 $space*3 0;
+}
+
+.section-faq-title {
+  color: $darker-gray;
+  font-size: $size--title-font;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: $space*2.25;
+}
+
+.section-faq-questions {
+  list-style-type: disc;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0;
+
+  @media #{$just-small-resolutions} {
+    padding-left: $space*4;
+    padding-right: $space*2;
+    justify-content: center;
+  }
+}
+
+.section-faq-question {
+  width: $size--answer-width;
+  margin-bottom: $space*.5;
+
+  @media #{$from-medium-resolutions} {
+    &:nth-last-of-type(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    font-size: $size--question-font;
+    font-weight: bold;
+    color: $darker-gray;
+    line-height: $size--question-line-height;
+    position: relative;
+    margin-bottom: $space*.25;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: $space*0.25;
+      left: -$space*1.8;
+      width: $size--list-bullet;
+      height: $size--list-bullet;
+      background-color: $orange-red;
+      border-radius: 100%;
+    }
+  }
+
+  p {
+    color: $blueish-gray;
+    font-size: $size--answer-font;
+    line-height: $size--answer-line-height;
+    margin: 0;
+  }
+
+  @media #{$just-small-resolutions} {
+    width: 100%;
+    margin-bottom: $space*1.5;
+
+    &:nth-last-of-type(-n+1) {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-size: $size--question-font-tablet;
+    }
+  }
+}

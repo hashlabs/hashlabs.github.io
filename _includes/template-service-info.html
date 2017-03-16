@@ -1,0 +1,23 @@
+<section class="service-info-container">
+  <div class="container service-info">
+
+    <div class="row">
+      <div class="col-10 offset-1">
+        <h2 class="text-center prevent-orphan">{{ include.title }}</h2>
+        <p class="prevent-orphan">{{ include.content }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-1">
+        <h3 class="text-center prevent-orphan">{{ include.list_title }}</h3>
+        <ul class="service-info-list">
+          {% for item in include.list %}
+            <li class="prevent-orphan">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>

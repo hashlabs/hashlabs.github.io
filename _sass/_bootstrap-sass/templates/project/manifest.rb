@@ -1,17 +1,15 @@
-description 'Bootstrap for Sass'
+description 'Bootstrap'
 
 # Stylesheet importing bootstrap
-stylesheet 'styles.sass'
+stylesheet 'styles.scss'
 
 # Bootstrap variable overrides file
-stylesheet '_bootstrap-variables.sass', :to => '_bootstrap-variables.sass'
+stylesheet '_bootstrap-variables.scss', :to => '_bootstrap-variables.scss'
 
-# Copy JS and fonts
+# Copy JS
 manifest = Pathname.new(File.dirname(__FILE__))
 assets   = File.expand_path('../../assets', manifest)
-{:javascript => 'javascripts',
- :font       => 'fonts'
-}.each do |method, dir|
+{:javascript => 'javascripts'}.each do |method, dir|
   root = Pathname.new(assets).join(dir)
   Dir.glob root.join('**', '*.*') do |path|
     path = Pathname.new(path)

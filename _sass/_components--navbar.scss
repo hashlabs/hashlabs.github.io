@@ -1,0 +1,75 @@
+$color--navbar-background: $hint-of-red;
+$size--navbar-height: 70px;
+$size--logo-padding-top: 13px;
+$size--logo-padding-left: $space;
+$size--nav-links-padding-top: 26px;
+$size--header-title: 20px;
+$size--header-title-margin-top: 24px;
+
+.main-wrapper {
+  padding-top: $size--navbar-height;
+}
+
+.site-header {
+  height: 100%;
+}
+
+.site-navbar {
+  background-color: $color--navbar-background;
+  height: $size--navbar-height;
+  z-index: z('navbar');
+  width: 100%;
+  position: fixed;
+  opacity: 1;
+  transition: all .3s ease;
+
+  // Using headroom.js for scrolling menu effect
+  &.headroom {
+    &--unpinned:not(.active) {
+      z-index: z('navbar-not-active');
+      opacity: 0;
+    }
+
+    &--top, &--pinned {
+      z-index: z('navbar');
+      opacity: 1;
+    }
+  }
+}
+
+.site-logo {
+  display: inline-block;
+  padding-top: $size--logo-padding-top;
+  padding-left: $space-triple;
+
+  @media #{$just-small-resolutions} {
+    padding-left: $size--logo-padding-left;
+  }
+}
+
+.header-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;;
+  padding-right: $space-triple;
+  padding-top: $size--nav-links-padding-top;
+}
+
+.header-link {
+  padding: 0 $space;
+  padding-right: $space;
+  padding-left: $space;
+
+  a {
+    width: 100%;
+    color: $black;
+  }
+}
+
+.header-title {
+  color: $orange-red;
+  display: inline-block;
+  font-weight: bold;
+  font-size: $size--header-title;
+  margin-top: $size--header-title-margin-top;
+}

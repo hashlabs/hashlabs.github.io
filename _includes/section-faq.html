@@ -1,0 +1,24 @@
+<section id="faq" class="section-faq-container">
+  <div class="container">
+
+    {% assign section = site.data.section-faq %}
+
+    <div class="row">
+      <div class="col-12 ">
+        <h2 class="section-faq-title prevent-orphan">{{ section.title }}</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <ul class="col-12 section-faq-questions">
+        {% for question in section.questions %}
+          <li class="section-faq-question">
+            <h3 class="prevent-orphan">{{ question.question }}</h3>
+            <p class="prevent-orphan">{{ question.answer }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+</section>

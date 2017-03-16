@@ -1,0 +1,13 @@
+<section class="site-brands-container">
+  <div class="container">
+    <ul class="site-brands">
+      {% for brand in site.data.brands %}
+        <li class="site-brand">
+          <a href="{{ brand.link }}" target="_blank">
+            <img class="img-fluid" src="{{ brand.logo }}" alt="{{ brand.alt }}" />
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

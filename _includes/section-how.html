@@ -1,0 +1,23 @@
+<section id="how-we-work" class="site-how-container">
+  <div class="container">
+
+    {% assign section = site.data.section-how %}
+
+    <div class="row section-how-title">
+      <div class="col-12">
+        <h2 class="text-center prevent-orphan">{{ section.title }}</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for item in section.groups %}
+        <section class="col-xs-12 col-md-4 section-how">
+          <img class="img-fluid" src="{{ item.image }}" alt="{{ item.alt }}">
+          <h3 class="prevent-orphan">{{ item.title }}</h3>
+          <p class="prevent-orphan">{{ item.content }}</p>
+        </section>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

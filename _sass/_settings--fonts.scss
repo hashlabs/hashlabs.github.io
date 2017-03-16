@@ -1,23 +1,23 @@
 /**
- * Check Bootstrap 3 Documentation for further
- * explanation of some vasriables used below
+ * Check Bootstrap Docs for further explanation
+ * of some variables used below
  * http://getbootstrap.com/customize/#less-variables
- *
- * keep in mind that all variables set to null are going to
- * be set further by bootstrap defaults
+ * Keep in mind that all variables set to null
+ * are going to be set further by bootstrap defaults
  */
+
 
  // -----------------------------------------------------------------------------
  // font-import
  // -----------------------------------------------------------------------------
 
-  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
 
 // -----------------------------------------------------------------------------
 // font-colors
 // -----------------------------------------------------------------------------
 
-  $text-color:                  $color--text;
+  // $text-color:                  $color--text;
 
 // -----------------------------------------------------------------------------
 // fonts-families
@@ -32,7 +32,9 @@
   $font-family-monospace:       null;
 
   $font-family-base:            $primary-font;
-  $font-size-base:              24px;
+
+  // This cannot be px!!! (Bootstrap 4 thing)
+  $font-size-base:              1rem;
   $font-size-slightly-large:    ceil($font-size-base*1.125);
   $font-size-large:             ceil($font-size-base*1.25);
   $font-size-small:             ceil($font-size-base*0.85);
@@ -56,7 +58,7 @@
 
   $headings-font-family:        null;
   $headings-font-weight:        $font-weight-regular;
-  $headings-color:              $black;
+  // $headings-color:              $black;
 
 // -----------------------------------------------------------------------------
 // line-height
