@@ -2,10 +2,6 @@
   <div class="container">
 
     {% assign section = site.data.section-lead %}
-    {% assign email_subject = site.email_subject %}
-    {% if page.email_subject %}
-      {% assign email_subject = page.email_subject %}
-    {% endif %}
 
     <div class="row">
       <div class="col-xs-12 col-md-6">
@@ -31,8 +27,8 @@
               {{ section.subtitle }}
             {% endif %}
           </p>
-          <div class="lead-button">
-            <a href="mailto:{{ site.email }}?subject={{ email_subject }}" class="btn btn-primary hidden-sm-down">{{ section.button_text }}</a>
+          <div class="lead-button hidden-sm-down">
+            {% include button-cta.html %}
           </div>
         </section>
       </div>
@@ -53,15 +49,9 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row hidden-md-up">
       <div class="col-xs-12 section-lead-button-mobile text-center">
-        <button class="btn btn-primary hidden-md-up">
-          {% if include.button_text %}
-            {{ include.button_text }}
-          {% else %}
-            {{ section.button_text }}
-          {% endif %}
-        </button>
+        {% include button-cta.html %}
       </div>
     </div>
   </div>
