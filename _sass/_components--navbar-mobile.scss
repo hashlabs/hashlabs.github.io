@@ -1,26 +1,24 @@
-$color--navbar-background:             $hint-of-red;
-$size--navbar-height:                  70px;
-$size--nav-links-padding-top:          26px;
-$size--menu-toggle-height:             40px;
-$size--menu-toggle-width:              28px;
-$size--menu-toggle-top:                60%;
-$size--menu-toggle-left:               40%;
+$color--navbar-background:                                 $hint-of-red;
+$size--navbar-height:                                      70px;
+$size--nav-links-padding-top:                              26px;
+$size--menu-toggle-height:                                 40px;
+$size--menu-toggle-width:                                  28px;
+$size--menu-toggle-top:                                    60%;
+$size--menu-toggle-left:                                   40%;
 // Height of the menu toggle lines
-$size--menu-toggle-line-height:        3px;
+$size--menu-toggle-line-height:                            3px;
 // This variable is for controlling the distance
 // between the menu toggle (hamburguer) lines
-$size--menu-toggle-line-step:           3;
-$size--menu-toggle-line-rotation:       45deg;
-
-$size--not-named: 4;
+$size--menu-toggle-line-step:                              3;
+$size--menu-toggle-line-rotation:                          45deg;
+$animation--mobile-menu:                                   all .2s ease-in-out;
 
 .site-nav-mobile-wrapper {
-  height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  transition: all .4s ease-in-out;
+  transition: $animation--mobile-menu;
   z-index: z('navbar-mobile');
   transform: translateY(-100%);
 
@@ -29,6 +27,22 @@ $size--not-named: 4;
       margin-top: $size--navbar-height;
       transform: translateY(0);
     }
+  }
+}
+
+.mobile-menu-overlay {
+  z-index: z('mobile-menu-overlay-unactive');
+  background-color: rgba($black, 0.3);
+  opacity: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &.active {
+    opacity: 1;
+    z-index: z('mobile-menu-overlay');
   }
 }
 
@@ -92,7 +106,7 @@ $size--not-named: 4;
   position: absolute;
   left: 0;
   width: 100%;
-  transition: all .3s ease-in-out;
+  transition: $animation--mobile-menu;
 
   &:nth-child(2) {
     top: $size--menu-toggle-line-height * $size--menu-toggle-line-step;
