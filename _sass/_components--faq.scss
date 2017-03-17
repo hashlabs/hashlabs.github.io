@@ -41,7 +41,7 @@ $size--answer-width:                    45%;
 
 .section-faq-question {
   width: $size--answer-width;
-  margin-bottom: $space*.5;
+  margin-bottom: $space*2;
 
   @media #{$from-medium-resolutions} {
     &:nth-last-of-type(-n+2) {

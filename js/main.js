@@ -6,9 +6,10 @@ var HashLabs = {
   },
 
   _bindElements: function _bindElements() {
-    this.mobileMenuElements = $('#mobile-nav, .site-navbar, #mobile-nav-toggle');
+    this.mobileMenuElements = $('#mobile-nav, .site-navbar, #mobile-nav-toggle, .mobile-menu-overlay');
     this.mobileMenuToggle = $('#mobile-nav-toggle');
-    this.mobileNavLinks = $('.nav-mobile-link');
+    // Click event will be atteched to these to close the menu
+    this.mobileMenuClosers = $('.nav-mobile-link, .mobile-menu-overlay');
     this.navBar = $('.site-navbar');
     this.video = $('#lead-video');
     this.videoElement = this.video.get(0);
@@ -72,9 +73,8 @@ var HashLabs = {
       that.mobileMenuElements.toggleClass('active');
     });
 
-    this.mobileNavLinks.on('click', function(event) {
-      that.mobileMenuElements.removeClass('active');
-      that.linkWasClicked = true;
+    this.mobileMenuClosers.on('click', function(event) {
+      that._closeMenu();
     });
   },
 
@@ -84,8 +84,14 @@ var HashLabs = {
       var title = $(document).find("title").text();
       ga('send', 'event', 'CTA', 'click', title);
     });
+  },
+
+  _closeMenu: function _closeMenu() {
+    this.mobileMenuElements.removeClass('active');
+    this.linkWasClicked = true;
   }
-};
+}
+
 
 $(document).ready(function () {
   HashLabs.init();
