@@ -28,6 +28,7 @@ var HashLabs = {
     this._handleMobileNavEvents();
     this._handleVideoLoop();
     this._preventOrphans();
+    this._handleAnalyticsEvents();
   },
 
   _handleNavBarEvents: function _handleNavBarEvents() {
@@ -74,6 +75,14 @@ var HashLabs = {
     this.mobileNavLinks.on('click', function(event) {
       that.mobileMenuElements.removeClass('active');
       that.linkWasClicked = true;
+    });
+  },
+
+  _handleAnalyticsEvents: function _handleAnalyticsEvents() {
+    // Track CTA clicks
+    $('.btn-cta').on('click', function (event) {
+      var title = $(document).find("title").text();
+      ga('send', 'event', 'CTA', 'click', title);
     });
   }
 };
