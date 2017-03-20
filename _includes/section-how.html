@@ -12,9 +12,13 @@
     <div class="row">
       {% for item in section.groups %}
         <section class="col-xs-12 col-md-4 section-how">
-          <img class="img-fluid" src="{{ item.image }}" alt="{{ item.alt }}">
-          <h3 class="prevent-orphan">{{ item.title }}</h3>
-          <p class="prevent-orphan">{{ item.content }}</p>
+          <div class="how-image">
+            <amp-img class="img-fluid" src="{{ item.image }}" alt="{{ item.alt }}" width="90" height="90" />
+          </div>
+          <div class="how-info">
+            <h3 class="prevent-orphan">{{ item.title }}</h3>
+            <p class="prevent-orphan">{{ item.content }}</p>
+          </div>
         </section>
       {% endfor %}
     </div>

@@ -1,13 +1,17 @@
 <section class="site-brands-container">
-  <div class="container">
-    <ul class="site-brands">
+  <div class="container-extended">
+    <div class="row justify-content-md-center site-brands">
       {% for brand in site.data.brands %}
-        <li class="site-brand">
-          <a href="{{ brand.link }}" target="_blank">
-            <img class="img-fluid" src="{{ brand.logo }}" alt="{{ brand.alt }}" />
-          </a>
-        </li>
+        <div class="col-brand">
+          <div class="site-brand">
+            <a class="d-block brand-logo" href="{{ brand.link }}" target="_blank">
+              <amp-img class="images-fluid" src="/images/logo-{{ brand.name }}.png"
+                srcset="/images/logo-{{ brand.name }}@2x.png 2x, /images/logo-{{ brand.name }}@3x.png 3x"
+                alt="{{ brand.alt }}" width="120" height="68" layout="responsive"/>
+            </a>
+          </div>
+        </div>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </section>

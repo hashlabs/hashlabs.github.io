@@ -9,17 +9,19 @@
       </div>
     </div>
 
-    <div class="row">
-      <ul class="site-technologies">
-        {% for tech in include.technologies %}
-          <li class="{{ include.technology_class }}">
-            <a href="{{ tech.href }}">
-              <img class="img-fluid" src="{{ tech.image }}" alt="{{ tech.alt }}">
-              <h3 class="text-center">{{ tech.name }}</h3>
+    <div class="row justify-content-md-center site-technologies">
+      {% for tech in include.technologies %}
+        <div class="col-technology">
+          <div class="{{ include.technology_class }}">
+            <a class="d-block technology-logo" href="{{ tech.href }}">
+              <amp-img class="img-fluid" src="{{ tech.image }}" alt="{{ tech.alt }}" width="99" height="74" />
             </a>
-          </li>
-        {% endfor %}
-      </ul>
+            <a class="d-block" href="{{ tech.href }}">
+              <h3 class="technology-name">{{ tech.name }}</h3>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
     </div>
 
   </div>

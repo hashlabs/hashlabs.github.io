@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# We need frontmatter here do not remove this comment
 ---
 
 /**
@@ -7,10 +7,10 @@
  */
 
 @import 'settings--palette';
+@import 'settings--defaults';
 @import 'settings--fonts';
 @import 'settings--bootstrap';
-@import '_bootstrap-sass/assets/stylesheets/bootstrap';
-@import 'settings--defaults';
+@import 'settings--custom-bootstrap';
 
 /**
  * Tools
@@ -38,8 +38,8 @@
 @import 'components--what-we-do';
 @import 'components--technologies';
 @import 'components--how';
-@import 'components--cta'; // Call to Action section
-@import 'components--faq'; // Frequently asked questions section
+@import 'components--cta';
+@import 'components--faq';
 @import 'components--service';
 
 /**

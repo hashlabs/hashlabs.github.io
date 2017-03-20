@@ -1,4 +1,6 @@
 ## [Unreleased]
+### Added
+* Second Release!
 
 ### Fixed
 * Node JS link ([@orlando](https://github.com/orlando))

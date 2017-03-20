@@ -36,14 +36,15 @@
       <div class="col-xs-12 col-md-6 col-lg-6">
 
         <div class="section-lead-video embed-responsive embed-responsive-16by9 hidden-md-down">
-          <video class="embed-responsive-item" id="lead-video" autoplay>
+          <video class="embed-responsive-item" id="lead-video" autoplay
+            width="540" height="300" layout="responsive" poster="/images/conversation_react_ruby_aws.png">
             {% if include.video %}
               {% assign video_name = include.video %}
             {% else %}
               {% assign video_name = section.video %}
             {% endif %}
-            <source src="/videos/{{video_name}}.mp4" type="video/mp4" />
-            <source src="/videos/{{video_name}}.webm" type="video/webm" />
+            <source src="https://www.hashlabs.com/videos/{{video_name}}.mp4" type="video/mp4" />
+            <source src="https://www.hashlabs.com/videos/{{video_name}}.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>

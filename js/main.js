@@ -27,17 +27,20 @@ var HashLabs = {
   _bindEvents: function _bindEvents() {
     this._handleMobileNavEvents();
     this._handleVideoLoop();
-    this._preventOrphans();
     this._handleAnalyticsEvents();
   },
 
-  _preventOrphans: function _preventOrphans() {
-    /*
-      We add a non breaking space (&nbsp;) between the last two
-      words of the selected elements, to prevent orphan words.
-    */
-    $('.prevent-orphan').each(function() {
-      $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/, '&nbsp;$1'));
+  _handleNavBarEvents: function _handleNavBarEvents() {
+    var that = this;
+
+    this.navBar.headroom({
+      onUnpin: function() {
+        $(this).toggleClass(this.classes.unpinned, !that.linkWasClicked);
+        $(this).toggleClass(this.classes.pinned, that.linkWasClicked);
+        that.linkWasClicked = false;
+
+        return;
+      }
     });
   },
 
