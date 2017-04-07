@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+### Fixed
+* Node JS link ([@orlando](https://github.com/orlando))
+* Fixing repaints ([@orlando](https://github.com/orlando))
+
 ## 1.0.0 - 2016-06-12
 ### Added
 * First Release!

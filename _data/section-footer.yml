@@ -22,9 +22,9 @@ menus:
         href: /hire-ruby-on-rails-developers
         text: Hire Ruby Developers
       - node_developers:
-        name: Hire Node Developers
-        href: /hire-node-developers
-        text: Hire Node Developers
+        name: Hire Node JS Developers
+        href: /hire-node-js-developers
+        text: Hire Node JS Developers
       - react_developers:
         name: Hire React Developers
         href: /hire-react-developers

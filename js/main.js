@@ -25,25 +25,10 @@ var HashLabs = {
   },
 
   _bindEvents: function _bindEvents() {
-    this._handleNavBarEvents();
     this._handleMobileNavEvents();
     this._handleVideoLoop();
     this._preventOrphans();
     this._handleAnalyticsEvents();
-  },
-
-  _handleNavBarEvents: function _handleNavBarEvents() {
-    var that = this;
-
-    this.navBar.headroom({
-      onUnpin: function() {
-        $(this).toggleClass(this.classes.unpinned, !that.linkWasClicked);
-        $(this).toggleClass(this.classes.pinned, that.linkWasClicked);
-        that.linkWasClicked = false;
-
-        return;
-      }
-    });
   },
 
   _preventOrphans: function _preventOrphans() {
