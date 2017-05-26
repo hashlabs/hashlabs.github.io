@@ -33,8 +33,6 @@
 
   $size--header-height:                          $space*7.5;
 
-  $size--font-weight-default:                   500;
-
 
 // -----------------------------------------------------------------------------
 // media queries
@@ -54,6 +52,7 @@
   $just-small-resolutions:                  "only screen and (max-width: #{$bootstrap-sm})";
   $just-medium-resolutions:                 "only screen and (max-width: #{$bootstrap-md})";
 
+  $from-very-small-resolutions:             "only screen and (min-width: #{$bootstrap-very-sm})";
   $from-small-resolutions:                  "only screen and (min-width: #{$bootstrap-sm})";
   $from-medium-resolutions:                 "only screen and (min-width: #{$bootstrap-md})";
   $from-large-resolutions:                  "only screen and (min-width: #{$bootstrap-lg})";

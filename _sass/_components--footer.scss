@@ -65,19 +65,15 @@ $size--title-font-size:               1.1rem;
   padding: 0;
 }
 
-// Basically applying same padding left to footer logo
-// than the one being applied to header logo, in order
-// to keep them both aligned on mobile devices.
+/*
+  Basically applying same padding left to footer logo
+  than the one being applied to header logo, in order
+  to keep them both aligned on mobile devices.
+ */
 .footer-logo-small {
   display: block;
   position: absolute;
   left: $space-triple;
-
-  img {
-    // This is the logo image size to match the
-    // header logo.
-    width: $size--logo-width;
-  }
 
   @media #{$just-small-resolutions} {
     left: $size--logo-padding-left;
