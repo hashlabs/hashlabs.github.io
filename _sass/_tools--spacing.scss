@@ -1,0 +1,18 @@
+.outer-section-padding {
+  @include padding-y($spacer*3.75);
+}
+
+.text-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(md) {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+%full-background-centered {
+  background-position: center;
+  background-size: cover;
+}

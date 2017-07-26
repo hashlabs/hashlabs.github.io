@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html amp lang="en">
+<html>
 
   {% include head.html %}
 
-  <body class="default site">
+  <body class="site">
 
-    {% include navbar.html %}
+    {% assign header_class = "navbar-light navbar-absolute" %}
+    {% include header.html include_class=header_class %}
 
     <main class="site-content">
       {{ content }}
     </main>
 
-    {% include section-footer.html %}
+    {% include footer.html include_cta=true %}
 
     {% include footer-scripts.html %}
 

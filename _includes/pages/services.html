@@ -1,0 +1,64 @@
+{% assign services=site.data.services %}
+
+<div id="services" class="services background-inverse">
+  <div class="container-fluid aesthetic-background-container">
+    <div class="row">
+      <div class="col-6 col-bg">
+        <span class="desktop-contour"/>
+      </div>
+      <div class="col-6 col-bg">
+        <span class="mobile-contour"/>
+      </div>
+    </div>
+  </div>
+  <div class="container content-wrapper">
+    <div class="row">
+      <div class="col-12 col-lead mb-0">
+        <div class="text-center">
+          <h1 class="h1-responsive mb-3">{{ services.lead_title }}</h1>
+          <p class="p-lg">{{ services.lead_subtitle }}</p>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-lg-8 push-lg-2 col-offers">
+            <div class="content-centered listing-offers">
+              <div class="row">
+                {% for offers in services.offers %}
+                  {% assign offer = offers[1] %}
+                  <div class="col-md-6">
+                    <div class="offer offer-{{forloop.index}}">
+                      <p class="illustrated-heading mb-4 {{offer.slug}}">{{ offer.text }}</p>
+                      <ul class="list-underlined">
+                        {% for technologies in offer.technologies %}
+                        {% assign tech = technologies[1] %}
+                        <li>
+                          <a href="{{tech.href}}">
+                            {{ tech.text }}
+                          </a>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-content-title">
+        <div class="text-center">
+          <h2 class="h2-responsive">{{ services.content_title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-content-text">
+        <div class="p-content mb-0">
+          {{ services.content_paragraph }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

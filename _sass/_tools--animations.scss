@@ -1,0 +1,47 @@
+@include keyframe-animation(polygon_animation) {
+  0% { opacity: 0.8 }
+  60% { opacity: 0.5 }
+  100% { opacity: 0.8 }
+}
+
+@include keyframe-animation(gopher_eye_movement) {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(90px); }
+  20% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+@include keyframe-animation(gopher_entrance) {
+  0% { transform: translateY(200%) translateX(-50%); }
+  100% { transform: translateY(0) translateX(-50%); }
+}
+
+@include keyframe-animation(cloud_animation) {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@mixin generate-react-atom-lines-animations($count) {
+  @for $i from 1 through $count {
+    @include keyframe-animation(react_line_#{$i}) {
+      from {
+        transform:
+          rotateZ(360deg / $count * $i)
+          rotateX(66deg)
+          rotateZ(0deg);
+      }
+      to {
+        transform:
+          rotateZ(360deg / $count * $i)
+          rotateX(66deg)
+          rotateZ(360deg);
+      }
+    }
+  }
+}
+
+@include keyframe-animation(dash) {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

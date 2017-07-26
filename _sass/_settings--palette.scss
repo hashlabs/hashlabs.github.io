@@ -1,42 +1,76 @@
-// -----------------------------------------------------------------------------
-// $COLOR-VARIABLES
-// -----------------------------------------------------------------------------
+/**
+ * Default colors variables
+ */
 
+$affair:                        #693F8F;
 $aluminium:                     #989898;
+$antiflash-white:               #F7F7F7;
 $black:                         #000000;
-$concrete:                      #F2F2F2;
-$custom-black:                  #333333;
-$hint-of-red:                   #FAFAFA;
-$gray:                          #CFD8DC;
-$kelly-green:                   #46B300;
-$mirage:                        #100F2A;
-$lime:                          #85C92A;
-$lily-white:                    #ECECEC;
-$red:                           #F7412D;
-$lust:                          #EC2811;
-$crayon-orange:                 #FF5C1F;
-$violet:                        #A100B7;
+$casablanca:                    #F0AD4E;
+$dove-gray:                     #717171;
+$fern:                          #5CB85C;
+$gray:                          #717171;
+$harvard-crimson:               #CC0000;
+$jacksons-purple:               #14298B;
+$malibu:                        #5BC0DE;
+$martinique:                    #3B384D;
+$mercury:                       #E9E9E9;
+$pelorous:                      #3DA2BE;
+$radical-red:                   #FF4865;
+$ruddy:                         #FF0221;
+$sky-blue:                      #61DAFB;
+$valencia:                      #D9534F;
 $white:                         #FFFFFF;
-$orange-red:                    #FF5824;
-$accent-orange-red:             #F04A16;
-$turquoise-blue:                #0FAFD3;
-$light-gray:                    #C2C2C2;
-$blueish-gray:                  #9B9B9B;
-$darker-gray:                   #4A4A4A;
+$yellow:                        #F1C300;
 
-$yummly:                        #D36911;
-$real-scout:                    #488EDD;
-$white-smoke:                   #F6F6F6;
+/**
+ * Color variables
+ */
 
+$mystic:                        #E1ECF4;
+$matisse:                       #15759B;
+$crayon-orange:                 #FF5C1F;
 
-// -----------------------------------------------------------------------------
-// $USABLE-COLORS
-// -----------------------------------------------------------------------------
+/**
+ * Brand colors
+ */
 
-$color--base:                   $orange-red;
-$color--accent:                 $turquoise-blue;
+$gmail-brand:                   #DF4A32;
+$facebook-brand:                #3C66C4;
+$yummly:                        #E26326;
+$pleiq:                         #16CC91;
+$wobe:                          #42195E;
+$real-scout:                    #0D92D9;
+
+/**
+ * Usable colors
+ */
+
+// When using a primary color in your palette, this color should be the most widely used across all screens and components.
+$color--primary:                $white;
+
+// Palettes with a secondary color may use this color to indicate a related action or information.
+$color--secondary:              $black;
+
+// The accent should be used for the interactive elements
 $color--accent:                 $crayon-orange;
-$color--text:                   $black;
 
-$color--error:                  $lust;
-$color--success:                $lime;
+/**
+ * Bootstrap colors
+ */
+
+$gray-base:                     $black;
+$gray-darker:                   lighten($gray-base, 13.5%);
+$gray-dark:                     lighten($gray-base, 20%);
+$gray:                          lighten($gray-base, 33.5%);
+$gray-light:                    lighten($gray-base, 46.7%);
+$gray-lighter:                  rgba($black, .1);
+$brand-primary:                 $color--primary;
+$brand-success:                 $fern;
+$brand-info:                    $malibu;
+$brand-warning:                 $casablanca;
+$brand-danger:                  $ruddy;
+
+$color--font-primary:           $black;
+$color--font-secondary:         $white;
+$color--font-tertiary:          $gray;

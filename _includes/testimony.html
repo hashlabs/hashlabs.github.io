@@ -1,0 +1,18 @@
+<div class="testimony">
+  <div class="text-center mb-3">
+    <img src="{{ site.data.home.quotes_img | prepend: site.baseurl }}" class="testimony-quote-img" alt="testimony quote">
+  </div>
+  <div class="testimony-quote-container">
+    <blockquote class="testimony-quote">
+      {{ include.testimony.quote }}
+    </blockquote>
+  </div>
+  <div class="testimony-author ml-4">
+    <img class="d-inline-block align-middle rounded-circle testimony-author-image" src="{{ include.testimony.image | prepend: site.baseurl }}" srcset="{{ include.testimony.image | prepend: site.baseurl | srcset }}" alt="{{ include.testimony.author }}" />
+    <p class="d-inline-block align-middle mb-0 ml-3 testimony-author-copy">
+      <span>{{ include.testimony.author }}</span>
+      <br />
+      <span>{{ include.testimony.position }} at <a href="{{ include.testimony.company.url }}">{{ include.testimony.company.text }}</a></span>
+    </p>
+  </div>
+</div>

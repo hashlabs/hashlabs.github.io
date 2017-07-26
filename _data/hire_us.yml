@@ -1,0 +1,39 @@
+contact_lead_image:
+  sm: "/assets/img/bgn_hire_us_mobile.png"
+  md: "/assets/img/bgn_hire_us_tablet.png"
+  lg: "/assets/img/bgn_hire_us_desktop.png"
+
+contact_form_inputs:
+  name:
+    name: "name"
+    type: "text"
+    id: "name-contact-input"
+  email:
+    name: "email"
+    type: "email"
+    id: "email-contact-input"
+  phone:
+    name: "phone"
+    type: "text"
+    id: "phone-contact-input"
+  type_of_job:
+    name: "typeOfJob"
+    type: "textarea"
+    id: "type-of-job-contact-input"
+  budget:
+    name: "budget"
+    type: "text"
+    id: "budget-contact-input"
+  how_did_you_hear:
+    name: "howDidYouHearAboutUs"
+    type: "radio"
+    feedback_id: "how-did-you-hear-radios"
+    options:
+      friend:
+        value: "A friend"
+      social_media:
+        value: "Social Media"
+      email:
+        value: "Email"
+      other:
+        value: "Other"

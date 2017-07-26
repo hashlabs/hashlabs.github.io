@@ -1,83 +1,62 @@
-$size--title-font:                     38px;
-$size--title-font-small:               28px;
-$size--list-title-font:                20px;
-$size--list-title-font-small:          18px;
-$size--line-height-content:            1.88;
-$size--item-line-height:               1.63;
-$size--item-font:                      16px;
-$size--list-bullet:                    12px;
+.service {
+  &-lead {
+    @include simple-transition();
+    height: 478px;
 
-.service-info-container {
-  background-color: white;
-  padding: $space*4 0;
+    @include media-breakpoint-up(md) {
+      height: 392px;
+    }
 
-  @media #{$just-small-resolutions} {
-    padding: $space*3 0 $space*2 0;
-  }
-}
-
-.service-info {
-  h2, h3 {
-    font-weight: bold;
-    color: $darker-gray;
+    @include media-breakpoint-up(lg) {
+      height: 562px
+    }
   }
 
-  h2 {
-    font-size: $size--title-font;
-    margin-bottom: $space*3;
+  &-title {
+    color: inherit;
+    font-size: $font-size-base * 1.125;
+    margin-bottom: $spacer * 1.75;
 
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base * 1.625;
+      margin-bottom: $spacer;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base * 1.875;
+      margin-bottom: $spacer * 1.875;
+    }
   }
 
-  h3 {
-    font-size: $size--list-title-font;
-    margin-top: $space*3;
-    margin-bottom: $space*3;
+  &-copy {
+    font-size: $font-size-base * .875;
+    line-height: 1.7;
+    margin: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base * 1.25;
+    }
   }
 
-  p {
-    line-height: $size--line-height-content;
-    color: $darker-gray;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: $space*2;
-  }
-
-  li {
-    position: relative;
+  &-section {
+    @include padding-y($spacer * 2.5);
     color: $black;
-    line-height: $size--item-line-height;
-    font-size: $size--item-font;
 
-    & + li {
-      margin-top: $space*1.5;
+    @include media-breakpoint-up(lg) {
+      @include padding-y($spacer * 3.5);
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: $space*0.25;
-      left: -$space*2;
-      width: $size--list-bullet;
-      height: $size--list-bullet;
-      background-color: $orange-red;
-      border-radius: 100%;
+    &--alt {
+      color: $white;
     }
   }
 
-  @media #{$just-small-resolutions} {
-    h2 {
-      font-size: $size--title-font-small;
-    }
-
-    h3 {
-      font-size: $size--list-title-font-small;
-      margin-bottom: $space*2;
-    }
-
-    p {
-      text-align: center;
-    }
+  &-description,
+  &-how {
+    background-color: $white;
   }
 }

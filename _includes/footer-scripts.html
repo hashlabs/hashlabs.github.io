@@ -1,41 +1,63 @@
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+<script defer src="https://code.jquery.com/jquery-3.1.1.min.js?external=true"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js?external=true" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js?external=true" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!-- url for the service worker, having in mind the baseurl, DON'T remove the white space in data-sw-url -->
+<div id="service-worker-helper" data-sw-url="{{ '/service-worker.js' | prepend: site.baseurl }}"></div>
+<script defer src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+<script defer src="{{ "/assets/js/service-worker-registration.js" | prepend: site.baseurl }}"></script>
 
-<!-- Start of Async Drift Code -->
-<script>
-!function() {
-  var t;
-  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
-  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-  t.factory = function(e) {
-    return function() {
-      var n;
-      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
-    };
-  }, t.methods.forEach(function(e) {
-    t[e] = t.factory(e);
-  }), t.load = function(t) {
-    var e, n, o, i;
-    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
-    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
-    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-  });
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('28wua45n32gd');
-</script>
-<!-- End of Async Drift Code -->
+<!-- Route specific scripts -->
+{% case page.url %}
+  {% when '/' %}
+    <script defer src="{{ "/assets/js/navbar-sticky.js" | prepend: site.baseurl }}"></script>
+  {% when '/services/react/' %}
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js?external=true"></script>
+    <script defer src="{{ "/assets/js/react.js" | prepend: site.baseurl }}"></script>
+  {% when '/process/' %}
+    <script defer src="{{ "/assets/js/process.js" | prepend: site.baseurl }}"></script>
+  {% when '/services/react-native/' %}
+    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js?external=true"></script>
+    <script defer src="{{ "/assets/js/react-native.js" | prepend: site.baseurl }}"></script>
+  {% when '/hire-us/' %}
+    <script defer src="{{ "/assets/js/contact-form.js" | prepend: site.baseurl }}"></script>
+  {% when '/work/' %}
+    <script defer src="{{ "/assets/js/work.js" | prepend: site.baseurl }}"></script>
+{% endcase %}
 
-<!-- Start of Google Analytics Code -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+{% if jekyll.environment == "production" %}
+  <!-- Production only scripts -->
+  <!-- Start of Async Drift Code -->
+  <script>
+  !function() {
+    var t;
+    if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+    t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+    t.factory = function(e) {
+      return function() {
+        var n;
+        return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e, n, o, i;
+      e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+      n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+    });
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('28wua45n32gd');
+  </script>
+  <!-- End of Async Drift Code -->
 
-  ga('create', 'UA-43634323-2', 'auto');
-  ga('send', 'pageview');
-</script>
-<!-- End of Google Analytics Code -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43634323-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+{% endif %}

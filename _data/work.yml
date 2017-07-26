@@ -1,0 +1,17 @@
+technologies:
+  go:
+    img: /assets/img/icon_label_go.png
+  html:
+    img: /assets/img/icon_label_html.png
+  js:
+    img: /assets/img/icon_label_js.svg
+  rails:
+    img: /assets/img/icon_label_rails.svg
+  react_native:
+    img: /assets/img/icon_label_react_native.svg
+  react:
+    img: /assets/img/icon_label_react.svg
+  rabbitmq:
+    img: /assets/img/icon_label_rabbitmq.svg
+  aws:
+    img: /assets/img/icon_label_aws.svg

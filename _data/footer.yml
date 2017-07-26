@@ -1,0 +1,13 @@
+brands:
+  - url: "https://www.yummly.com/"
+    img: "/assets/img/logo-yummly.png"
+    alt: "Logo Yummly"
+  - url: "https://www.realscout.com/"
+    img: "/assets/img/logo-real-scout.png"
+    alt: "Logo RealScout"
+  - url: "https://wobe.io/"
+    img: "/assets/img/logo-wobe.png"
+    alt: "Logo Wobe"
+  - url: "https://www.fundingcircle.com/"
+    img: "/assets/img/logo_funding_circle.png"
+    alt: "Logo Funding Circle"

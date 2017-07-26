@@ -1,0 +1,45 @@
+lead: "Empieza un proyecto con nosostros hoy."
+sublead: "¿Necesitas un MVP para tú idea o tienes un producto que quieres crecer? Podemos ayudar."
+cta:
+  text: "Contrátanos"
+  url: "/hire-us"
+
+copyright: "Hash Labs LLC © Todos los derechos reservados - Hecho con &hearts; por Hash Labs LLC"
+
+links:
+  - title: "EMPRESA"
+    links:
+      - text: "Nuestro proceso"
+        url: "/process"
+      - text: "Nuestro trabajo"
+        url: "/work"
+      - text: "Nuestros servicios"
+        url: "/services"
+      - text: "Contrátanos"
+        url: "/hire-us"
+      - text: "Inglés"
+        url: "https://www.hashlabs.com"
+  - title: "SERVICIOS"
+    links:
+      - text: "React"
+        url: "/services/react"
+      - text: "React Native"
+        url: "/services/react-native"
+      - text: "Ruby on Rails"
+        url: "/services/ruby-on-rails"
+      - text: "Go"
+        url: "/services/go"
+  - title: "CONÉCTATE"
+    links:
+      - text: "Blog"
+        url: "http://blog.hashlabs.com/"
+        external: true
+      - text: "Twitter"
+        url: "https://twitter.com/hashlabs"
+        external: true
+      - text: "Facebook"
+        url: "https://www.facebook.com/hashlabshq"
+        external: true
+      - text: "LinkedIn"
+        url: "https://linkedin.com/company/hashlabs"
+        external: true

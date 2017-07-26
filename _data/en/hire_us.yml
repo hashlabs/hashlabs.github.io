@@ -1,0 +1,37 @@
+contact_form_button_text: "Submit"
+contact_form_title: "Hire us for your amazing project!"
+
+contact_form_inputs:
+  name:
+    label: "Your name"
+    warning: "(required field)"
+  email:
+    label: "Your email"
+    warning: "(required field)"
+  phone:
+    label: "Your phone number"
+    warning: "(required field)"
+  type_of_job:
+    label: "What would you like to do?"
+    warning: "(required field)"
+  budget:
+    label: "What is your budget?"
+    warning: "(required field)"
+  how_did_you_hear:
+    label: "How did you hear about Hash Labs?"
+    warning: "(required field)"
+    options:
+      friend:
+        label: "A friend"
+      social_media:
+        label: "Social Media"
+      email:
+        label: "Email"
+      other:
+        label: "Other"
+
+contact_form_success_modal:
+  title: "Way to go!"
+  copy: "Your message was delivered successfully."
+  action_copy: "OK, Thanks"
+  image_alt: "Rocket icon"

@@ -1,0 +1,188 @@
+$size--navbar-brand-dimension:              $spacer*3.125; // ~ 50px
+$size--header-height:                       $size--navbar-brand-dimension + $navbar-padding-y;
+
+.header {
+  backface-visibility: hidden;
+  z-index: z-map('front');
+
+  .mobile-toggler {
+    // pixel perfect center middle line with middle of brand logo
+    height: $size--navbar-brand-dimension - ($size--mobile-toggler-strip-height/2);
+    top: -($size--mobile-toggler-strip-height/2);
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  .navbar-brand a {
+    text-decoration: none !important;
+  }
+}
+
+// in order to keep the boundaries as a container but being fixed-top
+.navbar-container {
+  @include padding-x($navbar-padding-x);
+  display: flex;
+  margin: 0 auto;
+  max-width: 100%;
+  width: map-get($container-max-widths, xl);
+
+  @include media-breakpoint-up(lg) {
+    &:not(.navbar) {
+      @include padding-x($content-padding-x);
+    }
+  }
+}
+
+.navbar-absolute {
+  // avoid sticky effect
+  position: absolute !important;
+}
+
+.navbar {
+  @include simple-transition(background);
+  color: $color--primary;
+  font-size: $font-size-base*1.25;
+  // as we will applied a custom padding using navbar-container
+  @include padding-x(0);
+
+  // handle styles whenever the user has scrolled
+  body.scrolled & {
+    background-color: rgba($color--accent, .9);
+  }
+
+  body.scrolled &,
+  body.navbar-expanded & {
+    @extend .navbar-inverse;
+
+    .img-light {
+      display: none;
+    }
+
+    .navbar-brand-text,
+    .navbar-brand-text span {
+      color: $navbar-inverse-color !important;
+    }
+  }
+}
+
+// custom animation handling
+body.navbar-expanded .navbar {
+  @include media-breakpoint-down(sm) {
+    height: 100%;
+
+    &,
+    .header {
+      background-color: $black;
+    }
+
+    .navbar-collapse {
+      background-color: $black;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.navbar-collapse {
+  @include simple-transition(transform);
+
+  @include media-breakpoint-down(sm) {
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    position: absolute;
+    top: $size--header-height;
+    transform: translate3d(0, -600%, 0);
+    // hide scrollbar
+    padding-right: $grid-gutter-width-base;
+    right: -($grid-gutter-width-base);
+  }
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.navbar.expanded .navbar-collapse {
+  display: flex;
+}
+
+.navbar-nav {
+  @include media-breakpoint-down(sm) {
+    // styles applied whenever the collapse gets expanded on mobile
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: unquote("calc(100% + #{$size--header-height})");
+    margin-top: -($size--header-height);
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    .nav-link {
+      // make sure to overwrite any styles for mobile and keep links contrast
+      color: $color--primary !important;
+    }
+  };
+}
+
+.navbar-brand {
+  @include dimension($size--navbar-brand-dimension);
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+  &-img {
+    // keep logo invisible until some specific rule gets applied
+    display: none;
+  }
+
+  .navbar-light & {
+    .img-light {
+      display: inline-block;
+    }
+  }
+
+  .navbar-inverse & {
+    .img-inverse {
+      display: inline-block;
+    }
+  }
+
+  &-img,
+  &-text {
+    @include margin-y(0px);
+    vertical-align: middle;
+  }
+
+  &-img {
+    height: 50px;
+  }
+}
+
+.navbar-brand-text {
+  // nav-link extend in order to keep simetry
+  @extend .nav-link;
+  display: inline-block;
+  font-size: $font-size-base*1.5;
+  font-weight: $font-weight-bold;
+  padding-left: $spacer/2;
+
+  span {
+    color: $color--accent;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+
+  .navbar-light & {
+    color: $text-color;
+  }
+
+  .navbar-inverse & {
+    color: $color--primary;
+  }
+}

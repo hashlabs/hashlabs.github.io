@@ -1,0 +1,48 @@
+# Lead section
+lead_title: "Construyamos algo que tus usuarios ❤️ usar."
+lead_subtitle: "Somos una agencia de desarrollo de software especializados en Web y Mobile."
+lead_btn:
+  url: "/work"
+  text: "Nuestro trabajo"
+
+# Services section
+services:
+  title: "Esto es lo que podemos hacer por ti"
+  web:
+    title: "DESARROLLO WEB"
+    text: "Nuestro proceso iterativo nos permite tener software funcional desde el día uno y continuar agregando funcionalidad cada semana, todo esto mientras mantenemos una comunicación constante contigo para priorizar hacer ajustes al roadmap."
+    btn:
+      text: "Metodología"
+      url: "/process"
+  mobile:
+    title: "DESARROLLO DE APLICACIONES MÓVILES"
+    text: "Usando React Native, construimos aplicaciones cross-platform para iOS y Android con una misma base de código. También por la flexibilidad que nos proporciona React Native, obtenemos un rendimiento y una velocidad de desarrollo increíbles."
+    btn:
+      text: "Servicios"
+      url: "/services"
+# Showcased Project section
+showcased_project:
+  brand:
+    image: "/assets/img/logo-pleiq-primary.png"
+    url: "#"
+  title: "PleIQ es una compañia de Realidad Aumentada que esta creando experiencias educativas para ñiños de preescolar. Mira lo que hicimos para ellos."
+  check_work:
+    text: "Nuestro trabajo"
+    url: "/work"
+
+# Testimonies section
+testimonies:
+  - image: "/assets/img/picture-adrianna-tan.jpg"
+    author: "Adrianna Tan"
+    position: "CEO"
+    company:
+      url: "https://wobe.io"
+      text: "Wobe"
+    quote: '"Ellos fueron nuestro primer equipo, sacaron nuestro MVP al mercado y ayudaron a nuestros nuevos empleados a ponerse al día. Su trabajo es excepcional"'
+  - image: "/assets/img/picture-matt-ross.jpg"
+    author: "Matt Ross"
+    position: "PM"
+    company:
+      url: "https://fundingcircle.com/us"
+      text: "Funding Circle"
+    quote: "\"<b>Hash Labs</b> se toma el tiempo necesario para asegurarse de que su trabajo es entendido, documentado y claramente comunicado a través de todos los canales necesarios. Fue un placer trabajar con ellos.\""

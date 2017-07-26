@@ -1,0 +1,27 @@
+.testimony {
+  &-quote {
+    border-left: 4px solid $mercury;
+    padding-left: $spacer * 1.25;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base * 0.875;
+
+      &-container {
+        min-height: 120px;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base * 1.125;
+    }
+  }
+
+  &-author-copy {
+    font-size: $font-size-base * 0.875;
+    max-width: 150px;
+  }
+
+  &-author-image {
+    max-width: 60px;
+  }
+}
