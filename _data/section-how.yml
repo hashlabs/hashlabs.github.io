@@ -1,0 +1,16 @@
+title: Our Team extension model explained
+groups:
+  - title: The best team for the job
+    content: Given your requirements, we will assemble the best team for you.
+    image: /images/icon_best.svg
+    alt: work with your team
+
+  - title: Scale as you go
+    content: Need more developers as you grow?. No problem! We got you covered.
+    image: /images/icon_scale.svg
+    alt: increase your skills
+
+  - title: Your success is our goal
+    content: A Customer Success Manager working on maximizing the impact we will have in your business
+    image: /images/icon_goal.svg
+    alt: meet deadlines

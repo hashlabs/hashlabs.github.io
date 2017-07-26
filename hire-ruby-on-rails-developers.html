@@ -1,0 +1,28 @@
+---
+page_title: Hire Ruby on Rails Developers | Hash Labs
+title: Hire Ruby on Rails Developers
+subtitle: Our team of expert Ruby on Rails developers will join your team full-time and help you achieve your goals and meet your deadlines.
+layout: services
+email_subject: We are requiring Ruby on Rails Developers
+content_ready: false
+video: conversation_rails_ruby_bootstrap
+---
+
+{% assign service = site.data.services-ruby-on-rails %}
+
+{% if content_ready %}
+  {%
+    include template-service-info.html
+    title = service.section_subtitle
+    content = service.section_content
+    list_title = service.list_title
+    list = service.list_items
+  %}
+{% endif %}
+
+{%
+  include template-technologies.html
+  title = "Other technologies that go well with Ruby on Rails"
+  technologies = service.technologies
+  technology_class = "site-technology--service"
+%}

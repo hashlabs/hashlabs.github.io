@@ -1,0 +1,93 @@
+$color--material-bg:                             $hint-of-red;
+$rule--row-border:                               '2px solid #{$concrete}';
+
+%hero-black-orange {
+  @include overlay;
+  background: linear-gradient(-145deg, rgba(#000000, .75) 30%, rgba(#FF5824, .75) 100%);
+  opacity: 1;
+}
+
+%hero-black-blue {
+  @include overlay;
+  background: linear-gradient(-145deg, rgba(#000000, .85), rgba(#100F2A, .80) 50%);
+}
+
+%hero-blue {
+  @include overlay;
+  background: rgba(#100F2A, .70);
+  opacity: 1;
+}
+
+%material-background {
+  background-color: $color--material-bg;
+}
+
+%tertiary-background {
+  background-color: $color--tertiary;
+  color: $color--base;
+}
+
+%view-hero-small {
+  height: $space*53;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+
+  .leadtext {
+    padding-top: $space*7;
+    position: relative;
+  }
+}
+
+// change rems units base
+html {
+  font-size: 7px;
+  @media #{$from-medium-resolutions} {font-size: 10px;}
+  @media #{$from-fhd-resolutions} {font-size: 14px;}
+}
+
+// change font size units base
+body {
+  @media #{$just-small-resolutions} {font-size: 14px;}
+  @media #{$from-fhd-resolutions} {font-size: 28px;}
+}
+
+img {
+  max-width: 100%;
+}
+
+// let container to be wider to match the new scale
+.container {
+  @media #{$from-fhd-resolutions} {
+    max-width: $space*117;
+    width: $screens-fhd - $grid-gutter-width;
+  }
+}
+
+.container-fluid {
+  @media #{$from-medium-resolutions} {
+    // gives extra gutter on the edges of the screen;
+    padding-left: $space*4;
+    padding-right: $space*4;
+  }
+}
+
+.material-background {
+  @extend %material-background;
+}
+
+.has-bottom-border {
+  border-bottom: #{$rule--row-border};
+}
+
+.tertiary-background {
+  @extend %tertiary-background;
+}
+
+.view-holder {
+  padding-top: $space*20;
+}

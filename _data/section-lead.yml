@@ -1,14 +1,4 @@
-lead:
-  - text: help startups to launch.
-  - text: do team augmentation.
-  - text: prototype MVPs.
-  - text: help to develop internal tooling.
-  - text: craft gluten-free code.
-  - text: build awesome products.
-
-sublead:
-  text: We develop digital products for web and mobile
-
-background:
-  src: /images/hero_background.jpg
-  arrow: /images/arrow.png
+title: Turbocharge your development team
+subtitle: Our team of expert developers will join your team full-time and help you achieve your goals and meet your deadlines.
+video: conversation_react_ruby_aws
+button_text: Hire Hash Labs

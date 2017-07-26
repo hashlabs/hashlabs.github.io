@@ -1,0 +1,49 @@
+<footer class="site-footer">
+
+  {% assign section = site.data.section-footer %}
+
+  <a href="#" class="footer-logo-small hidden-lg-up">
+    <img src="/images/logo_grey.svg" alt="Hash Labs Logo">
+  </a>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3 col-xs-3 col-md-2">
+        <a href="#" class="hidden-md-down">
+          <img src="/images/logo_grey.svg" alt="Hash Labs Logo">
+        </a>
+      </div>
+
+      <div class="col-9 col-xs-9 col-md-10 footer-links-groups">
+        <div class="row">
+
+          {% for menu in section.menus %}
+            <div class="col-lg-6 col-md-6 footer-links-group">
+              <h3 class="footer-links-title">{{menu.name}}</h3>
+              <ul class="footer-links">
+                {% for link in menu.links %}
+                  <li class="footer-link">
+                    <a href="{{link.href}}">{{link.name}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="footer-copyright">
+        <p class="text-center">
+          {{ section.copyright }}
+        </p>
+        <p class="text-center">
+          {{ section.note }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>

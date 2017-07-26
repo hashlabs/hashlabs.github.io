@@ -1,0 +1,28 @@
+---
+page_title: Hire Node JS Developers | Hash Labs
+title: Hire Node JS Developers
+subtitle: Our team of expert Node JS developers will join your team full-time and help you achieve your goals and meet your deadlines.
+layout: services
+email_subject: We are requiring Node JS Developers
+content_ready: false
+video: conversation_js_node_react
+---
+
+{% assign service = site.data.services-node %}
+
+{% if content_ready %}
+  {%
+    include template-service-info.html
+    title = service.section_subtitle
+    content = service.section_content
+    list_title = service.list_title
+    list = service.list_items
+  %}
+{% endif %}
+
+{%
+  include template-technologies.html
+  title = "Other technologies that go well with Node JS"
+  technologies = service.technologies
+  technology_class = "site-technology--service"
+%}
