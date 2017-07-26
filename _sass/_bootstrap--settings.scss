@@ -1,9 +1,10 @@
-/*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
- * Add into this file the variables that are going
- * to be used by Bootstrap to delivery its grid and
- * overall styles. A complete list of variables
- * can be found at: (http://getbootstrap.com/customize/#less-variables)
+/*
+  Add into this file the variables that are going
+  to be used by Bootstrap to delivery its grid and
+  overall styles. A complete list of variables
+  can be found within the bootstrap folder in the
+  _variables.scss file or at:
+  https://v4-alpha.getbootstrap.com/getting-started/options/
  */
 
 // Colors
@@ -32,7 +33,7 @@ $border-radius-base:              3px;
 $border-radius-small:             3px;
 $border-radius-large:             4px;
 $padding-large-vertical:          20px;
-$padding-large-horizontal:        30px;
+$padding-large-horizontal:        1.875rem;
 
 // Buttons
 
@@ -45,5 +46,5 @@ $input-color:                     $aluminium;
 $input-color-placeholder:         $aluminium;
 $input-border-focus:              $color--accent;
 $input-bg:                        transparent;
-$form-group-margin-bottom:        30px;
+$form-group-margin-bottom:        1.875rem;
 $input-height-small:              75px;

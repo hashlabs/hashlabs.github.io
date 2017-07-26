@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+### Added
+* Bootstrap 4 as an npm dependency
+
 ## [6.0] - 17/03/2017
 ### Added
 * Design for 2017[Q1]

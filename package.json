@@ -1,0 +1,11 @@
+{
+  "name": "hashlabs.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hashlabs/hashlabs.github.io.git",
+  "author": "Victor Tortolero <victormtortolero@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6"
+  }
+}
