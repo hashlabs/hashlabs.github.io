@@ -1,6 +1,10 @@
 $color--material-bg:                             $hint-of-red;
 $rule--row-border:                               '2px solid #{$concrete}';
 
+body {
+  margin: 0;
+}
+
 %hero-black-orange {
   @include overlay;
   background: linear-gradient(-145deg, rgba(#000000, .75) 30%, rgba(#FF5824, .75) 100%);
