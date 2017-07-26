@@ -1,86 +1,97 @@
-var HashLabs = {
-  init: function init() {
-    this._bindElements();
-    this._createFlags();
-    this._bindEvents();
-  },
-
-  _bindElements: function _bindElements() {
-    this.mobileMenuElements = $('#mobile-nav, .site-navbar, #mobile-nav-toggle, .mobile-menu-overlay');
-    this.mobileMenuToggle = $('#mobile-nav-toggle');
-    // Click event will be atteched to these to close the menu
-    this.mobileMenuClosers = $('.nav-mobile-link, .mobile-menu-overlay');
-    this.navBar = $('.site-navbar');
-    this.video = $('#lead-video');
-    this.videoElement = this.video.get(0);
-  },
-
-  _createFlags: function _createFlags() {
-    /*
-      All of the videos used on the lead section, have a loop
-      that starts at second 11, so we set that on this variable
-    */
-    this.loopResetTime = 11;
-    this.linkWasClicked = false;
-  },
-
-  _bindEvents: function _bindEvents() {
-    this._handleMobileNavEvents();
-    this._handleVideoLoop();
-    this._handleAnalyticsEvents();
-  },
-
-  _handleNavBarEvents: function _handleNavBarEvents() {
-    var that = this;
-
-    this.navBar.headroom({
-      onUnpin: function() {
-        $(this).toggleClass(this.classes.unpinned, !that.linkWasClicked);
-        $(this).toggleClass(this.classes.pinned, that.linkWasClicked);
-        that.linkWasClicked = false;
-
-        return;
-      }
-    });
-  },
-
-  _handleVideoLoop: function _handleVideoLoop() {
-    var that = this;
-    // This resets the video to the loopResetTime
-    // and starts reproducing it again.
-    this.video.on('ended', function(event) {
-      that.videoElement.currentTime = that.loopResetTime;
-      that.videoElement.play();
-    });
-  },
-
-  _handleMobileNavEvents: function _handleMobileNavEvents() {
-    var that = this;
-
-    this.mobileMenuToggle.on('click', function(event) {
-      that.mobileMenuElements.toggleClass('active');
-    });
-
-    this.mobileMenuClosers.on('click', function(event) {
-      that._closeMenu();
-    });
-  },
-
-  _handleAnalyticsEvents: function _handleAnalyticsEvents() {
-    // Track CTA clicks
-    $('.btn-cta').on('click', function (event) {
-      var title = $(document).find("title").text();
-      ga('send', 'event', 'CTA', 'click', title);
-    });
-  },
-
-  _closeMenu: function _closeMenu() {
-    this.mobileMenuElements.removeClass('active');
-    this.linkWasClicked = true;
-  }
-}
-
-
 $(document).ready(function () {
-  HashLabs.init();
+  var video = $('.fullscreen-video-object').get(0);
+  $(video).css({display: 'none'});
+
+  reproduceVideo = function(elementVideo) {
+    $(elementVideo).css({display: 'block'});
+    elementVideo.play();
+  };
+
+  if (video && video.readyState >= video.HAVE_ENOUGH_DATA) {
+    reproduceVideo(video);
+  } else if (video) {
+    video.addEventListener('canplay', function() {
+      reproduceVideo(video);
+    });
+  }
+
+  new WOW({
+    mobile: false
+  }).init();
+
+  $('#typed').typed({
+    stringsElement: $('#typed-strings'),
+    typeSpeed: 30,
+    startDelay: 80,
+    backSpeed: 5,
+    backDelay: 1800,
+    loop: false,
+    loopCount: false,
+    showCursor: false,
+    contentType: 'html',
+    onStringTyped: function () {
+      this.stringsCount = this.stringsCount || 1;
+      if (this.stringsCount === 1) {
+        $('.leadtext.static').css({display: 'none'});
+        $('.leadtext:not(.static)').css({display: 'block'});
+      }
+      this.stringsCount++;
+    }
+  });
+
+  var navbarHeader = $('#site-nav');
+  var teehanNav  = new TeehanLax(navbarHeader, {
+    menuOffset: 100,
+    hideShowOffset: 6,
+    detachPoint: 500,
+    classes: {
+      detached: "header-detached",
+      hidden: "header-hidden"
+    }
+  });
+
+  teehanNav.init();
+
+  $('.mobile-toggle').on('click touchstart', function (event) {
+    showHideNav();
+    event.preventDefault();
+  });
+
+  $('#site-nav-mobile').on('click touchstart', function (event) {
+    event.stopPropagation();
+  });
+
+  $('.site-nav-mobile-link').on('click touchstart', function (event) {
+    console.log('clicked');
+    hideNav();
+  });
+
+  function showHideNav() {
+    if ($('#site-nav-mobile').hasClass('expanded')) {
+      hideNav();
+    } else {
+      showNav();
+    }
+  }
+
+  function showNav() {
+    $('#site-nav-mobile').addClass('expanded');
+    $('.mobile-toggle').addClass('is-active');
+    $('body').addClass('no_scroll');
+  }
+
+  function hideNav() {
+    $('#site-nav-mobile').removeClass('expanded');
+    $('.mobile-toggle').removeClass('is-active');
+    $('body').removeClass('no_scroll');
+  }
+
+  $.lazyLoadXT.onerror = null;
+
+  $.lazyLoadXT.onload = function() {
+    var $el = $(this);
+    $el
+      .removeClass('lazy-hidden')
+      .addClass('animated ' + $el.attr('data-effect'));
+  };
 });

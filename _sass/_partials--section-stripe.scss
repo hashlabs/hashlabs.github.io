@@ -1,0 +1,42 @@
+$color--section-stripe-bg:                       $color--accent;
+$color--button-primary-stripe:                   $white;
+
+.section-stripe {
+  background-color: $color--section-stripe-bg;
+  padding-top: $space*4;
+  padding-bottom: $space*4;
+
+  .btn-primary {
+    color: $color--button-primary-stripe;
+    display: inline-block;
+  }
+
+  .section-title {
+    font-size: 150%;
+    @media #{$from-fhd-resolutions} {font-size: 200%;}
+    margin: 0;
+  }
+
+  .col-stripe-text {
+    text-align: center;
+  }
+
+  .col-stripe-button {
+    text-align: center;
+    margin-top: $space*3;
+  }
+
+  @media #{$from-large-resolutions} {
+    padding-top: $space*5;
+    padding-bottom: $space*5;
+
+    .col-stripe-text {
+      text-align: left;
+    }
+
+    .col-stripe-button {
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+}

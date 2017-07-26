@@ -1,8 +1,0 @@
-{% assign email_subject = site.email_subject %}
-{% if page.email_subject %}
-  {% assign email_subject = page.email_subject %}
-{% endif %}
-
-<a href="mailto:{{ site.email }}?subject={{ email_subject }}" class="btn btn-primary btn-cta">
-  {{ site.data.button-cta.text }}
-</a>

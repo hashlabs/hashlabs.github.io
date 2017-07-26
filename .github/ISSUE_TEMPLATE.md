@@ -6,3 +6,7 @@ As our project covers multiple parts, this is how we designate where the issue l
 
 * First thing
 * Second thing
+
+# Environment
+
+If the issues address a situation that needs to be solved and no a suggestion, specify where this problem has been reproduced (staging, production, device version, OS... etc)

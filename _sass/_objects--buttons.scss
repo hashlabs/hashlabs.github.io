@@ -1,34 +1,58 @@
-// If base font size is 16px, this will be 22px
-$size--btn-font-size:                    1.375rem;
-$size--btn-min-width-small:              80%;
-$color--btn-primary:                     $orange-red;
-$color--btn-primary-accent:              $accent-orange-red;
+$color--btn-primary-font:                      $white;
+$color--btn-outline:                           $color--accent;
 
-.btn {
-  cursor: pointer;
-  font-family: $primary-font;
-  font-weight: bold;
-  font-size: 1.375rem;
+$rule--btn-primary-border:                     '3px solid #{$color--accent}';
+$rule--btn-secondary-border:                   '3px solid transparent';
+$rule--btn-tertiary-border:                    '3px solid #{$color--tertiary}';
+
+%btn-boilerplate {
+  display: inline-block;
   max-width: 100%;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
+  min-width: 230px;
+  outline-color: $color--btn-outline;
+  padding: $space*1.75 $space*6;
+  @include simple-transition;
+
+  @media #{$from-small-resolutions} {
+    min-width: 0;
+    padding: $space $space*5;
+  }
 }
 
-// Btn primary is set to $orange-red on _settings--bootstrap.scss file
 .btn-primary {
-  padding: $space*.5 $space*5;
+  @extend %btn-boilerplate;
+  background-color: transparent;
+  border: #{$rule--btn-primary-border};
+  color: $color--btn-primary-font;
 
-  &:hover, &:focus {
-    background-color: $color--btn-primary-accent;
-    text-decoration: none;
-    color: $white;
+  &:hover {
+    background-color: $color--accent;
+    border-color: $color--accent;
+    color: $color--btn-primary-font;
   }
+}
 
-  @media #{$just-small-resolutions} {
-    padding: $space*.5 $space*3;
+.btn-secondary {
+  @extend %btn-boilerplate;
+  background-color: $color--accent;
+  border: #{$rule--btn-secondary-border};
+  color: $color--base;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $color--accent;
+    color: $color--accent;
   }
+}
 
-  @media #{$just-very-small-resolutions} {
-    min-width: $size--btn-min-width-small;
+.btn-tertiary {
+  @extend %btn-boilerplate;
+  background-color: $color--accent;
+  border: #{$rule--btn-tertiary-border};
+  color: $color--base;
+
+  &:hover {
+    background-color: $color--tertiary;
+    border-color: $color--tertiary;
   }
 }

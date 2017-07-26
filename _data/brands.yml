@@ -1,19 +1,19 @@
 - name: yummly
+  logo: /images/yummly_logo_retina.png
   link: https://www.yummly.com
-  alt: Yummly logo
 
-- name: real-scout
+- name: realscout
+  logo: /images/real_scout_logo_retina.png
   link: https://www.realscout.com
-  alt: Real Scout logo
 
-- name: funding-circle
+- name: save1
+  logo: /images/save_logo_retina.png
+  link: https://www.save1.com
+
+- name: fundingcircle
+  logo: /images/funding_circle_logo_retina.png
   link: https://www.fundingcircle.com
-  alt: Funding Circle logo
 
 - name: wobe
+  logo: /images/wobe_logo_retina.png
   link: http://www.wobe.io
-  alt: Wobe logo
-
-- name: rxspeed
-  link: http://www.rxspeed.com
-  alt: Rxspeed logo

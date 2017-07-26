@@ -1,81 +1,77 @@
-$color--footer-background:            $white-smoke;
-$size--footer-padding-top:            60px;
-$size--title-font-size:               1.1rem;
+$color--copyright-font:                          $aluminium;
 
 .site-footer {
-  background-color: $color--footer-background;
-  padding-top: $size--footer-padding-top;
-  position: relative;
-}
+  padding-top: $space*5;
+  text-align: center;
 
-.footer-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-bottom: $space-triple;
+  .section-title {
+    color: $color--text;
+    font-weight: $font-weight-bold;
+  }
 
-  li a {
-    color: $blueish-gray;
+  .custom-icon,
+  .offices {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .upper-group .row {
+    margin-bottom: $space*5;
+  }
+
+  .footer-links {
+    @include list-reset;
+
+    .footer-link {
+      display: inline-block;
+
+      & + .footer-link {
+        margin-left: $space*1.5;
+      }
+    }
+
+    a {
+      color: $color--accent;
+      font-size: 70%;
+      font-weight: $font-weight-bold;
+      text-transform: capitalize;
+    }
+  }
+
+  .bottom-section {
+    .row {
+      margin-bottom: $space*1.5;
+    }
+  }
+
+  .offices {
+    text-align: left;
+    padding-left: 5px;
+  }
+
+  .location-element {
+    font-size: 160%;
+
+    @media #{$from-small-resolutions} {
+      font-size: 100%;
+    }
   }
 }
 
-.footer-links-group {
-  h3 {
-    font-size: $size--title-font-size;
-    color: $darker-gray;
-    font-weight: bold;
-  }
+.simple-list {
+  @include list-reset();
+  font-size: 60%;
+}
 
-  @media #{$just-medium-resolutions} {
-    padding-left: $space-double*2;
-  }
-
-  @media #{$just-small-resolutions} {
-    padding-left: $space;
+.footer-branding {
+  .sitelogo {
+    display: block;
+    margin: 0 auto;
+    width: $space*7.5;
   }
 }
 
-.footer-links-groups {
-  @media #{$just-small-resolutions} {
-    padding-left: $space-double;
-  }
-}
-
-.footer-copyright {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: $space;
-
-  p {
-    padding: 0 $space;
-    margin: 0;
-    color: $light-gray;
-  }
-
-  @media #{$just-small-resolutions} {
-    margin-top: $space-double;
-  }
-}
-
-.footer-link {
-  padding: 0;
-}
-
-/*
-  Basically applying same padding left to footer logo
-  than the one being applied to header logo, in order
-  to keep them both aligned on mobile devices.
- */
-.footer-logo-small {
-  display: block;
-  position: absolute;
-  left: $space-triple;
-
-  @media #{$just-small-resolutions} {
-    left: $size--logo-padding-left;
-  }
+.copyright {
+  color: $color--copyright-font;
+  font-size: 50%;
 }

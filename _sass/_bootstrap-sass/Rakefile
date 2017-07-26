@@ -1,12 +1,13 @@
 lib_path = File.join(File.dirname(__FILE__), 'lib')
 $:.unshift(lib_path) unless $:.include?(lib_path)
 
+load './tasks/bower.rake'
+
 require 'rake/testtask'
 Rake::TestTask.new do |t|
   t.libs << 'test'
   t.test_files = FileList['test/**/*_test.rb']
-  t.verbose = false
-  t.warning = false
+  t.verbose = true
 end
 
 desc 'Test all Gemfiles from test/*.gemfile'
@@ -19,15 +20,13 @@ task :test_all_gemfiles do
     env = {'BUNDLE_GEMFILE' => gemfile}
     cmd_with_env = "  (#{env.map { |k, v| "export #{k}=#{Shellwords.escape v}" } * ' '}; #{cmd})"
     $stderr.puts Term::ANSIColor.cyan("Testing\n#{cmd_with_env}")
-    Bundler.with_clean_env do
-      PTY.spawn(env, cmd) do |r, _w, pid|
-        begin
-          r.each_line { |l| puts l }
-        rescue Errno::EIO
-          # Errno:EIO error means that the process has finished giving output.
-        ensure
-          ::Process.wait pid
-        end
+    PTY.spawn(env, cmd) do |r, _w, pid|
+      begin
+        r.each_line { |l| puts l }
+      rescue Errno::EIO
+        # Errno:EIO error means that the process has finished giving output.
+      ensure
+        ::Process.wait pid
       end
     end
     [$? && $?.exitstatus == 0, cmd_with_env]
@@ -44,28 +43,45 @@ end
 desc 'Dumps output to a CSS file for testing'
 task :debug do
   require 'sass'
-  require './lib/bootstrap'
-  require 'term/ansicolor'
-  require 'autoprefixer-rails'
   path = Bootstrap.stylesheets_path
-  %w(_bootstrap _bootstrap-flex _bootstrap-reboot _bootstrap-grid).each do |file|
+  %w(bootstrap).each do |file|
     engine = Sass::Engine.for_file("#{path}/#{file}.scss", syntax: :scss, load_paths: [path])
-    out = File.join('tmp', "#{file[1..-1]}.css")
-    css = engine.render
-    css = AutoprefixerRails.process(css)
-    File.write(out, css)
-    $stderr.puts Term::ANSIColor.green "Compiled #{out}"
+    File.open("./#{file}.css", 'w') { |f| f.write(engine.render) }
   end
 end
 
-desc 'Update bootstrap from upstream'
-task :update, :branch do |t, args|
-  require './tasks/updater'
-  Updater.new(branch: args[:branch]).update_bootstrap
+desc 'Convert bootstrap to bootstrap-sass'
+task :convert, :branch do |t, args|
+  require './tasks/converter'
+  Converter.new(branch: args[:branch]).process_bootstrap
 end
 
-desc 'Start a dummy Rails app server'
-task :rails_server do
+desc 'LESS to stdin -> Sass to stdout'
+task :less_to_scss, :branch do |t, args|
+  require './tasks/converter'
+  puts Converter.new(branch: args[:branch]).convert_less(STDIN.read)
+end
+
+desc 'Compile bootstrap-sass to tmp/ (or first arg)'
+task :compile, :css_path do |t, args|
+  require 'sass'
+  require 'term/ansicolor'
+
+  path = 'assets/stylesheets'
+  css_path = args.with_defaults(css_path: 'tmp')[:css_path]
+  puts Term::ANSIColor.bold "Compiling SCSS in #{path}"
+  Dir.mkdir(css_path) unless File.directory?(css_path)
+  %w(_bootstrap bootstrap/_theme).each do |file|
+    save_path = "#{css_path}/#{file.sub(/(^|\/)?_+/, '\1').sub('/', '-')}.css"
+    puts Term::ANSIColor.cyan("  #{save_path}") + '...'
+    engine    = Sass::Engine.for_file("#{path}/#{file}.scss", syntax: :scss, load_paths: [path])
+    css       = engine.render
+    File.open(save_path, 'w') { |f| f.write css }
+  end
+end
+
+desc 'Start a dummy (test) Rails app server'
+task :dummy_rails do
   require 'rack'
   require 'term/ansicolor'
   port = ENV['PORT'] || 9292

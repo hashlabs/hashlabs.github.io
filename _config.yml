@@ -6,22 +6,19 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Developers as a Service | Hash Labs
-email: sales@hashlabs.com
-email_subject: We are requiring Team Extension services
+title: Hash Labs | Hassle free software engineering
+email: contact@hashlabs.com
 description: >
-  Our team of experts developers will join your team full-time, to help you achieve your goals at meet your deadlines. We take care of our team training and growth path, so they stay up to date with new technologies.
+  We are a digital agency that builds products for the web and mobile.
 url: "https://www.hashlabs.com" # the base hostname & protocol for your site
 twitter_username: hashlabs
 github_username:  hashlabs
+form_action: https://formspree.io/contact@hashlabs.com
 thanks_url: https://www.hashlabs.com/thanks
 permalink: /blog/:title
 
 # Build settings
 markdown: kramdown
-
-gems:
-  - jekyll-autoprefixer
 
 # SASS
 sass:

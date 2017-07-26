@@ -1,0 +1,60 @@
+$size--lead-text:             180%;
+$color--background-whoweare:  $white-smoke;
+$size--lead-text-md:          160%;
+$size--text-md:               80%;
+$size--lead-text-lg:          180%;
+$size--text-lg:               80%;
+
+.section-whoweare {
+  padding-top: $space*2;
+  padding-bottom: $space*2;
+  background-color: $color--background-whoweare;
+
+  .leadtext {
+    margin-bottom: $space*3;
+    font-size: $size--lead-text;
+  }
+
+  .technologiestext {
+    margin-top: $space*6;
+  }
+
+  @media #{$from-small-resolutions} {
+    padding-top: $space*6;
+    padding-bottom: $space*6;
+
+    .technologies {
+      margin-top: $space*2;
+    }
+
+    .introtext {
+      margin-top: $space*4;
+    }
+
+    .leadtext {
+      font-size: $size--lead-text-md;
+    }
+
+    .introtext,
+    .subintrotext,
+    .technologiestext {
+      font-size: $size--text-md;
+    }
+  }
+
+  @media #{$from-large-resolutions} {
+    .leadtext {
+      font-size: $size--lead-text-lg;
+    }
+
+    .technologies {
+      margin-top: $space*4;
+    }
+
+    .introtext,
+    .subintrotext,
+    .technologiestext {
+      font-size: $size--text-lg;
+    }
+  }
+}

@@ -38,21 +38,17 @@
 // media queries
 // -----------------------------------------------------------------------------
 
-  $minimum-screen-resolution:     320px;
+  $minimun-screen-resolution:     320px;
 
-  $bootstrap-very-sm:             576px;
   $bootstrap-sm:                  768px;
   $bootstrap-md:                  992px;
   $bootstrap-lg:                  1200px;
   $screens-fhd:                   1920px;
   $tablet-landscape:              1024px;
 
-  $just-minimum-resolution:                 "only screen and (max-width: #{$minimum-screen-resolution})";
-  $just-very-small-resolutions:             "only screen and (max-width: #{$bootstrap-very-sm})";
   $just-small-resolutions:                  "only screen and (max-width: #{$bootstrap-sm})";
   $just-medium-resolutions:                 "only screen and (max-width: #{$bootstrap-md})";
 
-  $from-very-small-resolutions:             "only screen and (min-width: #{$bootstrap-very-sm})";
   $from-small-resolutions:                  "only screen and (min-width: #{$bootstrap-sm})";
   $from-medium-resolutions:                 "only screen and (min-width: #{$bootstrap-md})";
   $from-large-resolutions:                  "only screen and (min-width: #{$bootstrap-lg})";
@@ -60,5 +56,3 @@
 
 
   $from-small-to-medium-resolutions:        "only screen and (min-width: #{$bootstrap-sm}) and (max-width: #{$bootstrap-md})";
-
-  $size--logo-width: 44px;

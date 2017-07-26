@@ -1,0 +1,82 @@
+$color--form-font:                               $aluminium;
+
+.form-group {
+  color: $color--form-font;
+  position: relative;
+
+  &.has-error {
+    &,
+    .form-control {
+      color: $color--error;
+      border-color: $color--error;
+    }
+  }
+
+  &.has-success {
+    &,
+    .form-control {
+      color: $color--success;
+      border-color: $color--success;
+    }
+  }
+
+  &.has-form-bullet {
+    .form-control-bullet {
+      display: none;
+    }
+
+    @media #{$from-small-resolutions} {
+      padding-right: 45px; // anough space for bullet
+
+      .form-control-bullet {
+        display: block;
+        font-size: 350%; // bullet diameter 25px;
+        position: absolute;
+        right: 0;
+        top: 24px;
+        line-height: 0;
+      }
+    }
+
+    @media #{$from-medium-resolutions} {
+      .form-control-bullet {
+        font-size: 250%; // bullet diameter 25px;
+      }
+    }
+
+    @media #{$from-fhd-resolutions} {
+      .form-control-bullet {
+        font-size: 175%; // bullet diameter 25px;
+      }
+    }
+
+  }
+
+  .form-control {
+    color: $color--base;
+
+    &:focus + .form-control-bullet {
+      color: $color--accent;
+    }
+  }
+}
+
+textarea {
+  min-height: 250px;
+  resize: none;
+}
+
+@include placeholder-styles() {
+  color: $color--form-font;
+}
+
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.form-submit {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}

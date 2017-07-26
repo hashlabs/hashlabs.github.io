@@ -1,0 +1,177 @@
+.view-projects-hero {
+  @extend %view-hero-small;
+
+  &::before {
+    @extend %hero-black-orange;
+  }
+}
+
+.view-projects {
+  padding-top: $space*10;
+
+  @media #{$from-medium-resolutions} {
+    padding-top: $space*20;
+  }
+}
+
+.project-cabinet {
+  text-align: center;
+
+  .inner {
+    width: $space*60;
+    max-width: 100%;
+    margin: 0 0 0 auto;
+    padding: 0 $grid-gutter-width-half; // avoid to be to close from the image
+
+    .row {
+      margin-bottom: $space*4.5;
+    }
+
+    .row:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .section-title {
+    color: $color--text;
+    font-weight: $font-weight-bold;
+    margin-bottom: $space*1.5;
+
+    &.yummly {
+      color: $yummly;
+    }
+
+    &.real-scout {
+      color: $real-scout;
+    }
+  }
+
+  .brief {
+    width: $space*55;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+.row-project-cabinet {
+  &:not(:last-of-type) {
+    margin-bottom: $space*10;
+  }
+
+  @media #{$from-small-resolutions} {
+    max-width: 100%;
+    width: $space*160;
+
+    &:not(:last-of-type) {
+      margin-bottom: $space*20;
+    }
+  }
+}
+
+.projects-listing {
+  .btn-primary {
+    color: $color--accent;
+
+    &:hover {
+      color: $color--base;
+    }
+  }
+}
+
+.row-project-cabinet {
+  .project-cabinet-image {
+    &:first-of-type {
+      display: inline-block;
+      margin-left: -($grid-gutter-width/2);
+    }
+
+    &:last-of-type {
+      display: none;
+      margin-right: -($grid-gutter-width/2);
+    }
+  }
+
+  // this rule allows the yummly ipad to be centered
+  // but idelly to be able to have images that reach the edges
+  // of the screen and others that don't we should add an empty space
+  // of 15 px on the sides of the images that doesn't reach the edge
+  &:first-child {
+    .project-cabinet-image {
+      &:first-of-type {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+  }
+
+  @media #{$just-small-resolutions} {
+    &:nth-child(even) {
+      .project-cabinet-image {
+        &:first-of-type {
+          float: right; // to be able to negative margin right
+          margin-left: 0;
+          margin-right: -($grid-gutter-width/2);
+        }
+      }
+    }
+  }
+
+  @media #{$from-small-resolutions} {
+    &:nth-child(even) {
+      float: right !important;
+      text-align: right;
+
+      .project-cabinet-image {
+        &:first-of-type {
+          display: none;
+        }
+
+        &:last-of-type {
+          display: inline-block;
+        }
+      }
+
+      .inner {
+        margin: 0;
+      }
+    }
+  }
+
+  @media #{$from-medium-resolutions} {
+    .project-cabinet-image {
+      &:first-of-type {
+        margin-left: -$container-fluid-gutter;
+      }
+
+      &:last-of-type {
+        margin-right: -$container-fluid-gutter;
+      }
+    }
+  }
+}
+
+.project-cabinet {
+  &,
+  &-image {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+
+  @media #{$from-small-resolutions} {
+    &,
+    &-image {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &-image {
+      width: 40%;
+    }
+
+    & {
+      width: 55%;
+    }
+  }
+}

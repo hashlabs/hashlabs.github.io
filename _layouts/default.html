@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html amp lang="en">
+<html>
 
   {% include head.html %}
 
-  <body class="default site">
+  <body class="default">
 
-    {% include navbar.html %}
+    {% include header.html %}
 
-    <main class="site-content">
-      {{ content }}
-    </main>
+    {{ content }}
 
-    {% include section-footer.html %}
+    {% include footer.html %}
 
     {% include footer-scripts.html %}
 

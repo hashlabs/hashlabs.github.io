@@ -1,0 +1,25 @@
+.view-about-hero {
+  @extend %view-hero-small;
+
+  &::before {
+    @extend %hero-black-blue;
+  }
+}
+
+.about-intro {
+  font-size: 200%;
+  margin-bottom: $space*15;
+  margin-top: $space*10;
+}
+
+.about-content {
+  .leadtext {
+    color: $color--accent;
+  }
+
+  .section-title {
+    color: $color--text;
+    margin-bottom: $space*5;
+    margin-top: $space*8;
+  }
+}

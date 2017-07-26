@@ -1,0 +1,155 @@
+@include set-helper('.display-block') {
+  display: block !important;
+}
+
+@include set-helper('.element-fluid') {
+  width: 100% !important;
+}
+
+.col-strech,
+.row-strecth {
+  height: 100%;
+
+  > * {
+    height: 100%;
+  }
+}
+
+.col-inline {
+  display: inline-block;
+  float: none;
+}
+
+.emphasis-text {
+  font-weight: $font-weight-bold;
+}
+
+.fade-out {
+  @include fade-out;
+}
+
+.fade-in {
+  @include fade-in;
+}
+
+.has-bottom-shadow {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+  }
+}
+
+.no-pad {
+  padding: 0 !important;
+}
+
+.rounded-corners {
+  border-radius: $border-radius-base;
+}
+
+.text-aligned {
+  vertical-align: middle;
+}
+
+.text-accent.text-accent {
+  color: $color--accent;
+}
+
+.text-base.text-base {
+  color: $color--base;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-large {
+  font-size: $font-size-large;
+}
+
+.text-small {
+  font-size: $font-size-small;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.valign {
+  @include table-align($target: '.vobject');
+  width: 100%;
+}
+
+.center-block {
+  float: none;
+}
+
+@include set-helper('.row-aligned-cols') {
+  > * {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+  }
+}
+
+// padding/margins helpers
+$sizes: (xs: 0.5rem, sm: 1rem, md: 1.5rem, lg: 2rem, xl: 2.5rem);
+$properties: ('top', 'right', 'left', 'bottom');
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+@each $name, $value in $sizes {
+  @each $prop in $properties {
+    .margin-#{$prop}-#{$name} {
+      margin-#{$prop}: $value !important;
+    }
+
+    .padding-#{$prop}-#{$name} {
+      padding-#{$prop}: $value !important;
+    }
+  }
+}
+
+// Helpers to animation delay trigger
+$list: one two three four five six seven;
+$time-base: .3s;
+$time: $time-base;
+
+@each $number in $list {
+  .lapse-#{$number} {
+    @include lapse-delay(#{$time});
+    $time: $time + $time-base;
+  }
+}
+
+body.no_scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.lazy-hidden {
+  display: none;
+}
+
+.img-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+}
+
+.img-behind {
+  z-index: -1;
+}

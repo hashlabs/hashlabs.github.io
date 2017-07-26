@@ -1,0 +1,95 @@
+$color--lead-text:                               $white;
+$color--section-title-text:                      $white;
+
+%text-double-size {
+  font-size: 200%;
+  @media #{$from-fhd-resolutions} {font-size: 150%;}
+}
+
+.leadtext {
+  font-size: 250%;
+  font-weight: $font-weight-bold;
+  text-align: center;
+
+  @media #{$from-fhd-resolutions} {
+    font-size: 250%;
+  }
+}
+
+.subleadtext {
+  font-size: 125%;
+}
+
+.leadtext,
+.subleadtext {
+  color: $color--lead-text;
+}
+
+.subleadtext {
+  line-height: $line-height-base;
+  margin-top: 0;
+}
+
+.bullet-icon {
+  font-size: 80%;
+}
+
+.section-title {
+  color: $color--section-title-text;
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-size: 200%;
+}
+
+.section-subtitle {
+  font-size: 170%;
+  margin-top: 0;
+}
+
+.paragraph-content {
+  line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
+  margin-bottom: $space*2;
+  margin-top: $space*2;
+}
+
+blockquote {
+  font-size: 130%;
+}
+
+p {
+  a {
+    color: rgba($color--accent, .85);
+
+    &:hover {
+      color: $color--accent;
+    }
+  }
+}
+
+code,
+pre {
+  font-size: 95%;
+}
+
+h1 {
+  font-size: 220%;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+h3 {
+  font-size: 180%;
+}
+
+h4 {
+  font-size: 160%;
+}

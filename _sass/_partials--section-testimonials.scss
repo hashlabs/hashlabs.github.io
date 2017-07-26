@@ -1,0 +1,79 @@
+.section-testimonials {
+  @extend %material-background;
+  padding-bottom: $space*7;
+  padding-top: $space*7;
+
+  @media #{$from-medium-resolutions} {
+    padding-bottom: $space*15;
+    padding-top: $space*15;
+  }
+
+  .row + .row {
+    padding-top: $space*10;
+  }
+}
+
+.testimony-content {
+  @extend %text-double-size;
+  position: relative;
+  margin-bottom: $space*3;
+  line-height: $line-height-base;
+  text-align: center;
+
+  &.has-brackets {
+    &::after {
+      bottom: -$space*22.5;
+      content: '}';
+      display: block;
+      font-size: 425%;
+      left: 45%;
+      left: calc(50% - 20px); // 20px half of width of the bracket
+      line-height: 1;
+      position: absolute;
+      transform: rotate(90deg);
+    }
+
+    @media #{$from-small-resolutions} {
+      margin-bottom: $space*12.5;
+      padding-right: $space*12;
+      text-align: left;
+
+      &::after {
+        bottom: auto;
+        content: '}';
+        display: block;
+        font-size: 600%;
+        left: auto;
+        line-height: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.testimony-details {
+  font-size: 120%;
+  display: block;
+  margin-bottom: $space*12;
+  text-align: center;
+
+  @media #{$from-small-resolutions} {
+    font-size: 100%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.testimony-person {
+  display: block;
+  margin: 0 auto;
+  max-width: $space*25;
+  width: 100%;
+
+  @media #{$from-small-resolutions} {
+    max-width: $space*35;
+  }
+}
