@@ -1,0 +1,17 @@
+<div class="footer-cta outer-section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        {% include brand-list.html brands=site.data.footer.brands %}
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="footer-copy text-center text-lg-left mt-5 mt-lg-0">
+          <h2 class="footer-copy-lead">{{ site.data.footer.lead }}</h2>
+          <p class="footer-copy-sublead mt-3">{{ site.data.footer.sublead }}</p>
+          <a href="{{ site.data.footer.cta.link }}" class="btn btn-primary btn-lg mt-4 mt-lg-5">{{ site.data.footer.cta.text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-separator"></div>

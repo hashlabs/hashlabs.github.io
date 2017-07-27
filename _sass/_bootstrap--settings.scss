@@ -66,6 +66,11 @@ $link-hover-color:                      rgba($black, .8);
 $btn-primary-color:                         $white;
 $btn-primary-bg:                            $color--accent;
 $btn-primary-border:                        $btn-primary-bg;
+$btn-border-radius:                         0;
+$btn-border-radius-lg:                      0;
+$btn-border-radius-sm:                      0;
+$btn-padding-y-lg:                          1.25rem;
+$btn-padding-x-lg:                          3.75rem;
 
 // set of rules in order to remove outlines on focus
 $btn-box-shadow:                            transparent;
