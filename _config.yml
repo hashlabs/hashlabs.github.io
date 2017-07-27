@@ -20,6 +20,15 @@ permalink: /blog/:title
 # Build settings
 markdown: kramdown
 
+# Polyglot settings
+languages: ["en", "es"]
+default_lang: "en"
+exclude_from_localization: ["css", "js", "images"]
+parallel_localization: true
+
+plugins:
+  - jekyll-polyglot
+
 # SASS
 sass:
   style: compressed

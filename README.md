@@ -33,6 +33,10 @@ them in the template.
 You can add `yml` files in the `_data` folder, and query the contents of
 these files using `site.data.{filename}`.
 
+## FAQ
+
+Check the [FAQ](FAQ.md)
+
 ### Example
 
 # About
