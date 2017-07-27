@@ -37,10 +37,10 @@ url: "/some_link"
 Just add some extra spaces before rendering the variable like so:
 
 ```
-// Will get translated
+// Won't get translated
 <a href=" {{ page.url | prepend: site.baseurl }} "></a>
 
-// Won't get translated
+// Will get translated
 <a href="{{ page.url | prepend: site.baseurl }}"></a>
 ```
 
@@ -48,5 +48,19 @@ Even tho this is not documented on polyglot's docs, they use on their
 example site, specifically on a language switcher
 [here](https://github.com/untra/polyglot/blob/master/site/_includes/sidebar.html#L41)
 
+## How do I use the srcset filter?
+
+Use as shown below:
+
+```
+<img
+  src="{{ '/img/some_image.png' | prepend: site.baseurl }}"
+  srcset="{{ '/img/some_image.png' | prepend: site.baseurl | srcset }}"
+>
+```
+
+Also take in mind this filter makes 2 assumptions:
+1. Image path/name should only have 1 dot in it (the one just before the extension)
+2. Image should have 2 other images named like it, but with @2x and @3x just before the extension
 
 [polyglot]: https://github.com/untra/polyglot
