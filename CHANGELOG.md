@@ -2,6 +2,7 @@
 
 ## Changed
 * Clean base to start new design development
+* README to include deploy staging info
 
 ### Added
 * Bootstrap 4 as an npm dependency ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
