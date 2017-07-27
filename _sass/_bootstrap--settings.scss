@@ -53,6 +53,21 @@ $link-hover-color:                      rgba($black, .8);
  * Navbar
  */
 
+$navbar-inverse-color:                        $color--primary;
+$navbar-inverse-hover-color:                  rgba($color--primary, .7);
+$navbar-inverse-disabled-color:               rgba($color--primary, .3);
+$navbar-inverse-active-color:                 $color--primary;
+$navbar-inverse-toggler-border:               transparent;
+$navbar-inverse-toggler-bg:                   none;
+
+$navbar-light-color:                          $text-color;
+$navbar-light-hover-color:                    $color--accent;
+$navbar-light-disabled-color:                 rgba($text-color, .3);
+$navbar-light-active-color:                   $color--accent;
+$navbar-light-toggler-border:                 transparent;
+$navbar-light-toggler-bg:                     none;
+
+$navbar-toggler-padding-x:                  0;
 
 /**
  * Pills

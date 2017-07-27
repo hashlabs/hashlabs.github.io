@@ -1,10 +1,11 @@
 ## [Unreleased]
 
 ## Changed
-* Clean base to start new design development
-* README to include deploy staging info
+* Clean base to start new design development ([@duranmla](https://github.com/duranmla))
+* README to include deploy staging info ([@duranmla](https://github.com/duranmla))
 
 ### Added
+* Website Footer ([@carlows](https://github.com/carlows))
 * Bootstrap 4 as an npm dependency ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
 * i18n support with [polyglot](https://github.com/untra/polyglot) gem ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
 * srcset filter to generate img srcset attribute ([@TheMightyPenguin](https://github.com/TheMightyPenguin))

@@ -5,7 +5,8 @@
 
   <body class="site">
 
-    {% include header.html %}
+    {% assign header_class = "navbar-light" %}
+    {% include header.html include_class=header_class %}
 
     <main class="site-content">
       {{ content }}

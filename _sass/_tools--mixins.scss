@@ -113,8 +113,8 @@
   border-top: $side solid $color;
 }
 
-@mixin simple-transition($speed: $default-speed-transition) {
-  transition: all ease-out $speed;
+@mixin simple-transition($property: all, $speed: $default-speed-transition) {
+  transition: $property ease-out $speed;
 }
 
 @mixin list-reset {
