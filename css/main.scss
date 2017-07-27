@@ -1,76 +1,27 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-/**
- * Settings
- */
+// settings and variables (order matters)
+@import "settings--palette";
+@import "settings--defaults";
+@import "settings--fonts";
+@import "settings--icons";
 
-@import 'settings--palette';
-@import 'settings--fonts';
-@import 'bootstrap--custom';
-@import 'settings--defaults';
+// tools (sorted alphabetically)
+@import "tools--functions";
+@import "tools--mixins";
 
-/**
- * Tools
- */
+// bootstrap inclusion (order matters)
+@import "bootstrap--custom";
+@import "bootstrap--derivables";
+@import "tools--z-map";
 
-@import 'tools--functions';
-@import 'tools--mixins';
-@import 'tools--modifiers';
-@import 'tools--z-map';
+// vendor components
 
-/**
- * Objects
- */
+// objects (sorted alphabetically)
 
-@import 'objects--buttons';
-@import 'objects--brand-listers';
-@import 'objects--technology-listers';
-@import 'objects--crew-avatar';
-@import 'objects--cards';
-@import 'objects--paragraphs';
-@import 'objects--services-sidebar';
-@import 'objects-button-menu';
-@import 'objects--down-caret';
+// components (sorted alphabetically)
 
-/**
- * Components
- */
+// layout (sorted alphabetically)
 
-@import 'components--header';
-@import 'components--footer';
-@import 'components--member-profile';
-@import 'components--header-detached';
-@import 'components--mobile-menu';
-
-/**
- * Layouts
- */
-
-@import 'layouts--global';
-@import 'layouts--forms';
-@import 'layouts--blog';
-@import 'layouts--post';
-
-/**
- * Partials
- */
-
-@import 'partials--section-lead';
-@import 'partials--section-projects';
-@import 'partials--section-whoweare';
-@import 'partials--section-services';
-@import 'partials--services';
-@import 'partials--section-stripe';
-@import 'partials--section-fullscreen-video';
-@import 'partials--section-testimonials';
-@import 'partials--section-team';
-@import 'partials--error-404';
-
-@import 'partials--view-about';
-@import 'partials--view-team';
-@import 'partials--view-contact';
-@import 'partials--view-projects';
-@import 'partials--view-project';
-@import 'partials--view-thanks';
+// partials (sorted alphabetically)

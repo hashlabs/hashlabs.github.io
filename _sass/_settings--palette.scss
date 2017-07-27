@@ -1,36 +1,53 @@
-// -----------------------------------------------------------------------------
-// $COLOR-VARIABLES
-// -----------------------------------------------------------------------------
+/**
+ * Default colors variables
+ */
 
 $aluminium:                     #989898;
 $black:                         #000000;
-$concrete:                      #F2F2F2;
-$custom-black:                  #333333;
-$hint-of-red:                   #FAFAFA;
-$gray:                          #CFD8DC;
-$kelly-green:                   #46B300;
-$mirage:                        #100F2A;
-$lime:                          #85C92A;
-$lily-white:                    #ECECEC;
-$red:                           #F7412D;
-$lust:                          #EC2811;
-$crayon-orange:                 #FF5C1F;
-$violet:                        #A100B7;
+$casablanca:                    #F0AD4E;
+$fern:                          #5CB85C;
+$malibu:                        #5BC0DE;
+$valencia:                      #D9534F;
 $white:                         #FFFFFF;
 
-$yummly:                        #D36911;
-$real-scout:                    #488EDD;
-$white-smoke:                   #F6F6F6;
+/**
+ * Color variables
+ */
 
+$crayon-orange:                 #FF5C1F;
 
-// -----------------------------------------------------------------------------
-// $USABLE-COLORS
-// -----------------------------------------------------------------------------
+/**
+ * Brand colors
+ */
 
-$color--base:                   $white;
-$color--tertiary:               $mirage;
+$gmail-brand:                   #DF4A32;
+$facebook-brand:                #3C66C4;
+
+/**
+ * Usable colors
+ */
+
+// When using a primary color in your palette, this color should be the most widely used across all screens and components.
+$color--primary:                $white;
+
+// Palettes with a secondary color may use this color to indicate a related action or information.
+$color--secondary:              $black;
+
+// The accent should be used for the interactive elements
 $color--accent:                 $crayon-orange;
-$color--text:                   $black;
 
-$color--error:                  $lust;
-$color--success:                $lime;
+/**
+ * Bootstrap colors
+ */
+
+$gray-base:                     $black;
+$gray-darker:                   lighten($gray-base, 13.5%);
+$gray-dark:                     lighten($gray-base, 20%);
+$gray:                          lighten($gray-base, 33.5%);
+$gray-light:                    lighten($gray-base, 46.7%);
+$gray-lighter:                  rgba($black, .1);
+$brand-primary:                 $color--primary;
+$brand-success:                 $fern;
+$brand-info:                    $malibu;
+$brand-warning:                 $casablanca;
+$brand-danger:                  $valencia;

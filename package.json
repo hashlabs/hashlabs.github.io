@@ -5,6 +5,7 @@
   "repository": "git@github.com:hashlabs/hashlabs.github.io.git",
   "author": "Victor Tortolero <victormtortolero@gmail.com>",
   "license": "MIT",
+  "deploy": "yarn build && firebase deploy",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6"
   }

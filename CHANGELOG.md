@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## Changed
+* Clean base to start new design development
+
 ### Added
 * Bootstrap 4 as an npm dependency ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
 * i18n support with [polyglot](https://github.com/untra/polyglot) gem ([@TheMightyPenguin](https://github.com/TheMightyPenguin))

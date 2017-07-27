@@ -1,13 +1,21 @@
-$z-layers: (
-  'initial': 0,
-  'background-decorative': 10,
-  'mobile-menu': 20,
-  'header': 30,
+/**
+ * This is a map with all the z-index values
+ * If you have a value, please put in here in order.
+ *
+ * @example
+ * .foo {
+ *   z-map: z-map('layer-name')
+ * }
+ */
+
+$layer-list: (
+  'initial': 0
 );
 
-@function z($layer) {
-  @if not map-has-key($z-layers, $layer) {
+@function z-map($layer, $list: $layer-list) {
+  @if not map-has-key($list, $layer) {
     @warn 'No layer found for `#{$layer}` in $z-layers map. Property omitted.';
   }
-  @return map-get($z-layers, $layer);
+
+  @return map-get($list, $layer);
 }
