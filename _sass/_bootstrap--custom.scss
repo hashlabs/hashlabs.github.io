@@ -5,13 +5,16 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+// Enforce the fact of having settings just before this import this file
 @import "bootstrap--settings";
 
 // Core variables and mixins
-@import "../node_modules/bootstrap/scss/custom";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/custom";
 
+// Reset and dependencies
+@import "../node_modules/bootstrap/scss/normalize";
 @import "../node_modules/bootstrap/scss/print";
 
 // Core CSS

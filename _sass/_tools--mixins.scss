@@ -1,3 +1,11 @@
+/**
+ * Project Specific @mixin
+ */
+
+/**
+ * Generic @mixin
+ */
+
 @mixin placeholder-styles {
   ::-webkit-input-placeholder {@content;}
   ::-moz-placeholder {@content;}
@@ -17,11 +25,27 @@
   width: $dimension;
 }
 
+@mixin fixed-line-based-height($font-size, $lines) {
+  height: ($font-size*$line-height-base)*$lines;
+}
+
+@mixin truncate($width) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: $width;
+}
+
+/**
+ * Use this mixin on the parent container that will have
+ * the dynamic children to apply styles depending on the number
+ * of children within it.
+ */
 @mixin children-based-layout($min: 1, $max: 5, $selector: 'div') {
-  // when there are more than the children expected
-  // set the width to the $max variable to keep the
-  // layout as expected, otherwise this width will be
-  // overwritten for the matched rules.
+  /*
+    default width to be applied if children
+    are more than $max variable
+   */
   #{$selector} {
     width: 100%/$max;
   }
@@ -34,13 +58,9 @@
   }
 }
 
-@mixin blur-effect {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-}
-
-@mixin bring-it-front {
-  z-index: 1;
+@mixin blur-effect($noise: 2px) {
+  -webkit-filter: blur($noise);
+  filter: blur($noise);
 }
 
 @mixin fade-out($speed: .216s, $transition-function: linear) {
@@ -65,18 +85,6 @@
   transform: translate3d($x, $y, 0);
 }
 
-@mixin fontawesome-icon($name) {
-  &::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    transform: translate(0, 0);
-  }
-
-  @extend .fa-#{$name};
-}
-
 @mixin overlay($background: $custom-black, $opacity: .75, $top: 0, $right: 0, $bottom: 0, $left: 0) {
   background-color: $background;
   bottom: $bottom;
@@ -87,21 +95,13 @@
   opacity: $opacity;
 }
 
-@mixin table-align($align: middle, $target: false) {
-  display: table;
-  height: 100%;
+@mixin triangle-up($color: $white, $side: 10px) {
+  width: 0;
+  height: 0;
+  border-left: $side solid transparent;
+  border-right: $side solid transparent;
 
-  @if $target {
-    > #{$target} {
-      display: table-cell;
-      vertical-align: $align;
-    }
-  } @else {
-    > *:first-child {
-      display: table-cell;
-      vertical-align: $align;
-    }
-  }
+  border-bottom: $side solid $color;
 }
 
 @mixin triangle-down($side: 10px, $color: $gray) {
@@ -117,7 +117,7 @@
   transition: all ease-out $speed;
 }
 
-@mixin list-reset() {
+@mixin list-reset {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -133,60 +133,22 @@
   }
 }
 
-@mixin set-helper($class, $sufix: false) {
-  @if $sufix {
-    $sufix: '-#{$sufix}';
-  } @else {
-    $sufix: '';
-  }
-
-  #{$class}#{$sufix} {
-    @content;
-  }
-
-  #{$class}-xs#{$sufix} {
-    @media #{$just-small-resolutions} {
-      @content;
-    }
-  }
-
-  #{$class}-sm#{$sufix} {
-    @media #{$from-small-resolutions} {
-      @content;
-    }
-  }
-
-  #{$class}-md#{$sufix} {
-    @media #{$from-medium-resolutions} {
-      @content;
-    }
-  }
-
-  #{$class}-lg#{$sufix} {
-    @media #{$from-large-resolutions} {
-      @content;
-    }
-  }
+@mixin padding-y($padding) {
+  padding-bottom: $padding;
+  padding-top: $padding;
 }
 
-@mixin material-layer($depth) {
-  @if $depth < 1 {
-    box-shadow: none;
-  } @else if $depth > 5 {
-    @warn "Invalid $depth `#{$depth}` for mixin `material-layer`.";
-  } @else {
-    box-shadow: bottom-shadow($depth), top-shadow($depth);
-  }
+@mixin padding-x($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
 }
 
-@mixin lapse-delay($time) {
-  animation-delay: $time;
+@mixin margin-y($margin) {
+  margin-bottom: $margin;
+  margin-top: $margin;
 }
 
-@mixin background-opacity($color, $opacity: 1) {
-  $red: red($color);
-  $green: green($color);
-  $blue: blue($color);
-  background: $color; // The Fallback.
-  background: rgba($red, $green, $blue, $opacity);
+@mixin margin-x($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
 }

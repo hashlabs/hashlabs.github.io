@@ -2,49 +2,81 @@
   Add into this file the variables that are going
   to be used by Bootstrap to delivery its grid and
   overall styles. A complete list of variables
-  can be found within the bootstrap folder in the
-  _variables.scss file or at:
+  can be found within the bootstrap module at node_modules
+  within the _variables.scss file or at:
   https://v4-alpha.getbootstrap.com/getting-started/options/
  */
 
-// Colors
+/**
+ * Colors - styles/_settings--palette.scss
+ */
 
-$brand-primary:                   $color--base;
-$brand-secondary:                 $color--accent;
 
-// Scaffolding
+/**
+ * Body
+ */
 
-$body-bg-transparent:             false;
+/**
+ * Forms
+ */
 
-$body-bg:                         null;
-$text-color:                      $custom-black;
-$link-color:                      $brand-primary;
-$link-hover-color:                null;
-$link-hover-decoration:           none;
+/**
+ * Scaffolding
+ */
 
-// Grid system
+/**
+ * Spacing
+ */
 
-$grid-gutter-width:               30px;
-$grid-gutter-width-half:          $grid-gutter-width/2;
+/**
+ * Typography - styles/_settings--fonts.scss
+ */
 
-// Components
+$hr-border-color:                       $gray-lighter;
+$link-color:                            $color--accent;
+$link-hover-color:                      rgba($black, .8);
 
-$border-radius-base:              3px;
-$border-radius-small:             3px;
-$border-radius-large:             4px;
-$padding-large-vertical:          20px;
-$padding-large-horizontal:        1.875rem;
+/**
+ * Grid system
+ */
 
-// Buttons
+/**
+ * Components
+ */
 
-$btn-primary-border:              $brand-primary;
+/**
+ * Dropdown
+ */
 
-// Forms
 
-$input-border:                    $aluminium;
-$input-color:                     $aluminium;
-$input-color-placeholder:         $aluminium;
-$input-border-focus:              $color--accent;
-$input-bg:                        transparent;
-$form-group-margin-bottom:        1.875rem;
-$input-height-small:              75px;
+/**
+ * Navbar
+ */
+
+
+/**
+ * Pills
+ */
+
+
+/**
+ * Buttons
+ */
+
+$btn-primary-color:                         $white;
+$btn-primary-bg:                            $color--accent;
+$btn-primary-border:                        $btn-primary-bg;
+
+// set of rules in order to remove outlines on focus
+$btn-box-shadow:                            transparent;
+$btn-focus-box-shadow:                      transparent;
+$btn-active-box-shadow:                     transparent;
+$enable-shadows:                            true;
+
+/**
+ * Alerts
+ */
+
+/**
+ * Modals
+ */
