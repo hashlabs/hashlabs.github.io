@@ -1,0 +1,31 @@
+contact_form_button_text: "Enviar"
+contact_form_title: "Contrátanos y hagamos un proyecto sorprendente!"
+
+contact_form_inputs:
+  name:
+    label: "Tú nombre"
+    warning: "(campo obligatorio)"
+  email:
+    label: "Tú email"
+    warning: "(campo obligatorio)"
+  phone:
+    label: "Tú teléfono"
+    warning: "(campo obligatorio)"
+  type_of_job:
+    label: "Que te gustaria hacer?"
+    warning: "(campo obligatorio)"
+  budget:
+    label: "Cuál es tu presupuesto?"
+    warning: "(campo obligatorio)"
+  how_did_you_hear:
+    label: "Cómo escuchastes de Hash Labs?"
+    warning: "(campo obligatorio)"
+    options:
+      friend:
+        label: "Un amigo"
+      social_media:
+        label: "Social Media"
+      email:
+        label: "Email"
+      other:
+        label: "Otra"

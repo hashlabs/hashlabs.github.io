@@ -3,6 +3,11 @@ _site
 .sass-cache
 .jekyll-metadata
 
+# Configuration files
+_config.development.yml
+_config.production.yml
+_config.staging.yml
+
 # NPM
 node_modules/
 .DS_Store

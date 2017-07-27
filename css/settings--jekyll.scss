@@ -66,3 +66,21 @@
     background-image: url({{ site.data.home.showcased_project_images.lg | prepend: site.baseurl }});
   }
 }
+
+/**
+ * Contact Lead Section
+ * _sass/_partials--contact-lead.scss
+ */
+
+.contact-lead {
+  {% assign contact_lead_image = site.data.hire_us.contact_lead_image %}
+  background-image: url({{ contact_lead_image.sm | prepend: site.baseurl }});
+
+  @include media-breakpoint-up(md) {
+    background-image: url({{ contact_lead_image.md | prepend: site.baseurl }});
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-image: url({{ contact_lead_image.lg | prepend: site.baseurl }});
+  }
+}

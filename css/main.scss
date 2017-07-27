@@ -22,10 +22,12 @@
 // objects (sorted alphabetically)
 @import "objects--button-menu";
 @import "objects--buttons";
+@import "objects--input-with-dot";
 @import "objects--lists";
 @import "objects--type";
 
 // components (sorted alphabetically)
+@import "components--form";
 @import "components--header";
 @import "components--service";
 @import "components--testimony";
@@ -34,10 +36,13 @@
 @import "layouts--global";
 
 // partials (sorted alphabetically)
+@import "partials--contact-form";
+@import "partials--contact-lead";
 @import "partials--footer";
 @import "partials--home";
-@import "partials--services";
 @import "partials--service-go";
 @import "partials--service-rails";
-@import "partials--service-react";
 @import "partials--service-react-native";
+@import "partials--service-react";
+@import "partials--services";
+@import "partials--thanks";

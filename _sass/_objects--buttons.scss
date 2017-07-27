@@ -34,6 +34,9 @@
 
 .btn {
   @include padding-y($spacer);
+  cursor: pointer;
+  font-family: $primary-font;
+  font-weight: $font-weight-bold;
   width: 180px;
 
   @include media-breakpoint-up(lg) {

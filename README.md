@@ -2,14 +2,14 @@
 
 Lab Coat is the www.hashlabs.com website.
 
-## How to use
+## Set up Development Enviroment
 
 1. Make sure you have bundler installed (gem install bundler)
 2. `yarn` (or `npm install`)
 3. `bundle install`
 4. `rbenv rehash`
-5. `jekyll serve --watch` to serve and watch for changes
-6. run `jekyll build` when you want to build the site
+5. `cp _config.development.example.yml _config.development.yml`, then update that file variable values
+5. `yarn serve` to serve and watch for changes
 
 ## SASS
 
@@ -23,6 +23,10 @@ Jekyll compiles SASS when serving/building. Put your partials in the `_sass` fol
 
 @import 'bla';
 ```
+
+## Production Build
+
+Run `yarn build-production` then the ready for production site will be in the `_site` folder
 
 ## Staging
 

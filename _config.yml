@@ -13,7 +13,6 @@ description: >
 url: "https://www.hashlabs.com" # the base hostname & protocol for your site
 twitter_username: hashlabs
 github_username:  hashlabs
-form_action: https://formspree.io/contact@hashlabs.com
 thanks_url: https://www.hashlabs.com/thanks
 permalink: /blog/:title
 
@@ -47,4 +46,12 @@ sass:
   style: compressed
   sass_dir: _sass
 
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
+exclude:
+  - 'CHANGELOG.md'
+  - 'CNAME'
+  - 'config.ru'
+  - 'FAQ.md'
+  - 'firease.json'
+  - 'Gemfile.lock'
+  - 'Gemfile'
+  - 'vendor'

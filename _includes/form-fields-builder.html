@@ -1,0 +1,45 @@
+{% for item in include.items %}
+  {% assign field = item[1] %}
+  {% case field.type %}
+    {% when "radio" %}
+      <div class="form-group">
+        <h4 class="form-group-radio-title text-center text-md-left">
+          {{ field.label }} <br>
+          <div class="form-control-feedback" id="{{ field.feedback_id }}">{{ field.warning }}</div>
+        </h4>
+        <div class="custom-radios-container">
+          {% for option in field.options %}
+            {% assign radio_option = option[1] %}
+            <label class="custom-control custom-radio">
+              <input id="radio-{{ forloop.index }}" name="{{ field.name }}" type="radio" class="custom-control-input" value="{{ radio_option.value }}">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">{{ radio_option.label }}</span>
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+    {% when "textarea" %}
+      <div class="form-group textarea">
+        <label class="sliding-label" for="{{ field.id }}">
+          {{ field.label }}
+          <div class="form-control-feedback">{{ field.warning }}</div>
+        </label>
+        <div class="input-with-dot textarea">
+          <textarea class="form-control" id="{{ field.id }}" name="{{ field.name }}" placeholder="{{ field.placeholder }}" required></textarea>
+          <div class="dot"></div>
+        </div>
+      </div>
+    {% when "text" or "email" or "password" %}
+      <div class="form-group">
+        <label class="sliding-label" for="{{ field.id }}">
+          {{ field.label }} <div class="form-control-feedback">{{ field.warning }}</div>
+        </label>
+        <div class="input-with-dot">
+          <input type="{{ field.type }}" id="{{ field.id }}" name="{{ field.name }}" placeholder="{{ field.placeholder }}" class="form-control" required>
+          <div class="dot"></div>
+        </div>
+      </div>
+    {% else %}
+      <h2 class="form-title">{{ field.name }}</h2>
+  {% endcase %}
+{% endfor %}

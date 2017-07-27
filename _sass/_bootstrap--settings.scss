@@ -19,6 +19,15 @@
  * Forms
  */
 
+$input-padding-x:                       0.625rem;
+$input-padding-y:                       0.625rem;
+$input-bg:                              transparent;
+$input-color:                           $white;
+$input-border-color:                    $white;
+$input-border-radius:                   0;
+$input-border-focus:                    $crayon-orange;
+$custom-control-active-indicator-bg:    $crayon-orange;
+
 /**
  * Scaffolding
  */

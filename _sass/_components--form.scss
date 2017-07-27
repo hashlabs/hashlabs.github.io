@@ -1,0 +1,165 @@
+$dimension--custom-control-indicator-sm:                     12px;
+$dimension--custom-control-indicator-md:                     18px;
+$size--textarea-form-control-height-sm:                      104px;
+$size--textarea-form-control-height-md:                      152px;
+
+.form {
+  label {
+    font-size: $font-size-base * .875;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base;
+    }
+  }
+
+  .form-control-feedback,
+  .form-control {
+    font-family: $primary-font;
+    font-size: $font-size-base * .875;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base;
+    }
+  }
+
+  .form-control-feedback {
+    @include simple-transition();
+    display: none;
+    margin: 0;
+    opacity: 0;
+  }
+
+  textarea.form-control {
+    height: $size--textarea-form-control-height-sm;
+    resize: none;
+
+    @include media-breakpoint-up(md) {
+      height: $size--textarea-form-control-height-md;
+    }
+  }
+
+  .form-control {
+    @include padding-y($spacer * .5625);
+    @include simple-transition();
+    line-height: 1;
+
+    @include media-breakpoint-up(md) {
+      line-height: $input-line-height;
+    }
+  }
+
+  .custom-radios-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .custom-radio {
+    margin: 0;
+    min-height: auto;
+    width: 50%;
+
+    &:not(:nth-last-child(-n+2)) {
+      margin-bottom: $spacer;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
+
+    .custom-control-indicator {
+      @include dimension($dimension--custom-control-indicator-sm);
+      @include transform-vertical-center();
+
+      @include media-breakpoint-up(md) {
+        @include dimension($dimension--custom-control-indicator-md);
+      }
+    }
+
+    .custom-control-description {
+      @include media-breakpoint-up(md) {
+        margin-left: $spacer * .5;
+      }
+    }
+
+    .custom-control-input {
+      &:checked ~ .custom-control-indicator {
+        background-image: none;
+        background-color: $crayon-orange;
+      }
+
+      &:focus ~ .custom-control-indicator {
+        box-shadow: none;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      width: auto;
+
+      &:not(:last-child) {
+        margin-right: $spacer * 4.75;
+      }
+    }
+  }
+
+  .form-group {
+    @include simple-transition();
+    margin-top: $spacer * 2.25;
+    position: relative;
+
+    &:nth-last-of-type(2) {
+      margin-bottom: $spacer * 2.375;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: $spacer * 3;
+      }
+    }
+
+    &:nth-last-of-type(1) {
+      margin-bottom: $spacer * 4.125;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: $spacer * 5.125;
+      }
+    }
+
+    &-radio-title {
+      color: $white;
+      font-size: $font-size-base * 1.25;
+      font-weight: $font-weight-regular;
+      margin-bottom: $spacer * 1.5;
+
+      @include media-breakpoint-up(md) {
+        font-size: $font-size-base * 1.5;
+      }
+    }
+  }
+
+  .form-group.has-danger {
+    & .form-control-feedback {
+      display: inline-block;
+      opacity: 1;
+    }
+
+    & .custom-control-description {
+      color: $white;
+    }
+  }
+
+  .form-group .sliding-label {
+    @include simple-transition();
+    left: $input-padding-x;
+    pointer-events: none;
+    position: absolute;
+    top: $spacer * .5625;
+    right: $input-padding-x;
+
+    &--active {
+      top: $spacer * -1.5;
+      left: 0;
+
+      @include media-breakpoint-up(md) {
+        font-size: $font-size-base * .875;
+      }
+    }
+  }
+}
