@@ -1,0 +1,122 @@
+.aesthetic-background-container {
+  left: 0;
+  margin: 0 auto;
+  max-width: 1600px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+
+  @media (max-width: 1675px) {
+    overflow: hidden;
+  }
+}
+
+.desktop-contour {
+  background: url('/img/icon_imac_contour_mobile.svg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  @include media-breakpoint-up(md) {
+    background: url('/img/icon_imac_contour.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.mobile-contour {
+  background: url('/img/icon_iphone_contour_mobile.svg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  @include media-breakpoint-up(md) {
+    background: url('/img/icon_iphone_contour.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.desktop-contour,
+.mobile-contour {
+  display: block;
+}
+
+.services {
+  .desktop-contour {
+    background-position: left top;
+    height: 150px;
+    margin-left: -45px;
+
+    @include media-breakpoint-up(md) {
+      height: 360px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 600px;
+    }
+  }
+
+  .mobile-contour {
+    background-position: right top;
+    height: 220px;
+    margin-right: -45px;
+
+    @include media-breakpoint-up(md) {
+      height: 450px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 750px;
+    }
+  }
+
+  /**
+   * Spacing
+   */
+  .col-bg {
+    margin-top: $spacer*2;
+
+    @include media-breakpoint-up(md) {
+      margin-top: $size--header-height + $spacer;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: $size--header-height;
+    }
+  }
+
+  .col-lead {
+    margin-top: $spacer*4.25 + $size--header-height;
+
+    @include media-breakpoint-up(md) {
+      margin-top: $spacer*6.875 + $size--header-height;
+    };
+  }
+
+  .col-offers {
+    margin-top: $spacer*2.5;
+
+    @include media-breakpoint-up(md) {
+      margin-top: $spacer*5;
+    };
+  }
+
+  .col-content-title {
+    margin-top: $spacer*3;
+    margin-bottom: $spacer;
+
+    @include media-breakpoint-up(md) {
+      margin-top: $spacer*6.25;
+      margin-bottom: $spacer*2;
+    };
+  }
+
+  .col-content-text {
+    padding-bottom: $spacer*2;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: $spacer*5.875;
+      text-align: left;
+    }
+  }
+}

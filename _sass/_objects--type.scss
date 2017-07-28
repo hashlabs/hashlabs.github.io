@@ -1,0 +1,84 @@
+a {
+  @include simple-transition(color);
+}
+
+.p-content {
+  &, p, a {
+    font-size: 14px;
+    line-height: 1.7;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base*1.25;
+    };
+  }
+}
+
+.p-lg {
+  font-size: $font-size-base;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-lg;
+  };
+}
+
+.h1-responsive {
+  font-size: $font-size-base*1.75;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-h1;
+  };
+}
+
+.h2-responsive {
+  font-size: $font-size-base*1.75;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-h2;
+  };
+}
+
+.illustrated-heading {
+  $icon-gutter: $spacer/2;
+  text-transform: uppercase;
+
+  &,
+  &::before {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+      vertical-align: middle;
+    };
+  }
+
+  &.mobile::before {
+    $negative-space: ($spacer/2);
+    background: url('/img/icon-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media-breakpoint-up(md) {
+      // overcome the negative space on the sides of the mobile icon
+      margin-right: ($icon-gutter - $negative-space);
+      margin-left: -($negative-space);
+    };
+  }
+
+  &.desktop::before {
+    background: url('/img/icon-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::before {
+    height: 34px;
+    min-width: 34px;
+    margin-bottom: $spacer/2;
+    margin-right: $icon-gutter;
+    content: '';
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+}
