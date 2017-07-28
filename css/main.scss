@@ -21,19 +21,21 @@
 
 // objects (sorted alphabetically)
 @import "objects--button-menu";
+@import "objects--buttons";
 @import "objects--lists";
 @import "objects--type";
 
 // components (sorted alphabetically)
-@import "components--brand-list";
 @import "components--header";
 @import "components--service";
+@import "components--testimony";
 
 // layout (sorted alphabetically)
 @import "layouts--global";
 
 // partials (sorted alphabetically)
 @import "partials--footer";
+@import "partials--home";
 @import "partials--services";
 @import "partials--service-go";
 @import "partials--service-rails";

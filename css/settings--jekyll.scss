@@ -46,3 +46,23 @@
   {% assign react_native = site.services | where: 'name', 'react-native' | first %}
   background-image: url({{ react_native.bullet_image | prepend: site.baseurl }});
 }
+
+/**
+ * HOME Lead section
+ * _sass/_partials--home.scss
+ */
+.section-lead {
+  background-image: url({{ site.data.home.lead_background_image | prepend: site.baseurl }});
+}
+
+/**
+ * HOME showcased project section
+ * _sass/_partials--home.scss
+ */
+.section-showcased-project {
+  background-image: url({{ site.data.home.showcased_project_images.normal | prepend: site.baseurl }});
+
+  @include media-breakpoint-up(md) {
+    background-image: url({{ site.data.home.showcased_project_images.lg | prepend: site.baseurl }});
+  }
+}

@@ -6,13 +6,6 @@ body {
 .site {
   display: flex;
   flex-direction: column;
-
-  &-content {
-    .container:first-of-type,
-    .container-fluid:first-of-type {
-      padding-top: $size--header-height;
-    }
-  }
 }
 
 body {

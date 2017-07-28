@@ -1,6 +1,9 @@
 ## [Unreleased]
 
-## Fixed
+### Added
+* Home page ([@carlows](https://github.com/carlows))
+
+### Fixed
 * Prevent content to broke after resolution change ([@duranmla](https://github.com/duranmla))
 
 ## Changed

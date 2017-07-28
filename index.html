@@ -2,4 +2,81 @@
 layout: default
 ---
 
-{% include section-lead.html %}
+{% assign home=site.data.home %}
+{% assign first_testimony = home.testimonies[0] %}
+{% assign second_testimony = home.testimonies[1] %}
+
+<section class="section-lead text-center">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="section-lead-title text-wrapper-mobile">{{ home.lead_title }}</h1>
+        <h2 class="section-lead-subtitle mt-4 mt-md-3 font-weight-normal letter-spacing-lg">{{ home.lead_subtitle }}</h2>
+        <div class="section-lead-btn">
+          <a class="btn btn-transparent" href="{{ home.lead_btn.url }}">{{ home.lead_btn.text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-home-services outer-section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-md-left">
+        <h2 class="section-title text-center">{{ home.services.title }}</h2>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h4 class="section-item-title mt-4 illustrated-heading desktop">{{ home.services.web.title }}</h4>
+            <p class="mt-3 text-wrapper">{{ home.services.web.text }}</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <h4 class="section-item-title mt-4 illustrated-heading mobile">{{ home.services.mobile.title }}</h4>
+            <p class="mt-3 text-wrapper">{{ home.services.mobile.text }}</p>
+          </div>
+        </div>
+        <div class="action-buttons-container d-flex flex-row justify-content-center">
+          <div class="p-6 mr-2">
+            <a class="btn btn-sm btn-transparent-orange" href="{{ home.services.web.btn.url | prepend: site.baseurl }}">{{ home.services.web.btn.text }}</a>
+          </div>
+          <div class="p-6 ml-2">
+            <a class="btn btn-sm btn-transparent-orange" href="{{ home.services.mobile.btn.url | prepend: site.baseurl }}">{{ home.services.mobile.btn.text }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-showcased-project outer-section-padding text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="{{ home.showcased_project.brand.url }}">
+          <img src="{{ home.showcased_project.brand.image | prepend: site.baseurl }}" srcset="{{ home.showcased_project.brand.image | prepend: site.baseurl | srcset }}" alt="logo" />
+        </a>
+        <div class="mt-4">
+          <h1 class="section-showcased-project-title mb-0">{{ home.showcased_project.title }}</h1>
+        </div>
+        <div class="action-buttons-container d-flex flex-row justify-content-center">
+          <div class="p-6 mr-2">
+            <a class="btn btn-sm btn-yellow" href="{{ home.showcased_project.check_project.url | prepend: site.baseurl }}">{{ home.showcased_project.check_project.text }}</a>
+          </div>
+          <div class="p-6 ml-2">
+            <a class="btn btn-sm btn-yellow" href="{{ home.showcased_project.check_work.url | prepend: site.baseurl }}">{{ home.showcased_project.check_work.text }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-testimony outer-section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        {% include testimony.html testimony=first_testimony %}
+      </div>
+      <div class="col-12 col-md-6 mt-4 mt-md-0">
+        {% include testimony.html testimony=second_testimony %}
+      </div>
+    </div>
+  </div>
+</section>

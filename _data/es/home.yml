@@ -1,2 +1,52 @@
-lead_title: "Construyamos algo que tus usuarios ❤️"
-lead_subtitle: "Somos una agencia de desarrollo de software"
+# Lead section
+lead_title: "Construyamos algo que tus usuarios ❤️ usar."
+lead_subtitle: "Somos una agencia de desarrollo de software."
+lead_btn:
+  url: "#"
+  text: "Nuestro trabajo"
+
+# Services section
+services:
+  title: "Esto es lo que podemos hacer por ti"
+  web:
+    title: "DESARROLLO WEB"
+    text: "Our iterative process allow us to continuously deliver features every sprint, while working with you prioritizing and refining how the application should work."
+    btn:
+      text: "Nuestros Servicios"
+      url: "/services"
+  mobile:
+    title: "DESARROLLO MOVIL"
+    text: "Using React Native, we build cross-plataform applications for Android and iOS. This while maintaining great application performance and development speed."
+    btn:
+      text: "Nuestro Proceso"
+      url: "#"
+
+# Showcased Project section
+showcased_project:
+  brand:
+    image: "/img/logo-pleiq-primary.png"
+    url: "#"
+  title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  check_project:
+    text: "Mira el Projecto"
+    url: "#"
+  check_work:
+    text: "Nuestro trabajo"
+    url: "#"
+
+# Testimonies section
+testimonies:
+  - image: "/img/picture-david-feller.jpg"
+    author: "David Feller"
+    position: "CEO"
+    company:
+      url: "#"
+      text: "Yummly"
+    quote: "\"These guys are amazing! My project was once just a paper idea, now it's a reality thanks to <b>Hash Labs</b>.\""
+  - image: "/img/picture-matt-ross.jpg"
+    author: "Matt Ross"
+    position: "Project Manager"
+    company:
+      url: "#"
+      text: "Funding Circle"
+    quote: "\"<b>Hash Labs</b> takes the time necessary to make sure their work is understood, documented and clearly communicated across all necessary channels. It was a pleasure to work with them.\""
