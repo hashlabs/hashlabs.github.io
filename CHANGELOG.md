@@ -13,6 +13,8 @@
 * Bootstrap 4 as an npm dependency ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
 * i18n support with [polyglot](https://github.com/untra/polyglot) gem ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
 * srcset filter to generate img srcset attribute ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
+* Font smoothing ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
+* Services pages base layout ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
 
 ## [6.0] - 17/03/2017
 ### Added

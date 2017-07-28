@@ -26,6 +26,19 @@ default_lang: "en"
 exclude_from_localization: ["css", "js", "images"]
 parallel_localization: true
 
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /services/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: services
+    values:
+      layout: service
+
 plugins:
   - jekyll-polyglot
 

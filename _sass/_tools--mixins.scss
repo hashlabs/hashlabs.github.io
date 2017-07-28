@@ -36,6 +36,14 @@
   width: $width;
 }
 
+@mixin font-smoothing() {
+  // for smooth fonts
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // this smooths fonts on not osx devices
+  text-shadow: 1px 1px 1px rgba($black, .004);
+}
+
 /**
  * Use this mixin on the parent container that will have
  * the dynamic children to apply styles depending on the number

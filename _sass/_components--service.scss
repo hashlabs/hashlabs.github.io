@@ -1,0 +1,57 @@
+.service {
+  &-lead {
+    @include simple-transition();
+    height: 479px;
+
+    @include media-breakpoint-up(md) {
+      height: 392px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 562px;
+    }
+  }
+
+  &-title {
+    color: inherit;
+    font-size: $font-size-base * 1.125;
+    margin-bottom: $spacer * 1.75;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base * 1.625;
+      margin-bottom: $spacer;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base * 1.875;
+      margin-bottom: $spacer * 1.875;
+    }
+  }
+
+  &-copy {
+    font-size: $font-size-base * .875;
+    line-height: 1.7;
+    margin: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base * 1.25;
+    }
+  }
+
+  &-section {
+    @include padding-y($spacer * 2.5);
+    color: $black;
+
+    @include media-breakpoint-up(lg) {
+      @include padding-y($spacer * 3.5);
+    }
+
+    &--alt {
+      color: $white;
+    }
+  }
+}

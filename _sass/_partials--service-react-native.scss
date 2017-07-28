@@ -1,0 +1,25 @@
+.service--react-native {
+  .service-section {
+    &--alt {
+      background-color: $jacksons-purple;
+    }
+  }
+
+  .service-lead {
+    background-image: radial-gradient(circle at 50% 50%, #142b8b, #000000);
+  }
+
+  .custom-bullet-list-item::before {
+    top: $spacer * -.1;
+    width: 18px;
+
+    @include media-breakpoint-up(md) {
+      top: 0;
+      width: 22px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: $spacer * .25;
+    }
+  }
+}
