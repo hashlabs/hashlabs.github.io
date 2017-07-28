@@ -9,6 +9,7 @@ $fern:                          #5CB85C;
 $malibu:                        #5BC0DE;
 $valencia:                      #D9534F;
 $white:                         #FFFFFF;
+$gray:                          #717171;
 
 /**
  * Color variables
@@ -51,3 +52,7 @@ $brand-success:                 $fern;
 $brand-info:                    $malibu;
 $brand-warning:                 $casablanca;
 $brand-danger:                  $valencia;
+
+$color--font-primary:           $black;
+$color--font-secondary:         $white;
+$color--font-tertiary:          $gray;

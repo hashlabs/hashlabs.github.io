@@ -15,6 +15,7 @@
 @import "bootstrap--custom";
 @import "bootstrap--derivables";
 @import "tools--z-map";
+@import "tools--spacing";
 
 // vendor components
 
@@ -22,6 +23,12 @@
 
 // components (sorted alphabetically)
 
+@import "components--brand-list";
+
 // layout (sorted alphabetically)
 
+@import "layouts--global";
+
 // partials (sorted alphabetically)
+
+@import "partials--footer";

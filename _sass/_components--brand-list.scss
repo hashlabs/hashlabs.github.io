@@ -1,0 +1,10 @@
+.brand-list {
+  &-item {
+    display: inline-block;
+    width: 40%;
+  }
+
+  &-img {
+    max-width: 100%;
+  }
+}

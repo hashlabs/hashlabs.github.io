@@ -1,0 +1,45 @@
+lead: "We'd love to work with you."
+sublead: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+cta:
+  text: "Come on!"
+  link: "#"
+copyright: "Hash Labs LLC © All Rights Reserved - Made with &hearts; by Hash Labs LLC"
+
+links:
+  - title: "COMPANY"
+    links:
+      - text: "About Us"
+        url: "#"
+      - text: "Our Work"
+        url: "#"
+      - text: "Our Services"
+        url: "#"
+      - text: "Hire Us"
+        url: "#"
+  - title: "SERVICES"
+    links:
+      - text: "React"
+        url: "#"
+      - text: "React Native"
+        url: "#"
+      - text: "Ruby on Rails"
+        url: "#"
+      - text: "Go"
+        url: "#"
+  - title: "CONNECT"
+    links:
+      - text: "Blog"
+        url: "#"
+        external: true
+      - text: "Twitter"
+        url: "#"
+        external: true
+      - text: "Facebook"
+        url: "#"
+        external: true
+      - text: "LinkedIn"
+        url: "#"
+        external: true
+      - text: "YouTube"
+        url: "#"
+        external: true
