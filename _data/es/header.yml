@@ -1,0 +1,11 @@
+services:
+  href: /services
+  text: Servicios
+
+work:
+  href: /work
+  text: Trabajos
+
+hire_us:
+  href: /hire-us
+  text: Contáctanos

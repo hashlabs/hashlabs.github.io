@@ -11,3 +11,12 @@ body {
     flex: 1;
   }
 }
+
+body {
+  // left the gap for header navbar
+  padding-top: $size--header-height;
+
+  &.navbar-expanded {
+    @extend .modal-open;
+  }
+}

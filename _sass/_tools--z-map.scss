@@ -9,7 +9,8 @@
  */
 
 $layer-list: (
-  'initial': 0
+  'initial': 0,
+  'front': 100
 );
 
 @function z-map($layer, $list: $layer-list) {

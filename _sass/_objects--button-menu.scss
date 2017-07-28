@@ -1,0 +1,125 @@
+$size--mobile-toggler-height:                    $spacer*3.125;
+$color--branding-text:                           $white;
+$size--mobile-toggler-strip-height:              $spacer*0.25;
+$size--mobile-toggler-strip-margin-top:          $spacer*0.375 + $size--mobile-toggler-strip-height;
+$size--mobile-toggler-strip-width-base:          $spacer*2.25;
+$size--mobile-toggler-strip-width-step:          $spacer*0.375;
+
+.mobile-toggler {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: $size--mobile-toggler-strip-width-base;
+  height: $size--mobile-toggler-height;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background 0.216s;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.mobile-toggler-strip,
+.mobile-toggler-strip::before,
+.mobile-toggler-strip::after {
+  display: block;
+  position: absolute;
+  right: 0;
+  height: $size--mobile-toggler-strip-height;
+  transition: background 0.216s;
+
+  .navbar-light & {
+    background: $color--accent;
+  }
+
+  .navbar-inverse & {
+    background: $color--branding-text;
+  }
+}
+
+.mobile-toggler-strip {
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  // Top
+  &::before {
+    top: -$size--mobile-toggler-strip-margin-top;
+    width: $size--mobile-toggler-strip-width-base;
+  }
+
+  //Middle
+  width: $size--mobile-toggler-strip-width-base - $size--mobile-toggler-strip-width-step;
+
+  // Bottom
+  &::after {
+    bottom: -$size--mobile-toggler-strip-margin-top;
+    width: $size--mobile-toggler-strip-width-base - ($size--mobile-toggler-strip-width-step*2);
+  }
+}
+
+/**
+ *
+ * Hamburger to "x".Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+
+.mobile-toggler-strip {
+  -webkit-transition: background 0s 0.216s;
+          transition: background 0s 0.216s;
+
+  &::before {
+    -webkit-transition-property: top, -webkit-transform;
+            transition-property: top, transform;
+  }
+
+  &::after {
+    -webkit-transition-property: bottom, -webkit-transform;
+            transition-property: bottom, transform;
+  }
+
+  &::before,
+  &::after {
+    -webkit-transition-duration: 0.216s, 0.216s;
+            transition-duration: 0.216s, 0.216s;
+    -webkit-transition-delay: 0.216s, 0s;
+            transition-delay: 0.216s, 0s;
+  }
+}
+
+.mobile-toggler.active .mobile-toggler-strip,
+[aria-expanded="true"] .mobile-toggler .mobile-toggler-strip,
+.expanded .mobile-toggler .mobile-toggler-strip, {
+  background: none !important;
+
+  &::before,
+  &::after {
+    -webkit-transition-delay: 0s, 0.216s;
+            transition-delay: 0s, 0.216s;
+  }
+
+  &::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  &::after {
+    bottom: 0;
+    width: $size--mobile-toggler-strip-width-base;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
