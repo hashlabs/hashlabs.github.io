@@ -84,3 +84,91 @@
     background-image: url({{ contact_lead_image.lg | prepend: site.baseurl }});
   }
 }
+
+/**
+ * Service lead decoration
+ * _sass/_partials--services.scss
+ */
+
+@mixin services-contour-decoration($url, $size: contain) {
+  background: unquote("url(#{$url})");
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+.desktop-contour {
+  @include services-contour-decoration('{{site.url}}/img/icon_imac_contour_mobile.svg', auto 100%);
+
+  @include media-breakpoint-up(md) {
+   @include services-contour-decoration('{{site.url}}/img/icon_imac_contour.svg');
+  }
+}
+
+.mobile-contour {
+  @include services-contour-decoration('{{site.url}}/img/icon_iphone_contour_mobile.svg', auto 100%);
+
+  @include media-breakpoint-up(md) {
+   @include services-contour-decoration('{{site.url}}/img/icon_iphone_contour.svg');
+  }
+}
+
+/**
+ * Process step illustrations
+ * _sass/_partials--process.scss
+ */
+
+@mixin process-decorative-line($url, $width, $height) {
+  background: unquote("url(#{$url})");
+  height: $height;
+  width: $width;
+}
+
+.process {
+  .step-1 {
+    &::after {
+      @include process-decorative-line('{{site.url}}/img/decorative_process_step_1_to_2_mobile.svg', 195px, 100px);
+      margin: $spacer auto;
+
+      @include media-breakpoint-up(md) {
+        @include process-decorative-line('{{site.url}}/img/decorative_process_step_1_to_2_tablet.svg', 340px, 100px);
+      };
+
+      @include media-breakpoint-up(xl) {
+        margin: $spacer*4 auto $spacer;
+        @include process-decorative-line('{{site.url}}/img/decorative_process_step_1_to_2.svg', 600px, 150px);
+      };
+    }
+  }
+
+  .step-2 {
+    &::after {
+      @include process-decorative-line('{{site.url}}/img/decorative_process_step_2_to_3_mobile.svg', 180px, 100px);
+      margin: $spacer auto;
+
+      @include media-breakpoint-up(md) {
+        @include process-decorative-line('{{site.url}}/img/decorative_process_step_2_to_3_tablet.svg', 215px, 115px);
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin: 0 auto $spacer;
+        @include process-decorative-line('{{site.url}}/img/decorative_process_step_2_to_3.svg', 540px, 135px);
+      }
+    }
+  }
+
+  .step-3 {
+    &::after {
+      @include process-decorative-line('{{site.url}}/img/decorative_process_step_3_to_4_mobile.svg', 145px, 65px);
+      margin: $spacer auto;
+
+      @include media-breakpoint-up(md) {
+        @include process-decorative-line('{{site.url}}/img/decorative_process_step_3_to_4_tablet.svg', 340px, 100px);
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin: 0 auto;
+        @include process-decorative-line('{{site.url}}/img/decorative_process_step_3_to_4.svg', 350px, 160px);
+      }
+    }
+  }
+}

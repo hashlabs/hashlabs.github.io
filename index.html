@@ -7,7 +7,7 @@ layout: inverse
 {% assign second_testimony = home.testimonies[1] %}
 
 <section class="section-lead text-center">
-  <div class="container-fluid">
+  <div class="container content-wrapper">
     <div class="row">
       <div class="col">
         <h1 class="section-lead-title text-wrapper-mobile">{{ home.lead_title }}</h1>
@@ -20,7 +20,7 @@ layout: inverse
   </div>
 </section>
 <section class="section-home-services outer-section-padding">
-  <div class="container">
+  <div class="container content-wrapper">
     <div class="row">
       <div class="col-12 text-center text-md-left">
         <h2 class="section-title text-center">{{ home.services.title }}</h2>
@@ -64,7 +64,7 @@ layout: inverse
   </div>
 </section>
 <section class="section-testimony outer-section-padding">
-  <div class="container">
+  <div class="container content-wrapper">
     <div class="row">
       <div class="col-12 col-md-6">
         {% include testimony.html testimony=first_testimony %}

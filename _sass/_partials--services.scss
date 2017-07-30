@@ -17,30 +17,6 @@
   }
 }
 
-.desktop-contour {
-  background: url('/img/icon_imac_contour_mobile.svg');
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-
-  @include media-breakpoint-up(md) {
-    background: url('/img/icon_imac_contour.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.mobile-contour {
-  background: url('/img/icon_iphone_contour_mobile.svg');
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-
-  @include media-breakpoint-up(md) {
-    background: url('/img/icon_iphone_contour.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
 .desktop-contour,
 .mobile-contour {
   display: block;

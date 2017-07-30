@@ -11,6 +11,7 @@
 * Home page ([@carlows])
 * Added enviroment config files ([@TheMightyPenguin])
 * Hire us page contact form, and thanks page ([@TheMightyPenguin])
+* Process page ([@duranmla])
 
 ### Fixed
 * Prevent content to broke after resolution change ([@duranmla])
