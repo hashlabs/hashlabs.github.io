@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## Fixed
+* Prevent content to broke after resolution change ([@duranmla](https://github.com/duranmla))
+
 ## Changed
 * Clean base to start new design development ([@duranmla](https://github.com/duranmla))
 * README to include deploy staging info ([@duranmla](https://github.com/duranmla))
