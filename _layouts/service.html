@@ -1,0 +1,62 @@
+{% assign service = page %}
+
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="site pt-0">
+
+    {% assign header_class = "navbar-inverse" %}
+    {% include header.html include_class=header_class %}
+
+    <main class="site-content service service--{{ page.name }}">
+
+      {% include services-leads/{{ page.name }}.html %}
+
+      <section class="service-section service-description" id="{{ service.name }}-service-description">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="service-title text-center">{{ service.description.title }}</h2>
+              <p class="service-copy text-center text-lg-left">{{ service.description.copy }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section service-section--alt service-why" id="{{ service.name }}-service-why">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="service-title text-center">{{ service.why.title }}</h2>
+              <p class="service-copy text-center text-lg-left">{{ service.why.copy }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section service-how" id="{{ service.name }}-service-how">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="service-title text-center">{{ service.how.title }}</h2>
+              <ul class="custom-bullet-list">
+                {% for item in service.how.items %}
+                  <li class="custom-bullet-list-item">{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    {% include footer.html include_cta=true %}
+
+    {% include footer-scripts.html %}
+
+  </body>
+
+</html>

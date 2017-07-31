@@ -1,0 +1,48 @@
+---
+---
+
+/*
+  As jekyll doesn't provide a way to include liquid templating constructs
+  in scss partials in the `_sass` folder, this file will serve for that
+  purpose. If there's ever the need to include a jekyll variable on a
+  stylesheet, it'll be done on this file. It should be kept organized
+  with the same sections/components that are on the `_sass` folder.
+*/
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+/**
+ * Specific services sections
+ * _sass/_components--service.scss
+ */
+
+.service--rails  {
+  {% assign rails = site.services | where: 'name', 'rails' | first %}
+
+  .custom-bullet-list-item::before {
+    background-image: url({{ rails.bullet_image | prepend: site.baseurl }});
+  }
+
+  .service-how {
+    background-image: url({{ rails.how_background_image.sm | prepend: site.baseurl }});
+
+    @include media-breakpoint-up(md) {
+      background-image: url({{ rails.how_background_image.md | prepend: site.baseurl }});
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-image: url({{ rails.how_background_image.lg | prepend: site.baseurl }});
+    }
+  }
+}
+
+.service--react .custom-bullet-list-item::before {
+  {% assign react = site.services | where: 'name', 'react' | first %}
+  background-image: url({{ react.bullet_image | prepend: site.baseurl }});
+}
+
+.service--react-native .custom-bullet-list-item::before {
+  {% assign react_native = site.services | where: 'name', 'react-native' | first %}
+  background-image: url({{ react_native.bullet_image | prepend: site.baseurl }});
+}

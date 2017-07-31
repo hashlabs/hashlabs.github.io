@@ -26,7 +26,7 @@ Jekyll compiles SASS when serving/building. Put your partials in the `_sass` fol
 
 ## Staging
 
-To deploy to staging make sure you have access to the firebase labcoat-staging project and then run `yarn run deploy`
+To deploy to staging make sure you have access to the firebase labcoat-staging project and then run `yarn deploy`
 
 ## Data
 

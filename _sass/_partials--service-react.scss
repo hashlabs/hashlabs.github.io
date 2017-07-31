@@ -1,0 +1,28 @@
+.service--react {
+  .service-section {
+    color: $dove-gray;
+
+    &--alt {
+      background-color: $affair;
+      color: $white;
+    }
+  }
+
+  .service-lead {
+    background-image: linear-gradient(191deg, #693e8f, #6763a8 27%, #61dafb);
+  }
+
+  .custom-bullet-list-item::before {
+    top: $spacer * -.1;
+    width: 18px;
+
+    @include media-breakpoint-up(md) {
+      top: 0;
+      width: 22px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: $spacer * .25;
+    }
+  }
+}

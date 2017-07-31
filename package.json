@@ -8,5 +8,10 @@
   "deploy": "yarn build && firebase deploy",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6"
+  },
+  "scripts": {
+    "build": "jekyll build",
+    "build-production": "JEKYLL_ENV=production jekyll build",
+    "deploy": "yarn build-production && firebase deploy"
   }
 }

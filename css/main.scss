@@ -25,14 +25,17 @@
 @import "objects--type";
 
 // components (sorted alphabetically)
-@import "components--header";
-
 @import "components--brand-list";
+@import "components--header";
+@import "components--service";
 
 // layout (sorted alphabetically)
 @import "layouts--global";
 
 // partials (sorted alphabetically)
-
 @import "partials--footer";
 @import "partials--services";
+@import "partials--service-go";
+@import "partials--service-rails";
+@import "partials--service-react";
+@import "partials--service-react-native";
