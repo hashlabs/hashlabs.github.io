@@ -1,0 +1,33 @@
+.list-underlined {
+  @include list-reset;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.listing-offers {
+  .list-underlined li {
+    .services &,
+    .services & a {
+      color: $color--primary;
+
+      &:hover {
+        color: $color--accent;
+      }
+    }
+
+    & + li {
+      margin-top: $spacer*0.75;
+    }
+  }
+
+  .offer {
+    @include media-breakpoint-down(sm) {
+      margin-top: $spacer*3.5;
+      text-align: center;
+
+      &-1 {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -21,6 +21,8 @@
 
 // objects (sorted alphabetically)
 @import "objects--button-menu";
+@import "objects--lists";
+@import "objects--type";
 
 // components (sorted alphabetically)
 @import "components--header";
@@ -30,8 +32,7 @@
 // layout (sorted alphabetically)
 @import "layouts--global";
 
-@import "layouts--global";
-
 // partials (sorted alphabetically)
 
 @import "partials--footer";
+@import "partials--services";

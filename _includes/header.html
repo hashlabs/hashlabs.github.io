@@ -19,12 +19,12 @@
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav">
       {% for links in header %}
-      {% assign link = links[1] %}
-      <li class="nav-item">
-        <a class="nav-link" href="{{link.href}}">
-          {{link.text}}
-        </a>
-      </li>
+        {% assign link = links[1] %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{link.href}}">
+            {{link.text}}
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </div>

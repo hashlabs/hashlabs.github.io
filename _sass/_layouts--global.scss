@@ -6,13 +6,27 @@ body {
 .site {
   display: flex;
   flex-direction: column;
+
+  &-content {
+    .container:first-of-type,
+    .container-fluid:first-of-type {
+      padding-top: $size--header-height;
+    }
+  }
 }
 
 body {
-  // left the gap for header navbar
-  padding-top: $size--header-height;
-
   &.navbar-expanded {
     @extend .modal-open;
+  }
+}
+
+.background-inverse {
+  background-color: $color--secondary;
+  color: $color--primary;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $color--primary;
   }
 }

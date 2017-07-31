@@ -8,6 +8,7 @@
 * README to include deploy staging info ([@duranmla](https://github.com/duranmla))
 
 ### Added
+* Service page ([@duranmla](https://github.com/duranmla))
 * Website Footer ([@carlows](https://github.com/carlows))
 * Bootstrap 4 as an npm dependency ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
 * i18n support with [polyglot](https://github.com/untra/polyglot) gem ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
