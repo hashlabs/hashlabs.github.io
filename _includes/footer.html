@@ -13,7 +13,7 @@
               {% if item.external == true %}
               <li><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.text }}</a></li>
               {% else %}
-              <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+              <li><a href="{{ item.url | prepend: site.baseurl }}">{{ item.text }}</a></li>
               {% endif %}
             {% endfor %}
           </ul>

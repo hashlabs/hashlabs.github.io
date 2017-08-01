@@ -1,0 +1,53 @@
+.btn-transparent {
+  background-color: transparent;
+  border: 2px solid $color--accent;
+  color: $color--primary;
+
+  &:focus {
+    color: $color--primary;
+  }
+
+  &:hover {
+    background-color: $color--accent;
+    color: $color--primary;
+  }
+
+  &-orange {
+    @extend .btn-transparent;
+    color: $color--accent;
+  }
+}
+
+.btn-yellow {
+  background-color: $yellow;
+  color: $color--primary;
+
+  &:focus {
+    color: $color--primary;
+  }
+
+  &:hover {
+    background-color: darken($yellow, 5);
+    color: $color--primary;
+  }
+}
+
+.btn {
+  @include padding-y($spacer);
+  width: 180px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-lg;
+  }
+
+  &-sm {
+    width: 140px;
+    @include padding-x($spacer*0.25);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .btn, .btn-sm {
+    width: 215px;
+  }
+}
