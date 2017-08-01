@@ -1,23 +1,23 @@
 ## [Unreleased]
 
 ### Added
-* Home page ([@carlows](https://github.com/carlows))
+* Service page ([@duranmla])
+* Website Footer ([@carlows])
+* Bootstrap 4 as an npm dependency ([@TheMightyPenguin])
+* i18n support with [polyglot](https://github.com/untra/polyglot) gem ([@TheMightyPenguin])
+* srcset filter to generate img srcset attribute ([@TheMightyPenguin])
+* Font smoothing ([@TheMightyPenguin])
+* Services pages base layout ([@TheMightyPenguin])
+* Home page ([@carlows])
+* Added enviroment config files ([@TheMightyPenguin])
+* Hire us page contact form, and thanks page ([@TheMightyPenguin])
 
 ### Fixed
-* Prevent content to broke after resolution change ([@duranmla](https://github.com/duranmla))
+* Prevent content to broke after resolution change ([@duranmla])
 
 ## Changed
-* Clean base to start new design development ([@duranmla](https://github.com/duranmla))
-* README to include deploy staging info ([@duranmla](https://github.com/duranmla))
-
-### Added
-* Service page ([@duranmla](https://github.com/duranmla))
-* Website Footer ([@carlows](https://github.com/carlows))
-* Bootstrap 4 as an npm dependency ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
-* i18n support with [polyglot](https://github.com/untra/polyglot) gem ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
-* srcset filter to generate img srcset attribute ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
-* Font smoothing ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
-* Services pages base layout ([@TheMightyPenguin](https://github.com/TheMightyPenguin))
+* Clean base to start new design development ([@duranmla])
+* README to include deploy staging info ([@duranmla])
 
 ## [6.0] - 17/03/2017
 ### Added
@@ -36,3 +36,8 @@
 * First Release!
 
 [Unreleased]: https://github.com/hashlabshq/hashbot/compare/v6.0...HEAD
+
+[@carlows]: https://github.com/carlows
+[@duranmla]: https://github.com/duranmla
+[@orlando]: https://github.com/orlando
+[@TheMightyPenguin]: https://github.com/TheMightyPenguin

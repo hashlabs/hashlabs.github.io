@@ -10,8 +10,9 @@
     "bootstrap": "4.0.0-alpha.6"
   },
   "scripts": {
-    "build": "jekyll build",
-    "build-production": "JEKYLL_ENV=production jekyll build",
-    "deploy": "yarn build-production && firebase deploy"
+    "serve": "jekyll serve --config _config.yml,_config.development.yml",
+    "build-staging": "JEKYLL_ENV=staging jekyll build --config _config.yml,_config.staging.yml",
+    "build-production": "JEKYLL_ENV=production jekyll build --config _config.yml,_config.production.yml",
+    "deploy": "yarn build-staging && firebase deploy"
   }
 }

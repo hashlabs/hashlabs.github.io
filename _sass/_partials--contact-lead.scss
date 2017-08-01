@@ -1,0 +1,18 @@
+$size--contact-lead-min-height-sm:                    220px;
+$size--contact-lead-min-height-md:                    334px;
+$size--contact-lead-min-height-lg:                    448px;
+
+.contact-lead {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: $size--contact-lead-min-height-sm;
+
+  @include media-breakpoint-up(md) {
+    min-height: $size--contact-lead-min-height-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: $size--contact-lead-min-height-lg;
+  }
+}

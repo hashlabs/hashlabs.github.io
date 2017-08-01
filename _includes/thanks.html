@@ -1,0 +1,14 @@
+{% assign data = site.data.thanks %}
+
+<section class="thanks" id="thanks">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <img class="thanks-image img-fluid" src="{{ data.image | prepend: site.baseurl }}" alt="{{ data.image_alt }}">
+        <h1 class="thanks-title text-center">{{ data.title }}</h1>
+        <p class="thanks-copy text-center">{{ data.copy }}</p>
+        <a href="{{ '/' | prepend: site.baseurl }}" class="thanks-action text-center">{{ data.action_copy }}</a>
+      </div>
+    </div>
+  </div>
+</section>

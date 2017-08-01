@@ -160,3 +160,8 @@
   margin-left: $margin;
   margin-right: $margin;
 }
+
+@mixin transform-vertical-center() {
+  top: 50%;
+  transform: translateY(-50%);
+}
