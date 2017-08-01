@@ -14,6 +14,8 @@
 
 ### Fixed
 * Prevent content to broke after resolution change ([@duranmla])
+* Fix button styles ([@carlows])
+* Corrected all links in home page ([@carlows])
 
 ## Changed
 * Clean base to start new design development ([@duranmla])

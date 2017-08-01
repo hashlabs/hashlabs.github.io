@@ -2,7 +2,7 @@
 lead_title: "Let's build something your users will ❤️ to use."
 lead_subtitle: "We are a software development agency that creates web and mobile experiences."
 lead_btn:
-  url: "#"
+  url: "/work"
   text: "Check our work"
 
 # Services section
@@ -18,8 +18,8 @@ services:
     title: "MOBILE DEVELOPMENT"
     text: "Using React Native, we build cross-plataform applications for Android and iOS. This while maintaining great application performance and development speed."
     btn:
-      text: "View our Process"
-      url: "#"
+      text: "Check our Process"
+      url: "/process"
 
 # Showcased Project section
 showcased_project:
@@ -27,12 +27,9 @@ showcased_project:
     image: "/img/logo-pleiq-primary.png"
     url: "#"
   title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-  check_project:
-    text: "Check this Project"
-    url: "#"
   check_work:
     text: "Check our work"
-    url: "#"
+    url: "/work"
 
 # Testimonies section
 testimonies:

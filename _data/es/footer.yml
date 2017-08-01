@@ -2,21 +2,21 @@ lead: "Nos encantaría trabajar contigo."
 sublead: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 cta:
   text: "Vamos!"
-  url: "#"
+  url: "/hire-us"
 
 copyright: "Hash Labs LLC © Todos los derechos reservados - Hecho con &hearts; por Hash Labs LLC"
 
 links:
   - title: "EMPRESA"
     links:
-      - text: "Acerca de nosotros"
-        url: "#"
+      - text: "Nuestro proceso"
+        url: "/process"
       - text: "Nuestro trabajo"
-        url: "#"
+        url: "/work"
       - text: "Nuestros servicios"
-        url: "#"
+        url: "/services"
       - text: "Contratanos"
-        url: "#"
+        url: "/hire-us"
   - title: "SERVICIOS"
     links:
       - text: "React"
@@ -30,17 +30,14 @@ links:
   - title: "CONECTATE"
     links:
       - text: "Blog"
-        url: "#"
+        url: "http://blog.hashlabs.com/"
         external: true
       - text: "Twitter"
-        url: "#"
+        url: "https://twitter.com/hashlabs"
         external: true
       - text: "Facebook"
-        url: "#"
+        url: "https://www.facebook.com/hashlabshq"
         external: true
       - text: "LinkedIn"
-        url: "#"
-        external: true
-      - text: "YouTube"
-        url: "#"
+        url: "https://linkedin.com/company/hashlabs"
         external: true
