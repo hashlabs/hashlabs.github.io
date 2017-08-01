@@ -12,7 +12,7 @@
 
     <main class="site-content service service--{{ page.name }}">
 
-      {% include services-leads/{{ page.name }}.html %}
+      {% include services-leads/{{ page.name }}.html service=service %}
 
       <section class="service-section service-description" id="{{ service.name }}-service-description">
         <div class="container content-wrapper">
