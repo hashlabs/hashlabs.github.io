@@ -3,11 +3,8 @@
   border: 2px solid $color--accent;
   color: $color--primary;
 
+  &:hover,
   &:focus {
-    color: $color--primary;
-  }
-
-  &:hover {
     background-color: $color--accent;
     color: $color--primary;
   }
@@ -22,12 +19,16 @@
   background-color: $yellow;
   color: $color--primary;
 
+  &:hover,
   &:focus {
+    background-color: darken($yellow, 5);
     color: $color--primary;
   }
+}
 
-  &:hover {
-    background-color: darken($yellow, 5);
+.btn-primary {
+  &:hover,
+  &:focus {
     color: $color--primary;
   }
 }
@@ -35,12 +36,12 @@
 .btn {
   @include padding-y($spacer);
   cursor: pointer;
-  font-family: $primary-font;
-  font-weight: $font-weight-bold;
   width: 180px;
+  font-weight: 600;
 
   @include media-breakpoint-up(lg) {
     font-size: $font-size-lg;
+    font-weight: $font-weight-regular;
   }
 
   &-sm {

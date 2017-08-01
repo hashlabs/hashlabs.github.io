@@ -2,7 +2,7 @@
 lead_title: "Construyamos algo que tus usuarios ❤️ usar."
 lead_subtitle: "Somos una agencia de desarrollo de software."
 lead_btn:
-  url: "#"
+  url: "/work"
   text: "Nuestro trabajo"
 
 # Services section
@@ -19,7 +19,7 @@ services:
     text: "Using React Native, we build cross-plataform applications for Android and iOS. This while maintaining great application performance and development speed."
     btn:
       text: "Nuestro Proceso"
-      url: "#"
+      url: "/process"
 
 # Showcased Project section
 showcased_project:
@@ -32,7 +32,7 @@ showcased_project:
     url: "#"
   check_work:
     text: "Nuestro trabajo"
-    url: "#"
+    url: "/work"
 
 # Testimonies section
 testimonies:

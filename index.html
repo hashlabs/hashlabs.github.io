@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: inverse
 ---
 
 {% assign home=site.data.home %}
@@ -56,13 +56,8 @@ layout: default
         <div class="mt-4">
           <h1 class="section-showcased-project-title mb-0">{{ home.showcased_project.title }}</h1>
         </div>
-        <div class="action-buttons-container d-flex flex-row justify-content-center">
-          <div class="p-6 mr-2">
-            <a class="btn btn-sm btn-yellow" href="{{ home.showcased_project.check_project.url | prepend: site.baseurl }}">{{ home.showcased_project.check_project.text }}</a>
-          </div>
-          <div class="p-6 ml-2">
-            <a class="btn btn-sm btn-yellow" href="{{ home.showcased_project.check_work.url | prepend: site.baseurl }}">{{ home.showcased_project.check_work.text }}</a>
-          </div>
+        <div class="action-buttons-container col-12 text-center">
+          <a class="btn btn-yellow" href="{{ home.showcased_project.check_work.url | prepend: site.baseurl }}">{{ home.showcased_project.check_work.text }}</a>
         </div>
       </div>
     </div>
