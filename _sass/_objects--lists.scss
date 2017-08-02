@@ -1,3 +1,37 @@
+.list-pills {
+  @include list-reset;
+
+  &,
+  & li {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  li {
+    @include padding-x($spacer/2);
+    background-color: $mystic;
+    border-color: transparent;
+    color: $matisse;
+    font-size: 12px;
+    justify-content: center;
+    padding: .4em .5em;
+    text-transform: lowercase;
+
+    & + li {
+      margin-left: $spacer/2;
+    }
+
+    img {
+      height: 16px;
+    }
+
+    span {
+      margin-left: $spacer/4;
+    }
+  }
+}
+
 .list-underlined {
   @include list-reset;
   text-decoration: underline;

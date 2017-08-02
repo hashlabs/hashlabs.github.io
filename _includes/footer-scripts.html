@@ -18,6 +18,8 @@
     <script defer src="{{ "/js/go.js" | prepend: site.baseurl }}"></script>
   {% when '/hire-us/' %}
     <script defer src="{{ "/js/contact-form.js" | prepend: site.baseurl }}"></script>
+  {% when '/work/' %}
+    <script defer src="{{ "/js/work.js" | prepend: site.baseurl }}"></script>
 {% endcase %}
 
 {% if jekyll.environment == "production" %}

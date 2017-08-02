@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+{% assign work=site.data.work %}
+
+<div id="work" class="work">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lead">
+        <div class="text-center">
+          <div class="h1-responsive-lg mb-2">{{work.lead_title}}</div>
+          <h5 class="subtitle">{{work.lead_subtitle}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="alternated-rows">
+      {% for clients in work.clients limit: 3 %}
+        {% assign client = clients[1] %}
+        <div class="row align-items-center alternated-row client client-{{forloop.index}} {{client.slug}}">
+          <div class="col-12 col-xl-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="client-content">
+                  <div class="row">
+                    <div class="col-12 col-content-title">
+                      <h2 class="h2-responsive-small">{{client.title}}</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="client-content-text content-text p-content-sm">
+                        {{client.content}}
+                        <p>{{work.tools_text}}</p>
+                        <ul class="list-pills">
+                          {% for tool in client.tools %}
+                            {% assign tool = tools[1] %}
+                            {% assign data = tool[1] %}
+                            <li class="pill-item">
+                              {% assign technology = work.technologies[data.slug] %}
+                              <img class="pull-item-icon" src="{{ technology.img | prepend: site.baseurl }}" alt="{{data.text}}">
+                              <span>{{data.text}}</span>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="text-center client-content-img">
+              <img class="img-fluid" src="{{ client.img | prepend: site.baseurl }}" alt="{{client.title}}">
+              <div class="client-desktop-animation">
+                <video height="335" loop>
+                  <source src="{{site.baseurl}}/videos/animation_our_work_{{client.slug}}.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

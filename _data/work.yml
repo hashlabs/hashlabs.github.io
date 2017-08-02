@@ -1,0 +1,13 @@
+technologies:
+  go:
+    img: /img/icon_label_go.png
+  html:
+    img: /img/icon_label_html.png
+  js:
+    img: /img/icon_label_js.svg
+  rails:
+    img: /img/icon_label_rails.svg
+  react_native:
+    img: /img/icon_label_react_native.svg
+  react:
+    img: /img/icon_label_react.svg

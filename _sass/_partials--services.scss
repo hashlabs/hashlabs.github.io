@@ -66,14 +66,6 @@
     }
   }
 
-  .col-lead {
-    margin-top: $spacer*4.25 + $size--header-height;
-
-    @include media-breakpoint-up(md) {
-      margin-top: $spacer*6.875 + $size--header-height;
-    };
-  }
-
   .col-offers {
     margin-top: $spacer*2.5;
 

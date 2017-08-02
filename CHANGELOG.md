@@ -18,6 +18,7 @@
 * 404 page ([@duranmla])
 * Go service animation ([@TheMightyPenguin])
 * React service animation ([@TheMightyPenguin])
+* Our work page ([@duranmla])
 
 ### Fixed
 * Prevent content to broke after resolution change ([@duranmla])
