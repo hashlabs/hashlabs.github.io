@@ -119,3 +119,34 @@ a {
     }
   }
 }
+
+.lead-jumbo {
+  font-size: 100px;
+  font-weight: $font-weight-normal;
+
+  @include media-breakpoint-up(md) {
+    font-size: 180px;
+  }
+}
+
+.subtitle-jumbo {
+  font-size: $font-size-base*1.25;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base*1.75;
+  }
+
+  &--has-border {
+    border-top: 2px solid;
+    display: inline-block;
+    padding-top: 1rem;
+  }
+}
+
+.single-page-callback {
+  font-size: $font-size-base;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base*1.25;
+  }
+}
