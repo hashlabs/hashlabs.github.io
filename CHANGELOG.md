@@ -13,6 +13,7 @@
 * Hire us page contact form, and thanks page ([@TheMightyPenguin])
 * Process page ([@duranmla])
 * React Native service animation ([@TheMightyPenguin])
+* 404 page ([@duranmla])
 
 ### Fixed
 * Prevent content to broke after resolution change ([@duranmla])

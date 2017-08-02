@@ -1,0 +1,27 @@
+---
+layout: no-footer
+permalink: /404.html
+---
+
+{% assign data = site.data.not_found %}
+
+<div class="background-inverse">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <img class="responsive-img" src="{{ data.image | prepend: site.baseurl }}" alt="{{ data.image_alt }}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="lead-jumbo mb-0">404</h1>
+        <p class="subtitle-jumbo subtitle-jumbo--has-border">{{data.title}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a class="single-page-callback" href="{{ '/' | prepend: site.baseurl }}">{{data.action_copy}}</a>
+      </div>
+    </div>
+  </div>
+</div>
