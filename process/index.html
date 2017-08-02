@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% assign process=site.data.process %}
+
+<div id="process" class="process">
+  <div class="container">
+    <div class="row hidden-sm-down">
+      <div class="col-12 col-lead">
+        <div class="text-center">
+          <div class="h1-responsive">{{process.lead_title}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="alternated-rows">
+      {% for steps in process.steps %}
+        {% assign step = steps[1] %}
+        <div class="row align-items-center alternated-row step step-{{forloop.index}} {{step.slug}}">
+          <div class="col-12 col-xl-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="step-content">
+                  <div class="row">
+                    <div class="col-12 col-content-title">
+                      <h2 class="h2-responsive-small mb-0">{{step.title}}</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="step-content-text p-content-sm">
+                        {{step.content}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="text-center step-content-img">
+              <img src="{{ step.img | prepend: site.baseurl }}" alt="{{step.title}}">
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

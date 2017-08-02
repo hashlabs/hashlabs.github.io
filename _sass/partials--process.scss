@@ -1,0 +1,110 @@
+.process {
+  .step-content {
+    @include media-breakpoint-up(xl) {
+      max-width: 670px;
+      margin-right: auto;
+    }
+  }
+
+  /*
+    this will allow the iphone image to do not
+    take more height than needed as the aspect ratio is vertical
+    in case the image change this rule may not be needed
+  */
+  .step.agile {
+    img {
+      @include media-breakpoint-down(sm) {
+        height: 220px;
+      }
+    }
+  }
+
+  .step-content-text {
+    color: $aluminium;
+  }
+
+  .step-content-img {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  /**
+   * Decorative lines
+   */
+  .step-1,
+  .step-2,
+  .step-3 {
+    &::after {
+      content: '';
+      display: block;
+    }
+  }
+}
+
+/**
+* Spacing
+*/
+.process {
+  .alternated-rows {
+    .alternated-row:last-child {
+      margin-bottom: $spacer*5.6;
+    }
+
+    @include media-breakpoint-up(xl) {
+      .alternated-row:nth-child(odd) {
+        .step-content {
+          max-width: 550px;
+          margin-right: 0;
+          margin-left: auto;
+        }
+
+        .col-xl-6:first-child {
+          @extend .push-xl-6;
+        }
+
+        .col-xl-6:last-child {
+          @extend .pull-xl-6;
+        }
+      }
+    }
+  }
+
+  .step-content-text {
+    margin-bottom: $spacer*2;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  .col-lead {
+    margin-top: $size--header-height + $spacer*3;
+    margin-bottom: $spacer*4;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: $size--header-height + $spacer*4;
+      margin-bottom: $spacer*6;
+    }
+  }
+
+  .col-content-title {
+    margin-bottom: $spacer*1.25;
+  }
+
+  .step {
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      text-align: left;
+    }
+  }
+
+  .step-1 {
+    margin-top: $spacer*2 + $size--header-height;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 0;
+    }
+  }
+}

@@ -17,6 +17,17 @@ a {
   }
 }
 
+.p-content-sm {
+  &, p, a {
+    font-size: $font-size-base;
+    line-height: 1.65;
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base*1.125;
+    };
+  }
+}
+
 .p-lg {
   font-size: $font-size-base;
 
@@ -26,6 +37,7 @@ a {
 }
 
 .h1-responsive {
+  font-weight: $font-weight-bold;
   font-size: $font-size-base*1.75;
 
   @include media-breakpoint-up(md) {
@@ -33,8 +45,29 @@ a {
   };
 }
 
+.h1-responsive-lg {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-base*1.75;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base*2.375;
+  };
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base*3.125;
+  };
+}
+
 .h2-responsive {
   font-size: $font-size-base*1.75;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-h2;
+  };
+}
+
+.h2-responsive-small {
+  font-size: $font-size-base*1.375;
 
   @include media-breakpoint-up(md) {
     font-size: $font-size-h2;

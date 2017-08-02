@@ -1,5 +1,5 @@
 $size--navbar-brand-dimension:              $spacer*3.125; // ~ 50px
-$size--header-height:                       $size--navbar-brand-dimension + $spacer;
+$size--header-height:                       $size--navbar-brand-dimension + $navbar-padding-y;
 
 .header {
   backface-visibility: hidden;
@@ -12,7 +12,21 @@ $size--header-height:                       $size--navbar-brand-dimension + $spa
   }
 
   @include media-breakpoint-down(sm) {
-    padding: $navbar-padding-y $navbar-padding-x;
+    width: 100%;
+  }
+}
+
+// in order to keep the boundaries as a container but being fixed-top
+.navbar-container {
+  @include padding-x($navbar-padding-x);
+  display: flex;
+  margin: 0 auto;
+  width: map-get($container-max-widths, xl);
+
+  @include media-breakpoint-up(lg) {
+    &:not(.navbar) {
+      @include padding-x($content-padding-x);
+    }
   }
 }
 
@@ -20,27 +34,8 @@ $size--header-height:                       $size--navbar-brand-dimension + $spa
   @include simple-transition(background);
   color: $color--primary;
   font-size: $font-size-base*1.25;
-
-  @include media-breakpoint-down(sm) {
-    padding: 0;
-  }
-
-  // custom animation handling
-  &.expanded {
-    @include media-breakpoint-down(sm) {
-      height: 100%;
-
-      .navbar,
-      .header {
-        background-color: $black;
-      }
-
-      .navbar-collapse {
-        background-color: $black;
-        transform: translate3d(0, 0, 0);
-      }
-    }
-  }
+  // as we will applied a custom padding using navbar-container
+  @include padding-x(0);
 
   body.scrolled &,
   body.navbar-expanded & {
@@ -62,6 +57,23 @@ $size--header-height:                       $size--navbar-brand-dimension + $spa
   }
 }
 
+// custom animation handling
+.navbar-expanded .navbar {
+  @include media-breakpoint-down(sm) {
+    height: 100%;
+
+    &,
+    .header {
+      background-color: $black;
+    }
+
+    .navbar-collapse {
+      background-color: $black;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
 .navbar-collapse {
   @include simple-transition(transform);
 
@@ -72,7 +84,7 @@ $size--header-height:                       $size--navbar-brand-dimension + $spa
     overflow-y: auto;
     position: absolute;
     top: $size--header-height;
-    transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -600%, 0);
     // hide scrollbar
     padding-right: $grid-gutter-width-base;
     right: -($grid-gutter-width-base);

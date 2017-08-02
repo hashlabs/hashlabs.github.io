@@ -6,6 +6,10 @@ work:
   href: /work
   text: Work
 
+process:
+  href: /process
+  text: Our process
+
 hire_us:
   href: /hire-us
   text: Hire us

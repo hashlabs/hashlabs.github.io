@@ -13,6 +13,8 @@ body {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+
   &.navbar-expanded {
     @extend .modal-open;
   }
@@ -26,4 +28,31 @@ body {
   .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $color--primary;
   }
+}
+
+.container-form {
+  max-width: 900px;
+  @include make-container;
+}
+
+.container {
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+
+  // allow custom space on large screens between the content and the edges of the viewport
+  @include media-breakpoint-up(lg) {
+    @include padding-x($content-padding-x);
+  }
+}
+
+.content-wrapper {
+  /*
+    no padding is added to this element
+    as it is intended to be used alongside a
+    container class
+   */
+  width: 1210px;
+  margin: 0 auto;
+  max-width: 100%;
 }
