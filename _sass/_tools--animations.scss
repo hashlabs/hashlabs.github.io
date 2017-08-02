@@ -1,0 +1,5 @@
+@include keyframe-animation(polygon_animation) {
+  0% { opacity: 0.8 }
+  60% { opacity: 0.5 }
+  100% { opacity: 0.8 }
+}

@@ -14,8 +14,9 @@
 // bootstrap inclusion (order matters)
 @import "bootstrap--custom";
 @import "bootstrap--derivables";
-@import "tools--z-map";
+@import "tools--animations";
 @import "tools--spacing";
+@import "tools--z-map";
 
 // vendor components
 
