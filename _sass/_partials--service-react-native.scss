@@ -1,12 +1,15 @@
+$size--service-react-native-image-height-sm:                    276px;
+$size--service-react-native-image-height-md:                    256px;
+$size--service-react-native-image-height-lg:                    416px;
+$size--service-react-native-radial-gradient-size-sm:            260px;
+$size--service-react-native-radial-gradient-size-md:            230px;
+$size--service-react-native-radial-gradient-size-lg:            350px;
+
 .service--react-native {
   .service-section {
     &--alt {
       background-color: $jacksons-purple;
     }
-  }
-
-  .service-lead {
-    background-image: radial-gradient(circle at 50% 50%, #142b8b, #000000);
   }
 
   .custom-bullet-list-item::before {
@@ -20,6 +23,115 @@
 
     @include media-breakpoint-up(lg) {
       top: $spacer * .25;
+    }
+  }
+}
+
+.service--react-native .service-lead {
+  background-color: $black;
+  position: relative;
+
+  &-background,
+  canvas {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  canvas {
+    z-index: z-map('initial');
+  }
+
+  &-background {
+    background-image: radial-gradient(circle at center, $jacksons-purple 0, rgba($black, 0) $size--service-react-native-radial-gradient-size-sm);
+    z-index: z-map('middle');
+
+    @include media-breakpoint-up(md) {
+      background-image: radial-gradient(circle at center, $jacksons-purple 0, rgba($black, 0) $size--service-react-native-radial-gradient-size-md);
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-image: radial-gradient(circle at center, $jacksons-purple 0, rgba($black, .2) $size--service-react-native-radial-gradient-size-lg);
+    }
+  }
+
+  &-image {
+    height: $size--service-react-native-image-height-sm;
+    margin-bottom: $spacer;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      height: $size--service-react-native-image-height-md;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: $size--service-react-native-image-height-lg;
+    }
+  }
+
+  &-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+  }
+
+  &-content,
+  &-background {
+    // so that clicks will affect the canvas directly
+    pointer-events: none;
+  }
+
+  &-content,
+  &-image,
+  &-title {
+    // so that content renders above canvas
+    z-index: z-map('front');
+  }
+
+  &-content {
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      top: $spacer * 1.5;
+    }
+  }
+}
+
+.service--react-native .service-lead-title {
+  color: $white;
+  font-size: $font-size-base * 1.625;
+  margin-bottom: 0;
+  font-weight: $font-weight-regular;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 0;
+    font-size: $font-size-base * 3;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base * 4.25;
+  }
+
+  &--left {
+    margin-right: $spacer * 2;
+
+    @include media-breakpoint-up(lg) {
+      margin-right: $spacer * 4.6875;
+    }
+  }
+
+  &--right {
+    margin-left: $spacer * 2;
+
+    @include media-breakpoint-up(lg) {
+      margin-left: $spacer * 4.6875;
     }
   }
 }

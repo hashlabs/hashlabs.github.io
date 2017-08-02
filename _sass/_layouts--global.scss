@@ -10,6 +10,10 @@ body {
   &--black {
     background-color: black;
   }
+
+  &--navbar-padding {
+    padding-top: $size--header-height;
+  }
 }
 
 body {

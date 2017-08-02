@@ -1,14 +1,14 @@
 .service {
   &-lead {
     @include simple-transition();
-    height: 479px;
+    height: 478px;
 
     @include media-breakpoint-up(md) {
       height: 392px;
     }
 
     @include media-breakpoint-up(lg) {
-      height: 562px;
+      height: 562px
     }
   }
 
