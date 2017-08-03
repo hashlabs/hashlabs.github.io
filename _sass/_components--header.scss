@@ -30,12 +30,22 @@ $size--header-height:                       $size--navbar-brand-dimension + $nav
   }
 }
 
+.navbar-absolute {
+  // avoid sticky effect
+  position: absolute !important;
+}
+
 .navbar {
   @include simple-transition(background);
   color: $color--primary;
   font-size: $font-size-base*1.25;
   // as we will applied a custom padding using navbar-container
   @include padding-x(0);
+
+  // handle styles whenever the user has scrolled
+  body.scrolled & {
+    background-color: rgba($color--accent, .9);
+  }
 
   body.scrolled &,
   body.navbar-expanded & {
@@ -50,15 +60,10 @@ $size--header-height:                       $size--navbar-brand-dimension + $nav
       color: $navbar-inverse-color !important;
     }
   }
-
-  // handle styles whenever the user has scrolled
-  body.scrolled & {
-    background-color: rgba($color--accent, .9);
-  }
 }
 
 // custom animation handling
-.navbar-expanded .navbar {
+body.navbar-expanded .navbar {
   @include media-breakpoint-down(sm) {
     height: 100%;
 
