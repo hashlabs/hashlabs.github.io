@@ -3,8 +3,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% capture seo %}
+    {% seo %}
+  {% endcapture %}
+
+  {% comment %}
+    Allows to have a small summary card for Twitter
+    Discussion here: https://github.com/jekyll/jekyll-seo-tag/issues/84
+  {% endcomment %}
+  {% if page.twitter_image_small == true %}
+    {{ seo | replace: "summary_large_image", "summary" }}
+  {% else %}
+    {{ seo }}
+  {% endif %}
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/settings--jekyll.css" | prepend: site.baseurl }}">

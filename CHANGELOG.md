@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 ### Added
+* Added SEO metadata and Sitemap ([@carlows])
 * Rails lead section ([@carlows])
 * Service page ([@duranmla])
 * Website Footer ([@carlows])

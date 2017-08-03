@@ -63,4 +63,12 @@ Also take in mind this filter makes 2 assumptions:
 1. Image path/name should only have 1 dot in it (the one just before the extension)
 2. Image should have 2 other images named like it, but with @2x and @3x just before the extension
 
+## How do I add images for Facebook and Twitter for an specific page?
+
+Just add an image property to the page frontmatter. For example:
+
+```
+image: "/img/episode_preview_1200x630px.png"
+```
+
 [polyglot]: https://github.com/untra/polyglot
