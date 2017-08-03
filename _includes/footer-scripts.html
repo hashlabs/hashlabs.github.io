@@ -10,6 +10,8 @@
   {% when '/services/react-native/' %}
     <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script defer src="{{ "/js/react-native.js" | prepend: site.baseurl }}"></script>
+  {% when '/services/go/' %}
+    <script defer src="{{ "/js/go.js" | prepend: site.baseurl }}"></script>
   {% when '/hire-us/' %}
     <script defer src="{{ "/js/contact-form.js" | prepend: site.baseurl }}"></script>
 {% endcase %}

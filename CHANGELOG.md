@@ -15,6 +15,7 @@
 * Process page ([@duranmla])
 * React Native service animation ([@TheMightyPenguin])
 * 404 page ([@duranmla])
+* Go service animation ([@TheMightyPenguin])
 
 ### Fixed
 * Prevent content to broke after resolution change ([@duranmla])
