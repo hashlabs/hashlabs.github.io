@@ -171,6 +171,20 @@
   transform: translateX(-50%);
 }
 
+@mixin transform-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin full-absolute-cover {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 @mixin star_animation($animation_name, $duration, $pos_x, $pos_y, $rotation) {
   @include keyframe-animation($animation_name) {
     0% { transform: translate($pos_x, $pos_y) rotate($rotation) scale(1) translate(-$pos_x, -$pos_y) }

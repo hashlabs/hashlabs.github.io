@@ -8,10 +8,6 @@
     }
   }
 
-  .service-lead {
-    background-image: linear-gradient(191deg, #693e8f, #6763a8 27%, #61dafb);
-  }
-
   .custom-bullet-list-item::before {
     top: $spacer * -.1;
     width: 18px;
@@ -23,6 +19,51 @@
 
     @include media-breakpoint-up(lg) {
       top: $spacer * .25;
+    }
+  }
+}
+
+.service--react .service-lead {
+  backface-visibility: hidden;
+  background-image: linear-gradient(191deg, #693e8f, #6763a8 27%, #61dafb);
+
+  canvas {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: z-map('middle');
+  }
+
+  &-background-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    top: $spacer * 1.5;
+    z-index: z-map('front');
+  }
+
+  &-title {
+    color: $white;
+    font-size: $spacer * 2.375;
+    font-weight: 600;
+
+    @include media-breakpoint-up(md) {
+      font-size: $spacer * 3;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: $spacer * 4.25;
     }
   }
 }

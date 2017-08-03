@@ -7,6 +7,10 @@
 {% case page.url %}
   {% when '/' %}
     <script defer src="{{ "/js/navbar-sticky.js" | prepend: site.baseurl }}"></script>
+  {% when '/services/react/' %}
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script defer src="{{ "/js/particle-class.js" | prepend: site.baseurl }}"></script>
+    <script defer src="{{ "/js/react.js" | prepend: site.baseurl }}"></script>
   {% when '/services/react-native/' %}
     <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script defer src="{{ "/js/react-native.js" | prepend: site.baseurl }}"></script>

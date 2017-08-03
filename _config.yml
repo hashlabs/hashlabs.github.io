@@ -111,6 +111,7 @@ sass:
 exclude:
   - 'CHANGELOG.md'
   - 'CNAME'
+  - 'node_modules'
   - 'config.ru'
   - 'FAQ.md'
   - 'firease.json'

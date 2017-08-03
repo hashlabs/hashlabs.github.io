@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function initReactNativeAnimation() {
   function getParticlesCount() {
     var width = window.innerWidth;
     if (width <= 767) {
