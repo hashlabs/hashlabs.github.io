@@ -1,19 +1,22 @@
+var reactServiceLeadId = 'react-service-lead';
+var reactServiceLead = $('#' + reactServiceLeadId);
+var system;
+var canvas;
+var ctx;
 var ParticleSystem;
-var options;
+var options = {
+  minParticleSize: 4,
+  maxParticleSize: 12,
+  particlesCount: 10,
+  distanceTolerance: 2,
+  minMovementOffset: 20,
+  maxMovementOffset: 50,
+  minEasing: 0.01,
+  maxEasing: 0.015,
+  colors: ['#693F8F','#61DAFB', '#FFFFFF']
+};
 
 (function createParticleSystemClass() {
-  options = {
-    minParticleSize: 4,
-    maxParticleSize: 12,
-    particlesCount: 10,
-    distanceTolerance: 2,
-    minMovementOffset: 20,
-    maxMovementOffset: 50,
-    minEasing: 0.01,
-    maxEasing: 0.015,
-    colors: ['#693F8F','#61DAFB', '#FFFFFF']
-  };
-
   var Particle = function() {
     this.originalPosition = createVector(random(width), random(height));
     this.position = this.originalPosition.copy();
@@ -101,3 +104,41 @@ var options;
     });
   };
 })();
+
+function getReactLeadHeight() {
+  return parseInt(
+    reactServiceLead
+      .css('height')
+      .replace('px', '')
+  );
+}
+
+function getReactLeadWidth() {
+  return parseInt(
+    reactServiceLead
+      .css('width')
+      .replace('px', '')
+  );
+}
+
+/*
+  p5.js functions
+ */
+function setup() {
+  canvas = createCanvas(getReactLeadWidth(), getReactLeadHeight());
+  canvas.parent('react-service-lead');
+  ctx = canvas.elt.getContext('2d');
+  system = new ParticleSystem(options.particlesCount);
+  noStroke();
+}
+
+function windowResized() {
+  resizeCanvas(getReactLeadWidth(), getReactLeadHeight());
+  system.reset();
+}
+
+function draw() {
+  clear();
+  background(color(0, 0));
+  system.run();
+}

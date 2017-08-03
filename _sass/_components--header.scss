@@ -105,6 +105,10 @@ body.navbar-expanded .navbar {
   }
 }
 
+.navbar.expanded .navbar-collapse {
+  display: flex;
+}
+
 .navbar-nav {
   @include media-breakpoint-down(sm) {
     // styles applied whenever the collapse gets expanded on mobile

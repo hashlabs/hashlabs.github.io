@@ -8,6 +8,9 @@ _config.development.yml
 _config.production.yml
 _config.staging.yml
 
+# Assets
+assets/
+
 # NPM
 node_modules/
 .DS_Store
