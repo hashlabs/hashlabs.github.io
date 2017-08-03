@@ -7,6 +7,26 @@
 
   .service-lead {
     background-color: $pelorous;
+
+    &-wrapper {
+      padding-top: $size--header-height;
+    }
+
+    &-background {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include media-breakpoint-up(lg) {
+        background-size: auto;
+      }
+    }
+
+    &-background,
+    &-content,
+    &-wrapper {
+      height: 100%;
+    }
   }
 
   .service-how {
@@ -39,6 +59,51 @@
 
     @include media-breakpoint-up(lg) {
       padding-left: $spacer * 2.25;
+    }
+  }
+
+  .rails-illustration {
+    backface-visibility: hidden;
+
+    &-svg {
+      width: 280px;
+
+      @include media-breakpoint-up(md) {
+        width: 320px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 500px;
+      }
+    }
+
+    $stars-list: (
+      (star-1, 2500ms, 349px, 94px, -330deg),
+      (star-2, 3500ms, 370px, 72px, -330deg),
+      (star-3, 5000ms, 31px, 41px, -330deg),
+      (star-4, 1500ms, 7px, 7px, -330deg),
+      (star-5, 3000ms, 131px, 109px, -330deg)
+    );
+
+    @each $id, $duration, $pos-x, $pos-y, $rotation in $stars-list {
+      ##{$id} {
+        @include star_animation(#{$id}-animation, $duration, $pos-x, $pos-y, $rotation);
+      }
+    }
+
+    $polygons-list: (
+      ruby-polygon-2: 2000ms,
+      ruby-polygon-3: 2500ms,
+      ruby-polygon-4: 3500ms,
+      ruby-polygon-5: 1500ms,
+      ruby-polygon-6: 4500ms,
+      ruby-polygon-7: 3000ms
+    );
+
+    @each $id, $duration in $polygons-list {
+      ##{$id} {
+        animation: polygon_animation $duration ease-in 0s infinite;
+      }
     }
   }
 }

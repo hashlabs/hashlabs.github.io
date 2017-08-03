@@ -20,6 +20,10 @@
 .service--rails  {
   {% assign rails = site.services | where: 'name', 'rails' | first %}
 
+  .service-lead-background {
+    background-image: url({{ rails.lead_background_image | prepend: site.baseurl }});
+  }
+
   .custom-bullet-list-item::before {
     background-image: url({{ rails.bullet_image | prepend: site.baseurl }});
   }

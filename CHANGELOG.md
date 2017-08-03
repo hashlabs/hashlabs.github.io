@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 ### Added
+* Rails lead section ([@carlows])
 * Service page ([@duranmla])
 * Website Footer ([@carlows])
 * Bootstrap 4 as an npm dependency ([@TheMightyPenguin])
