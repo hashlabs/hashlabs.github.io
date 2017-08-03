@@ -19,6 +19,7 @@ module.exports = {
     main: './_scripts/main.js',
     'navbar-sticky': './_scripts/navbar-sticky.js',
     'react-native': './_scripts/react-native.js',
+    'process': './_scripts/process.js',
     work: './_scripts/work.js'
   },
   output: {

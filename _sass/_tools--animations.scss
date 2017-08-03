@@ -39,3 +39,9 @@
     }
   }
 }
+
+@include keyframe-animation(dash) {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

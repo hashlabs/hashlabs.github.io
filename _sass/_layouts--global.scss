@@ -92,7 +92,7 @@ body {
       }
     }
 
-    .alternated-row:nth-child(odd) {
+    .alternated-row:nth-of-type(odd) {
       .col-xl-6:first-child {
         @extend .push-xl-6;
       }
