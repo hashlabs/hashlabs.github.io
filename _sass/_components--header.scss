@@ -14,6 +14,10 @@ $size--header-height:                       $size--navbar-brand-dimension + $nav
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
+
+  .navbar-brand a {
+    text-decoration: none !important;
+  }
 }
 
 // in order to keep the boundaries as a container but being fixed-top
