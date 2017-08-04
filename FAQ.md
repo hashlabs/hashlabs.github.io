@@ -114,7 +114,7 @@ new CopyWebpackPlugin([
 ])
 ```
 
-In this project we use this to exlclude a file from webpack processing, as we need it
+In this project we use this to exclude a file from webpack processing, as we need it
 as it's cause its a p5.js sketch.
 
 ## Why do we have a `postcss.config.js` file?

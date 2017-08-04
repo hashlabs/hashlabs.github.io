@@ -32,13 +32,18 @@
   },
   "scripts": {
     "copy-assets": "rm -rf assets && rsync _assets/ assets/ -av",
+    "copy-service-worker": "rm _site/service-worker.js && cp service-worker.js _site/service-worker.js",
     "watch": "yarn copy-assets && webpack --watch",
     "serve": "JEKYLL_ENV=development jekyll serve --config _config.yml,_config.development.yml",
     "webpack-build": "yarn copy-assets && webpack",
     "jekyll-build-staging": "JEKYLL_ENV=staging jekyll build --config _config.yml,_config.staging.yml",
     "jekyll-build-production": "JEKYLL_ENV=production jekyll build --config _config.yml,_config.production.yml",
-    "build-staging": "yarn webpack-build && yarn jekyll-build-staging",
-    "build-production": "yarn webpack-build && yarn jekyll-build-production",
+    "build-staging": "yarn webpack-build && yarn jekyll-build-staging && webpack && yarn copy-service-worker",
+    "build-production": "yarn webpack-build && yarn jekyll-build-production && webpack && yarn copy-service-worker",
     "deploy": "yarn build-staging && firebase deploy"
+  },
+  "devDependencies": {
+    "ignore-loader": "^0.1.2",
+    "sw-precache-webpack-plugin": "^0.11.4"
   }
 }

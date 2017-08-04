@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 ### Added
+* Runtime caching to load assets offline ([@carlows])
 * Added SEO metadata and Sitemap ([@carlows])
 * Rails lead section ([@carlows])
 * Service page ([@duranmla])

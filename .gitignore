@@ -14,3 +14,5 @@ assets/
 # NPM
 node_modules/
 .DS_Store
+
+service-worker.js
