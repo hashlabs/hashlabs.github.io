@@ -1,5 +1,6 @@
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -20,7 +21,8 @@ module.exports = {
     'navbar-sticky': './_scripts/navbar-sticky.js',
     'react-native': './_scripts/react-native.js',
     'process': './_scripts/process.js',
-    work: './_scripts/work.js'
+    work: './_scripts/work.js',
+    'service-worker-registration': './_scripts/service-worker-registration.js'
   },
   output: {
     filename: 'js/[name].js',
@@ -52,6 +54,10 @@ module.exports = {
           outputPath: 'img/',
           publicPath: '/assets/'
         }
+      },
+      {
+        test: /\.yml$/,
+        loader: 'ignore-loader'
       }
     ]
   },
@@ -66,6 +72,22 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: './_scripts/react.js', to: 'js/react.js' }
-    ])
+    ]),
+    new SWPrecacheWebpackPlugin({
+      staticFileGlobs: ['_site/**/*.{css,js}'],
+      stripPrefix: '_site/',
+      cacheId: 'labcoat-landing',
+      filepath: './service-worker.js',
+      runtimeCaching: [{
+        urlPattern: /(\/assets\/\w+\/(.+))|(\/img\/(.+))/,
+        handler: 'networkFirst'
+      }, {
+        urlPattern: /\/$/,
+        handler: 'networkFirst'
+      }],
+      minify: true,
+      handleFetch: true,
+      maximumFileSizeToCacheInBytes: 10485760
+    }),
   ]
 };

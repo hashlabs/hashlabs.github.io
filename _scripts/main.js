@@ -1,5 +1,12 @@
 import '../_sass/main.scss';
 
+/*
+  Imports all .yml files so webpack can watch any changes.
+  A loader is being used to ignore bundling these files.
+ */
+function requireAll(r) { r.keys().forEach(r); }
+requireAll(require.context('../_data/', true, /\.yml$/));
+
 $(document).ready(function() {
   var HashLabsNavbar = {
     init: function navbar() {
