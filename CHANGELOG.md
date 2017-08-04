@@ -20,6 +20,7 @@
 * React service animation ([@TheMightyPenguin])
 * Our work page ([@duranmla])
 * Webpack base config for JS and SCSS ([@TheMightyPenguin])
+* Process page animation video ([@duranmla])
 
 ### Fixed
 * Prevent content to broke after resolution change ([@duranmla])

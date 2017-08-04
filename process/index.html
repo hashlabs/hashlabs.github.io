@@ -39,10 +39,16 @@ layout: default
           </div>
           <div class="col-12 col-xl-6">
             <div class="text-center step-content-img">
-              <img src="{{ step.img | prepend: site.baseurl }}" alt="{{step.title}}">
+              <img class="img-fluid" src="{{ step.img | prepend: site.baseurl }}" alt="{{step.title}}">
+              <div class="step-desktop-animation text-center">
+                <video class="img-fluid video-{{step.slug}}">
+                  <source src="{{site.baseurl}}/videos/animation_our_process_{{step.slug}}.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
         </div>
+        {% include svg/decorative_process_step_{{forloop.index}}_to_{{forloop.index | plus:1}}.svg %}
       {% endfor %}
     </div>
   </div>

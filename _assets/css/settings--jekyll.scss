@@ -153,8 +153,7 @@
       };
 
       @include media-breakpoint-up(xl) {
-        margin: $spacer*4 auto $spacer;
-        @include process-decorative-line('{{site.url}}/img/decorative_process_step_1_to_2.svg', 600px, 150px);
+        display: none;
       };
     }
   }
@@ -169,8 +168,7 @@
       }
 
       @include media-breakpoint-up(xl) {
-        margin: 0 auto $spacer;
-        @include process-decorative-line('{{site.url}}/img/decorative_process_step_2_to_3.svg', 540px, 135px);
+        display: none;
       }
     }
   }
@@ -185,8 +183,7 @@
       }
 
       @include media-breakpoint-up(xl) {
-        margin: 0 auto;
-        @include process-decorative-line('{{site.url}}/img/decorative_process_step_3_to_4.svg', 350px, 160px);
+        display: none;
       }
     }
   }

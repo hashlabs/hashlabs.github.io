@@ -1,4 +1,80 @@
+$step-path-animation-speed:                2s;
+
+.step-path {
+  visibility: hidden;
+
+  &.animated {
+    visibility: visible;
+  }
+}
+
+/*
+  The technique used here is listed on the article:
+  https://css-tricks.com/svg-line-animation-works/ and
+  methods applied by vivus, besides, the numbers listed
+  on stroke-dasharray are caculated by using JS before
+  as suggested at:
+  https://css-tricks.com/svg-line-animation-works/#article-header-id-9
+ */
+
+.step-path-1 {
+  &.animated {
+    .fill {
+      stroke-dasharray: 737, 739;
+      stroke-dashoffset: 737;
+      animation: dash $step-path-animation-speed linear forwards;
+    }
+  }
+}
+
+.step-path-2 {
+  &.animated {
+    .fill {
+      stroke-dasharray: 648, 649;
+      stroke-dashoffset: 648;
+      animation: dash $step-path-animation-speed linear forwards;
+    }
+  }
+}
+
+.step-path-3 {
+  &.animated {
+    .fill {
+      stroke-dasharray: 464, 465;
+      stroke-dashoffset: 464;
+      animation: dash $step-path-animation-speed linear forwards;
+    }
+  }
+}
+
 .process {
+  .step {
+    & + .step-path {
+      display: none;
+    }
+
+    & + .step-path-1 {
+      @include media-breakpoint-up(xl) {
+        display: block;
+        margin: $spacer*4 auto $spacer;
+      };
+    }
+
+    & + .step-path-2 {
+      @include media-breakpoint-up(xl) {
+        display: block;
+        margin: 0 auto $spacer;
+      };
+    }
+
+    & + .step-path-3 {
+      @include media-breakpoint-up(xl) {
+        display: block;
+        margin: 0 auto;
+      };
+    }
+  }
+
   .step-content {
     @include media-breakpoint-up(xl) {
       max-width: 670px;
@@ -52,7 +128,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-      .alternated-row:nth-child(odd) {
+      .alternated-row:nth-of-type(odd) {
         .step-content {
           max-width: 550px;
           margin-right: 0;
@@ -72,5 +148,83 @@
     @include media-breakpoint-up(md) {
       margin-top: 0;
     }
+  }
+
+  .step-content-img {
+    .step-desktop-animation {
+      display: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+      > img {
+        display: none;
+      }
+
+      .step-desktop-animation {
+        display: block;
+      }
+    }
+  }
+}
+
+/*
+  To reserve the space where the videos are being placed
+  and avoid flick before load them we set a fixed height
+  on each of the videos for each step of the process
+*/
+
+$steps-slug-map: (
+  roadmapping: 378px,
+  agile: 428px,
+  ci: 207px,
+  analytics: 352px
+);
+
+@mixin process-animations-fixed-height($steps-map) {
+  @each $step in map-keys($steps-map) {
+    $step-height: map-get($steps-map, $step);
+    .video-#{$step} {
+      height: $step-height;
+    }
+  }
+}
+
+/*
+  This will prevent the videos of having an
+  unexpected black border when they are exported
+*/
+@mixin process-video-cover($step, $width: 3px) {
+  .step-#{$step} .step-desktop-animation {
+    position: relative;
+    &::before {
+      @include full-absolute-cover;
+      border: $width solid white;
+      content: '';
+      display: block;
+      @content;
+    }
+  }
+}
+
+.process {
+  $max-container-width: map-get($container-max-widths, xl);
+  /*
+    if we set the fixed height when the container starts to be fluid
+    we cannot guarantee that the space we reserve is actual the whole
+    space needed by the video.
+   */
+  @media (min-width: $max-container-width) {
+    @include process-animations-fixed-height($steps-slug-map);
+  }
+
+  @include process-video-cover(3, 5px) {
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  @include process-video-cover(1, 10px) {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
   }
 }
