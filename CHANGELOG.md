@@ -31,6 +31,7 @@
 ## Changed
 * Clean base to start new design development ([@duranmla])
 * README to include deploy staging info ([@duranmla])
+* Process animation trigger script ([@duranmla])
 
 ## [6.0] - 17/03/2017
 ### Added
