@@ -17,11 +17,13 @@
 * React Native service animation ([@TheMightyPenguin])
 * 404 page ([@duranmla])
 * Go service animation ([@TheMightyPenguin])
+* React service animation ([@TheMightyPenguin])
 
 ### Fixed
 * Prevent content to broke after resolution change ([@duranmla])
 * Fix button styles ([@carlows])
 * Corrected all links in home page ([@carlows])
+* Navbar overflow caused by `display: flex` ([@TheMightyPenguin])
 
 ## Changed
 * Clean base to start new design development ([@duranmla])

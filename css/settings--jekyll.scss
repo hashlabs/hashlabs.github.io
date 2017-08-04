@@ -41,9 +41,24 @@
   }
 }
 
-.service--react .custom-bullet-list-item::before {
+.service--react {
   {% assign react = site.services | where: 'name', 'react' | first %}
-  background-image: url({{ react.bullet_image | prepend: site.baseurl }});
+
+  .service-lead-background-image {
+    background-image: url({{ react.lead_background_image.sm | prepend: site.baseurl }});
+
+    @include media-breakpoint-up(md) {
+      background-image: url({{ react.lead_background_image.md | prepend: site.baseurl }});
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-image: url({{ react.lead_background_image.lg | prepend: site.baseurl }});
+    }
+  }
+
+  .custom-bullet-list-item::before {
+    background-image: url({{ react.bullet_image | prepend: site.baseurl }});
+  }
 }
 
 .service--react-native .custom-bullet-list-item::before {

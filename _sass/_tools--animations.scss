@@ -20,3 +20,22 @@
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+@mixin generate-react-atom-lines-animations($count) {
+  @for $i from 1 through $count {
+    @include keyframe-animation(react_line_#{$i}) {
+      from {
+        transform:
+          rotateZ(360deg / $count * $i)
+          rotateX(66deg)
+          rotateZ(0deg);
+      }
+      to {
+        transform:
+          rotateZ(360deg / $count * $i)
+          rotateX(66deg)
+          rotateZ(360deg);
+      }
+    }
+  }
+}

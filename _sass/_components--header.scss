@@ -21,6 +21,7 @@ $size--header-height:                       $size--navbar-brand-dimension + $nav
   @include padding-x($navbar-padding-x);
   display: flex;
   margin: 0 auto;
+  max-width: 100%;
   width: map-get($container-max-widths, xl);
 
   @include media-breakpoint-up(lg) {
@@ -84,7 +85,6 @@ body.navbar-expanded .navbar {
 
   @include media-breakpoint-down(sm) {
     bottom: 0;
-    display: flex;
     left: 0;
     overflow-y: auto;
     position: absolute;
@@ -96,6 +96,7 @@ body.navbar-expanded .navbar {
   }
 
   @include media-breakpoint-up(md) {
+    display: flex;
     justify-content: flex-end;
   }
 }
@@ -177,4 +178,3 @@ body.navbar-expanded .navbar {
     color: $color--primary;
   }
 }
-

@@ -1,0 +1,59 @@
+$dimension--react-atom-sm:                       215px;
+$dimension--react-atom-md:                       232px;
+$dimension--react-atom-lg:                       354px;
+$quantity--react-atom-lines:                     3;
+$time--react-atom-line-animation:                2.5s;
+
+.react-atom {
+  @include dimension($dimension--react-atom-sm);
+  color: $sky-blue;
+  perspective: 50000px;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    @include dimension($dimension--react-atom-md);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include dimension($dimension--react-atom-lg);
+  }
+
+  &-center {
+    @include transform-center();
+    background: currentColor;
+    border-radius: 100%;
+    height: 18.4%;
+    position: absolute;
+    width: 18.4%;
+  }
+
+  &-line {
+    border-left: $dimension--react-atom-sm / 25 solid;
+    border-radius: 100%;
+    border-right: $dimension--react-atom-sm / 65 solid;
+    border-top: $dimension--react-atom-sm / 25 solid transparent;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    @for $i from 1 through $quantity--react-atom-lines {
+      &:nth-child(#{$i}) {
+        animation: react_line_#{$i} $time--react-atom-line-animation linear infinite;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      border-left: $dimension--react-atom-md / 25 solid;
+      border-right: $dimension--react-atom-md / 65 solid;
+      border-top: $dimension--react-atom-md / 25 solid transparent;
+    }
+
+    @include media-breakpoint-up(lg) {
+      border-left: $dimension--react-atom-lg / 25 solid;
+      border-right: $dimension--react-atom-lg / 65 solid;
+      border-top: $dimension--react-atom-lg / 25 solid transparent;
+    }
+  }
+}
+
+@include generate-react-atom-lines-animations($quantity--react-atom-lines);
