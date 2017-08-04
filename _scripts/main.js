@@ -1,3 +1,5 @@
+import '../_sass/main.scss';
+
 $(document).ready(function() {
   var HashLabsNavbar = {
     init: function navbar() {

@@ -71,4 +71,55 @@ Just add an image property to the page frontmatter. For example:
 image: "/img/episode_preview_1200x630px.png"
 ```
 
+## Why do I need to run `yarn serve` and `yarn watch` at the same time?
+
+* `yarn serve` starts the jekyll server passing development config to it
+* `yarn watch` copies the `_assets` folder to `assets` and starts webpack in watch mode
+
+## Why was webpack added to the project?
+
+We needed autoprefixing of CSS files, so we tried adding some jekyll plugins, but as the
+available plugins were quite old and unmantained they took a long time to build ([40-60]+ secs).
+Aside from this, we also needed to add JS uglyfying and cache with Service Workers, and at
+the time of making this project Webpack was the better choice as it could handle all of this,
+and even more if needed.
+
+With webpack and some plugins we are able to add:
+* SCSS processing, minifying and autprefixing
+* JS uglyfying
+* A plugin to add sw-precache
+
+## How do I add a new script to the page?
+
+Add the script to the `_scripts` folder, then be sure to add it to the entry section
+on the webpack configuration (`webpack.config.js`) like so:
+
+```
+entry: {
+  // ... other scripts
+  'new-script': './_scripts/new-script.js'
+},
+```
+
+Then if you are already running `yarn watch`, cancel it and run it again.
+
+## I have this specific script that cant get uglified, what should I do?
+
+Go to the webpack configuration, and then add it to the `CopyWebpackPlugin` options
+like so:
+
+```
+new CopyWebpackPlugin([
+  { from: './_scripts/some-script.js', to: 'js/some-script.js' }
+])
+```
+
+In this project we use this to exlclude a file from webpack processing, as we need it
+as it's cause its a p5.js sketch.
+
+## Why do we have a `postcss.config.js` file?
+
+As we needed to handle autoprefixing, the most updated plugin was a postcss plugin,
+so we are only using the `postcss-loader` to handle autoprefixing.
+
 [polyglot]: https://github.com/untra/polyglot

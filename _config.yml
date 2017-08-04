@@ -48,7 +48,7 @@ markdown: kramdown
 # Polyglot settings
 languages: ["en", "es"]
 default_lang: "en"
-exclude_from_localization: ["css", "js", "images"]
+exclude_from_localization: ["assets"]
 parallel_localization: true
 
 # Collections
@@ -106,15 +106,16 @@ plugins:
 # SASS
 sass:
   style: compressed
-  sass_dir: _sass
 
 exclude:
   - 'CHANGELOG.md'
   - 'CNAME'
   - 'node_modules'
   - 'config.ru'
+  - 'node_modules'
   - 'FAQ.md'
   - 'firease.json'
   - 'Gemfile.lock'
   - 'Gemfile'
   - 'vendor'
+  - 'webpack.config.json'
