@@ -10,7 +10,6 @@ title: Hash Labs | Hassle free software engineering
 email: contact@hashlabs.com
 description: >
   We are a digital agency that builds products for the web and mobile.
-url: "https://www.hashlabs.com" # the base hostname & protocol for your site
 twitter_username: hashlabs
 github_username:  hashlabs
 thanks_url: https://www.hashlabs.com/thanks
@@ -18,7 +17,7 @@ permalink: /blog/:title
 
 # Images for SEO tags use baseurl
 # https://github.com/jekyll/jekyll-seo-tag/blob/6a373369e8318629685cca69635c2ab719fe731e/spec/jekyll_seo_tag_integration_spec.rb#L159
-logo: "/img/hashlabs_logo_200x200px.png"
+logo: "/assets/img/hashlabs_logo_200x200px.png"
 
 author:
   twitter: hashlabs
@@ -93,7 +92,7 @@ defaults:
       #
       # In case the image is smaller than 600x315 px, a small card will be shown.
       #
-      image: "/img/hashlabs_logo_1200x630px.png"
+      image: "/assets/img/hashlabs_logo_1200x630px.png"
       twitter_image_small: false
 
 # In case any plugin that generates content is added
@@ -114,8 +113,14 @@ exclude:
   - 'config.ru'
   - 'node_modules'
   - 'FAQ.md'
-  - 'firease.json'
+  - 'firebase.json'
+  - 'MAINTAINERS'
+  - 'package.json'
+  - 'yarn-error.log'
+  - 'yarn.lock'
+  - 'postcss.config.js'
   - 'Gemfile.lock'
   - 'Gemfile'
   - 'vendor'
-  - 'webpack.config.json'
+  - 'README.md'
+  - 'webpack.config.js'

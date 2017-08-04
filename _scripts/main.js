@@ -7,9 +7,9 @@ import '../_sass/main.scss';
 function requireAll(r) { r.keys().forEach(r); }
 requireAll(require.context('../_data/', true, /\.yml$/));
 
-$(document).ready(function() {
-  var HashLabsNavbar = {
-    init: function navbar() {
+$(document).ready(function initNavbar() {
+  const HashLabsNavbar = {
+    init() {
       // add class to navbar global container to handle further styles
       $('.navbar-toggler').on('click', function onClickNavbarToggler() {
         $('#navbar').toggleClass('expanded');

@@ -1,7 +1,7 @@
 contact_lead_image:
-  sm: "/img/bgn_hire_us_mobile.png"
-  md: "/img/bgn_hire_us_tablet.png"
-  lg: "/img/bgn_hire_us_desktop.png"
+  sm: "/assets/img/bgn_hire_us_mobile.png"
+  md: "/assets/img/bgn_hire_us_tablet.png"
+  lg: "/assets/img/bgn_hire_us_desktop.png"
 
 contact_form_inputs:
   name:

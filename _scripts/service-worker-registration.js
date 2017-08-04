@@ -4,11 +4,11 @@
       /*
         Import the url dynamically as we need liquid to get the full url for the service worker
        */
-      var swUrl = $('#service-worker-helper').data('sw-url');
+      const swUrl = $('#service-worker-helper').data('sw-url');
 
       navigator.serviceWorker.register(swUrl).then(function serviceWorkerRegistration(reg) {
         reg.onupdatefound = function () {
-          var installingWorker = reg.installing;
+          const installingWorker = reg.installing;
 
           installingWorker.onstatechange = function serviceWorkerChangeState() {
             switch (installingWorker.state) {

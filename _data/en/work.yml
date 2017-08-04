@@ -6,7 +6,7 @@ clients:
     slug: "wobe"
     title: "Wobe"
     content: "<p><i>Is an innovative approach to financial inclusion. Our award-winning mobile app puts the power of self-employment in the hands of anyone in Indonesia with an Android phone. </i></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>"
-    img: "/img/devices_wobe.png"
+    img: "/assets/img/devices_wobe.png"
     tools:
       go:
         text: "Go"
@@ -20,7 +20,7 @@ clients:
     content: "<p><i>Is a mobile app and website that provides recipe recommendations personalized to the individual's tastes, semantic recipe search, a digital recipe box, shopping list and one-hour grocery delivery.</i></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
-    img: "/img/devices_yummly.png"
+    img: "/assets/img/devices_yummly.png"
     tools:
       js:
         text: "JS"
@@ -32,7 +32,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     slug: "real_scout"
     title: "Real Scout"
     content: "<p><i>RealScout is dedicated to this vision of the future, where technology is an essential complement, but not a replacement for the real estate ecosystem that exists today.</i></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>"
-    img: "/img/devices_real_scout.png"
+    img: "/assets/img/devices_real_scout.png"
     tools:
       js:
         text: "JS"
@@ -44,7 +44,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     slug: "pleiq"
     title: "Pleiq"
     content: "<p><i>PleIQ is a new kind of educational toys that use Augmented Reality to stimulate multiple intelligences in preschoolers.</i></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>"
-    img: "/img/devices_pleiq.png"
+    img: "/assets/img/devices_pleiq.png"
     tools:
       react:
         text: "React"

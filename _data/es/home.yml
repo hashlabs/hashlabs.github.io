@@ -24,7 +24,7 @@ services:
 # Showcased Project section
 showcased_project:
   brand:
-    image: "/img/logo-pleiq-primary.png"
+    image: "/assets/img/logo-pleiq-primary.png"
     url: "#"
   title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
   check_project:
@@ -36,14 +36,14 @@ showcased_project:
 
 # Testimonies section
 testimonies:
-  - image: "/img/picture-david-feller.jpg"
+  - image: "/assets/img/picture-david-feller.jpg"
     author: "David Feller"
     position: "CEO"
     company:
       url: "#"
       text: "Yummly"
     quote: "\"These guys are amazing! My project was once just a paper idea, now it's a reality thanks to <b>Hash Labs</b>.\""
-  - image: "/img/picture-matt-ross.jpg"
+  - image: "/assets/img/picture-matt-ross.jpg"
     author: "Matt Ross"
     position: "Project Manager"
     company:
