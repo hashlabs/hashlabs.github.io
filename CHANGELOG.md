@@ -28,6 +28,7 @@
 * Fix button styles ([@carlows])
 * Corrected all links in home page ([@carlows])
 * Navbar overflow caused by `display: flex` ([@TheMightyPenguin])
+* Hide process path default after line has been filled ([@duranmla])
 
 ## Changed
 * Clean base to start new design development ([@duranmla])

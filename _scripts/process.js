@@ -36,6 +36,7 @@ $(document).ready(function () {
       setTimeout(function () {
         if (step) {
           step.play();
+          $(path).find('.default').hide();
         }
       }, CSSAnimationKeyframeSpeed);
     },
