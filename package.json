@@ -38,8 +38,8 @@
     "webpack-build": "yarn copy-assets && webpack",
     "jekyll-build-staging": "JEKYLL_ENV=staging jekyll build --config _config.yml,_config.staging.yml",
     "jekyll-build-production": "JEKYLL_ENV=production jekyll build --config _config.yml,_config.production.yml",
-    "build-staging": "yarn webpack-build && yarn jekyll-build-staging && webpack && yarn copy-service-worker",
-    "build-production": "yarn webpack-build && yarn jekyll-build-production && webpack && yarn copy-service-worker",
+    "build-staging": "yarn webpack-build && yarn jekyll-build-staging && webpack --env.prod && yarn copy-service-worker",
+    "build-production": "yarn webpack-build && yarn jekyll-build-production && webpack --env.prod && yarn copy-service-worker",
     "deploy": "yarn build-staging && firebase deploy"
   },
   "devDependencies": {
