@@ -1,7 +1,7 @@
 $(document).ready(function initContactForm() {
-  var HashLabsContactForm = {
-    init: function() {
-      this._contactForm();
+  const HashLabsContactForm = {
+    init() {
+      this.contactForm();
     },
 
     requiredFormFields: [
@@ -13,14 +13,14 @@ $(document).ready(function initContactForm() {
       { name: 'howDidYouHearAboutUs', feedback: $('#how-did-you-hear-radios') }
     ],
 
-    _getFormValues: function getFormValues() {
-      var values = {};
+    getFormValues() {
+      const values = {};
 
       $('#contact-form .form-control:not([type="radio"])').each(function saveFormValues() {
         values[this.name] = $(this).val();
       });
 
-      var checkedRadio = $('#contact-form .custom-control-input[type="radio"]:checked');
+      const checkedRadio = $('#contact-form .custom-control-input[type="radio"]:checked');
       checkedRadio.each(function getRadiosValues() {
         values[this.name] = $(this).val() || '';
       });
@@ -28,12 +28,12 @@ $(document).ready(function initContactForm() {
       return values;
     },
 
-    _validateForm: function validateForm(formValues) {
-      var requiredFormFields = this.requiredFormFields;
-      var isFormValid = true;
+    validateForm(formValues) {
+      const requiredFormFields = this.requiredFormFields;
+      let isFormValid = true;
 
       requiredFormFields.forEach(function checkRequiredFormFields(field) {
-        var isFieldValid = !!(typeof formValues[field.name] !== 'undefined' && formValues[field.name]);
+        const isFieldValid = !!(typeof formValues[field.name] !== 'undefined' && formValues[field.name]);
         isFormValid = isFormValid && isFieldValid;
 
         if (!isFieldValid) {
@@ -48,13 +48,13 @@ $(document).ready(function initContactForm() {
       return isFormValid;
     },
 
-    _contactForm: function contactForm() {
-      var validateForm = this._validateForm.bind(this);
-      var getFormValues = this._getFormValues.bind(this);
+    contactForm() {
+      const validateForm = this.validateForm.bind(this);
+      const getFormValues = this.getFormValues.bind(this);
 
       $('#contact-form').submit(function contactFormSubmitHandler(event) {
-        var formValues = getFormValues();
-        var isFormValid = validateForm(formValues);
+        const formValues = getFormValues();
+        const isFormValid = validateForm(formValues);
 
         if (!isFormValid) {
           // If form isn't valid, we prevent the submit event from happening
@@ -64,9 +64,9 @@ $(document).ready(function initContactForm() {
       });
 
       $('#contact-form .form-control').focus(function contactFormFocusHandler(event) {
-        var input = $(this);
-        var id = input.attr('id');
-        var label = $('label[for="' + id + '"]');
+        const input = $(this);
+        const id = input.attr('id');
+        const label = $('label[for="' + id + '"]');
 
         label
           .addClass('sliding-label--active')
@@ -76,9 +76,9 @@ $(document).ready(function initContactForm() {
       });
 
       $('#contact-form .form-control').blur(function contactFormBlurHandler(event) {
-        var input = $(this);
-        var id = input.attr('id');
-        var label = $('label[for="' + id + '"]');
+        const input = $(this);
+        const id = input.attr('id');
+        const label = $('label[for="' + id + '"]');
 
         if (!input.val()) {
           label

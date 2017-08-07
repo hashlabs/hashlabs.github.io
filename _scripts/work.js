@@ -1,16 +1,16 @@
-$(document).ready(function() {
-  var HashLabsWork = {
-    init: function init() {
+$(document).ready(function initWorkPage() {
+  const HashLabsWork = {
+    init() {
       this.bindVideoClientAnimation();
     },
-    bindVideoClientAnimation: function bindVideoClientAnimation() {
-      var playVideo = function playVideo() {
-        var video = $(this).find('video').get(0);
+    bindVideoClientAnimation() {
+      const playVideo = () => {
+        const video = $(this).find('video').get(0);
         video.play();
       };
 
-      var stopVideo = function stopVideo() {
-        var video = $(this).find('video').get(0);
+      const stopVideo = () => {
+        const video = $(this).find('video').get(0);
         video.pause();
         video.currentTime = 0;
       };

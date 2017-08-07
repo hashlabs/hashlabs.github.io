@@ -7,9 +7,9 @@ module Jekyll
     # 2. image has 2x and 3x versions that are named the same
     #
     # Example:
-    #   {{ "/img/some_image.png" | srcset }}
+    #   {{ "/assets/img/some_image.png" | srcset }}
     #   will output:
-    #   "/img/some_image.png 1x, /img/some_image@2x.png 2x, /img/some_image@3x.png 3x"
+    #   "/assets/img/some_image.png 1x, /assets/img/some_image@2x.png 2x, /assets/img/some_image@3x.png 3x"
     def srcset(image)
       splitted_name = image.split('.')
       image_name = splitted_name.first

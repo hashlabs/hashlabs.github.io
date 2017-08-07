@@ -1,6 +1,5 @@
-lead_background_video: "/videos/hashlabs_branding_video_480p.mp4"
-lead_background_image: "/img/hero_background.jpg"
+lead_background_image: "/assets/img/hero_background.jpg"
 showcased_project_images:
-  normal: "/img/showcased-project-background.jpg"
-  lg: "/img/showcased-project-background-lg.jpg"
-quotes_img: "/img/quotes.svg"
+  normal: "/assets/img/showcased-project-background.jpg"
+  lg: "/assets/img/showcased-project-background-lg.jpg"
+quotes_img: "/assets/img/quotes.svg"

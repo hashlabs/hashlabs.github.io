@@ -54,8 +54,8 @@ Use as shown below:
 
 ```
 <img
-  src="{{ '/img/some_image.png' | prepend: site.baseurl }}"
-  srcset="{{ '/img/some_image.png' | prepend: site.baseurl | srcset }}"
+  src="{{ '/assets/img/some_image.png' | prepend: site.baseurl }}"
+  srcset="{{ '/assets/img/some_image.png' | prepend: site.baseurl | srcset }}"
 >
 ```
 
@@ -68,7 +68,7 @@ Also take in mind this filter makes 2 assumptions:
 Just add an image property to the page frontmatter. For example:
 
 ```
-image: "/img/episode_preview_1200x630px.png"
+image: "/assets/img/episode_preview_1200x630px.png"
 ```
 
 Or perhaps things like "description" will be added in the same way:

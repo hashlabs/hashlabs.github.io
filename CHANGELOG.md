@@ -22,6 +22,7 @@
 * Our work page ([@duranmla])
 * Webpack base config for JS and SCSS ([@TheMightyPenguin])
 * Process page animation video ([@duranmla])
+* Webpack plugins for PurifyCSS and image optimizations ([@TheMightyPenguin])
 
 ### Fixed
 * Fix caching on assets from CDN ([@carlows])
@@ -32,6 +33,7 @@
 * Hide process path default after line has been filled ([@duranmla])
 * Target `_blank` for brand list logos ([@duranmla])
 * Header navigation animation timing ([@duranmla])
+* `_next` link on hire-us form ([@TheMightyPenguin])
 
 ## Changed
 * Clean base to start new design development ([@duranmla])

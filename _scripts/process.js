@@ -1,6 +1,6 @@
-$(document).ready(function () {
-  var HashLabsProcess = {
-    init: function init() {
+$(document).ready(function initProcessPage() {
+  const HashLabsProcess = {
+    init() {
       if (window.matchMedia("(min-width: 1200px)").matches) {
         this.setupPaths();
         this.setupSteps();
@@ -8,11 +8,12 @@ $(document).ready(function () {
         this.checkScrollToActivateStep();
       }
     },
-    setupPaths: function setupPaths() {
-      this.paths = $('.step-path').each(function traversePaths(i, p) { return p; });
+    setupPaths() {
+      const traversePaths = (i, p) => p;
+      this.paths = $('.step-path').each(traversePaths);
     },
-    setupSteps: function setupSteps() {
-      var that = this;
+    setupSteps() {
+      const that = this;
 
       // save all steps bottom offsets to use them to active animations properly
       this.stepsBottomOffsets = [];
@@ -24,35 +25,36 @@ $(document).ready(function () {
 
       this.setupSpecialSteps();
     },
-    playStep: function playStep(step) {
-      var CSSAnimationKeyframeSpeed = 2000;
-      var path = (step === 0) ? undefined : this.paths.get(step - 1);
-      var step = this.steps.get(step);
+    playStep(stepNumber) {
+      const CSSAnimationKeyframeSpeed = 2000;
+      const path = (stepNumber === 0) ? undefined : this.paths.get(stepNumber - 1);
+      const step = this.steps.get(stepNumber);
 
       if (path) {
         $(path).addClass('animated');
       }
 
-      setTimeout(function () {
+      setTimeout(function playStepTimeoutHandler() {
         if (step) {
           step.play();
           $(path).find('.default').hide();
         }
       }, CSSAnimationKeyframeSpeed);
     },
-    setupSpecialSteps: function setupSpecialSteps() {
+    setupSpecialSteps() {
       /*
         analytics is the first video and we want the cloud
         gets filled with color as soon as we call the play method
         over this but keeping the video with equal gaps between
         icon transitions so the loop gets satisfied
        */
-      var analyticsVideo = this.steps.filter('.video-analytics').get(0);
+      const analyticsVideo = this.steps.filter('.video-analytics').get(0);
       analyticsVideo.loop = true;
       analyticsVideo.currentTime = 0.4;
     },
-    checkScrollToActivateStep: function checkScrollToActivateStep() {
-      var boundary = ($(window).scrollTop() + $(window).height());
+    checkScrollToActivateStep() {
+      const boundary = ($(window).scrollTop() + $(window).height());
+
       if (boundary > this.stepsBottomOffsets[0]) {
         this.playStep(0);
       }
@@ -71,8 +73,8 @@ $(document).ready(function () {
         $(window).off('scroll');
       }
     },
-    bindScrollToSteps: function bindScrollToSteps() {
-      var that = this;
+    bindScrollToSteps() {
+      const that = this;
       $(window).on('scroll', that.checkScrollToActivateStep.bind(that));
     }
   };

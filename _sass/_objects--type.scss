@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6,
 
   &.mobile::before {
     $negative-space: ($spacer/2);
-    background: url('/img/icon-mobile.svg');
+    background: url('/assets/img/icon-mobile.svg');
     background-repeat: no-repeat;
     background-position: center;
 
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6,
   }
 
   &.desktop::before {
-    background: url('/img/icon-desktop.svg');
+    background: url('/assets/img/icon-desktop.svg');
     background-repeat: no-repeat;
     background-position: center;
   }

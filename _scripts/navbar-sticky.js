@@ -1,10 +1,10 @@
 $(document).ready(function() {
-  var HashLabsNavbar = {
-    init: function navbar() {
+  const HashLabsNavbar = {
+    init() {
       // detect user has scrolled
       $(window).scroll(function stickyNavbar() {
-        var scrollTop = $(window).scrollTop();
-        var scrolled = $('body').hasClass('scrolled');
+        const scrollTop = $(window).scrollTop();
+        const scrolled = $('body').hasClass('scrolled');
 
         if (!scrolled && (scrollTop > 0)) {
           $('body').addClass('scrolled');

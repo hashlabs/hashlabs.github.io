@@ -1,6 +1,6 @@
 $(document).ready(function initReactNativeAnimation() {
-  function getParticlesCount() {
-    var width = window.innerWidth;
+  const getParticlesCount = () => {
+    const width = window.innerWidth;
     if (width <= 767) {
       return 20;
     } else if (width <= 1023) {
@@ -15,7 +15,7 @@ $(document).ready(function initReactNativeAnimation() {
     Check this page for the available options:
     https://github.com/VincentGarreau/particles.js/
    */
-  var particleJSOptions = {
+  const particleJSOptions = {
     "particles": {
       "number": {
         "value": getParticlesCount(),

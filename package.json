@@ -7,43 +7,48 @@
   "license": "MIT",
   "deploy": "yarn build && firebase deploy",
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "bootstrap": "4.0.0-alpha.6"
+  },
+  "scripts": {
+    "copy-service-worker": "rm _site/service-worker.js && cp service-worker.js _site/service-worker.js",
+    "copy-main-styles": "rm _site/assets/css/main.css && cp assets/css/main.css _site/assets/css/main.css",
+    "post-build": "yarn copy-service-worker && yarn copy-main-styles",
+    "watch": "webpack --watch",
+    "serve": "JEKYLL_ENV=development jekyll serve --config _config.yml,_config.development.yml",
+    "webpack-build": "webpack",
+    "jekyll-build-staging": "JEKYLL_ENV=staging jekyll build --config _config.yml,_config.staging.yml",
+    "jekyll-build-production": "JEKYLL_ENV=production jekyll build --config _config.yml,_config.production.yml",
+    "build-staging": "yarn webpack-build && yarn jekyll-build-staging && webpack --env.prod && yarn post-build",
+    "build-production": "yarn webpack-build && yarn jekyll-build-production && webpack --env.prod && yarn post-build",
+    "deploy": "yarn build-staging && firebase deploy"
+  },
+  "devDependencies": {
     "autoprefixer": "^7.1.2",
-    "bootstrap": "4.0.0-alpha.6",
-    "command-line-args": "^4.0.5",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.2",
     "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "glob-all": "^3.1.0",
-    "img-loader": "^2.0.0",
+    "ignore-loader": "^0.1.2",
+    "imagemin-webpack-plugin": "^1.5.0-beta.0",
     "node-sass": "^4.5.3",
     "optimize-css-assets-webpack-plugin": "^1.3.2",
     "postcss-loader": "^2.0.6",
-    "purify-css": "^1.2.2",
+    "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1",
+    "sw-precache-webpack-plugin": "^0.11.4",
     "uglify-js": "^3.0.10",
     "uglifyjs-webpack-plugin": "^0.4.3",
     "url-loader": "^0.5.8",
     "webpack": "^2.5.1"
-  },
-  "scripts": {
-    "copy-assets": "rm -rf assets && rsync _assets/ assets/ -av",
-    "copy-service-worker": "rm _site/service-worker.js && cp service-worker.js _site/service-worker.js",
-    "watch": "yarn copy-assets && webpack --watch",
-    "serve": "JEKYLL_ENV=development jekyll serve --config _config.yml,_config.development.yml",
-    "webpack-build": "yarn copy-assets && webpack",
-    "jekyll-build-staging": "JEKYLL_ENV=staging jekyll build --config _config.yml,_config.staging.yml",
-    "jekyll-build-production": "JEKYLL_ENV=production jekyll build --config _config.yml,_config.production.yml",
-    "build-staging": "yarn webpack-build && yarn jekyll-build-staging && webpack --env.prod && yarn copy-service-worker",
-    "build-production": "yarn webpack-build && yarn jekyll-build-production && webpack --env.prod && yarn copy-service-worker",
-    "deploy": "yarn build-staging && firebase deploy"
-  },
-  "devDependencies": {
-    "ignore-loader": "^0.1.2",
-    "sw-precache-webpack-plugin": "^0.11.4"
   }
 }

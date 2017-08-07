@@ -116,18 +116,18 @@
 }
 
 .desktop-contour {
-  @include services-contour-decoration('{{site.url}}/img/icon_imac_contour_mobile.svg', auto 100%);
+  @include services-contour-decoration('{{site.url}}/assets/img/icon_imac_contour_mobile.svg', auto 100%);
 
   @include media-breakpoint-up(md) {
-   @include services-contour-decoration('{{site.url}}/img/icon_imac_contour.svg');
+   @include services-contour-decoration('{{site.url}}/assets/img/icon_imac_contour.svg');
   }
 }
 
 .mobile-contour {
-  @include services-contour-decoration('{{site.url}}/img/icon_iphone_contour_mobile.svg', auto 100%);
+  @include services-contour-decoration('{{site.url}}/assets/img/icon_iphone_contour_mobile.svg', auto 100%);
 
   @include media-breakpoint-up(md) {
-   @include services-contour-decoration('{{site.url}}/img/icon_iphone_contour.svg');
+   @include services-contour-decoration('{{site.url}}/assets/img/icon_iphone_contour.svg');
   }
 }
 
@@ -145,11 +145,11 @@
 .process {
   .step-1 {
     &::after {
-      @include process-decorative-line('{{site.url}}/img/decorative_process_step_1_to_2_mobile.svg', 195px, 100px);
+      @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_1_to_2_mobile.svg', 195px, 100px);
       margin: $spacer auto;
 
       @include media-breakpoint-up(md) {
-        @include process-decorative-line('{{site.url}}/img/decorative_process_step_1_to_2_tablet.svg', 340px, 100px);
+        @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_1_to_2_tablet.svg', 340px, 100px);
       };
 
       @include media-breakpoint-up(xl) {
@@ -160,11 +160,11 @@
 
   .step-2 {
     &::after {
-      @include process-decorative-line('{{site.url}}/img/decorative_process_step_2_to_3_mobile.svg', 180px, 100px);
+      @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_2_to_3_mobile.svg', 180px, 100px);
       margin: $spacer auto;
 
       @include media-breakpoint-up(md) {
-        @include process-decorative-line('{{site.url}}/img/decorative_process_step_2_to_3_tablet.svg', 215px, 115px);
+        @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_2_to_3_tablet.svg', 215px, 115px);
       }
 
       @include media-breakpoint-up(xl) {
@@ -175,11 +175,11 @@
 
   .step-3 {
     &::after {
-      @include process-decorative-line('{{site.url}}/img/decorative_process_step_3_to_4_mobile.svg', 145px, 65px);
+      @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_3_to_4_mobile.svg', 145px, 65px);
       margin: $spacer auto;
 
       @include media-breakpoint-up(md) {
-        @include process-decorative-line('{{site.url}}/img/decorative_process_step_3_to_4_tablet.svg', 340px, 100px);
+        @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_3_to_4_tablet.svg', 340px, 100px);
       }
 
       @include media-breakpoint-up(xl) {

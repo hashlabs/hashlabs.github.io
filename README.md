@@ -8,7 +8,7 @@ Lab Coat is the www.hashlabs.com website.
 2. `yarn` (or `npm install`)
 3. `bundle install`
 4. `rbenv rehash`
-5. `cp _config.development.example.yml _config.development.yml`, then update that file variable values
+5. `cp _config.example.yml _config.development.yml`, then update the values of the variables on that file
 5. Run `yarn serve` and `yarn watch` at the same time to serve and watch for changes
 
 ## SASS

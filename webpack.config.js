@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
@@ -19,8 +20,12 @@ module.exports = function (env) {
     context: path.resolve(__dirname),
     entry: {
       'contact-form': './_scripts/contact-form.js',
-      go: './_scripts/go.js',
-      main: './_scripts/main.js',
+      /*
+        We include babel babel-polyfill only on our main script file,
+        more on this here:
+        http://babeljs.io/docs/usage/polyfill/
+       */
+      main: ['babel-polyfill', './_scripts/main.js'],
       'navbar-sticky': './_scripts/navbar-sticky.js',
       'react-native': './_scripts/react-native.js',
       'process': './_scripts/process.js',
@@ -33,6 +38,13 @@ module.exports = function (env) {
     },
     module: {
       rules: [
+        {
+          test: /\.js$/,
+          exclude: /(node_modules)/,
+          use: {
+            loader: 'babel-loader'
+          }
+        },
         {
           test: /\.scss$/,
           use: extractStyles.extract({
@@ -50,23 +62,22 @@ module.exports = function (env) {
           }
         },
         {
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          loader: 'file-loader',
-          query: {
-            name: '[name].[ext]',
-            outputPath: 'img/',
-            publicPath: '/assets/'
-          }
-        },
-        {
           test: /\.yml$/,
           loader: 'ignore-loader'
         }
       ]
     },
     plugins: [
-      new UglifyJSPlugin(),
+      new UglifyJSPlugin({
+        exclude: /(main\.js)/
+      }),
       extractStyles,
+      new PurifyCSSPlugin({
+        paths: glob.sync([
+          path.join(__dirname, './_site/**/*.html'),
+          path.join(__dirname, './_site/**/*.js')
+        ])
+      }),
       new OptimizeCssAssetsPlugin({
         assetNameRegExp: /main\.css$/g,
         cssProcessor: require('cssnano'),
@@ -74,8 +85,15 @@ module.exports = function (env) {
         canPrint: true
       }),
       new CopyWebpackPlugin([
-        { from: './_scripts/react.js', to: 'js/react.js' }
+        { from: './_scripts/react.js', to: 'js/react.js' },
+        { from: './_assets/' }
       ]),
+      new ImageminPlugin({
+        test: /\.(jpeg|jpg|png|gif|svg)$/i,
+        optipng: {
+          optimizationLevel: 7
+        }
+      }),
       new SWPrecacheWebpackPlugin({
         staticFileGlobs: precacheFilePatterns,
         stripPrefix: '_site/',
