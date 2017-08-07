@@ -75,8 +75,13 @@ $size--mobile-toggler-strip-width-step:          $spacer*0.375;
  */
 
 .mobile-toggler-strip {
-  -webkit-transition: background 0s 0.216s;
-          transition: background 0s 0.216s;
+  /*
+    This transition rule gets executed when the button come from
+    close state to open.
+    property | transition duration | delay
+   */
+  -webkit-transition: background 0.216s 0s;
+          transition: background 0.216s 0s;
 
   &::before {
     -webkit-transition-property: top, -webkit-transform;
@@ -92,8 +97,8 @@ $size--mobile-toggler-strip-width-step:          $spacer*0.375;
   &::after {
     -webkit-transition-duration: 0.216s, 0.216s;
             transition-duration: 0.216s, 0.216s;
-    -webkit-transition-delay: 0.216s, 0s;
-            transition-delay: 0.216s, 0s;
+    -webkit-transition-delay: 0s, 0s;
+            transition-delay: 0s, 0s;
   }
 }
 
@@ -101,6 +106,13 @@ $size--mobile-toggler-strip-width-step:          $spacer*0.375;
 [aria-expanded="true"] .mobile-toggler .mobile-toggler-strip,
 .expanded .mobile-toggler .mobile-toggler-strip, {
   background: none !important;
+  /*
+    This transition rule gets executed when the button come from
+    open state to closed.
+    property | transition duration | delay
+   */
+  -webkit-transition: background 0.216s 0s;
+          transition: background 0.216s 0s;
 
   &::before,
   &::after {
