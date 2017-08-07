@@ -25,7 +25,8 @@
 * Webpack plugins for PurifyCSS and image optimizations ([@TheMightyPenguin])
 
 ### Fixed
-* caching on assets from CDN ([@carlows])
+* Fix buttons width ([@carlows])
+* Fix caching on assets from CDN ([@carlows])
 * Prevent content to broke after resolution change ([@duranmla])
 * button styles ([@carlows])
 * Corrected all links in home page ([@carlows])

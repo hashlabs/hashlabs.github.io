@@ -36,7 +36,7 @@
 .btn {
   @include padding-y($spacer);
   cursor: pointer;
-  width: 180px;
+  min-width: 180px;
   font-weight: 600;
 
   @include media-breakpoint-up(lg) {
@@ -45,13 +45,13 @@
   }
 
   &-sm {
-    width: 140px;
+    min-width: 140px;
     @include padding-x($spacer*0.25);
   }
 }
 
 @include media-breakpoint-up(lg) {
   .btn, .btn-sm {
-    width: 215px;
+    min-width: 215px;
   }
 }
