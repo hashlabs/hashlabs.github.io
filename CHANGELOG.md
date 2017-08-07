@@ -30,6 +30,7 @@
 * Navbar overflow caused by `display: flex` ([@TheMightyPenguin])
 * Hide process path default after line has been filled ([@duranmla])
 * Target `_blank` for brand list logos ([@duranmla])
+* Header navigation animation timing ([@duranmla])
 
 ## Changed
 * Clean base to start new design development ([@duranmla])
