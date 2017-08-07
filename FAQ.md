@@ -63,12 +63,18 @@ Also take in mind this filter makes 2 assumptions:
 1. Image path/name should only have 1 dot in it (the one just before the extension)
 2. Image should have 2 other images named like it, but with @2x and @3x just before the extension
 
-## How do I add images for Facebook and Twitter for an specific page?
+## How do I add images or other data for Facebook and Twitter within an specific page?
 
 Just add an image property to the page frontmatter. For example:
 
 ```
 image: "/img/episode_preview_1200x630px.png"
+```
+
+Or perhaps things like "description" will be added in the same way:
+
+```
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod..."
 ```
 
 ## Why do I need to run `yarn serve` and `yarn watch` at the same time?
