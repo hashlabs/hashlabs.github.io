@@ -24,6 +24,7 @@
 * Process page animation video ([@duranmla])
 
 ### Fixed
+* Fix caching on assets from CDN ([@carlows])
 * Prevent content to broke after resolution change ([@duranmla])
 * Fix button styles ([@carlows])
 * Corrected all links in home page ([@carlows])

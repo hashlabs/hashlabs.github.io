@@ -1,6 +1,6 @@
-<script defer src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script defer src="https://code.jquery.com/jquery-3.1.1.min.js?external=true"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js?external=true" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js?external=true" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <!-- url for the service worker, having in mind the baseurl, DON'T remove the white space in data-sw-url -->
 <div id="service-worker-helper" data-sw-url="{{ '/service-worker.js' | prepend: site.baseurl }}"></div>
 <script defer src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
@@ -11,12 +11,12 @@
   {% when '/' %}
     <script defer src="{{ "/assets/js/navbar-sticky.js" | prepend: site.baseurl }}"></script>
   {% when '/services/react/' %}
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js?external=true"></script>
     <script defer src="{{ "/assets/js/react.js" | prepend: site.baseurl }}"></script>
   {% when '/process/' %}
     <script defer src="{{ "/assets/js/process.js" | prepend: site.baseurl }}"></script>
   {% when '/services/react-native/' %}
-    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js?external=true"></script>
     <script defer src="{{ "/assets/js/react-native.js" | prepend: site.baseurl }}"></script>
   {% when '/services/go/' %}
     <script defer src="{{ "/assets/js/go.js" | prepend: site.baseurl }}"></script>

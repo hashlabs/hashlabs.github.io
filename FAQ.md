@@ -122,4 +122,16 @@ as it's cause its a p5.js sketch.
 As we needed to handle autoprefixing, the most updated plugin was a postcss plugin,
 so we are only using the `postcss-loader` to handle autoprefixing.
 
+## Why do assets fetch from CDN have a external=true parameter?
+
+This is because we're using a serviceworker to cache all the site assets when they get fetch. Having this property makes it easier to match all the urls with a REGEX pattern.
+
+In case you include any external assets that are needed for UI, include this property as well.
+
+E.G:
+
+```javascript
+<script defer src="https://code.jquery.com/jquery-3.1.1.min.js?external=true"></script>
+```
+
 [polyglot]: https://github.com/untra/polyglot
