@@ -68,9 +68,7 @@ module.exports = function (env) {
       ]
     },
     plugins: [
-      new UglifyJSPlugin({
-        exclude: /(main\.js)/
-      }),
+      new UglifyJSPlugin(),
       extractStyles,
       new PurifyCSSPlugin({
         paths: glob.sync([

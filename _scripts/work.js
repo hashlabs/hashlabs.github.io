@@ -4,12 +4,12 @@ $(document).ready(function initWorkPage() {
       this.bindVideoClientAnimation();
     },
     bindVideoClientAnimation() {
-      const playVideo = () => {
+      const playVideo = function playVideo() {
         const video = $(this).find('video').get(0);
         video.play();
       };
 
-      const stopVideo = () => {
+      const stopVideo = function stopVideo() {
         const video = $(this).find('video').get(0);
         video.pause();
         video.currentTime = 0;
