@@ -17,11 +17,12 @@
     "post-build": "yarn copy-service-worker && yarn copy-main-styles",
     "watch": "webpack --watch",
     "serve": "JEKYLL_ENV=development jekyll serve --config _config.yml,_config.development.yml",
-    "webpack-build": "webpack",
+    "jekyll-build-development": "JEKYLL_ENV=development jekyll build --config _config.yml,_config.development.yml",
     "jekyll-build-staging": "JEKYLL_ENV=staging jekyll build --config _config.yml,_config.staging.yml",
     "jekyll-build-production": "JEKYLL_ENV=production jekyll build --config _config.yml,_config.production.yml",
-    "build-staging": "yarn webpack-build && yarn jekyll-build-staging && webpack --env.prod && yarn post-build",
-    "build-production": "yarn webpack-build && yarn jekyll-build-production && webpack --env.prod && yarn post-build",
+    "build-development": "webpack && yarn jekyll-build-development && webpack && yarn post-build",
+    "build-staging": "webpack && yarn jekyll-build-staging && webpack --env.prod && yarn post-build",
+    "build-production": "webpack && yarn jekyll-build-production && webpack --env.prod && yarn post-build",
     "deploy": "yarn build-staging && firebase deploy"
   },
   "devDependencies": {

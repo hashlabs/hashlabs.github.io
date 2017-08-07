@@ -2,7 +2,7 @@
 
 ### Added
 * Runtime caching to load assets offline ([@carlows])
-* Added SEO metadata and Sitemap ([@carlows])
+* SEO metadata and Sitemap ([@carlows])
 * Rails lead section ([@carlows])
 * Service page ([@duranmla])
 * Website Footer ([@carlows])
@@ -12,7 +12,7 @@
 * Font smoothing ([@TheMightyPenguin])
 * Services pages base layout ([@TheMightyPenguin])
 * Home page ([@carlows])
-* Added enviroment config files ([@TheMightyPenguin])
+* enviroment config files ([@TheMightyPenguin])
 * Hire us page contact form, and thanks page ([@TheMightyPenguin])
 * Process page ([@duranmla])
 * React Native service animation ([@TheMightyPenguin])
@@ -25,15 +25,16 @@
 * Webpack plugins for PurifyCSS and image optimizations ([@TheMightyPenguin])
 
 ### Fixed
-* Fix caching on assets from CDN ([@carlows])
+* caching on assets from CDN ([@carlows])
 * Prevent content to broke after resolution change ([@duranmla])
-* Fix button styles ([@carlows])
+* button styles ([@carlows])
 * Corrected all links in home page ([@carlows])
 * Navbar overflow caused by `display: flex` ([@TheMightyPenguin])
 * Hide process path default after line has been filled ([@duranmla])
 * Target `_blank` for brand list logos ([@duranmla])
 * Header navigation animation timing ([@duranmla])
 * `_next` link on hire-us form ([@TheMightyPenguin])
+* Bug with JS script of work page ([@TheMightyPenguin])
 
 ## Changed
 * Clean base to start new design development ([@duranmla])
