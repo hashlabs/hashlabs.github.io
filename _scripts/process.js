@@ -18,7 +18,6 @@ $(document).ready(function initProcessPage() {
       // save all steps bottom offsets to use them to active animations properly
       this.stepsBottomOffsets = [];
       this.steps = $('video').each(function traverseVideos(i, v) {
-        v.loop = true;
         that.stepsBottomOffsets.push($(v).offset().top + $(v).height());
         return v;
       });
@@ -49,7 +48,6 @@ $(document).ready(function initProcessPage() {
         icon transitions so the loop gets satisfied
        */
       const analyticsVideo = this.steps.filter('.video-analytics').get(0);
-      analyticsVideo.loop = true;
       analyticsVideo.currentTime = 0.4;
     },
     checkScrollToActivateStep() {
