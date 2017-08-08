@@ -140,4 +140,15 @@ E.G:
 <script defer src="https://code.jquery.com/jquery-3.1.1.min.js?external=true"></script>
 ```
 
+## How to add a title in a page?
+
+Just go to the folder where the page is located, for example for the index page it would be `/home`.
+
+Within the translated files `-en` and `-es`, add a title key with your title:
+
+```
+title: "Home" # Will be used as title for this page
+description: "Home description" # Will be used as description for this page
+```
+
 [polyglot]: https://github.com/untra/polyglot
