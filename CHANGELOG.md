@@ -38,6 +38,7 @@
 * Bug with JS script of work page ([@TheMightyPenguin])
 
 ## Changed
+* Refactored files so page front-matter is translated ([@carlows])
 * Clean base to start new design development ([@duranmla])
 * README to include deploy staging info ([@duranmla])
 * Process animation trigger script ([@duranmla])
