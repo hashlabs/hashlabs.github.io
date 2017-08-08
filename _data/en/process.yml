@@ -3,20 +3,20 @@ steps:
   roadmapping:
     slug: "roadmapping"
     title: "Roadmapping"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    content: "We start every project with one or two weeks of planning where we layout the work we need to do and estimate how much time it will take. Also, we start with the initial mockups and flows for the application before writing the first line of code.<br/><br/>The goal of this phase is to have a clear sense of what success means for this project and have everyone (both our team and our clients) with that clear idea on mind."
     img: "/assets/img/image_roadmap.svg"
   agile:
     slug: "agile"
     title: "Design and Agile development"
-    content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    content: "Here we start developing the application, we take designs and turn into completely functional components. We deliver new features continuously as they are ready to be tested, our methodology allows us to have working code and a place where everyone can check how it works from day one."
     img: "/assets/img/image_design_development.svg"
   ci:
     slug: "ci"
     title: "Continuous integration and delivery"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    content: "The practice of writing well-tested code is built into our DNA, and we set up systems that allow us to do this in an automated way. Once a feature is integrated is deployed and available for you to use it right away."
     img: "/assets/img/image_continuos_integrations_empty.svg"
   analytics:
     slug: "analytics"
     title: "Analytics and performance monitoring"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    content: "Project success is our goal, not feature complete. We setup analytics and performance monitoring so you can know both if your application is doing good and if it's healthy at all times. We love relationships with clients that last, and we will assist you in both making your application great and scale as your grow."
     img: "/assets/img/image_analitycs_color.svg"
