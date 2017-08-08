@@ -1,27 +1,55 @@
-lead_title: "This is what we do best!"
-lead_subtitle: "We’re specialists in Web and Mobile Development"
+lead_title: "Some of our latest projects"
 tools_text: "Technologies we used"
 clients:
+  pleiq:
+    slug: "pleiq"
+    title: "PleIQ"
+    content: "<p><i>PleIQ is a new kind of educational toys that use Augmented Reality to stimulate multiple intelligences in preschoolers.</i></p><p>We created a set of applications that allowed them to gather and process data from their mobile game and translate those to metrics and dashboard that parents and schools can use to know better how their children learning is improving across time.</p>"
+    img: "/assets/img/devices_pleiq.png"
+    tools:
+      react:
+        text: "React"
+        slug: "react"
+      rails:
+        text: "Rails"
+        slug: "rails"
+      js:
+        text: "JS"
+        slug: "js"
+      html:
+        text: "HTML/CSS"
+        slug: "html"
   wobe:
     slug: "wobe"
     title: "Wobe"
-    content: "<p><i>Is an innovative approach to financial inclusion. Our award-winning mobile app puts the power of self-employment in the hands of anyone in Indonesia with an Android phone. </i></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>"
+    content: "<p><i>Is an innovative approach to financial inclusion. Our award-winning mobile app puts the power of self-employment in the hands of anyone in Indonesia with an Android phone.</i></p><p>We developed their MVP that allows people to sell Pulsa (Airtime) and start a small business. With Go and RabbitMQ we created a real-time architecture that has low latency even when connecting to external services.</p>"
     img: "/assets/img/devices_wobe.png"
     tools:
       go:
-        text: "Go"
+        text: "go"
         slug: "go"
       react_native:
         text: "react-native"
         slug: "react_native"
+      rabbitmq:
+        text: "rabbitmq"
+        slug: "rabbitmq"
+      rails:
+        text: "rails"
+        slug: "rails"
+      aws:
+        text: "aws"
+        slug: "aws"
   yummly:
+    hide: true
     slug: "yummly"
     title: "Yummly"
-    content: "<p><i>Is a mobile app and website that provides recipe recommendations personalized to the individual's tastes, semantic recipe search, a digital recipe box, shopping list and one-hour grocery delivery.</i></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    content: "<p><i>Is a mobile app and website that provides recipe recommendations personalized to the individual's tastes, semantic recipe search, a digital recipe box, shopping list and one-hour grocery delivery.</i></p><p>We developed an application to streamline the registration process of their API offering (<a target='_blank' href='//developer.yummly.com'>developer.yummly.com</a>) by combining multiple third-party services like payment processor and API management tools into one registration flow; this allowed them to pre qualify new users faster and decrease non-paying ones.</p>"
     img: "/assets/img/devices_yummly.png"
     tools:
+      rails:
+        text: "rails"
+        slug: "rails"
       js:
         text: "JS"
         slug: "js"
@@ -29,6 +57,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         text: "HTML/CSS"
         slug: "html"
   real_scout:
+    hide: true
     slug: "real_scout"
     title: "Real Scout"
     content: "<p><i>RealScout is dedicated to this vision of the future, where technology is an essential complement, but not a replacement for the real estate ecosystem that exists today.</i></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>"
@@ -40,15 +69,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       html:
         text: "HTML/CSS"
         slug: "html"
-  pleiq:
-    slug: "pleiq"
-    title: "Pleiq"
-    content: "<p><i>PleIQ is a new kind of educational toys that use Augmented Reality to stimulate multiple intelligences in preschoolers.</i></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>"
-    img: "/assets/img/devices_pleiq.png"
-    tools:
-      react:
-        text: "React"
-        slug: "react"
-      rails:
-        text: "Rails"
-        slug: "rails"

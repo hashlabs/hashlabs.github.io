@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 ### Added
+* English copy ([@orlando])
 * Runtime caching to load assets offline ([@carlows])
 * SEO metadata and Sitemap ([@carlows])
 * Rails lead section ([@carlows])

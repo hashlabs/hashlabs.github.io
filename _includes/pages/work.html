@@ -13,6 +13,10 @@
     <div class="alternated-rows">
       {% for clients in work.clients limit: 3 %}
         {% assign client = clients[1] %}
+
+        {% if client.hide == true %}
+          {% continue %}
+        {% endif %}
         <div class="row align-items-center alternated-row client client-{{forloop.index}} {{client.slug}}">
           <div class="col-12 col-xl-6">
             <div class="row">
@@ -50,7 +54,7 @@
             <div class="text-center client-content-img">
               <img class="img-fluid" src="{{ client.img | prepend: site.baseurl }}" alt="{{client.title}}">
               <div class="client-desktop-animation">
-                <video height="335" loop>
+                <video height="335">
                   <source src="{{site.baseurl}}/assets/videos/animation_our_work_{{client.slug}}.mp4" type="video/mp4">
                 </video>
               </div>

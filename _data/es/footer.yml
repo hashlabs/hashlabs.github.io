@@ -1,7 +1,7 @@
-lead: "Nos encantaría trabajar contigo."
-sublead: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+lead: "Empieza un proyecto con nosostros hoy."
+sublead: "¿Necesitas un MVP para tu idea o tienes un producto que quieres crecer? Podemos ayudar."
 cta:
-  text: "Vamos!"
+  text: "Contrátanos"
   url: "/hire-us"
 
 copyright: "Hash Labs LLC © Todos los derechos reservados - Hecho con &hearts; por Hash Labs LLC"
@@ -15,8 +15,10 @@ links:
         url: "/work"
       - text: "Nuestros servicios"
         url: "/services"
-      - text: "Contratanos"
+      - text: "Contrátanos"
         url: "/hire-us"
+      - text: "Inglés"
+        url: "https://www.hashlabs.com"
   - title: "SERVICIOS"
     links:
       - text: "React"
