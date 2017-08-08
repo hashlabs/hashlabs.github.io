@@ -38,11 +38,11 @@ testimonies:
     company:
       url: "https://wobe.io"
       text: "Wobe"
-    quote: '"They were our first team, pushed our MVP out of the door and helped our new hires to get up to speed. They work is outstanding."'
+    quote: '"Ellos fueron nuestro primer equipo, sacaron nuestro MVP al mercado y ayudaron a nuestros nuevos empleados a ponerse al día. Su trabajo es excepcional"'
   - image: "/assets/img/picture-matt-ross.jpg"
     author: "Matt Ross"
     position: "PM"
     company:
       url: "https://fundingcircle.com/us"
       text: "Funding Circle"
-    quote: "\"<b>Hash Labs</b> takes the time necessary to make sure their work is understood, documented and clearly communicated across all necessary channels. It was a pleasure to work with them.\""
+    quote: "\"<b>Hash Labs</b> se toma el tiempo necesario para asegurarse de que su trabajo es entendido, documentado y claramente comunicado a través de todos los canales necesarios. Fue un placer trabajar con ellos.\""

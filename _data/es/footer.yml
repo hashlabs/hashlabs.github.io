@@ -1,5 +1,5 @@
 lead: "Empieza un proyecto con nosostros hoy."
-sublead: "¿Necesitas un MVP para tu idea o tienes un producto que quieres crecer? Podemos ayudar."
+sublead: "¿Necesitas un MVP para tú idea o tienes un producto que quieres crecer? Podemos ayudar."
 cta:
   text: "Contrátanos"
   url: "/hire-us"
@@ -29,7 +29,7 @@ links:
         url: "/services/ruby-on-rails"
       - text: "Go"
         url: "/services/go"
-  - title: "CONECTATE"
+  - title: "CONÉCTATE"
     links:
       - text: "Blog"
         url: "http://blog.hashlabs.com/"
