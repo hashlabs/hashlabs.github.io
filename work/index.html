@@ -17,6 +17,10 @@ layout: default
     <div class="alternated-rows">
       {% for clients in work.clients limit: 3 %}
         {% assign client = clients[1] %}
+
+        {% if client.hide == true %}
+          {% continue %}
+        {% endif %}
         <div class="row align-items-center alternated-row client client-{{forloop.index}} {{client.slug}}">
           <div class="col-12 col-xl-6">
             <div class="row">

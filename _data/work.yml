@@ -11,3 +11,7 @@ technologies:
     img: /assets/img/icon_label_react_native.svg
   react:
     img: /assets/img/icon_label_react.svg
+  rabbitmq:
+    img: /assets/img/icon_label_rabbitmq.svg
+  aws:
+    img: /assets/img/icon_label_aws.svg

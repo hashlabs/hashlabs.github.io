@@ -1,7 +1,7 @@
-lead: "We'd love to work with you."
-sublead: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+lead: "Start a project with us today."
+sublead: "Need an MVP for your idea or have a working product that needs to grow? We can help!"
 cta:
-  text: "Come on!"
+  text: "Hire us"
   url: "/hire-us"
 
 copyright: "Hash Labs LLC © All Rights Reserved - Made with &hearts; by Hash Labs LLC"
