@@ -52,7 +52,7 @@
           </div>
           <div class="col-12 col-xl-6">
             <div class="text-center client-content-img">
-              <img class="img-fluid" src="{{ client.img | prepend: site.baseurl }}" alt="{{client.title}}">
+              <img class="img-fluid" src="{{ client.img | prepend: site.baseurl }}" srcset="{{ client.img | prepend: site.baseurl | srcset }}" alt="{{client.title}}">
               <div class="client-desktop-animation">
                 <video height="335">
                   <source src="{{site.baseurl}}/assets/videos/animation_our_work_{{client.slug}}.mp4" type="video/mp4">

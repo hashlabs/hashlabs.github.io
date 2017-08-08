@@ -10,6 +10,7 @@ _config.staging.yml
 
 # Assets
 assets/
+_assets/optimized_img/
 
 # NPM
 node_modules/

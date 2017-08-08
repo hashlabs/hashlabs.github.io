@@ -151,4 +151,15 @@ title: "Home" # Will be used as title for this page
 description: "Home description" # Will be used as description for this page
 ```
 
+## How do I add new images?
+
+1. Add the images to the `_assets/img/` folder
+2. Run `yarn optimize-images` to generate optimized images
+
+## Do optimized images overwrite original images?
+
+No, when images from `_assets/img/` get optimized, they get saved
+to `_assets/optimized_img/` (this folder is gitignored), and from there
+we copy them to `assets/img/` with webpack.
+
 [polyglot]: https://github.com/untra/polyglot

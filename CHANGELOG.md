@@ -24,6 +24,8 @@
 * Webpack base config for JS and SCSS ([@TheMightyPenguin])
 * Process page animation video ([@duranmla])
 * Webpack plugins for PurifyCSS and image optimizations ([@TheMightyPenguin])
+* Script to generate retina-friendly images ([@TheMightyPenguin])
+* Script to deploy to gh-pages ([@TheMightyPenguin])
 
 ### Fixed
 * Fix buttons width ([@carlows])
