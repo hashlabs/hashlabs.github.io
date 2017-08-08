@@ -37,6 +37,7 @@
 * Header navigation animation timing ([@duranmla])
 * `_next` link on hire-us form ([@TheMightyPenguin])
 * Bug with JS script of work page ([@TheMightyPenguin])
+* Spanish typos ([@duranmla])
 
 ## Changed
 * Refactored files so page front-matter is translated ([@carlows])

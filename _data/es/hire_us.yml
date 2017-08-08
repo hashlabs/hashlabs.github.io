@@ -12,7 +12,7 @@ contact_form_inputs:
     label: "Tú teléfono"
     warning: "(campo obligatorio)"
   type_of_job:
-    label: "Que te gustaria hacer?"
+    label: "Qué te gustaría hacer?"
     warning: "(campo obligatorio)"
   budget:
     label: "Cuál es tu presupuesto?"

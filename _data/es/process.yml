@@ -18,5 +18,5 @@ steps:
   analytics:
     slug: "analytics"
     title: "Monitoreo de rendimiento"
-    content: "El éxito del proyecto es nuestra meta, no solo tener todas las características completas. Configuramos analíticas y la monitoreo de rendimiento para que pueda saber si su aplicación está va bien y si es saludable en todo momento. Amamos las relaciones con los clientes que duran, y le ayudaremos a hacer que su aplicación escale."
+    content: "El éxito del proyecto es nuestra meta, no solo tener todas las características completas. Configuramos analíticas y monitoreo de rendimiento para que pueda saber si su aplicación cumple con las expectativas y si esta estable en todo momento. Amamos las relaciones con los clientes que duran, y le ayudaremos a hacer que su aplicación escale."
     img: "/assets/img/image_analitycs_color.svg"

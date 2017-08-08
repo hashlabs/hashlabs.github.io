@@ -4,7 +4,7 @@ clients:
   pleiq:
     slug: "pleiq"
     title: "PleIQ"
-    content: "<p><i>PleIQ es un nuevo tipo de juguetes educacionales que usan Realidad Aumentada para estimular las inteligencias múltiples en niños de 3 a 8 años.</i></p><p>Desarrollamos un conjunto de aplicaciones que les permitió recopilar y procesar datos de su juego móvil y traducirlos a métricas y dashboards que los padres y las escuelas pueden usar para conocer mejor cómo mejora el aprendizaje de sus hijos/estudiantes a través del tiempo.</p>"
+    content: "<p><i>PleIQ es un nuevo tipo de juguetes educacionales que usan Realidad Aumentada para estimular las inteligencias múltiples en niños de 3 a 8 años.</i></p><p>Desarrollamos un conjunto de aplicaciones que les permitió recopilar y procesar datos de su juego móvil y traducirlos a métricas y dashboards que los padres y las escuelas pueden usar para conocer cómo mejora el aprendizaje de sus hijos/estudiantes a través del tiempo.</p>"
     img: "/assets/img/devices_pleiq.png"
     tools:
       react:
