@@ -71,7 +71,6 @@ $(document).ready(function initContactForm() {
         label
           .addClass('sliding-label--active')
           .closest('.form-group')
-          .addClass('form-group--slided')
           .removeClass('has-danger');
       });
 
@@ -82,9 +81,7 @@ $(document).ready(function initContactForm() {
 
         if (!input.val()) {
           label
-            .removeClass('sliding-label--active')
-            .closest('.form-group')
-            .removeClass('form-group--slided');
+            .removeClass('sliding-label--active');
         }
       });
 
@@ -92,6 +89,17 @@ $(document).ready(function initContactForm() {
         $(this)
           .closest('.form-group')
           .removeClass('has-danger');
+      });
+
+      $('#contact-form .form-control:not([type="radio"])').each(function checkValidInputs() {
+        const input = $(this);
+        const inputValue = input.val();
+        const id = input.attr('id');
+        const label = $('label[for="' + id + '"]');
+
+        if (inputValue) {
+          label.addClass('sliding-label--active');
+        }
       });
     }
   };

@@ -53,6 +53,10 @@ $(document).ready(function initProcessPage() {
     checkScrollToActivateStep() {
       const boundary = ($(window).scrollTop() + $(window).height());
 
+      if (!this.stepsBottomOffsets.length) {
+        return;
+      }
+
       if (boundary > this.stepsBottomOffsets[0]) {
         this.playStep(0);
       }

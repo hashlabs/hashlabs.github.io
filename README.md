@@ -12,6 +12,10 @@ Lab Coat is the www.hashlabs.com website.
 6. Run `yarn optimize-images`, and be sure to run this each time you add new images to `_assets/img/`
 7. Run `yarn serve` and `yarn watch` at the same time to serve and watch for changes
 
+## Development
+
+Currently our default branch to develop is `source` this is intended in order to avoid issues as we need to deploy using github pages. Having the `source` branch allow us to perform the build process in an isolated way and push the output to master branch so teh github page will still working as expected despite the custom build process
+
 ## Deployment :rocket:
 
 #### Staging

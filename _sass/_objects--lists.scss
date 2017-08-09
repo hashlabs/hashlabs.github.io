@@ -1,5 +1,6 @@
 .list-pills {
   @include list-reset;
+  flex-wrap: wrap;
 
   &,
   & li {
@@ -15,6 +16,7 @@
     color: $matisse;
     font-size: 12px;
     justify-content: center;
+    margin-bottom: $spacer/2;
     padding: .4em .5em;
     text-transform: lowercase;
 

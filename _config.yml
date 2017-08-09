@@ -13,6 +13,7 @@ twitter_username: hashlabs
 github_username:  hashlabs
 thanks_url: https://www.hashlabs.com/thanks
 permalink: /blog/:title
+baseurl: ""
 
 # Images for SEO tags use baseurl
 # https://github.com/jekyll/jekyll-seo-tag/blob/6a373369e8318629685cca69635c2ab719fe731e/spec/jekyll_seo_tag_integration_spec.rb#L159
