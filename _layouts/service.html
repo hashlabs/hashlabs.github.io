@@ -1,7 +1,7 @@
 {% assign service = page %}
 
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.active_lang }}">
   {% include head.html %}
 
   <body class="site pt-0">
@@ -9,6 +9,7 @@
     {% include header.html include_class=header_class %}
 
     <main class="site-content service service--{{ page.name }}">
+      <h1 class="hidden-xs-up">{{service.title}}</h1>
       {% include services-leads/{{ page.name }}.html service=service %}
 
       <section class="service-section service-description" id="{{ service.name }}-service-description">

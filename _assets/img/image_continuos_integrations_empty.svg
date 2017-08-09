@@ -31,8 +31,8 @@
                         <circle id="Oval-4-Copy-17" fill="#FFFFFF" cx="450" cy="14" r="8"></circle>
                         <circle id="Oval-4-Copy-18" fill="#FFFFFF" cx="475" cy="14" r="8"></circle>
                     </g>
-                    <path d="M142,0 L300.284754,0 L300.284754,154 L142,154 L142,0 Z M157,15.9687181 L157,103.796668 L286,103.796668 L286,15.9687181 L157,15.9687181 Z" id="Combined-Shape" fill="#2F5681"></path>
-                    <path d="M154,13 L288.835161,13 L288.835161,106.13937 L154,106.13937 L154,13 Z M157,16 L157,104 L286,104 L286,16 L157,16 Z" id="Combined-Shape" fill="#000000"></path>
+                    <path d="M142,0 L300.284754,0 L300.284754,154 L142,154 L142,0 Z M157,15.9687181 L157,103.796668 L286,103.796668 L286,15.9687181 L157,15.9687181 Z" fill="#2F5681"></path>
+                    <path d="M154,13 L288.835161,13 L288.835161,106.13937 L154,106.13937 L154,13 Z M157,16 L157,104 L286,104 L286,16 L157,16 Z" fill="#000000"></path>
                     <polygon id="Rectangle-23" fill="#4A4A4A" points="318.941927 58 323.941927 58 316 86 311 86"></polygon>
                     <rect id="Rectangle-22" fill="#2F5681" x="299" y="79" width="32" height="75"></rect>
                     <rect id="Rectangle-25" fill="#000000" x="41" y="154" width="16" height="63"></rect>

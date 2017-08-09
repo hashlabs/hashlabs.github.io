@@ -47,10 +47,10 @@ $dimension--service-go-bullet:                    8px;
     z-index: -1;
   }
 
-  #eye_left #pupil,
-  #eye_left #shine,
-  #eye_right #pupil,
-  #eye_right #shine {
+  #eye_left .pupil,
+  #eye_left .shine,
+  #eye_right .pupil,
+  #eye_right .shine {
     @include simple-transition();
     animation: gopher_eye_movement $time--gopher-eye-movement-animation linear $time--gopher-entrance-animation infinite;
   }
