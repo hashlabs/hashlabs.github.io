@@ -1,0 +1,56 @@
+$size--font-lead:             1.25rem;
+$size--font-sublead:          1rem;
+$size--font-lead-lg:          1.75rem;
+$size--font-sublead-lg:       1.25rem;
+
+.footer-container {
+  background-color: $color--secondary;
+}
+
+.footer-copy {
+
+  &-lead,
+  &-sublead {
+    color: $color--primary;
+  }
+
+  &-lead {
+    font-size: $size--font-lead;
+  }
+
+  &-sublead {
+    font-size: $size--font-sublead;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-lead {
+      font-size: $size--font-lead-lg;
+    }
+
+    &-sublead {
+      font-size: $size--font-sublead-lg;
+    }
+  }
+}
+
+.footer-links {
+  color: $color--font-tertiary;
+}
+
+.footer-link-list {
+  font-weight: normal;
+  list-style: none;
+
+  li {
+    margin-bottom: $spacer*0.5;
+  }
+
+  li a {
+    color: $color--font-tertiary;
+  }
+}
+
+.section-separator {
+  background-image: radial-gradient(circle at 50% 0, #303030, #000000);
+  height: 2px;
+}

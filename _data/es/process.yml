@@ -1,0 +1,22 @@
+lead_title: "Cada paso de nuestro proceso"
+steps:
+  roadmapping:
+    slug: "roadmapping"
+    title: "Roadmapping"
+    content: "Comenzamos cada proyecto con una o dos semanas de planificación donde exponemos el trabajo que debemos hacer y estimamos cuánto tiempo tomará. <br/> <br/> El objetivo de esta fase es tener una idea clara de lo que significa el éxito para este proyecto y tener a todos (tanto nuestro equipo como nuestros clientes) con esa idea clara en mente."
+    img: "/assets/img/image_roadmap.svg"
+  agile:
+    slug: "agile"
+    title: "Diseño y Desarrollo agil"
+    content: "<p>Aquí empezamos a desarrollar la aplicación, tomamos diseños y los convertimos en componentes completamente funcionales. Entregamos nueva funcionalidad continuamente tan pronto como estén listas para ser probadas. Nuestra metodología nos permite tener un lugar donde todos pueden comprobar cómo funciona el software que escribimos desde el primer día del proyecto.</p>"
+    img: "/assets/img/image_design_development.svg"
+  ci:
+    slug: "ci"
+    title: "Integración y entrega continua"
+    content: "La práctica de escribir código bien probado está incorporada en nuestro ADN, y establecemos sistemas que nos permiten hacerlo de manera automatizada. Una vez que una característica está integrada se despliega y está disponible para que usted la use de inmediato."
+    img: "/assets/img/image_continuos_integrations_empty.svg"
+  analytics:
+    slug: "analytics"
+    title: "Monitoreo de rendimiento"
+    content: "El éxito del proyecto es nuestra meta, no solo tener todas las características completas. Configuramos analíticas y monitoreo de rendimiento para que pueda saber si su aplicación cumple con las expectativas y si esta estable en todo momento. Amamos las relaciones con los clientes que duran, y le ayudaremos a hacer que su aplicación escale."
+    img: "/assets/img/image_analitycs_color.svg"

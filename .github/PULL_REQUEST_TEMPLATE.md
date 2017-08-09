@@ -1,4 +1,5 @@
 # Context
+
 Here you should write the context/background of the code changes, a
 good format to follow is.
 
@@ -7,6 +8,7 @@ good format to follow is.
 * Anything you feel will help to understand your changes
 
 ## Links
+
 Here you should add links that are related to this Pull Request. For
 example:
 
@@ -14,6 +16,7 @@ example:
 * Documentation Links
 
 ## Media
+
 Normally, if you are working on a feature that has a UI component, you
 should add a gif or a video of the behavior otherwise you may just need
 an image to do the trick. For gifs/videos we use [recordit.co](http://recordit.co)/

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="693px" height="217px" viewBox="0 0 693 217" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>production_line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="animacio" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="production_line">
+            <g id="continuos">
+                <g id="machine" transform="translate(2.000000, 0.000000)">
+                    <rect id="Rectangle-38" fill="#000000" x="15" y="138" width="470" height="16"></rect>
+                    <g id="table" transform="translate(0.000000, 109.000000)">
+                        <rect id="Rectangle-38-Copy" stroke="#FFC91C" stroke-width="4" fill="#000000" x="0" y="0" width="500.547028" height="27.2136564" rx="13.6068282"></rect>
+                        <circle id="Oval-4" fill="#FFFFFF" cx="25" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy" fill="#FFFFFF" cx="50" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-2" fill="#FFFFFF" cx="75" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-3" fill="#FFFFFF" cx="100" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-4" fill="#FFFFFF" cx="125" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-5" fill="#FFFFFF" cx="150" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-6" fill="#FFFFFF" cx="175" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-7" fill="#FFFFFF" cx="200" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-8" fill="#FFFFFF" cx="225" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-9" fill="#FFFFFF" cx="250" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-10" fill="#FFFFFF" cx="275" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-11" fill="#FFFFFF" cx="300" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-12" fill="#FFFFFF" cx="325" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-13" fill="#FFFFFF" cx="350" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-14" fill="#FFFFFF" cx="375" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-15" fill="#FFFFFF" cx="400" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-16" fill="#FFFFFF" cx="425" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-17" fill="#FFFFFF" cx="450" cy="14" r="8"></circle>
+                        <circle id="Oval-4-Copy-18" fill="#FFFFFF" cx="475" cy="14" r="8"></circle>
+                    </g>
+                    <path d="M142,0 L300.284754,0 L300.284754,154 L142,154 L142,0 Z M157,15.9687181 L157,103.796668 L286,103.796668 L286,15.9687181 L157,15.9687181 Z" id="Combined-Shape" fill="#2F5681"></path>
+                    <path d="M154,13 L288.835161,13 L288.835161,106.13937 L154,106.13937 L154,13 Z M157,16 L157,104 L286,104 L286,16 L157,16 Z" id="Combined-Shape" fill="#000000"></path>
+                    <polygon id="Rectangle-23" fill="#4A4A4A" points="318.941927 58 323.941927 58 316 86 311 86"></polygon>
+                    <rect id="Rectangle-22" fill="#2F5681" x="299" y="79" width="32" height="75"></rect>
+                    <rect id="Rectangle-25" fill="#000000" x="41" y="154" width="16" height="63"></rect>
+                    <rect id="Rectangle-25-Copy" fill="#000000" x="176" y="154" width="16" height="63"></rect>
+                    <rect id="Rectangle-25-Copy-2" fill="#000000" x="312" y="154" width="16" height="63"></rect>
+                    <rect id="Rectangle-25-Copy-3" fill="#000000" x="447" y="154" width="16" height="63"></rect>
+                    <circle id="Oval-5" fill="#FF5824" cx="321.999219" cy="56.999219" r="5.99921901"></circle>
+                </g>
+                <rect id="screen" fill="#000000" opacity="0.2" x="159" y="16" width="129" height="88"></rect>
+                <g id="box_checked" transform="translate(355.000000, 38.000000)">
+                    <rect id="Rectangle-24-Copy-2" fill="#B59574" x="0" y="0" width="97" height="69"></rect>
+                    <rect id="Rectangle-39-Copy-2" fill="#D3BBA6" x="40" y="0" width="17" height="27"></rect>
+                    <rect id="Rectangle-39-Copy-3" fill="#D3BBA6" x="40" y="42" width="17" height="27"></rect>
+                    <circle id="Oval-8" fill="#81BB46" cx="47.5" cy="34.5" r="19.5"></circle>
+                    <polyline id="Path-8" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" points="39 33.7430378 45.1677844 39.9108222 57.0786066 28"></polyline>
+                </g>
+                <g id="boxes_set" transform="translate(499.000000, 80.000000)">
+                    <g id="box3" transform="translate(0.000000, 68.000000)">
+                        <rect id="Rectangle-24-Copy-2" fill="#B59574" x="0" y="0" width="97" height="69"></rect>
+                        <rect id="Rectangle-39-Copy-2" fill="#D3BBA6" x="40" y="0" width="17" height="27"></rect>
+                        <rect id="Rectangle-39-Copy-3" fill="#D3BBA6" x="40" y="42" width="17" height="27"></rect>
+                        <circle id="Oval-8" fill="#81BB46" cx="47.5" cy="34.5" r="19.5"></circle>
+                        <polyline id="Path-8" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" points="39 33.7430378 45.1677844 39.9108222 57.0786066 28"></polyline>
+                    </g>
+                    <g id="box2" transform="translate(97.000000, 68.000000)">
+                        <rect id="Rectangle-24-Copy-2" fill="#B59574" x="0" y="0" width="97" height="69"></rect>
+                        <rect id="Rectangle-39-Copy-2" fill="#D3BBA6" x="40" y="0" width="17" height="27"></rect>
+                        <rect id="Rectangle-39-Copy-3" fill="#D3BBA6" x="40" y="42" width="17" height="27"></rect>
+                        <circle id="Oval-8" fill="#81BB46" cx="47.5" cy="34.5" r="19.5"></circle>
+                        <polyline id="Path-8" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" points="39 33.7430378 45.1677844 39.9108222 57.0786066 28"></polyline>
+                    </g>
+                    <g id="box1" transform="translate(97.000000, 0.000000)">
+                        <rect id="Rectangle-24-Copy-2" fill="#B59574" x="0" y="0" width="97" height="69"></rect>
+                        <rect id="Rectangle-39-Copy-2" fill="#D3BBA6" x="40" y="0" width="17" height="27"></rect>
+                        <rect id="Rectangle-39-Copy-3" fill="#D3BBA6" x="40" y="42" width="17" height="27"></rect>
+                        <circle id="Oval-8" fill="#81BB46" cx="47.5" cy="34.5" r="19.5"></circle>
+                        <polyline id="Path-8" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" points="39 33.7430378 45.1677844 39.9108222 57.0786066 28"></polyline>
+                    </g>
+                </g>
+                <g id="panel" transform="translate(303.000000, 87.000000)" fill="#5393DA">
+                    <rect id="Rectangle-40" x="0" y="0" width="10" height="7"></rect>
+                    <rect id="Rectangle-40-Copy-2" x="0" y="10" width="10" height="7"></rect>
+                    <rect id="Rectangle-40-Copy-4" x="0" y="20" width="10" height="7"></rect>
+                    <rect id="Rectangle-40-Copy" x="15" y="0" width="10" height="7"></rect>
+                    <rect id="Rectangle-40-Copy-3" x="15" y="10" width="10" height="7"></rect>
+                    <rect id="Rectangle-40-Copy-5" x="15" y="20" width="10" height="7"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

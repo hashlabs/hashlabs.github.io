@@ -1,3 +1,21 @@
+# Jekyll
 _site
 .sass-cache
 .jekyll-metadata
+
+# Configuration files
+_config.development.yml
+_config.production.yml
+_config.staging.yml
+
+# Assets
+assets/
+_assets/optimized_img/
+
+# NPM
+node_modules/
+
+.DS_Store
+
+service-worker.js
+*.log

@@ -1,19 +1,115 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
-/*
- * The site layout is handled as a group of flex columns.
- */
 .site {
   display: flex;
   flex-direction: column;
+
+  &--black {
+    background-color: black;
+  }
+
+  &--navbar-padding {
+    padding-top: $size--header-height;
+  }
+
+  &--centered-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+
+    .site-content {
+      margin: $size--header-height 0 0;
+      padding: 0;
+    }
+  }
 }
 
-/*
- * This makes the main content to expand as needed.
- */
-.site-content {
-  flex: 1;
-  margin-top: $size--navbar-height;
+body {
+  @include font-smoothing;
+
+  &.navbar-expanded {
+    @extend .modal-open;
+  }
+}
+
+.background-inverse {
+  background-color: $color--secondary;
+  color: $color--primary;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $color--primary;
+  }
+}
+
+.container-form {
+  max-width: 900px;
+  @include make-container;
+}
+
+.container {
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+
+  // allow custom space on large screens between the content and the edges of the viewport
+  @include media-breakpoint-up(lg) {
+    @include padding-x($content-padding-x);
+  }
+}
+
+.content-wrapper {
+  /*
+    no padding is added to this element
+    as it is intended to be used alongside a
+    container class
+   */
+  width: 1210px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.alternated-rows {
+  .alternated-row {
+    text-align: center;
+
+    .content-text {
+      margin-bottom: $spacer*2;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .alternated-row {
+      text-align: left;
+
+      .content-text {
+        margin-bottom: 0;
+      }
+    }
+
+    .alternated-row:nth-of-type(odd) {
+      .col-xl-6:first-child {
+        @extend .push-xl-6;
+      }
+
+      .col-xl-6:last-child {
+        @extend .pull-xl-6;
+      }
+    }
+  }
+}
+
+.col-lead {
+  margin-top: $size--header-height + $spacer*3;
+  margin-bottom: $spacer*4;
+
+  @include media-breakpoint-up(xl) {
+    margin-top: $size--header-height + $spacer*4;
+    margin-bottom: $spacer*6;
+  }
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="site">
+
+    {% assign header_class = "navbar-inverse navbar-absolute" %}
+    {% include header.html include_class=header_class %}
+
+    <main class="site-content">
+      {{ content }}
+    </main>
+
+    {% include footer.html include_cta=true %}
+
+    {% include footer-scripts.html %}
+
+  </body>
+
+</html>

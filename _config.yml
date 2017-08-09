@@ -6,26 +6,120 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Developers as a Service | Hash Labs
-email: sales@hashlabs.com
-email_subject: We are requiring Team Extension services
-description: >
-  Our team of experts developers will join your team full-time, to help you achieve your goals at meet your deadlines. We take care of our team training and growth path, so they stay up to date with new technologies.
-url: "https://www.hashlabs.com" # the base hostname & protocol for your site
+title: Hash Labs
+email: contact@hashlabs.com
+description: We are a digital agency that builds products for the web and mobile.
 twitter_username: hashlabs
 github_username:  hashlabs
 thanks_url: https://www.hashlabs.com/thanks
 permalink: /blog/:title
 
+# Images for SEO tags use baseurl
+# https://github.com/jekyll/jekyll-seo-tag/blob/6a373369e8318629685cca69635c2ab719fe731e/spec/jekyll_seo_tag_integration_spec.rb#L159
+logo: "/assets/img/hashlabs_logo_200x200px.png"
+
+author:
+  twitter: hashlabs
+
+# Twitter configuration
+twitter:
+  username: hashlabs
+
+# Facebook configuration (remove the trailing # to configure these properties)
+#  facebook:
+#    app_id: # Facebook app ID for Facebook insights
+#    publisher: # Facebook page URL or ID of the publishing entity
+#    admins: # Facebook user ID for domain insights linked to a personal account
+
+# Social profiles
+social:
+  name: Hash Labs
+  links:
+    - https://twitter.com/hashlabs
+    - https://www.facebook.com/hashlabshq
+    - https://es.linkedin.com/company/hashlabs
+    - http://blog.hashlabs.com/
+
 # Build settings
 markdown: kramdown
 
-gems:
-  - jekyll-autoprefixer
+# Polyglot settings
+languages: ["en", "es"]
+default_lang: "en"
+exclude_from_localization: ["assets"]
+parallel_localization: true
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /services/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: services
+    values:
+      layout: service
+  - scope:
+      path: ""
+    values:
+      # Default image to display in social media when sharing the home page
+      #
+      # For twitter:
+      #
+      # For the large summary card:
+      #
+      # Set twitter_image_small to false
+      #
+      # The dimension of a Twitter in-stream photo must be 900 x 450 px,
+      # centered vertically with a 2:1 ratio and it can’t exceed 3MB.
+      # If you want the photo displayed in the stream preview to be the same
+      # as the original, it cannot exceed the following measurements: 1024 x 512 (2:1 aspect).
+      #
+      # For the smaller summary card:
+      #
+      # Set twitter_image_small to true
+      #
+      # Use an aspect ratio of 1:1 and use a minimum of 200x200 px.
+      #
+      # For facebook:
+      #
+      # Use images that are at least 1200 x 630 pixels for the best display on high resolution devices.
+      # At the minimum, you should use images that are 600 x 315 pixels to display link page posts with larger images.
+      # Images can be up to 8MB in size.
+      #
+      # In case the image is smaller than 600x315 px, a small card will be shown.
+      #
+      image: "/assets/img/hashlabs_logo_1200x630px.png"
+      twitter_image_small: false
+
+# In case any plugin that generates content is added
+# Make sure to include jekyll-sitemap at last
+plugins:
+  - jekyll-polyglot
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # SASS
 sass:
   style: compressed
-  sass_dir: _sass
 
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
+exclude:
+  - 'CHANGELOG.md'
+  - 'CNAME'
+  - 'node_modules'
+  - 'config.ru'
+  - 'node_modules'
+  - 'FAQ.md'
+  - 'firebase.json'
+  - 'MAINTAINERS'
+  - 'package.json'
+  - 'yarn-error.log'
+  - 'yarn.lock'
+  - 'postcss.config.js'
+  - 'Gemfile.lock'
+  - 'Gemfile'
+  - 'vendor'
+  - 'README.md'
+  - 'webpack.config.js'

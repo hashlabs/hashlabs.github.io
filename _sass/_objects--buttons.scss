@@ -1,34 +1,57 @@
-// If base font size is 16px, this will be 22px
-$size--btn-font-size:                    1.375rem;
-$size--btn-min-width-small:              80%;
-$color--btn-primary:                     $orange-red;
-$color--btn-primary-accent:              $accent-orange-red;
+.btn-transparent {
+  background-color: transparent;
+  border: 2px solid $color--accent;
+  color: $color--primary;
 
-.btn {
-  cursor: pointer;
-  font-family: $primary-font;
-  font-weight: bold;
-  font-size: 1.375rem;
-  max-width: 100%;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
+  &:hover,
+  &:focus {
+    background-color: $color--accent;
+    color: $color--primary;
+  }
+
+  &-orange {
+    @extend .btn-transparent;
+    color: $color--accent;
+  }
 }
 
-// Btn primary is set to $orange-red on _settings--bootstrap.scss file
+.btn-yellow {
+  background-color: $yellow;
+  color: $color--primary;
+
+  &:hover,
+  &:focus {
+    background-color: darken($yellow, 5);
+    color: $color--primary;
+  }
+}
+
 .btn-primary {
-  padding: $space*.5 $space*5;
+  &:hover,
+  &:focus {
+    color: $color--primary;
+  }
+}
 
-  &:hover, &:focus {
-    background-color: $color--btn-primary-accent;
-    text-decoration: none;
-    color: $white;
+.btn {
+  @include padding-y($spacer);
+  cursor: pointer;
+  min-width: 180px;
+  font-weight: 600;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-regular;
   }
 
-  @media #{$just-small-resolutions} {
-    padding: $space*.5 $space*3;
+  &-sm {
+    min-width: 140px;
+    @include padding-x($spacer*0.25);
   }
+}
 
-  @media #{$just-very-small-resolutions} {
-    min-width: $size--btn-min-width-small;
+@include media-breakpoint-up(lg) {
+  .btn, .btn-sm {
+    min-width: 215px;
   }
 }

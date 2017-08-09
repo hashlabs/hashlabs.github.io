@@ -1,0 +1,110 @@
+$size--headings-height:                   1.5;
+
+.section-lead {
+  @extend %full-background-centered;
+  padding-bottom: $spacer*6;
+  padding-top: $spacer*10;
+
+  &-title,
+  &-subtitle {
+    color: $color--primary;
+  }
+
+  &-title {
+    font-size: $font-size-base * 1.75;
+    line-height: $size--headings-height;
+  }
+
+  &-subtitle {
+    font-size: $font-size-base;
+    margin: 0 auto;
+    max-width: 500px;
+    line-height: $size--headings-height;
+  }
+
+  &-btn {
+    margin-top: $spacer*2.5;
+  }
+
+  @include media-breakpoint-up(md) {
+    &-subtitle {
+      font-size: $font-size-base * 1.125;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $spacer*12;
+    padding-top: $spacer*18;
+
+    &-title {
+      font-size: $font-size-base * 2.25;
+    }
+
+    &-subtitle {
+      font-size: $font-size-base * 1.5625;
+      max-width: 750px;
+    }
+
+    &-btn {
+      margin-top: $spacer*4.375;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &-title {
+      font-size: $font-size-base * 3;
+    }
+  }
+}
+
+.section-home-services {
+
+  .section-title {
+    font-size: $font-size-base * 1.125;
+  }
+
+  .section-item-title {
+    font-size: $font-size-base;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .section-title {
+      font-size: $font-size-base * 1.5;
+    }
+  }
+}
+
+.section-showcased-project {
+  @extend %full-background-centered;
+
+  &-title {
+    color: $color--primary;
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: $size--headings-height;
+  }
+
+  @include media-breakpoint-up(md) {
+    &-title {
+      font-size: $font-size-base * 1.375;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-title {
+      font-size: $font-size-base * 1.75;
+    }
+  }
+}
+
+.section-testimony {
+  background-color: $antiflash-white;
+}
+
+.action-buttons-container {
+  margin-top: $spacer * 3.375;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: $spacer * 4;
+  }
+}

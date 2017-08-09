@@ -1,0 +1,190 @@
+---
+---
+
+/*
+  As jekyll doesn't provide a way to include liquid templating constructs
+  in scss partials in the `_sass` folder, this file will serve for that
+  purpose. If there's ever the need to include a jekyll variable on a
+  stylesheet, it'll be done on this file. It should be kept organized
+  with the same sections/components that are on the `_sass` folder.
+*/
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+/**
+ * Specific services sections
+ * _sass/_components--service.scss
+ */
+
+.service--rails  {
+  {% assign rails = site.services | where: 'name', 'rails' | first %}
+
+  .service-lead-background {
+    background-image: url({{ rails.lead_background_image | prepend: site.baseurl }});
+  }
+
+  .custom-bullet-list-item::before {
+    background-image: url({{ rails.bullet_image | prepend: site.baseurl }});
+  }
+
+  .service-how {
+    background-image: url({{ rails.how_background_image.sm | prepend: site.baseurl }});
+
+    @include media-breakpoint-up(md) {
+      background-image: url({{ rails.how_background_image.md | prepend: site.baseurl }});
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-image: url({{ rails.how_background_image.lg | prepend: site.baseurl }});
+    }
+  }
+}
+
+.service--react {
+  {% assign react = site.services | where: 'name', 'react' | first %}
+
+  .service-lead-background-image {
+    background-image: url({{ react.lead_background_image.sm | prepend: site.baseurl }});
+
+    @include media-breakpoint-up(md) {
+      background-image: url({{ react.lead_background_image.md | prepend: site.baseurl }});
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-image: url({{ react.lead_background_image.lg | prepend: site.baseurl }});
+    }
+  }
+
+  .custom-bullet-list-item::before {
+    background-image: url({{ react.bullet_image | prepend: site.baseurl }});
+  }
+}
+
+.service--react-native .custom-bullet-list-item::before {
+  {% assign react_native = site.services | where: 'name', 'react-native' | first %}
+  background-image: url({{ react_native.bullet_image | prepend: site.baseurl }});
+}
+
+/**
+ * HOME Lead section
+ * _sass/_partials--home.scss
+ */
+.section-lead {
+  background-image: url({{ site.data.home.lead_background_image | prepend: site.baseurl }});
+}
+
+/**
+ * HOME showcased project section
+ * _sass/_partials--home.scss
+ */
+.section-showcased-project {
+  background-image: url({{ site.data.home.showcased_project_images.normal | prepend: site.baseurl }});
+
+  @include media-breakpoint-up(md) {
+    background-image: url({{ site.data.home.showcased_project_images.lg | prepend: site.baseurl }});
+  }
+}
+
+/**
+ * Contact Lead Section
+ * _sass/_partials--contact-lead.scss
+ */
+
+.contact-lead {
+  {% assign contact_lead_image = site.data.hire_us.contact_lead_image %}
+  background-image: url({{ contact_lead_image.sm | prepend: site.baseurl }});
+
+  @include media-breakpoint-up(md) {
+    background-image: url({{ contact_lead_image.md | prepend: site.baseurl }});
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-image: url({{ contact_lead_image.lg | prepend: site.baseurl }});
+  }
+}
+
+/**
+ * Service lead decoration
+ * _sass/_partials--services.scss
+ */
+
+@mixin services-contour-decoration($url, $size: contain) {
+  background: unquote("url(#{$url})");
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+.desktop-contour {
+  @include services-contour-decoration('{{site.url}}/assets/img/icon_imac_contour_mobile.svg', auto 100%);
+
+  @include media-breakpoint-up(md) {
+   @include services-contour-decoration('{{site.url}}/assets/img/icon_imac_contour.svg');
+  }
+}
+
+.mobile-contour {
+  @include services-contour-decoration('{{site.url}}/assets/img/icon_iphone_contour_mobile.svg', auto 100%);
+
+  @include media-breakpoint-up(md) {
+   @include services-contour-decoration('{{site.url}}/assets/img/icon_iphone_contour.svg');
+  }
+}
+
+/**
+ * Process step illustrations
+ * _sass/_partials--process.scss
+ */
+
+@mixin process-decorative-line($url, $width, $height) {
+  background: unquote("url(#{$url})");
+  height: $height;
+  width: $width;
+}
+
+.process {
+  .step-1 {
+    &::after {
+      @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_1_to_2_mobile.svg', 195px, 100px);
+      margin: $spacer auto;
+
+      @include media-breakpoint-up(md) {
+        @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_1_to_2_tablet.svg', 340px, 100px);
+      };
+
+      @include media-breakpoint-up(xl) {
+        display: none;
+      };
+    }
+  }
+
+  .step-2 {
+    &::after {
+      @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_2_to_3_mobile.svg', 180px, 100px);
+      margin: $spacer auto;
+
+      @include media-breakpoint-up(md) {
+        @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_2_to_3_tablet.svg', 215px, 115px);
+      }
+
+      @include media-breakpoint-up(xl) {
+        display: none;
+      }
+    }
+  }
+
+  .step-3 {
+    &::after {
+      @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_3_to_4_mobile.svg', 145px, 65px);
+      margin: $spacer auto;
+
+      @include media-breakpoint-up(md) {
+        @include process-decorative-line('{{site.url}}/assets/img/decorative_process_step_3_to_4_tablet.svg', 340px, 100px);
+      }
+
+      @include media-breakpoint-up(xl) {
+        display: none;
+      }
+    }
+  }
+}

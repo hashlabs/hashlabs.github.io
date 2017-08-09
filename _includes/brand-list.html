@@ -1,0 +1,7 @@
+<div class="brand-list text-center text-lg-left">
+  {% for brand in include.brands %}
+  <a class="brand-list-item ml-2 mr-2 mt-lg-3 mb-lg-3" href="{{ brand.url }}" target="_blank">
+    <img class="brand-list-img" src="{{ brand.img | prepend: site.baseurl }}" srcset="{{ brand.img | prepend: site.baseurl | srcset }}" alt="{{ brand.alt }}" />
+  </a>
+  {% endfor %}
+</div>

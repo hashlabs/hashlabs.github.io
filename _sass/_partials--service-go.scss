@@ -1,0 +1,94 @@
+$time--gopher-entrance-animation:                 3s;
+$time--gopher-eye-movement-animation:             5s;
+$time--gopher-small-cloud-delay:                  $time--gopher-entrance-animation + .25;
+$time--gopher-big-cloud-delay:                    $time--gopher-entrance-animation + .5;
+$dimension--service-go-bullet:                    8px;
+
+.service--go {
+  .service-section {
+    &--alt {
+      background-color: $radical-red;
+    }
+  }
+
+  .service-description,
+  .service-why,
+  .service-how {
+    z-index: z-map('front');
+  }
+}
+
+.service--go .service-lead {
+  backface-visibility: hidden;
+  background-color: $martinique;
+  position: relative;
+  z-index: -2;
+}
+
+.service--go .gopher-svg {
+  @include transform-horizontal-center();
+  animation: gopher_entrance $time--gopher-entrance-animation;
+  position: absolute;
+  top: $spacer * -10;
+  width: 294px;
+
+  @include media-breakpoint-up(md) {
+    top: $spacer * -9;
+    width: 470px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: $spacer * 3.5;
+    width: 718px;
+  }
+
+  &,
+  & * {
+    z-index: -1;
+  }
+
+  #eye_left #pupil,
+  #eye_left #shine,
+  #eye_right #pupil,
+  #eye_right #shine {
+    @include simple-transition();
+    animation: gopher_eye_movement $time--gopher-eye-movement-animation linear $time--gopher-entrance-animation infinite;
+  }
+
+  .small-cloud,
+  .big-cloud,
+  .go-text {
+    opacity: 0;
+  }
+
+  .small-cloud {
+    animation: cloud_animation 1s ease $time--gopher-small-cloud-delay 1 normal forwards;
+  }
+
+  .big-cloud,
+  .go-text {
+    animation: cloud_animation 1s ease $time--gopher-big-cloud-delay 1 normal forwards;
+  }
+}
+
+.service--go .custom-bullet-list-item {
+  padding-left: $spacer * 1.25;
+
+  &::before {
+    @include dimension($dimension--service-go-bullet);
+    background-color: $radical-red;
+    top: $spacer * .35;
+
+    @include media-breakpoint-up(md) {
+      top: $spacer * .45;
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: $spacer * .70;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: $spacer * 1.5;
+  }
+}

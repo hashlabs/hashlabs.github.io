@@ -1,0 +1,58 @@
+$clients-colors: (
+  pleiq: $pleiq,
+  real-scout: $real-scout,
+  wobe : $wobe,
+  yummly: $yummly
+);
+
+@mixin client-brand-colors($rule: '.col-content-title > *', $colors-map: $clients-colors) {
+  @each $client in map-keys($colors-map) {
+    $client-color: map-get($colors-map, $client);
+
+    .#{$client} {
+      #{$rule} {
+        color: $client-color;
+      }
+    }
+  }
+}
+
+@include client-brand-colors;
+
+.work {
+  .alternated-rows {
+    .alternated-row {
+      margin-bottom: $spacer*2.5;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: $spacer*4;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacer*9;
+      }
+    }
+  }
+
+  .client-content-img {
+    .client-desktop-animation {
+      display: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      > img {
+        display: none;
+      }
+
+      .client-desktop-animation {
+        display: block;
+      }
+    }
+  }
+
+  .list-pills {
+    @include media-breakpoint-down(lg) {
+      justify-content: center;
+    }
+  }
+}

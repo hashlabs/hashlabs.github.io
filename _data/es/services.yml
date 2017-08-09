@@ -1,0 +1,27 @@
+lead_title: "¡Esto es lo que podemos hacer por ti!"
+lead_subtitle: "Somos especialistas en aplicaciones web y móvil"
+
+offers:
+  web_development:
+    slug: "desktop"
+    text: "Desarrollo Web"
+    technologies:
+      ruby_on_rails:
+        text: "ruby on rails"
+        href: "/services/ruby-on-rails"
+      react:
+        text: "react"
+        href: "/services/react"
+      go:
+        text: "go"
+        href: "/services/go"
+  mobile_development:
+    slug: "mobile"
+    text: "Desarrollo Móvil"
+    technologies:
+      react_native:
+        text: "react native"
+        href: "/services/react-native"
+
+content_title: "La herramienta correcta para el trabajo"
+content_paragraph: "<p>Hemos seleccionado estas pocas tecnologías como las que utilizamos para resolver los problemas de nuestros clientes. Hemos trabajado extensamente con estas tecnologías, dominándolas y escribiendo procesos alrededor de ellas</p><p>Elegiremos la tecnología que trabaja mejor para el problema que estamos solucionando basados en nuestra investigación y experiencia.<p>Si bien nuestro equipo puede aprender tecnologías muy rápido, preferimos trabajar con herramientas que ya conocemos para asegurarnos de que ofrezcamos nuestro mejor trabajo."

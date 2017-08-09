@@ -1,0 +1,47 @@
+$dimension--form-control-dot-xs:                           8px;
+$dimension--form-control-dot-md:                           14px;
+
+.input-with-dot {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  .form-control {
+    flex: 1;
+    margin-right: $spacer * .5;
+
+    @include media-breakpoint-up(md) {
+      margin-right: $spacer * 1.375;
+    };
+  }
+
+  .dot {
+    @include dimension($dimension--form-control-dot-xs);
+    @include simple-transition();
+    background-color: $white;
+    border-radius: 50%;
+    flex: 0 0 $dimension--form-control-dot-xs;
+
+    @include media-breakpoint-up(md) {
+      @include dimension($dimension--form-control-dot-md);
+      flex: 0 0 $dimension--form-control-dot-md;
+    }
+  }
+
+  &.textarea {
+    align-items: flex-start;
+
+    .dot {
+      position: relative;
+      top: $spacer * .75;
+    }
+  }
+
+  .form-control:focus ~ .dot {
+    background-color: $crayon-orange;
+  }
+
+  .form-group.has-warning .dot {
+    background-color: $ruddy;
+  }
+}

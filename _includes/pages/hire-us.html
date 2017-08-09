@@ -1,0 +1,34 @@
+{% assign hire_us = site.data.hire_us %}
+
+{% comment %}
+  This prepends the current language to the thanks url
+  to show after form successful submission
+{% endcomment %}
+
+{% capture captured_thanks_path %}
+  {% if site.active_lang != site.default_lang %}
+    {{ '/' | append: site.active_lang }}
+  {% endif %}
+  {{ '/thanks' }}
+{% endcapture %}
+
+{% assign thanks_path = captured_thanks_path | strip_newlines | replace: ' ', '' %}
+
+<section class="contact-lead" id="contact-lead"></section>
+
+<section class="contact-form" id="contact-form-section">
+  <div class="container-form">
+    <h1 class="contact-form-title text-center">{{ hire_us.contact_form_title }}</h1>
+    <form class="form" id="contact-form" method="POST" action="{{ site.form_action }}" novalidate>
+      {% include form-fields-builder.html items=hire_us.contact_form_inputs %}
+
+      <input type="hidden" name="_next" value="{{ thanks_path | prepend: site.baseurl }}" style="display:none" />
+      <input type="hidden" name="_language" value="{{ site.active_lang }}" style="display:none" />
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <button type="submit" class="btn btn-primary btn-lg mt-4 mt-lg-5">{{ hire_us.contact_form_button_text }}</button>
+    </form>
+  </div>
+</section>
+
+<div class="section-separator hidden-sm-down"></div>

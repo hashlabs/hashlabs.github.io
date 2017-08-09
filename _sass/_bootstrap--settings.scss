@@ -1,0 +1,129 @@
+/*
+  Add into this file the variables that are going
+  to be used by Bootstrap to delivery its grid and
+  overall styles. A complete list of variables
+  can be found within the bootstrap module at node_modules
+  within the _variables.scss file or at:
+  https://v4-alpha.getbootstrap.com/getting-started/options/
+ */
+
+/**
+ * Spacing
+ */
+
+$spacer:                                1rem;
+
+/**
+ * Colors - styles/_settings--palette.scss
+ */
+
+/**
+ * Body
+ */
+
+/**
+ * Forms
+ */
+
+$input-padding-x:                       0.625rem;
+$input-padding-y:                       0.625rem;
+$input-bg:                              transparent;
+$input-color:                           $white;
+$input-border-color:                    $white;
+$input-border-radius:                   0;
+$input-border-focus:                    $crayon-orange;
+$custom-control-active-indicator-bg:    $crayon-orange;
+
+/**
+ * Grid containers
+ */
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1440px
+);
+
+/**
+ * Scaffolding
+ */
+
+/**
+ * Spacing
+ */
+
+/**
+ * Typography - styles/_settings--fonts.scss
+ */
+
+$hr-border-color:                       $gray-lighter;
+$link-color:                            $color--accent;
+$link-hover-color:                      rgba($color--accent, .7);
+
+/**
+ * Grid system
+ */
+
+/**
+ * Components
+ */
+
+/**
+ * Dropdown
+ */
+
+
+/**
+ * Navbar
+ */
+
+$navbar-inverse-color:                        $color--primary;
+$navbar-inverse-hover-color:                  rgba($color--primary, .7);
+$navbar-inverse-disabled-color:               rgba($color--primary, .3);
+$navbar-inverse-active-color:                 $color--primary;
+$navbar-inverse-toggler-border:               transparent;
+$navbar-inverse-toggler-bg:                   none;
+
+$navbar-light-color:                          $text-color;
+$navbar-light-hover-color:                    $color--accent;
+$navbar-light-disabled-color:                 rgba($text-color, .3);
+$navbar-light-active-color:                   $color--accent;
+$navbar-light-toggler-border:                 transparent;
+$navbar-light-toggler-bg:                     none;
+
+$navbar-toggler-padding-x:                    0;
+$navbar-toggler-padding-y:                    0;
+
+$navbar-padding-y:                            $spacer;
+$navbar-padding-x:                            $spacer;
+
+/**
+ * Pills
+ */
+
+
+/**
+ * Buttons
+ */
+
+$btn-primary-color:                         $white;
+$btn-primary-bg:                            $color--accent;
+$btn-primary-border:                        $btn-primary-bg;
+$btn-border-radius:                         0;
+$btn-border-radius-lg:                      0;
+$btn-border-radius-sm:                      0;
+
+// set of rules in order to remove outlines on focus
+$btn-box-shadow:                            transparent;
+$btn-focus-box-shadow:                      transparent;
+$btn-active-box-shadow:                     transparent;
+$enable-shadows:                            true;
+
+/**
+ * Alerts
+ */
+
+/**
+ * Modals
+ */

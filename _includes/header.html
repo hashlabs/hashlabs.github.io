@@ -1,0 +1,33 @@
+{% assign header=site.data.header %}
+{% assign class_name=include.include_class %}
+
+<nav id="navbar" class="navbar navbar-toggleable-sm {{class_name}} fixed-top">
+  <div class="navbar-container">
+    <header id="header" class="header">
+      <div class="navbar-toggler navbar-toggler-right">
+        <button class="mobile-toggler">
+          <span class="mobile-toggler-strip">Mobile Toggle</span>
+        </button>
+      </div>
+      <div class="navbar-brand">
+        <a class="d-inline-block" href="/">
+          <img class="navbar-brand-img img-light" src="/assets/img/logo_orange.svg" alt="Hash Labs" />
+          <img class="navbar-brand-img img-inverse" src="/assets/img/logo_white.svg" alt="Hash Labs" />
+          <p class="navbar-brand-text bullet-icon d-inline-block hidden-sm-down">Hash Labs <span>&bull;</span></p>
+        </a>
+      </div>
+    </header>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        {% for links in header %}
+        {% assign link = links[1] %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{link.href}}">
+            {{link.text}}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

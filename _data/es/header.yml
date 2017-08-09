@@ -1,0 +1,15 @@
+services:
+  href: /services
+  text: Servicios
+
+work:
+  href: /work
+  text: Trabajos
+
+process:
+  href: /process
+  text: Nuestro proceso
+
+hire_us:
+  href: /hire-us
+  text: Contrátanos

@@ -1,72 +1,65 @@
 /**
- * Check Bootstrap Docs for further explanation
- * of some variables used below
- * http://getbootstrap.com/customize/#less-variables
- * Keep in mind that all variables set to null
- * are going to be set further by bootstrap defaults
+ * font-import
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,600,700?external=true);
+
+/**
+ * font-colors
+ */
+
+$text-color:                  $black;
+$body-color:                  $text-color;
+$headings-color:              $text-color;
+
+/**
+ * font-size
+ */
+
+$font-size-base:              1rem;
+
+/**
+ * font-families
+ */
+
+$primary-font:                'Montserrat', sans-serif;
+$secondary-font:              null;
+$headings-font-family:        $secondary-font;
+
+$font-family-sans-serif:      $primary-font;
+$font-family-serif:           $secondary-font;
+$font-family-monospace:       null;
+
+/**
+ * font-weight
+ */
+
+$font-weight-regular:           400;
+$font-weight-bold:              700;
+$lead-font-weight:              $font-weight-regular;
+
+/**
+ * headings
+ */
+
+$headings-font-family:        null;
+$headings-font-weight:        $font-weight-bold;
+$headings-color:              $gray-dark;
+
+/**
+ * line-height
  */
 
 
- // -----------------------------------------------------------------------------
- // font-import
- // -----------------------------------------------------------------------------
+/**
+ * Inputs
+ */
 
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700');
+$input-font-family:           $primary-font;
+$input-font-weight:           700;
 
-// -----------------------------------------------------------------------------
-// font-colors
-// -----------------------------------------------------------------------------
+/**
+ * Button
+ */
 
-  // $text-color:                  $color--text;
-
-// -----------------------------------------------------------------------------
-// fonts-families
-// -----------------------------------------------------------------------------
-
-  $primary-font:                'Montserrat', sans-serif;
-  $secondary-font:              null;
-  $headings-font-family:        $secondary-font;
-
-  $font-family-sans-serif:      $primary-font;
-  $font-family-serif:           $secondary-font;
-  $font-family-monospace:       null;
-
-  $font-family-base:            $primary-font;
-
-  // This cannot be px!!! (Bootstrap 4 thing)
-  $font-size-base:              1rem;
-  $font-size-slightly-large:    ceil($font-size-base*1.125);
-  $font-size-large:             ceil($font-size-base*1.25);
-  $font-size-small:             ceil($font-size-base*0.85);
-
-  $font-size-h1:                floor($font-size-base*2.6);
-  $font-size-h2:                floor($font-size-base*2.15);
-  $font-size-h3:                ceil($font-size-base*1.7);
-  $font-size-h4:                ceil($font-size-base*1.25);
-  $font-size-h5:                $font-size-base;
-  $font-size-h6:                ceil($font-size-base*0.85);
-
-// -----------------------------------------------------------------------------
-// font-weight
-// -----------------------------------------------------------------------------
-  $font-weight-regular:            400;
-  $font-weight-bold:               600;
-
-  $font-weight-normal:             $font-weight-regular;
-  $size--font-weight-default:      $font-weight-normal;
-
-// -----------------------------------------------------------------------------
-// headings
-// -----------------------------------------------------------------------------
-
-  $headings-font-family:        null;
-  $headings-font-weight:        $font-weight-regular;
-  // $headings-color:              $black;
-
-// -----------------------------------------------------------------------------
-// line-height
-// -----------------------------------------------------------------------------
-
-  $line-height-base:            1.6; //1.428571429;
-  $line-height-computed:        floor($font-size-base * $line-height-base);
-  $headings-line-height:        1.1;
+$button-font-family:          $primary-font;

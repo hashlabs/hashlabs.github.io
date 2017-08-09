@@ -1,0 +1,50 @@
+# Lead section
+lead_title: "Let's build something your users will ❤️ to use."
+lead_subtitle: "We are a software development agency that creates web and mobile experiences."
+lead_btn:
+  url: "/work"
+  text: "Our work"
+
+# Services section
+services:
+  title: "This is what we can do for you"
+  web:
+    title: "WEB DEVELOPMENT"
+    text: "Our iterative process allows us to to have working software from day one and continuously deliver features every sprint, all this while maintaining communication with you to prioritize or make adjustments to the roadmap on the fly."
+    btn:
+      text: "Our process"
+      url: "/process"
+  mobile:
+    title: "MOBILE DEVELOPMENT"
+    text: "Using React Native, we build cross-platform applications for iOS and Android with one codebase. Also, because of the flexibility of React Native, we achieve outstanding performance and development speed."
+    btn:
+      text: "Our services"
+      url: "/services"
+
+# Showcased Project section
+showcased_project:
+  brand:
+    image: "/assets/img/logo-pleiq-primary.png"
+    url: "#"
+  title: "PleIQ is an Augmented Reality company that creates learning experiences for preschool children. Check out what we did for them."
+  other_key: "We delivered a set of applications that allowed them to gather and process data from their mobile application and translate those to metrics and dashboard parents and schools can use to how better how their children learning is improving across time."
+  check_work:
+    text: "Our work"
+    url: "/work"
+
+# Testimonies section
+testimonies:
+  - image: "/assets/img/picture-adrianna-tan.jpg"
+    author: "Adrianna Tan"
+    position: "CEO"
+    company:
+      url: "https://wobe.io"
+      text: "Wobe"
+    quote: '"They were our first team, pushed our MVP out of the door and helped our new hires to get up to speed. Their work is outstanding."'
+  - image: "/assets/img/picture-matt-ross.jpg"
+    author: "Matt Ross"
+    position: "PM"
+    company:
+      url: "https://fundingcircle.com/us"
+      text: "Funding Circle"
+    quote: '"<b>Hash Labs</b> takes the time necessary to make sure their work is understood, documented and clearly communicated across all necessary channels. It was a pleasure to work with them."'
