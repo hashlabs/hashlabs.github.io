@@ -9,7 +9,18 @@ Lab Coat is the www.hashlabs.com website.
 3. `bundle install`
 4. `rbenv rehash`
 5. `cp _config.example.yml _config.development.yml`, then update the values of the variables on that file
-5. Run `yarn serve` and `yarn watch` at the same time to serve and watch for changes
+6. Run `yarn optimize-images`, and be sure to run this each time you add new images to `_assets/img/`
+7. Run `yarn serve` and `yarn watch` at the same time to serve and watch for changes
+
+## Deployment :rocket:
+
+#### Staging
+
+Run `yarn deploy`
+
+#### Production
+
+Run `yarn deploy-production`
 
 ## SASS
 

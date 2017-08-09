@@ -84,7 +84,9 @@ module.exports = function (env) {
       }),
       new CopyWebpackPlugin([
         { from: './_scripts/react.js', to: 'js/react.js' },
-        { from: './_assets/' }
+        { from: './_assets/css', to: 'css/' },
+        { from: './_assets/videos', to: 'videos/' },
+        { from: './_assets/optimized_img', to: 'img/' }
       ]),
       new ImageminPlugin({
         test: /\.(jpeg|jpg|png|gif|svg)$/i,
