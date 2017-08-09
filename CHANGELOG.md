@@ -40,6 +40,8 @@
 * `_next` link on hire-us form ([@TheMightyPenguin])
 * Bug with JS script of work page ([@TheMightyPenguin])
 * Spanish typos ([@duranmla])
+* Contact form labels ([@TheMightyPenguin])
+* Update pill list to have `flex-wrap: wrap` and minor enhancements ([@duranmla])
 
 ## Changed
 * Refactored files so page front-matter is translated ([@carlows])
