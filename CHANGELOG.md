@@ -42,6 +42,7 @@
 * Spanish typos ([@duranmla])
 * Contact form labels ([@TheMightyPenguin])
 * Update pill list to have `flex-wrap: wrap` and minor enhancements ([@duranmla])
+* Update HTML semantics, SVG attributes duplication, page lang and type for `og:type` ([@duranmla])
 
 ## Changed
 * Refactored files so page front-matter is translated ([@carlows])
