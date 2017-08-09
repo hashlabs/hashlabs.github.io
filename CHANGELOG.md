@@ -43,6 +43,7 @@
 * Contact form labels ([@TheMightyPenguin])
 * Update pill list to have `flex-wrap: wrap` and minor enhancements ([@duranmla])
 * Update HTML semantics, SVG attributes duplication, page lang and type for `og:type` ([@duranmla])
+* Replaced div with span for HTML correctnes ([@TheMightyPenguin])
 
 ## Changed
 * Refactored files so page front-matter is translated ([@carlows])
