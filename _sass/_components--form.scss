@@ -135,12 +135,12 @@ $size--textarea-form-control-height-md:                      152px;
   }
 
   .form-group.has-danger {
-    & .form-control-feedback {
+    .form-control-feedback {
       display: inline-block;
       opacity: 1;
     }
 
-    & .custom-control-description {
+    .custom-control-description {
       color: $white;
     }
   }

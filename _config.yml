@@ -47,7 +47,7 @@ markdown: kramdown
 # Polyglot settings
 languages: ["en", "es"]
 default_lang: "en"
-exclude_from_localization: ["assets"]
+exclude_from_localization: ["assets", "robots.txt"]
 parallel_localization: true
 
 # Collections
