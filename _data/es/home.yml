@@ -38,7 +38,7 @@ testimonies:
     company:
       url: "https://wobe.io"
       text: "Wobe"
-    quote: '"Ellos fueron nuestro primer equipo, sacaron nuestro MVP al mercado y ayudaron a nuestros nuevos empleados a ponerse al día. Su trabajo es excepcional"'
+    quote: "Contratamos a <b>Hash Labs</b> para construir nuestro MVP y no podríamos estar más felices. Quedamos muy contentos con la excelente comunicación, el profesionalismo que vimos."
   - image: "/assets/img/picture-matt-ross.jpg"
     author: "Matt Ross"
     position: "PM"

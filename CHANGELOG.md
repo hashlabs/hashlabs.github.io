@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 ### Added
+* New testimonial ([@orlando])
 * English copy ([@orlando])
 * Runtime caching to load assets offline ([@carlows])
 * SEO metadata and Sitemap ([@carlows])

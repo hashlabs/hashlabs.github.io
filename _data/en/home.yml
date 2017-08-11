@@ -40,11 +40,11 @@ testimonies:
     company:
       url: "https://wobe.io"
       text: "Wobe"
-    quote: '"They were our first team, pushed our MVP out of the door and helped our new hires to get up to speed. Their work is outstanding."'
+    quote: "We engaged <b>Hash Labs</b> to build our MVP and we couldn't be happier. We were very pleased with the excellent communication and professionalism that we saw, that didn't feel like a remote team at all."
   - image: "/assets/img/picture-matt-ross.jpg"
     author: "Matt Ross"
     position: "PM"
     company:
       url: "https://fundingcircle.com/us"
       text: "Funding Circle"
-    quote: '"<b>Hash Labs</b> takes the time necessary to make sure their work is understood, documented and clearly communicated across all necessary channels. It was a pleasure to work with them."'
+    quote: "<b>Hash Labs</b> takes the time necessary to make sure their work is understood, documented and clearly communicated across all necessary channels. It was a pleasure to work with them."
